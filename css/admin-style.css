@@ -1,0 +1,54 @@
+#header-logo {
+	background-image: url(../images/logo_admin.png);
+	width: 60px;
+}
+#progo_welcome li ul {
+	margin-top: 6px;
+	list-style: inside;
+}
+table.form-table label { font-size: 13px; }
+
+/* PROGO DIRECT METABOX ON DIRECT MARKET PAGES */
+#progo_screen { display: block; width: 373px; height: 228px; position: relative; background:url(../images/LightGrey/screenshot.jpg) no-repeat 0 0; font-family: Arial, Helvetica, sans-serif; border: 1px solid #ccc; }
+
+#ptitle, #parr { font-size: 14px; position: absolute; top: 44px; left: 11px; }
+#progo_screen.StrongBlue #ptitle { color: #fff; }
+#pget { font-size: 10px; position: absolute; top: 79px; left: 144px; }
+#parr { font-weight: bold; font-size: 15px; color: #fff; top: 203px; }
+#progo_screen.Light #parr { color: #3E3E3E; }
+#pimg { position:absolute; width: 119px; height: 117px; top: 69px; left: 10px; }
+
+#pprice { position: absolute; top: 85px; left: 145px; font-size: 10px }
+#pprice .s { background: url(../images/s.gif) repeat-x 0 6px; }
+#pprice .sale { color: #f00; }
+#pprice .p { font-size: 19px; font-weight: bold; position: relative; top: 5px }
+#pprice .c { position: relative; top: -2px; }
+#pprice .d { display: none; }
+
+#pta { width: 116px; position: absolute; top: 2px; right: 2px; font-size: 15px; line-height: 14px; text-align: center; color: #fff; }
+#prh { width: 125px; position:absolute; top: 42px; left: 250px; text-align: center; font-size: 10px; line-height: 11px; font-family: Tahoma, Geneva, sans-serif; }
+#pbn { width: 100px; position: absolute; top:205px; left: 264px; text-align: center; font-weight: bold; font-size: 11px; color: #fff; }
+
+/* for other color schemes */
+#progo_screen.BlackGrey { background-image:url(../images/BlackGrey/screenshot.jpg); }
+#progo_screen.LightBlue { background-image:url(../images/LightBlue/screenshot.jpg); }
+#progo_screen.OrangeBlack { background-image:url(../images/OrangeBlack/screenshot.jpg); }
+#progo_screen.StrongBlue { background-image:url(../images/StrongBlue/screenshot.jpg); }
+
+#progo_screen.BlackGrey #pget, #progo_screen.LightBlue #pget, #progo_screen.OrangeBlack #pget { color: #fff; }
+#progo_screen.BlackGrey #pprice .s, #progo_screen.LightBlue #pprice .s, #progo_screen.OrangeBlack #pprice .s { background-image: url(../images/sw.gif); -moz-opacity: 0.5; opacity: 0.5; filter: alpha(opacity=50); color: #fff }
+#progo_screen.BlackGrey #pprice .sale, #progo_screen.LightBlue #pprice .sale, #progo_screen.OrangeBlack #pprice .sale, #progo_screen.BlackGrey #prh, #progo_screen.LightBlue #prh, #progo_screen.OrangeBlack #prh { color: #fff; text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.65) }
+#progo_screen.BlackGrey #pbn { color: #000; }
+#progo_screen.LightBlue #pbn { color: #003F5E; }
+#progo_screen.LightBlue #parr { color: #333; }
+
+
+/* api key check? */
+img.kcheck { position: relative; top:3px; }
+
+tr.status-notdirect { display: none; }
+
+/* for admin pages */
+.metabox-holder .postbox .inside h3 { background: none; cursor: text; padding: 0; }
+.metabox-holder .postbox .inside.noh3 h3 { display: none; }
+.progo-form .form-table th { width: 160px; }

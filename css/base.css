@@ -1,0 +1,244 @@
+/* we are on the grid : 960.gs */
+@import '960.css';
+
+/* reset default browser CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, acronym, address, big, 
+cite, code, del, dfn, em, font, img, ins, 
+kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, 
+u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, 
+legend, table, caption, tbody, tfoot, thead, tr, th, td { background: transparent; border: 0; margin: 0; padding: 0; }
+body.direct { line-height: 1;}
+body.direct blockquote { quotes: none;}
+body.direct blockquote:before, 
+body.direct blockquote:after { content: ''; content: none;}
+body.direct del { text-decoration: line-through;}
+body.direct table { border-collapse: collapse; }
+body.direct a img { border: none;}
+
+/* =Fonts */
+body.direct, body.direct input, body.direct textarea, body.direct .pingback a.url { font-family: Arial, Helvetica, sans-serif; }
+
+/* =Layout */
+body.direct #wrap, 
+body.direct #page, 
+body.direct #top { width: 980px; margin:0 auto; position: relative }
+body.direct #page { float: left }
+body.direct #container { float: left; margin: 0; position: relative; background: #fff url(../images/direct/line.gif) repeat-y 659px 0 }
+body.direct #main { float:left; }
+body.direct #top { float: left; width: 962px; padding: 0 9px; background: url(../images/direct/top.png) repeat-y 0 0; margin-bottom: 30px }
+body.direct #tend { float:left; width: 980px; height: 10px; position: absolute; left: 0; bottom: -10px; background:url(../images/direct/tend.png) no-repeat 0 0; }
+body.direct #topimg { float: left; position: relative; z-index: 6 }
+body.direct #bodycontent { float: left; width: 633px }
+body.direct #arrow { float:left; display:inline; width: 612px; height:54px; position: absolute; background:url(../images/direct/arrow.jpg) no-repeat 100% 0; z-index:5; font: 17px/120% Arial, Helvetica, sans-serif; color:#fff; padding: 39px 36px 0 34px; top: 456px; left:-2px; }
+/* =Global Elements */
+
+/* Main global 'theme' and typographic styles */
+body.direct { background: #fff url(../images/direct/bg.jpg) no-repeat 50% 0;}
+body.direct body, body.direct input, body.direct textarea { color: #666; font-size: 12px; line-height: 18px;}
+body.direct hr { background-color: #e7e7e7; border: 0; clear: both; height: 1px; margin-bottom: 18px;}
+
+/* Text elements */
+body.direct p { margin-bottom: 18px;}
+body.direct ul { margin: 0 0 18px 1em;}
+body.direct ol ol { list-style: upper-alpha;}
+body.direct ol ol ol { list-style: lower-roman;}
+body.direct ol ol ol ol { list-style: lower-alpha;}
+body.direct ul ul, 
+body.direct ol ol, 
+body.direct ul ol, 
+body.direct ol ul { margin-bottom: 0;}
+body.direct dl { margin: 0 0 24px 0;}
+body.direct dt { font-weight: bold;}
+body.direct dd { margin-bottom: 18px;}
+body.direct strong { font-weight: bold;}
+body.direct cite, 
+body.direct em, 
+body.direct i { font-style: italic;}
+body.direct big { font-size: 131.25%;}
+body.direct ins { background: #ffc; text-decoration: none;}
+body.direct blockquote { font-style: italic; padding: 0 3em;}
+body.direct blockquote cite, 
+body.direct blockquote em, 
+body.direct blockquote i { font-style: normal;}
+body.direct pre { background: #f7f7f7; color: #222; line-height: 18px; margin-bottom: 18px; padding: 1.5em;}
+body.direct abbr, 
+body.direct acronym { border-bottom: 1px dotted #666; cursor: help;}
+body.direct sup, 
+body.direct sub { height: 0; line-height: 1; position: relative; vertical-align: baseline; }
+body.direct sup { bottom: 1ex;}
+body.direct sub { top: .5ex;}
+body.direct input[type="text"], 
+body.direct input.text, 
+body.direct textarea { background: #fff; border: 1px solid #ccc; box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); padding: 2px;}
+body.direct input.text, 
+body.direct textarea { width: 163px; }
+body.direct span.shipping_region_name, 
+body.direct span.shipping_country_name { background: #fff; border: 1px solid #ccc; box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); padding: 2px; float: left; height: 17px; margin-bottom: 10px; width: 163px; font-weight: normal; cursor: default; color: #666 }
+body.direct .zip input.text {width:58px;}
+body.direct input.text.need { border-color: #f00; }
+body.direct input.txt.need { border-color: #f00; }
+body.direct a { color: #0066cc; text-decoration: none }
+body.direct a:hover { color: #ff4b33; text-decoration: underline }
+
+body.direct .screen-reader-text { position: absolute; left: -9000px; }
+
+/* hdr */
+body.direct #hdr { float: left; height: 86px; position: absolute; top: 0; left: 10px; z-index:10; background:url(../images/direct/hdr.png) repeat-x 0 0; }
+body.direct #logo { float: left; width: 142px; height: 57px; margin: 10px 9px 0; text-indent: -999em; background:url(../images/direct/logo.gif) no-repeat 0 0 }
+
+body.direct #slogan { position: absolute; top: 29px; left: 168px; margin: 0; font-size: 15px; font-weight: normal; color: #e4e4e4; }
+body.direct .tshade { margin-left: 4px; padding-left: 6px; background:url(../images/direct/LightGrey/form.png) no-repeat 0 0; height: 87px; }
+body.direct #toparr { float: left; width: 210px; height:101px; font: 28px/25px Arial, Helvetica, sans-serif; color: #fff; text-align: center; background: url(../images/direct/toparr.jpg) no-repeat 50% 0; padding: 21px 50px 0; text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.65); position: relative; z-index: 10 }
+body.direct .page-template-page-thanks-php #toparr { font-size: 50px; width: 310px; padding: 21px 0 0 }
+
+/* content */
+body.direct #main { color: #333; font-size: 13px; line-height: 16px;}
+body.direct #main input.upd { border: none; background: none; padding: 0; cursor:pointer }
+body.direct #main p, 
+body.direct #main ul, 
+body.direct #main ol, 
+body.direct #main dd, 
+body.direct #main pre, 
+body.direct #main hr { margin-bottom: 18px;}
+body.direct #main ul ul, 
+body.direct #main ol ol, 
+body.direct #main ul ol, 
+body.direct #main ol ul { margin-bottom: 0;}
+body.direct #main pre, 
+body.direct #main kbd, 
+body.direct #main tt, 
+body.direct #main var { font-size: 15px; line-height: 21px;}
+body.direct #main code { font-size: 13px;}
+body.direct #main dt, 
+body.direct #main th { color: #000;}
+body.direct #main h2 { font-size: 20px; }
+body.direct #main h1,
+body.direct #main h2, 
+body.direct #main h3, 
+body.direct #main h4, 
+body.direct #main h5, 
+body.direct #main h6 { line-height: 1.2em; margin: 0 0 3px; font-weight: normal}
+body.direct #main h3 { font-size: 18px; line-height: 17px }
+body.direct #main #prod h1, 
+body.direct #main h1.page-title { float: left; width: 100%; margin: 25px 0 17px 15px; font: bold 34px/120% Arial, Helvetica, sans-serif; color: #3c3c3c }
+body.direct #main h1.page-title { margin-bottom: 0; }
+
+body.direct .entry-meta { color: #888; font-size: 12px;}
+body.direct .entry-meta abbr, 
+body.direct .entry-utility abbr { border: none;}
+body.direct .entry-meta abbr:hover, 
+body.direct .entry-utility abbr:hover { border-bottom: 1px dotted #666;}
+body.direct .entry { border: 1px solid #c4c4c4; background: #fff; margin: 17px 0 30px 15px; padding: 20px; }
+body.direct.wpsc-shopping-cart .entry { margin: 17px 10px 0 0; padding: 0; }
+body.direct #main .entry p:last-child { margin-bottom: 12px;}
+body.direct .entry fieldset { border: 1px solid #e7e7e7; margin: 0 0 24px 0; padding: 24px;}
+body.direct .entry fieldset legend { background: #fff; color: #000; font-weight: bold; padding: 0 24px;}
+body.direct .entry input { margin: 0 0 24px 0;}
+body.direct .entry .adjustform input, 
+body.direct .entry .product_form input { margin-bottom: 10px; display: block; }
+body.direct .entry input.file, 
+body.direct .entry input.button { margin-right: 24px;}
+body.direct .entry label { color: #888; font-size: 12px;}
+body.direct .entry select { margin: 0 0 24px 0;}
+body.direct .entry sup, 
+body.direct .entry sub { font-size: 10px;}
+body.direct .entry blockquote.left { float: left; margin-left: 0; margin-right: 24px; text-align: right; width: 33%;}
+body.direct .entry blockquote.right { float: right; margin-left: 24px; margin-right: 0; text-align: left; width: 33%;}
+body.direct .page-link { color: #000; font-weight: bold; margin: 0 0 22px 0; word-spacing: 0.5em;}
+body.direct .page-link a:link, 
+body.direct .page-link a:visited { background: #f1f1f1; color: #333; font-weight: normal; padding: 0.5em 0.75em; text-decoration: none;}
+body.direct .page-link a:active, 
+body.direct .page-link a:hover { color: #ff4b33;}
+body.direct.page .edit-link { clear: both; display: block;}
+body.direct #entry-author-info { background: #f2f7fc; border-top: 4px solid #000; clear: both; font-size: 14px; line-height: 20px; margin: 24px 0; overflow: hidden; padding: 18px 20px;}
+body.direct #entry-author-info #author-avatar { background: #fff; border: 1px solid #e7e7e7; float: left; height: 60px; margin: 0 -104px 0 0; padding: 11px;}
+body.direct #entry-author-info #author-description { float: left; margin: 0 0 0 104px;}
+body.direct #entry-author-info h2 { color: #000; font-size: 100%; font-weight: bold; margin-bottom: 0;}
+body.direct .entry-utility { clear: both; color: #888; font-size: 12px; line-height: 18px;}
+body.direct .entry-meta a, 
+body.direct .entry-utility a { color: #888;}
+body.direct .entry-meta a:hover, 
+body.direct .entry-utility a:hover { color: #ff4b33;}
+body.direct #main .video-player { padding: 0;}
+
+/* images */
+body.direct #main .alignleft, body.direct #main img.alignleft { display: inline; float: left; margin-right: 24px; margin-top: 4px; margin-bottom: 20px;}
+body.direct #main .alignright, body.direct #main img.alignright { display: inline; float: right; margin-left: 24px; margin-top: 4px;}
+body.direct #main .aligncenter, body.direct #main img.aligncenter { clear: both; display: block; margin-left: auto; margin-right: auto;}
+body.direct #main img.alignleft, body.direct #main img.alignright, body.direct #main img.aligncenter { margin-bottom: 12px;}
+
+/* Main sidebars */
+body.direct .pform { position: relative; float: right; right: 1px; padding: 30px 0 11px 16px; background:url(../images/direct/form.png) repeat-x 0 100%; margin: 87px 0 0 0; color: #000; width: 294px; }
+body.direct .errors { color: #f00; font-weight: bold }
+body.direct .pform h3 { display:block; font-size: 21px; line-height:25px; color:#333; text-align: center; position: relative; margin: -1px 0 0; position: relative; z-index: 11 }
+body.direct .pform label { display:block; margin: 4px 4px 1px; }
+body.direct input.txt { display: block; width: 126px; height: 20px; margin: 0 }
+body.direct .req.need { border-color: #f00 }
+body.direct input.txt.full { width: 270px }
+body.direct input.txt.zip { width: 60px }
+body.direct select { height: 24px; }
+body.direct input.sbtn { display:block; margin: 8px auto; width: 252px; cursor:pointer; height: 44px; border: none; text-align: center; background: url(../images/direct/btn.png) no-repeat 0 0; font: bold 20px/29px Arial, Helvetica, sans-serif; color: #fff; cursor:pointer }
+body.direct .pform em { display: block; font-size: 11px; line-height: 14px; margin: 3px 0 0 12px }
+
+body.direct #side { float: right }
+body.direct #right { float: right; width: 299px; height:390px; margin: 87px 1px 0 0; padding: 41px 10px 0 0; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc }
+body.direct #right p { margin: 0 }
+body.direct .block { float: right; width: 93%; border-bottom: 1px solid #ccc; margin: 0 0 10px; padding: 0 0 10px }
+body.direct #right .block { width: 286px; }
+body.direct .block.thx { height: 90px }
+body.direct #right .block.follow { border-bottom: 0; padding-bottom: 0; margin-bottom: 0 }
+body.direct .block.features { height: 354px; position: relative; padding: 0 }
+body.direct .block h3.title { float: left; width: 100%; padding: 9px 0; margin: 0; font: 19px/23px Arial, Helvetica, sans-serif; color: #333; }
+body.direct .block h3.title .spacer { float: left; }
+body.direct .block .inside { float: left; width: 100%; padding: 0; font-size:13px; line-height:18px }
+body.direct ul.ftabs { list-style: none; float: left; width: 100%; border-bottom: 1px solid #ccc; margin: 0; padding: 0; font-size: 14px; line-height:22px }
+body.direct ul.ftabs li { float: left; color: #333 }
+body.direct ul.ftabs li.t { width: 140px }
+body.direct ul.ftabs a { padding: 0 15px; float: left; color: #333; border: solid #fff; border-width: 1px 1px 0 }
+body.direct ul.ftabs .ison a { background-color: #666; color: #fff; border-color: #ccc }
+body.direct #features-flash { float: left; width: 275px; height: 330px; }
+body.direct .block.ee strong { font-size: 13px; font-weight: bold; text-transform: uppercase; color: #333 }
+body.direct .block.ee table { border-right: 1px solid #ccc; margin-top: 9px }
+body.direct .block.ee th { background-color: #8ec245; color: #fff; text-transform: uppercase; text-align: left; padding-left: 10px; height:21px}
+body.direct .block.ee td { border-left: 1px solid #ccc; border-bottom: 1px solid #ccc; padding-left: 10px; height: 26px }
+body.direct .block.ee em { font-size: 10px; font-style: normal; display: block; width: 300px }
+body.direct .block.share { border-bottom: none }
+body.direct .thx, 
+body.direct .block h3.title a { color: #333 }
+body.direct .thx .block h3.title { font-size: 16px; font-weight: bold; padding: 0; }
+body.direct label.fl { float: left; margin-right: 20px; line-height: 20px; }
+/* footer */
+body.direct #fwrap { float: left; width: 100%; min-width: 980px; background: url(../images/direct/ftr.png) repeat-x 0 0; margin-top: 20px; padding: 30px 0 }
+
+body.direct #footer { width: 980px; margin: 0 auto }
+body.direct #footer p { margin: 0; font: 11px/17px Arial, Helvetica, sans-serif; }
+body.direct #footer p, 
+body.direct #footer p a { color: #999; background-color: inherit; text-decoration: none; }
+body.direct #footer p a:hover { text-decoration: underline; }
+body.direct #footer p a.logo { display: block; width: 42px; height: 42px; text-indent: -999em; background: url(/images/nav/footer-splash.jpg) top left no-repeat; float: left; margin: 5px 33px 0 41px; }
+
+/* other */
+*:focus { outline: none;}
+
+
+body.direct input.honey {display:none;}
+
+
+
+body.direct ul { list-style: disc; }
+body.direct #toparr,
+body.direct #arrow,
+body.direct #slogan,
+body.direct #bodycontent h2,
+body.direct #bodycontent h3 {
+	font-family: 'GSMT';
+	letter-spacing: .25px;
+	line-height: 1.1em;
+}
+body.direct #toparr span {
+	color: #f3c233;
+	display: block;
+	overflow: visible;
+	width: 200px;
+}

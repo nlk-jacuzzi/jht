@@ -1,0 +1,227 @@
+/*
+Theme Name: JHT Awareness
+Theme URI: http://www.jacuzzihottubs.com/
+Description: 2012 WordPress theme for Jacuzzi Hot Tubs, designed and developed by Ninthlink, Inc.
+Author: Ninthlink, Inc
+Author URI: http://www.ninthlink.com
+Version: 2.09
+*/
+
+
+	/* - - - - top banner title - - - - */
+    /* main style overrides */
+    body.admin-bar .hd {
+        top: 0px !important;
+    }
+    .hd { 
+        background: black !important;
+        height: 110px !important;
+    }
+    .hd a.logo { 
+        top: 10px !important;
+    }
+    .bd {
+        position: relative !important;
+        top: 110px;
+    }
+    .goldBar10 {
+        position: relative !important;
+        top: 110px !important;
+    }
+    .hero {
+        margin-top: 0px !important;
+    }
+    .hero h1.title {
+        padding: 60px 20px 42px !important;
+    }
+    /* new top banner styles */
+    .aware-logo {
+        display: block;
+        float: left;
+        position: relative;
+        left: 200px;
+        top: 45px;
+        font-size: 16px;
+        color: white;
+        text-transform: uppercase;
+        font-family: "GSL";
+    }
+    .awareness-title {
+        font-family: "GSL" !important;
+        text-transform: none !important;
+        font-size: 49px !important;
+        letter-spacing: -3px !important;
+        color: black;
+        text-align: center;
+        margin: 40px 0 60px !important;
+    }
+    .awareness-title span {
+        font-size: 22px !important;
+        vertical-align: super;
+    }
+    /* left side rows */
+    .aware-rows {
+        float: left;
+        padding-right: 40px;
+    }
+    .aware-row {
+        width: 666px;
+        float: left;
+        clear: both;
+    }
+    .aware-row1 {
+        padding-bottom: 14px;
+        /* min-height: 260px; */
+    }
+    .aware-row2 {
+        padding-bottom: 14px;
+    }
+    .aware-row3 {
+        padding-bottom: 30px;
+    }
+
+    .aware-row-left {
+        width: 320px;
+        float: left;
+        padding-right: 20px;
+    }
+    .aware-row-right {
+        float: left;
+        width: 300px;
+    }
+    /* fonts and images for left side */
+    .awareness-h2 {
+        font-family: "GSMT" !important;
+        text-transform: none !important;
+        font-size: 23px !important;
+        color: black;
+    }
+    .awareness-h3 {
+        font-family: "Arial" !important;
+        text-transform: none !important;
+        font-size: 15px !important;
+        line-height: 1.5em;
+        color: #cc8b00;
+    }
+    .aware-col1 p {
+        font-family: "Arial" !important;
+        font-size: 12px !important;
+    }
+    
+    a.aware-img {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    /* awareness right sidebar */
+    .aware-side {
+        float: left;
+        min-width: 200px;
+    }
+    .aware-right-sidebar {
+        width: 250px;
+        font-family: "Lato" !important; /*"GSBQ" !important;*/
+        font-weight: 700;
+        font-size: 17px;
+        color: black;
+        line-height: 1.4em;
+        margin-bottom: -4px;
+    }
+    .aware-right-sidebar div {
+        text-align: center;
+        padding-bottom: 60px;
+    }
+    .aware-btn {
+        cursor: pointer;
+        font-family: "Lato" !important; /*GSBQ" !important;*/
+        font-size: 12px !important;
+        letter-spacing: 0px;
+        text-transform: uppercase !important;
+        font-weight: 700 !important;
+        width: 254px;
+        height: 42px;
+        text-align: center;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        border: 2px solid #feca41;
+        background: #e2ae00; /* Old browsers */
+        background: -moz-linear-gradient(top,  #e2ae00 0%, #ffc000 45%, #e2ae04 53%, #e2ae00 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2ae00), color-stop(45%,#ffc000), color-stop(53%,#e2ae04), color-stop(100%,#e2ae00)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #e2ae00 0%,#ffc000 45%,#e2ae04 53%,#e2ae00 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #e2ae00 0%,#ffc000 45%,#e2ae04 53%,#e2ae00 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #e2ae00 0%,#ffc000 45%,#e2ae04 53%,#e2ae00 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #e2ae00 0%,#ffc000 45%,#e2ae04 53%,#e2ae00 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2ae00', endColorstr='#e2ae00',GradientType=0 ); /* IE6-9 */
+        /* drop shadow */
+        -moz-box-shadow: 3px 3px 8px #333;
+        -webkit-box-shadow: 3px 3px 8px #333;
+        box-shadow: 3px 3px 8px #333;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#333333')"; /* For IE 8 */
+        filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#333333'); /* For IE 5.5 - 7 */
+    }
+    .aware-btn:hover {
+        cursor: pointer;
+        /*font-family: "GSBQ" !important;
+        font-size: 13px !important;
+        letter-spacing: -1px;
+        text-transform: uppercase !important;
+        width: 246px;
+        height: 42px;
+        text-align: center;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        border: 2px solid #feca41;*/
+        background: #fceabb; /* Old browsers */
+        background: -moz-linear-gradient(top,  #fceabb 0%, #fccd4d 50%, #f8b500 52%, #fbdf93 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fceabb), color-stop(50%,#fccd4d), color-stop(52%,#f8b500), color-stop(100%,#fbdf93)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #fceabb 0%,#fccd4d 50%,#f8b500 52%,#fbdf93 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #fceabb 0%,#fccd4d 50%,#f8b500 52%,#fbdf93 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #fceabb 0%,#fccd4d 50%,#f8b500 52%,#fbdf93 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #fceabb 0%,#fccd4d 50%,#f8b500 52%,#fbdf93 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
+    }
+
+    /* thickbox mods */
+    #TB_window {
+        min-width: 600px !important;
+        max-height: 600px !important;
+        overflow: auto !important;
+        margin-left: -300px !important;
+    }
+    #TB_Image {
+        width: 560px !important;
+        height: auto !important;
+        position: relative !important;
+    }
+    /* awareness footer */
+    #aware-foot-pic1 {
+        position: relative;
+        left: -12px;
+        top: -5px;
+    }
+    #aware-foot-pic2 {
+        position: relative;
+        bottom: 0px;
+    }
+    #aware-foot-pic3 {
+        position: relative;
+        left: -16px;
+    }
+    #aw-btn-1 {
+        position: relative;
+        top: -72px;
+        left: 18px;
+    }
+    #aw-btn-2 {
+        position: relative;
+        top: -67px;
+        left: 28px;
+    }
+    #aw-btn-3 {
+        position: relative;
+        top: -67px;
+        left: -4px;
+    }

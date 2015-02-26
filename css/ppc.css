@@ -1,0 +1,51 @@
+/* ppc */
+
+/* body.direct.direct2 */
+
+body.direct.direct2 #top, body.direct.canada #top {
+	min-height: 551px !important;
+}
+body.direct.direct2 form, body.direct.canada form {
+	min-height: 423px !important;
+}
+body.direct.direct2 form table, body.direct.canada form table {
+	margin-top: 10px;
+}
+body.direct.direct2 form table td, body.direct.canada form table td {
+	padding-top: 10px;
+}
+body.direct.direct2 form h3 {
+	margin: 20px 0 0 -10px;
+}
+body.direct.direct2 form input[type=submit], body.direct.canada form input[type=submit] {
+	position: absolute;
+	bottom: 10px;
+	right: 35px;
+}
+body.direct.direct2 form em.no-share, body.direct.canada form em.no-share {
+	padding: 30px 0 0 6px;
+}
+
+body.direct.direct-default #top, body.direct.canada #top {
+	min-height: 551px !important;
+}
+body.direct.direct-default form, body.direct.canada form {
+	min-height: 423px !important;
+}
+body.direct.direct-default form table, body.direct.canada form table {
+	margin-top: 10px;
+}
+body.direct.direct-default form table td, body.direct.canada form table td {
+	padding-top: 10px;
+}
+body.direct.direct-default form h3 {
+	margin: 20px 0 0 -10px;
+}
+body.direct.direct-default form input[type=submit], body.direct.canada form input[type=submit] {
+	position: absolute;
+	bottom: 10px;
+	right: 35px;
+}
+body.direct.direct-default form em.no-share, body.direct.canada form em.no-share {
+	padding: 30px 0 0 6px;
+}
