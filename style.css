@@ -6664,8 +6664,6 @@ a.getpricing
 {
 	width: 304px;
 	border-right: 1px solid #CCC;
-	border-bottom: 1px solid #CCC;
-	padding-bottom: 10px;
 }
 
 .hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li:nth-child(even)
@@ -6716,15 +6714,15 @@ a.getpricing
 	font-family: "GSMT";
 	font-size: 19px;
 	line-height: 22px;
-	white-space: wrap;
+	white-space: normal;
 	height: auto;
 }
 
 .hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li hr
 {
-	border: 1px solid #CCC;
-	height: 1px;
 	color: #CCC;
+	border-top: 1px solid rgb(204, 204, 204);
+	width: 90%;
 }
 
 .clear
