@@ -6690,14 +6690,18 @@ a.getpricing
 
 .hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .thumb {
     float: left;
-    width: 150px;
+    width: 140px;
     border: 0px solid #CCC;
 }
 
 .hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .tag {
     float: left;
-    width: 150px;
+	width: 135px;
     border: 0px solid #CCC;
+    font-family: "GSMT";
+    font-size: 19px;
+    line-height: 22px;
+    margin-top: 25px;
 }
 
 .clear
