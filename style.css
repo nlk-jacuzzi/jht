@@ -6714,8 +6714,17 @@ a.getpricing
 {
 	position: inherit;
 	font-family: "GSMT";
-    font-size: 19px;
-    line-height: 22px;
+	font-size: 19px;
+	line-height: 22px;
+	white-space: wrap;
+	height: auto;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li hr
+{
+	border: 1px solid #CCC;
+	height: 1px;
+	color: #CCC;
 }
 
 .clear

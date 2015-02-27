@@ -83,7 +83,7 @@
 											}
 											$o .= '<p class="link"><a href="'. $s['url'] .'">View '. $s['name'] .'</a></p>';
 											if($cname  == 'Collections'){
-												$o .= '<hr/><p class="clear"></p>';	
+												$o .= '<p class="clear"></p><hr/>';	
 											}
 											$j++;
 										}
