@@ -62,6 +62,7 @@
 											$o .= '<div class="image prel" title="'. $c['img'] .'"></div>';
 										}
 									} else {
+										$cname = $c['name'];
 										if($c['name'] == 'Collections'){
 											$o .= '<ul class="grid4 grid2 collections collections-new">';	
 										}
@@ -73,12 +74,18 @@
 											$o .= '<li class="cell '. $s['slug'] .($j==0 ? ' first' : ($j==3 ? ' last' : '') ) .'">';
 											$o .= '<div class="h">'. $s['fullname'] .'</div>';
 											$o .= '<p class="thumb"><a href="'. $s['url'] .'" title="'. $s['imgsrc'] .'" class="prel thm"></a></p>';
-											$o .= '<p class="tag">'. $s['tag'] .'</p>';
+											if($cname == 'Collections')
+											{
+												$o .= '<p class="tag"><a href="'. $s['url'] .'">'. $s['tag'] .'</a></p>';
+											}
+											else {
+												$o .= '<p class="tag">'. $s['tag'] .'</p>';
+											}
 											$o .= '<p class="link"><a href="'. $s['url'] .'">View '. $s['name'] .'</a></p>';
 											$j++;
 										}
-										if($c['name'] == 'Collections'){
-											$o .= '<p class="clear"></p>';	
+										if($cname  == 'Collections'){
+											$o .= '<hr/><p class="clear"></p>';	
 										}
 										$o .= '</ul>';
 									}

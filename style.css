@@ -6662,11 +6662,17 @@ a.getpricing
 /* For Collections New Menu Style */
 .hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li
 {
-	width: 306px;
+	width: 304px;
 	border-right: 1px solid #CCC;
 	border-bottom: 1px solid #CCC;
 	padding-bottom: 10px;
 }
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li:nth-child(even)
+{
+	border-right: 0px solid #CCC;
+}
+
 
 .hd .primaryMenu li ul li div.superMenu.collection-super
 {
@@ -6690,15 +6696,15 @@ a.getpricing
 
 .hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .thumb {
     float: left;
-    width: 140px;
+    width: 150px;
     border: 0px solid #CCC;
 }
 
 .hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .tag {
     float: left;
-	width: 135px;
+	width: 125px;
     border: 0px solid #CCC;
-    font-family: "GSMT";
+    font-family: "GSL";
     font-size: 19px;
     line-height: 22px;
     margin-top: 25px;
