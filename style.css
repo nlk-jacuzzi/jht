@@ -6725,6 +6725,11 @@ a.getpricing
 	width: 90%;
 }
 
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li:last-child
+{
+	border-bottom: 0px;	
+}
+
 .clear
 {
 	clear: both;
