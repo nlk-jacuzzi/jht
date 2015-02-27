@@ -6663,11 +6663,47 @@ a.getpricing
 .hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li
 {
 	width: 306px;
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 10px;
 }
 
 .hd .primaryMenu li ul li div.superMenu.collection-super
 {
 	height: auto;	
 }	
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li
+{
+	height: auto;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .h
+{
+	display: none;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li p.link
+{
+	display: none;	
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .thumb {
+    float: left;
+    width: 150px;
+    border: 0px solid #CCC;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .tag {
+    float: left;
+    width: 150px;
+    border: 0px solid #CCC;
+}
+
+.clear
+{
+	clear: both;
+	margin: 0 auto;
+}
 
 

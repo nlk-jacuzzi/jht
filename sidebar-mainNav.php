@@ -77,6 +77,9 @@
 											$o .= '<p class="link"><a href="'. $s['url'] .'">View '. $s['name'] .'</a></p>';
 											$j++;
 										}
+										if($c['name'] == 'Collections'){
+											$o .= '<p class="clear"></p>';	
+										}
 										$o .= '</ul>';
 									}
 									$o .= '</div>';
