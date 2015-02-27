@@ -82,11 +82,12 @@
 												$o .= '<p class="tag">'. $s['tag'] .'</p>';
 											}
 											$o .= '<p class="link"><a href="'. $s['url'] .'">View '. $s['name'] .'</a></p>';
+											if($cname  == 'Collections'){
+												$o .= '<hr/><p class="clear"></p>';	
+											}
 											$j++;
 										}
-										if($cname  == 'Collections'){
-											$o .= '<hr/><p class="clear"></p>';	
-										}
+										
 										$o .= '</ul>';
 									}
 									$o .= '</div>';

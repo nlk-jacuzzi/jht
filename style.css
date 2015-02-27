@@ -6704,10 +6704,18 @@ a.getpricing
     float: left;
 	width: 125px;
     border: 0px solid #CCC;
-    font-family: "GSL";
+    font-family: "GSMT";
     font-size: 19px;
     line-height: 22px;
     margin-top: 25px;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .tag a
+{
+	position: inherit;
+	font-family: "GSMT";
+    font-size: 19px;
+    line-height: 22px;
 }
 
 .clear
