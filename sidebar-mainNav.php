@@ -63,7 +63,7 @@
 										}
 									} else {
 										if($c['name'] == 'Collections'){
-											$o .= '<ul class="grid2 collections collections-new">';	
+											$o .= '<ul class="grid4 grid2 collections collections-new">';	
 										}
 										else {
 											$o .= '<ul class="grid4 collections">';
