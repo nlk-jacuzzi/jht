@@ -6658,3 +6658,16 @@ a.getpricing
 {
 	text-transform: none;
 }
+
+/* For Collections New Menu Style */
+.hd .primaryMenu li ul li div.superMenu ul.grid2 li
+{
+	width: 306px;
+}
+
+.hd .primaryMenu li ul li div.superMenu.collection-super
+{
+	height: auto;	
+}	
+
+
