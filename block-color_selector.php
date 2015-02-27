@@ -26,7 +26,7 @@
 .color-selector.color-selector-container .color-selector-wrapper .thumb img { border: 2px solid #fff; border-radius: 99px; display: block; height: 45px; width: 45px; }
 /* styles for when modal */
 .color-selector-modal-bg { background-color: rgba(0,0,0,.66); height: 100%; left: 0; position: fixed; top: 0; width: 100%; z-index: 999; }
-.color-selector-modal { background-color: #fff; margin: 100px auto; width: 1020px; }
+.color-selector-modal { background-color: #fff; margin: 55px auto; width: 1020px; }
 .color-selector-modal-title { background-color: #000; position: relative; width: 100%; }
 .color-selector-modal-title h2 { color: #fff; font: 700 24px/84px "GSL"; letter-spacing: 1px; margin: 40px; }
 .color-selector-modal-title span { position: absolute; right: 36px; top: 36px; }
