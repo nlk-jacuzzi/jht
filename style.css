@@ -6736,4 +6736,19 @@ a.getpricing
 	margin: 0 auto;
 }
 
+/* Fix overflow of text on Best selling */
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4 li .thumb
+{
+	height: 120px;	
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4 li .tag{
+	white-space: normal;
+	text-align: center;
+	padding: 3px 10px 10px;
+	color: #333;
+	line-height: 14px;
+	min-height: 40px;
+}
 
