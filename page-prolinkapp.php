@@ -28,16 +28,25 @@ if ( has_post_thumbnail() ) {
             	<h1 style="line-height:48px"><?php if ( $titleoverride ) { echo $titleoverride; } else { the_title(); } ?></h1>
             </div>
 <?php } else { ?>
-    <div class="hero">
+    <div class="hero prolink-hero">
     	<div class="wrap">
-            <h1 class="title"><?php if ( $titleoverride ) { esc_attr_e(wp_kses($titleoverride, array())); } else { the_title(); } ?></h1>
+            <div class="col-left">
+                <h1 class="title"><span class="gold">Jacuzzi&reg; Brand<br />Hot Tubs<br />Announces</span><br /><span class="white">the ProLink&trade; App</span></h1>
+                <p><span class="white">Jacuzzi&reg; Hot Tubs debuts a new way for spa owners to combine smartphone technology with tech-savvy J-500&trade; Collection hot tubs: the ProLink&trade; app.</span></p>
+                <a href="#thebuttonDoesWhat">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/landing/button.png" />
+                </a>
+            </div>
+            <div class="coll-right">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/landing/imag1.jpg" />
+            </div>
 <?php } ?>
         </div>
     </div>
     <div class="goldBar10"></div>
     <div class="bd">
     	<div class="wrap">
-            <div class="twoCol">
+            <div class="oneCol prolink-content">
                 <div class="main">
 					<?php the_content(); ?>
                 </div>
