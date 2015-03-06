@@ -3922,19 +3922,3 @@ function jht_do_hreflang() {
 		print $a[ $p['path'] ];
 }
 
-
-
-function greeterware() { ?>
-	<!-- Live Chat Button Code -->
-	<div id="live_chat_status"></div>
-	<!-- Live Chat Button Code -->
-
-	<!--Start of Chat Window Code-->
-	<div id="floatDiv"></div>
-	<script type="text/javascript" src="http://greeterware.com/Dashboard/cwgen/scripts/library.js" ></script>
-	<script type="text/javascript" src="http://greeterware.com/Dashboard/cwgen/Company/LiveAdmins/jacuzzi.com/gvars.js" ></script>
-	<script type="text/javascript" src="http://greeterware.com/Dashboard/cwgen/Company/LiveAdmins/jacuzzi.com/chatwindow.js" ></script>
-	<script type="text/javascript" defer="defer" src="http://greeterware.com/Dashboard/cwgen/scripts/chatscriptyui.js" ></script>
-	<!--End of Chat Window Code-->
-<?php }
-add_action( 'wp_footer', 'greeterware' );
