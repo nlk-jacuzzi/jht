@@ -78,6 +78,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                     if (class_exists('MultiPostThumbnails') && $new_post) {
                         echo '<p style="font-size: 24px;margin-bottom: .5em;margin-top: -68px;font-family: \'GSBQ\';">' . get_the_title($new_post->ID) . '</p>';
                         $the_img = MultiPostThumbnails::the_post_thumbnail('jht_tub', 'three-quarter', $new_post->ID, 'large');
+                        echo '<p style="">' . get_post_meta( $new_post->ID, 'topheadline', true ) . '</p>';
                     }
                     else { ?>
                         <p style="font-size: 24px;margin-bottom: .5em;margin-top: -68px;font-family: 'GSBQ';"></p>
