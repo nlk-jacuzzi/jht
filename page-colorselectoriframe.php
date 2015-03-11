@@ -16,14 +16,13 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
             <h2 class="sub-title">Use the color palette to the right to pick out your shell and cabinet color.</h2>
         </div>
 
-        <?php get_template_part('block', 'color_selector'); ?>
-        <?php get_template_part('block', 'cta_forms'); ?>
+        <?php get_template_part('block', 'color_selector_blank'); ?>
+        <?php //get_template_part('block', 'cta_forms'); ?>
 
         <div class="wrap">
             <div class="oneCol">
                 <div class="main">
-                    
-					<?php the_content(); ?>
+                    <?php the_content(); ?>
                 </div>
             </div>
 
