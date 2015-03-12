@@ -125,6 +125,14 @@ else {} ?>
 
 	wp_footer();
 ?>
+<?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); ?>
+<?php if ( ! is_plugin_active('live-chat/live-chat.php') ) { ?>
+    <div id="live_chat_status" style=""></div>
+    <script type='text/javascript' src='http://greeterware.com/Dashboard/cwgen/scripts/library.js?ver=1.0'></script>
+    <script type='text/javascript' src='http://greeterware.com/Dashboard/cwgen/Company/LiveAdmins/jacuzzi.com/gvars.js?ver=1.0'></script>
+    <script type='text/javascript' src='http://greeterware.com/Dashboard/cwgen/Company/LiveAdmins/jacuzzi.com/chatwindow.js?ver=1.0'></script>
+    <script type='text/javascript' defer="defer" src='http://greeterware.com/Dashboard/cwgen/scripts/chatscriptyui.js?ver=1.0'></script>
+<?php } ?>
 
 </body>
 </html>
