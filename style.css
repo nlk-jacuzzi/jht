@@ -6717,6 +6717,9 @@ a.getpricing
 	white-space: normal;
 	height: auto;
 }
+.hd .primaryMenu li ul li div.superMenu ul.grid4 li .tag a {
+	white-space: normal;
+}
 
 .hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li hr
 {
