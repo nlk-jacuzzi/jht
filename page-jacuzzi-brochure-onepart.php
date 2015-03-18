@@ -70,7 +70,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		    padding: 16px 0 10px;
 		    position: absolute;
 			right: -299px;
-			top: -5px;
+			top: 6px;
 		}
 		
 		
@@ -184,7 +184,15 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		.gform_wrapper li.gfield.gfield_error.gfield_contains_required
 		{
 			padding: 0px !important;
-		}			
+		}
+		
+		li.email-right
+		{
+			position: absolute;
+			width: 100%;
+			top: 0px;
+			left: 562px;
+		}				
 	</style>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
