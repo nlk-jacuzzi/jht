@@ -29,13 +29,39 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
             <?php // empty hero area ?>
         </div>
     </div>
+    <style>
+    	.main .gform_wrapper .gform_footer input.button, .main .gform_wrapper .gform_footer input[type="submit"]
+    	{
+    		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+			color: #252525 !important;
+    		background: -moz-linear-gradient(center top , #E5C871 0%, #D9B444 36%, #C69200 100%) repeat scroll 0% 0% transparent;
+    		border-radius: 6px;
+			border: 1px solid #D7AD33;
+			font: 400 18px "GSBQ";
+			padding: 8px 85px;
+			color: #252525;
+			height: auto;
+			text-transform: none;
+			text-shadow: none;
+			margin: 4px;
+			letter-spacing: 1px;
+    	}
+    	
+    	.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label
+    	{
+    		margin-top: 4px !important;
+    	}
+    	
+    </style>
     <div class="bd request-pricing">
     	<div class="wrap">
             <div class="twoCol">
                 <div class="main request-pricing">
                     <h1 class="title"><?php the_title(); ?></h1>
-                    <p>Simply fill in this quick form to request pricing on your perfect hot tub. Your local authorized Jacuzzi dealer will reach out to you with expert selection advice, pricing, and any current specials in your area.<br /><br />*Indicates required fields.</p>
-
+                    <p>Simply fill in this quick form to request pricing on your perfect hot tub. Your local authorized Jacuzzi dealer will reach out to you with expert selection advice, pricing, and any current specials in your area.<br><br>*Indicates required fields.</p>
+					<?php echo do_shortcode('[gravityform id="17" name="No-Obligation Price Quote" title="false" description="false"]'); ?>
+					<p class="note"><a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a></p>
+					<?php /* ?>
                     <form action="<?php echo get_permalink(); ?>" method="post" id="leadForm">
 
                         <?php avala_hidden_fields( 15, 9, 5 ); ?>
@@ -74,6 +100,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                         </div>
 
                     </form>
+                    <?php */ ?>
                 </div>
                 <div class="side">
                     <?php // Dynamic images would go here based on product coming in from 
