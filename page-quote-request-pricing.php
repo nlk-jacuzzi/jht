@@ -52,6 +52,11 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     		margin-top: 4px !important;
     	}
     	
+    	p.note a
+    	{
+    		color: #0092CB;
+			text-decoration: none;
+    	}
     </style>
     <div class="bd request-pricing">
     	<div class="wrap">
