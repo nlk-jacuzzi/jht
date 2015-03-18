@@ -63,7 +63,6 @@ function geo_data_mysql( $ip ) {
 }
 
 function geo_data_curl( $ip ) {
-
 	return false;
 }
 

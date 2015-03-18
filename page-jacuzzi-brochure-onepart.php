@@ -16,6 +16,102 @@ get_header( 'newdirect' );
 if ( have_posts() ) while ( have_posts() ) : the_post();
 
 ?>
+<style type="text/css">
+		
+		.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type="submit"] {
+		    border-radius: 5px;
+		    font-size: 1.5em !important;
+		    margin-bottom: 0 !important;
+		    margin-left: 24px;
+		    padding: 0.63125em 1.3em 0.531em;
+			-webkit-box-shadow: 0px 5px 10px 0px rgba(136, 133, 142, 0.75);
+			-moz-box-shadow:    0px 5px 10px 0px rgba(136, 133, 142, 0.75);
+			box-shadow:         0px 5px 10px 0px rgba(136, 133, 142, 0.75);
+		}
+		
+		.gform_wrapper {
+    		margin: 0;
+		}
+		
+		.gform_body
+		{
+			xmargin-left: 24px;
+		}	
+		
+		.gform_wrapper .gform_footer {
+		    clear: both;
+		    margin: 10px 0 0;
+		    padding: 10px 0;
+		}
+		
+		.gform_wrapper .gform_footer {
+		    clear: both;
+		    margin: 16px 0 0;
+		    padding: 16px 0 8px !important;
+		}
+		
+		
+		.gform_wrapper {
+		    margin: 10px 0;
+		    max-width: 72% !important;
+		    overflow: inherit;
+		    position: relative;
+			max-width: 572px !important;
+			margin-top: 20px !important;
+		}
+		
+		.gform_wrapper .gform_footer {
+		    clear: both;
+		    margin: 16px 0 0;
+		    padding: 16px 0 10px;
+		    position: absolute;
+		    right: -230px;
+			top: 10px;
+		}
+		
+		
+		.gform_wrapper input[type="text"], .gform_wrapper input[type="url"], .gform_wrapper input[type="email"], .gform_wrapper input[type="tel"], .gform_wrapper input[type="number"], .gform_wrapper input[type="password"]
+		{
+				border-radius: 5px  !important;
+			    font-family: inherit;
+			    font-size: 15px  !important;
+			    letter-spacing: normal;
+			    outline-style: none;
+			    padding: 5px !important;
+				color: #6a747c;	
+		}
+		
+		.gform_wrapper .top_label .gfield_label {
+		    clear: both;
+		    display: inline-block;
+		    font-weight: bold;
+		    line-height: 1.3em;
+		    margin: 10px 0 4px;
+		    xmin-height: 35px;
+		}
+		
+		.gform_wrapper .top_label .gf_right_half .gfield_label, .gform_wrapper .top_label .gf_left_third .gfield_label,  .gform_wrapper .top_label .gf_middle_third .gfield_label
+		{
+			min-height: 35px;
+		}
+		
+		span.requiredSpan
+		{
+			display: block;
+			margin: 10px 0px;
+			text-align: center;
+			font-style: italic;
+			color: #414141;
+			font-size: 12px;
+			line-height: 12px;	
+		}
+		
+	</style>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('.gform_footer').append('<p><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p><a id="click-me-spot" name="more-info"></a>');
+		});
+	</script>
 <div id="main-wrapper">
 	<div class="page-header" id="page-header">
     	<div class="content center ab-b">
@@ -23,7 +119,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             	<h1><strong class="small">The Jacuzzi Hot Tub Brochure </strong>40 Pages of Facts &amp; Photos - <strong>Free</strong></h1>
                 <h2>Get instant access to hot tub comparison charts, stunning photos,<br />complete specifications and feature descriptions.</h2>
             </div>
-            <form action="http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" method="post" id="leadForm" class="pform bro">
+            <?php echo do_shortcode('[gravityform id="16" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
+            <?php /* ?><form action="http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" method="post" id="leadForm" class="pform bro">
 
                 <?php avala_hidden_fields( 15, 9, 12 ); ?>
 
@@ -93,6 +190,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                     </tr>
                 </table>
             </form>
+			 
+			 */?>
             <a id="click-me-anchor" href="#more-info"></a>
 
                 <script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1183768",type:"1",revenue:"250",actionid:"28343"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/analytics.html?dedup=1&domainId=1183768&type=1&revenue=250&actionid=28343" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe></noscript>
