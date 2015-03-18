@@ -31,6 +31,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		
 		.gform_wrapper {
     		margin: 0;
+    		position: absolute;
+    		top: 530px;
+			left: 156px;
 		}
 		
 		.gform_body
@@ -106,6 +109,38 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			line-height: 12px;	
 		}
 		
+		.gplaceholder label
+		{
+			display: none !important;
+		}
+		
+		}
+		
+		.gform_wrapper .ginput_complex input[type="text"] {
+		    width: 268px;
+		    height: 28px;
+		    margin: 0px 0px 8px;
+		    display: block;
+		    box-sizing: border-box;
+		}
+		
+		.gform_wrapper .top_label .gf_middle_third .gfield_label 
+		{
+			width: 130px;
+			color: #000;
+			font: 700 12px/14.5px arial;
+			max-width: 180px;
+		}
+		.gform_wrapper .top_label li.gfield.gf_left_third select.medium, .gform_wrapper .top_label li.gfield.gf_middle_third select.medium, .gform_wrapper .top_label li.gfield.gf_right_third select.medium, .gform_wrapper .top_label li select.medium
+		{
+		    border: 1px solid #CCC;
+		    border-radius: 2px;
+		    position: relative;
+		    top: 2px;
+		    height: 25px;
+		    line-height: 25px;
+		    background: none repeat scroll 0% 0% #FFF;
+		}	
 	</style>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
