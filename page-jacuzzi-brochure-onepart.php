@@ -17,7 +17,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 
 ?>
 <style type="text/css">
-		
+		/* Template related gform css */
 		.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type="submit"] {
 		    border-radius: 5px;
 		    font-size: 1.5em !important;
@@ -31,14 +31,12 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		
 		.gform_wrapper {
     		margin: 0;
-    		position: absolute;
-    		top: 530px;
-			left: 156px;
 		}
 		
 		.gform_body
 		{
 			xmargin-left: 24px;
+			width: 545px;
 		}	
 		
 		.gform_wrapper .gform_footer {
@@ -53,14 +51,17 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		    padding: 16px 0 8px !important;
 		}
 		
+		.gform_wrapper ul li.gfield {
+		    margin-bottom: 7px !important;
+		}
 		
 		.gform_wrapper {
-		    margin: 10px 0;
-		    max-width: 72% !important;
-		    overflow: inherit;
-		    position: relative;
-			max-width: 572px !important;
-			margin-top: 20px !important;
+		    xmargin: 10px 0;
+		    xmax-width: 72% !important;
+		    xoverflow: inherit;
+		    xposition: relative;
+			xmax-width: 572px !important;
+			xmargin-top: 20px !important;
 		}
 		
 		.gform_wrapper .gform_footer {
@@ -68,8 +69,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		    margin: 16px 0 0;
 		    padding: 16px 0 10px;
 		    position: absolute;
-		    right: -230px;
-			top: 10px;
+			right: -299px;
+			top: -5px;
 		}
 		
 		
@@ -77,11 +78,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		{
 				border-radius: 5px  !important;
 			    font-family: inherit;
-			    font-size: 15px  !important;
-			    letter-spacing: normal;
-			    outline-style: none;
-			    padding: 5px !important;
-				color: #6a747c;	
+			    font-size: 12px  !important;
+			    color: #666;	
 		}
 		
 		.gform_wrapper .top_label .gfield_label {
@@ -95,7 +93,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		
 		.gform_wrapper .top_label .gf_right_half .gfield_label, .gform_wrapper .top_label .gf_left_third .gfield_label,  .gform_wrapper .top_label .gf_middle_third .gfield_label
 		{
-			min-height: 35px;
+			min-height: 30px;
+			margin-top: 0px;
 		}
 		
 		span.requiredSpan
@@ -124,13 +123,28 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		    box-sizing: border-box;
 		}
 		
-		.gform_wrapper .top_label .gf_middle_third .gfield_label 
+		.gform_wrapper .top_label .gfield_label 
 		{
-			width: 130px;
+			width: 180px;
 			color: #000;
 			font: 700 12px/14.5px arial;
 			max-width: 180px;
+			margin-top: 0px !important;
+			margin-bottom: 0px !important;
 		}
+		
+		.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label
+		{
+			color: #000;
+			font: 700 12px/14.5px arial;
+			margin-top: 3px !important;
+		}	
+		
+		.checkbox-field .gfield_label
+		{
+			display: none !important;	
+		}	
+		
 		.gform_wrapper .top_label li.gfield.gf_left_third select.medium, .gform_wrapper .top_label li.gfield.gf_middle_third select.medium, .gform_wrapper .top_label li.gfield.gf_right_third select.medium, .gform_wrapper .top_label li select.medium
 		{
 		    border: 1px solid #CCC;
@@ -140,7 +154,37 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		    height: 25px;
 		    line-height: 25px;
 		    background: none repeat scroll 0% 0% #FFF;
+		    font-size: 12px;
+		    margin-bottom: 0px;
+		}
+		
+		body .gform_wrapper label.gfield_label + div.ginput_container {
+		    margin-top: 0px !important;
+		}
+		
+		#land #page-header .content.ab-b form.bro {
+		    top: 525px;
+		    left: 156px;
+		}
+		
+		.gform_wrapper div.validation_error, .gform_wrapper .ginput_container + .gfield_description.validation_message
+		{
+			display: none  !important;
+		}
+		
+		.gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning
+		{
+			background-color: none !important;
+			margin-bottom: 6px !important;
+			padding: 0px !important;
+			border-top: 0px !important;
+			border-bottom: 0px !important;
 		}	
+		
+		.gform_wrapper li.gfield.gfield_error.gfield_contains_required
+		{
+			padding: 0px !important;
+		}			
 	</style>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
