@@ -113,8 +113,6 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			display: none !important;
 		}
 		
-		}
-		
 		.gform_wrapper .ginput_complex input[type="text"] {
 		    width: 268px;
 		    height: 28px;
@@ -125,10 +123,10 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		
 		.gform_wrapper .top_label .gfield_label 
 		{
-			width: 180px;
+			xwidth: 180px;
 			color: #000;
 			font: 700 12px/14.5px arial;
-			max-width: 180px;
+			xmax-width: 180px;
 			margin-top: 0px !important;
 			margin-bottom: 0px !important;
 		}
@@ -192,7 +190,12 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			width: 100%;
 			top: 0px;
 			left: 562px;
-		}				
+		}
+		
+		.emailblock
+		{
+			margin-top: 10px !important;				
+		}	
 	</style>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
