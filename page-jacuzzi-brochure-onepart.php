@@ -27,6 +27,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			-webkit-box-shadow: 0px 5px 10px 0px rgba(136, 133, 142, 0.75);
 			-moz-box-shadow:    0px 5px 10px 0px rgba(136, 133, 142, 0.75);
 			box-shadow:         0px 5px 10px 0px rgba(136, 133, 142, 0.75);
+			color: #fff;
 		}
 		
 		.gform_wrapper {
@@ -194,7 +195,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		
 		.emailblock
 		{
-			margin-top: 10px !important;				
+			margin-top: 35px !important;				
 		}	
 	</style>
 	<script type="text/javascript">
