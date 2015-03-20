@@ -74,7 +74,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                     var opt = $('.avalaFieldProductId option').filter(function () { return $(this).html() == sel; }).val();
                     $('.avalaFieldProductId option[value="'+opt+'"]').attr('selected', 'selected');
                 })(jQuery);
-                jQuery('div.main.request-pricing').load(function($){
+                jQuery(document).ready(function($){
                     $('div.main.request-pricing').css('visibility', 'visible');
                 });
                 </script>
