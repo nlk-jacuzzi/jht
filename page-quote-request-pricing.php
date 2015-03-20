@@ -8,7 +8,7 @@
  */
 
 
-avala_form_submit();
+//avala_form_submit();
 
 $new_post = false;
 
