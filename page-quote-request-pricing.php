@@ -36,8 +36,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                 <div class="main request-pricing">
                     <h1 class="title"><?php the_title(); ?></h1>
                     <p>Simply fill in this quick form to request pricing on your perfect hot tub. Your local authorized Jacuzzi dealer will reach out to you with expert selection advice, pricing, and any current specials in your area.<br><br>*Indicates required fields.</p>
-					<?php echo do_shortcode('[gravityform id="14" name="No-Obligation Price Quote" title="false" description="false"]'); ?>
+					<div id="hideme" style="visibility: hidden;"><?php echo do_shortcode('[gravityform id="14" name="No-Obligation Price Quote" title="false" description="false"]'); ?></div>
                     <style>
+                        #hideme { visibility: visible !important; }
                         .main .gform_wrapper .gform_footer input.button, .main .gform_wrapper .gform_footer input[type="submit"]
                         {
                             box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
