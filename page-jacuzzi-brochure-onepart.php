@@ -210,7 +210,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             	<h1><strong class="small">The Jacuzzi Hot Tub Brochure </strong>40 Pages of Facts &amp; Photos - <strong>Free</strong></h1>
                 <h2>Get instant access to hot tub comparison charts, stunning photos,<br />complete specifications and feature descriptions.</h2>
             </div>
-            <?php echo do_shortcode('[gravityform id="16" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
+            <?php echo do_shortcode('[gravityform id="13" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
             <?php /* ?><form action="http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" method="post" id="leadForm" class="pform bro">
 
                 <?php avala_hidden_fields( 15, 9, 12 ); ?>
