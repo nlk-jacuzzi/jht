@@ -78,6 +78,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                 (function($){
                     $('div.main.request-pricing').load(function(){
                         $(this).css('visibility', 'visible');
+                    }
                 })(jQuery);
                 </script>
                 <div class="side">
