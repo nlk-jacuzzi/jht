@@ -61,7 +61,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="bd request-pricing">
     	<div class="wrap">
             <div class="twoCol">
-                <div class="main request-pricing">
+                <div class="main request-pricing" style="display: none;">
                     <h1 class="title"><?php the_title(); ?></h1>
                     <p>Simply fill in this quick form to request pricing on your perfect hot tub. Your local authorized Jacuzzi dealer will reach out to you with expert selection advice, pricing, and any current specials in your area.<br><br>*Indicates required fields.</p>
 					<?php echo do_shortcode('[gravityform id="14" name="No-Obligation Price Quote" title="false" description="false"]'); ?>
@@ -73,6 +73,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                     var sel = str.replace(/[^a-z0-9\-]/gi, '');
                     var opt = $('.avalaFieldProductId option').filter(function () { return $(this).html() == sel; }).val();
                     $('.avalaFieldProductId option[value="'+opt+'"]').attr('selected', 'selected');
+                    $('div.main.request-pricing').show();
                 })(jQuery);
                 </script>
                 <div class="side">
