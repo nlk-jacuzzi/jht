@@ -61,7 +61,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="bd request-pricing">
     	<div class="wrap">
             <div class="twoCol">
-                <div class="main request-pricing" style="visibility: hidden;">
+                <div class="main request-pricing">
                     <h1 class="title"><?php the_title(); ?></h1>
                     <p>Simply fill in this quick form to request pricing on your perfect hot tub. Your local authorized Jacuzzi dealer will reach out to you with expert selection advice, pricing, and any current specials in your area.<br><br>*Indicates required fields.</p>
 					<?php echo do_shortcode('[gravityform id="14" name="No-Obligation Price Quote" title="false" description="false"]'); ?>
@@ -69,14 +69,16 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                 </div>
                 <script type="text/javascript">
                 (function($){
+                    $('div.main.request-pricing').css('visibility', 'hidden');
                     var str = "<?php echo get_the_title($new_post->ID); ?>";
                     var sel = str.replace(/[^a-z0-9\-]/gi, '');
                     var opt = $('.avalaFieldProductId option').filter(function () { return $(this).html() == sel; }).val();
                     $('.avalaFieldProductId option[value="'+opt+'"]').attr('selected', 'selected');
                 })(jQuery);
-                jQuery(document).ready(function($){
-                    $('div.main.request-pricing').css('visibility', 'visible');
-                });
+                (function($){
+                    $('div.main.request-pricing').load(function(){
+                        $(this).css('visibility', 'visible');
+                })(jQuery);
                 </script>
                 <div class="side">
                     <?php // Dynamic images would go here based on product coming in from 
