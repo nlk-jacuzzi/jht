@@ -57,7 +57,19 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     		color: #0092CB;
 			text-decoration: none;
     	}
+    	
+    	.name_first label, .name_last label
+    	{
+    		display: none !important;
+    	}
+    	
     </style>
+    <script>
+    	jQuery(document).ready(function(){
+    		jQuery('.name_first > input').attr('placeholder', 'First');
+    		jQuery('.name_last > input').attr('placeholder', 'Last');
+    	});
+    </script>
     <div class="bd request-pricing">
     	<div class="wrap">
             <div class="twoCol">
