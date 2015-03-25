@@ -109,7 +109,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<div class="skirt thumb silverwood" timg="silverwood" rel="Silverwood" data-pdf="silver" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/skirts/skirt-thumb-silverwood.png" height="45" width="45" /></div>
 			</div>
 			<?php /* ?><a class="btn bigGoldBtn" href="<?php echo get_bloginfo('url'); ?>/get-a-quote/" target="_parent">Get Pricing</a><?php */ ?>
-			<a class="btn bigGoldBtn" href="" download="">Download Your Selected Color PDF</a>
+			<a class="btn bigGoldBtn pdf-download" href="" download="">Download Your Selected Color PDF</a>
 
 		</div>
 
