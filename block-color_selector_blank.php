@@ -19,7 +19,7 @@
 .color-selector.color-selector-container .color-selector-wrapper .right h2 { font-size: 16px; letter-spacing: .75px; margin: 24px 5px 10px; text-transform: none; }
 .color-selector.color-selector-container .color-selector-wrapper .right h2 span { font-family: "GSL"; font-weight: 700; }
 .color-selector.color-selector-container .color-selector-wrapper .right .btn { margin-top: 34px; text-transform: uppercase; }
-.color-selector.color-selector-container .color-selector-wrapper .right .pdf-download { color: #414141; font: 400 16px/40px "GSL"; }
+.color-selector.color-selector-container .color-selector-wrapper .right .pdf-download { color: #414141; font: 600 14px/40px "GSL"; text-transform: capitalize;  letter-spacing: 0px !important;}
 .color-selector.color-selector-container .color-selector-wrapper .thumb { border: 2px solid #fff; border-radius: 99px; cursor: pointer; display: inline-block; margin: 2px 3px; overflow: hidden; -webkit-transition: border-color .05s; transition: border-color .05s; }
 .color-selector.color-selector-container .color-selector-wrapper .thumb.active,
 .color-selector.color-selector-container .color-selector-wrapper .thumb:hover { border: 2px solid #666; box-shadow: 0px 0px 6px rgba(0,0,0,.25);  }
@@ -108,8 +108,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<div class="skirt thumb roastedchestnut" timg="roastedchestnut" rel="Roasted Chestnut" data-pdf="chest" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/skirts/skirt-thumb-roastedchestnut.png" height="45" width="45" /></div>
 				<div class="skirt thumb silverwood" timg="silverwood" rel="Silverwood" data-pdf="silver" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/skirts/skirt-thumb-silverwood.png" height="45" width="45" /></div>
 			</div>
-			<a class="btn bigGoldBtn" href="<?php echo get_bloginfo('url'); ?>/get-a-quote/" target="_parent">Get Pricing</a>
-			<a class="pdf-download" href="" download="">Download Your Selected Color PDF</a>
+			<?php /* ?><a class="btn bigGoldBtn" href="<?php echo get_bloginfo('url'); ?>/get-a-quote/" target="_parent">Get Pricing</a><?php */ ?>
+			<a class="btn bigGoldBtn pdf-download" href="" download="">Download Your Selected Color PDF</a>
 
 		</div>
 
