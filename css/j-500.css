@@ -128,7 +128,8 @@ section
 .tubs-block
 {
 	height: 250px;
-	background: #2f2e2d;
+	xbackground: #2f2e2d;
+	background: #686663;
 	color: #fff;
 }
 
@@ -282,7 +283,8 @@ section
 	height: 485px;
 	right: 0px;
 	top: 0px;
-	background: #2f2e2d;
+	xbackground: #2f2e2d;
+	background: #686663;
 	color: #fff;
 	padding-right: 25px;
 	width: 295px;

@@ -47,7 +47,23 @@ get_header();
 		    // animated top scrolling
 		    jQuery('body, html').animate({scrollTop: pos});
 		});
-
+		
+		jQuery('.open-modal-iframe').click( function() {
+			jQuery('#vimeovideo').attr('src', '//player.vimeo.com/video/113983094?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933&amp;autoplay=1');
+			
+			jQuery('body').append('<div class="black-out">');
+			var importModalContentId = jQuery(this).attr('rel');
+			jQuery('#' + importModalContentId).clone().appendTo('.black-out').addClass('shownModal').removeClass('hiddenModal');
+			jQuery('#' + importModalContentId + '.shownModal').append('<div class="close-modal"></div>');
+			var wl		= jQuery('#' + importModalContentId).width() / 2,
+				wt		= jQuery('#' + importModalContentId).height() / 2,
+				ww		= jQuery( window ).width() / 2,
+				wh		= jQuery( window ).height() / 2,
+				left	= ww - wl,
+				top		= wh - wt;
+			jQuery('#' + importModalContentId + '.shownModal').css('margin-left', left + 'px').css('margin-top', top + 'px');
+			jQuery('div.black-out').fadeIn();
+		});
 	});
 </script>
 <div class="hd shd">
@@ -83,10 +99,10 @@ get_header();
 				With the market cornered in advanced hydromassage, the J-500™ Collection combines innovative technology and ground-breaking hot tub design. The new series features a unique curve design and outer architectural lighting never seen before. They also bring an exterior skirt design inspired from woven textiles that steal the spotlight. Regardless of which model you choose, the J-500™ Collection does more than enhance your wellbeing; it makes a statement.
 			</p>
 			<p>
-				<a href="#" class="play-video-btn open-modal" rel="vimeo-video">PLAY VIDEO</a>
+				<a href="#" class="play-video-btn open-modal-iframe" rel="vimeo-video">PLAY VIDEO</a>
 			</p>
-			<div id="vimeo-video" style="width: 854px; height: 480px;">
-				<iframe src="//player.vimeo.com/video/113983094?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933" width="854" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<div id="vimeo-video" class="hiddenModal" style="width: 854px; height: 480px;">
+				<iframe id="vimeovideo" src="#" width="854" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
 		</div>
 		<div class="tubs-block">
@@ -142,7 +158,7 @@ get_header();
 			<div class="intro-section">
 				<div class="left-desc">
 					<h2 class="text-uppercase"><span>Revolutionary</span> Design</h2>
-					<p>The J-500™ Collection will change the way you see hot tubs. Fiber optic ProEdge™ lighting technology on the inside perimeter and behind dual waterfalls make your hot tub glow. And the weather-proof Curvalux™ exterior skirt that mimics the tight weave of designer outdoor furniture blends seamlessly with your decor. Along with a contemporary silhouette and architectural exterior corner lights, the J-500™ Collection is as much of a design piece as it is a dynamic hydromassage experience. </p>
+					<p>The J-500™ Collection will change the way you see hot tubs. Fiber optic ProEdge ™ lighting technology on the inside perimeter and behind dual waterfalls make your hot tub glow. And the weather-proof Curvalux™ exterior skirt that mimics the tight weave of designer outdoor furniture blends seamlessly with your decor. Along with a contemporary silhouette and architectural exterior corner lights, the J-500™ Collection is as much of a design piece as it is a dynamic hydromassage experience. </p>
 				</div>
 				<div class="right-banner-j500 revo-right">
 					
@@ -161,11 +177,11 @@ get_header();
 					<ul class="list-unstyled">
 						<li>CURVALUX™ DESIGNER<br>WOVEN EXTERIORS</li>
 						<li>INTEGRATED CORNER<br>EXTERIOR LIGHTING</li>
-						<li>PROEDGE INTERIOR ILLUMINATION</li>
+						<li>PROEDGE ™ INTERIOR ILLUMINATION</li>
 						<li>SLEEK, MODERN SHAPE<br>WITH ELEVATED SILHOUETTE</li>
-						<li>DUAL, MULTI-COLOR PROEDGE™ WATERFALLS</li>
+						<li>DUAL, MULTI-COLOR PROEDGE ™ WATERFALLS</li>
 						<li>HIDDEN CLIP SYSTEM SKIRT FOR EASY EQUIPMENT ACCESS</li>
-						<li>WALL MOUNTED CONTROLSFOR SLEEK<br> DECK DESIGN</li>
+						<li>WALL MOUNTED CONTROLS FOR SLEEK<br> DECK DESIGN</li>
 						<li>ELEGANT LOGOED<br>CUSHIONED HEADRESTS</li>
 					</ul>
 				</div>
@@ -219,9 +235,7 @@ get_header();
 			</div>
 			<div class="hero-section-j500">
 				<div class="slidewrapper">
-					<ul class="bxslider">
-						<li><img src="<?php bloginfo('template_url'); ?>/images/j500/technology_slide1.jpg" /></li>
-					</ul>
+					<img src="<?php bloginfo('template_url'); ?>/images/j500/technology_slide1.jpg" />
 				</div>
 				<div class="right-bullet-point">
 					<ul class="list-unstyled">
