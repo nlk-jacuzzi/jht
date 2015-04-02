@@ -67,7 +67,7 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     <?php /* * * * * DEFAULT HOME PAGE J-500 HERO BLOCK * * * * */ ?>
     <div class="hero" style="background: url(<?php echo get_template_directory_uri(); ?>/images/heros/Final-Home-Hero-J500.jpg) no-repeat 50% 50%;">
         <div id="hero-slide-1" class="block">
-            <a href="/j-500/" target="_blank" style="position: absolute; color: transparent; width: 190px; height: 40px; top: 240px; left: 3px;">See it in person</a>
+            <a href="<?php echo get_bloginfo('url'); ?>/j-500/" target="_blank" style="position: absolute; color: transparent; width: 190px; height: 40px; top: 240px; left: 3px;">See it in person</a>
         </div>
     </div>
 
