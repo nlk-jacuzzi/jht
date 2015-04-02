@@ -687,6 +687,12 @@ body.ppc-white .hd a.logo {
 	color:#B98100;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.hd .primaryMenu li ul li div.superMenu ul li.j-585 a{
+	background-position: -2088px 15px;
+}
+.hd .primaryMenu li ul li div.superMenu ul li.j-575 a{
+	background-position: -1990px 15px;
+}
 .hd .primaryMenu li ul li div.superMenu ul li.j-lx a{
 	background-position: 0 15px;
 }
