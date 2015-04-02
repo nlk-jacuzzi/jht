@@ -76,7 +76,7 @@ get_header();
 				<a href="#revo-design" class="anchorscroll">DESIGN</a>
 			</li>
 			<li>
-				<a href="#hydromessage" class="anchorscroll">HYDROMESSAGE</a>
+				<a href="#hydromessage" class="anchorscroll">HYDROMASSAGE</a>
 			</li>
 			<li>
 				<a href="#technology" class="anchorscroll">TECHNOLOGY</a>
@@ -158,7 +158,7 @@ get_header();
 			<div class="intro-section">
 				<div class="left-desc">
 					<h2 class="text-uppercase"><span>Revolutionary</span> Design</h2>
-					<p>The J-500™ Collection will change the way you see hot tubs. Fiber optic ProEdge ™ lighting technology on the inside perimeter and behind dual waterfalls make your hot tub glow. And the weather-proof Curvalux™ exterior skirt that mimics the tight weave of designer outdoor furniture blends seamlessly with your decor. Along with a contemporary silhouette and architectural exterior corner lights, the J-500™ Collection is as much of a design piece as it is a dynamic hydromassage experience. </p>
+					<p>The J-500™ Collection will change the way you see hot tubs. Fiber optic ProEdge™ lighting technology on the inside perimeter and behind dual waterfalls make your hot tub glow. And the weather-proof Curvalux™ exterior skirt that mimics the tight weave of designer outdoor furniture blends seamlessly with your decor. Along with a contemporary silhouette and architectural exterior corner lights, the J-500™ Collection is as much of a design piece as it is a dynamic hydromassage experience. </p>
 				</div>
 				<div class="right-banner-j500 revo-right">
 					
@@ -177,9 +177,9 @@ get_header();
 					<ul class="list-unstyled">
 						<li>CURVALUX™ DESIGNER<br>WOVEN EXTERIORS</li>
 						<li>INTEGRATED CORNER<br>EXTERIOR LIGHTING</li>
-						<li>PROEDGE ™ INTERIOR ILLUMINATION</li>
+						<li>PROEDGE™ INTERIOR ILLUMINATION</li>
 						<li>SLEEK, MODERN SHAPE<br>WITH ELEVATED SILHOUETTE</li>
-						<li>DUAL, MULTI-COLOR PROEDGE ™ WATERFALLS</li>
+						<li>DUAL, MULTI-COLOR PROEDGE™ WATERFALLS</li>
 						<li>HIDDEN CLIP SYSTEM SKIRT FOR EASY EQUIPMENT ACCESS</li>
 						<li>WALL MOUNTED CONTROLS FOR SLEEK<br> DECK DESIGN</li>
 						<li>ELEGANT LOGOED<br>CUSHIONED HEADRESTS</li>
@@ -192,8 +192,8 @@ get_header();
 		<div class="wrap">
 			<div class="intro-section">
 				<div class="left-desc">
-					<h2 class="text-uppercase"><span>UNRIVALED JACUZZI®</span><br/> HYDROMASSAGE </h2>
-					<p>The J-500™ models still bring the same superior hydromassage for which the Jacuzzi® Brand is known. A wide variety of seating fosters comfort for people of varying heights, while a new hip jet makes its debut. And, combined with wrist jets in both a lounge and upright therapy seats, the J-500™ Collection has you covered from your neck down to your toes.</p>
+					<h2 class="text-uppercase"><span>UNRIVALED</span><br/> HYDROMASSAGE </h2>
+					<p>The J-500™ models still bring the same superior hydromassage for which the Jacuzzi<sup>®</sup> Brand is known. A wide variety of seating fosters comfort for people of varying heights, while a new hip jet makes its debut. And, combined with wrist jets in both a lounge and upright therapy seats, the J-500™ Collection has you covered from your neck down to your toes.</p>
 				</div>
 				<div class="right-banner-j500 hydro-right">
 					
@@ -210,7 +210,7 @@ get_header();
 				</div>
 				<div class="right-bullet-point">
 					<ul class="list-unstyled">
-						<li>NEW POWERPRO® FX MEDIUM JET</li>
+						<li>NEW POWERPRO<sup>®</sup> FX MEDIUM JET</li>
 						<li>UPGRADED RX THERAPY<br>
 						SEAT AND LOUNGE</li>
 						<li>NEW WRIST JET IN UPRIGHT SEAT</li>
