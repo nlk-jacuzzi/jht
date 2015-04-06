@@ -5557,7 +5557,7 @@ float: right;
 .bd ul.options-list li a:hover, .options-list li a:hover{background:url(images/icons/button-orange.png);text-shadow:0 0 1px #000}
 .facts-bg{background:#fff;background:rgba(255,255,255,0.5);min-height:120px}
 .align-center{text-align:center}
-.single .bd h2, .page .bg-new .twoCol .main .collection h1{background:url(images/icons/yellow-line.png) no-repeat center bottom;color:#000;font-size:22px;font-weight:bold;text-shadow:none;font-family: "GSMT";padding:0 0 10px}
+.single .bd h2, .page .bg-new .twoCol .main .collection h1{background:url(images/icons/yellow-line.png) no-repeat center bottom;color:#000;font-size:22px;font-weight:bold;text-shadow:none;font-family: "GSMT";padding:0 0 10px; line-height: 150%; }
 .single .bd h2{text-align:center;margin:15px 0 20px}
 .single .bg-new .twoCol .main .collection h4, .page .bg-new .twoCol .main .collection h4{color:#000;font-size:18px;font-weight:bold;text-shadow:none;font-family: "GSMT";margin:0 0 20px}
 .bd a.btn-bg{background:url(images/icons/button.png);display:block;width:242px;height:44px;margin:0 auto;text-decoration:none;color:#fff;font-size:16px;font-weight:bold;text-shadow:0 0 1px #000;font-family: "GSMT";line-height:44px;float:right}
