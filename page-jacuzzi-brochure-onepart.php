@@ -207,8 +207,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 	<div class="page-header" id="page-header">
     	<div class="content center ab-b">
         	<div class="block span1of1">
-            	<h1><strong class="small">The Jacuzzi Hot Tub Brochure </strong>40 Pages of Facts &amp; Photos - <strong>Free</strong></h1>
-                <h2>Get instant access to hot tub comparison charts, stunning photos,<br />complete specifications and feature descriptions.</h2>
+            	<h1><strong class="small">THE JACUZZI HOT TUB BROCHURE </strong>25 Pages of Facts &amp; Photos - <strong>Free</strong></h1>
+                <h2>Get instant access to Jacuzzi® Hot Tub features , stunning lifestyle photos,<br />collection descriptions and more.</h2>
             </div>
             <?php echo do_shortcode('[gravityform id="13" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
             <?php /* ?><form action="http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" method="post" id="leadForm" class="pform bro">
@@ -293,10 +293,10 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
     	<div class="content" role="main">
             <article class="row swap">
                 <div class="col span1of2 normalize middle">
-                    <h2>Easily Compare Hot Tub Models Side-by-Side</h2>
+                    <h2>Easily See Hot Tub Models Side-by-Side</h2>
                     <ul>
                     	<li>Find the right hot tub for you</li>
-                        <li>Select sizes, features &amp; options</li>
+                        <li>Explore sizes, features &amp; options</li>
                         <li>Use as an all-in-one reference guide</li>
                     </ul>
                 </div>
@@ -304,37 +304,37 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                     <div class="overflow-left-2of3">
                         <figure class="align-right">
                             <div class="img span1of1">
-                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/brochure-495.jpg" alt="" />
+                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/easy_compare.png" alt="" />
                             </div>
                         </figure>
                     </div>
                 </div>
             </article>
-        	<article class="row">
+            <article class="row">
             	<div class="col span1of2 normalize middle">
-                    <h2>Learn About the Power of Hydrotherapy</h2>
+                    <h2>Learn About the Power of Hydromassage</h2>
                     <ul>
-                    	<li>Reduces stress and improves sleep</li>
-                        <li>Targeted jet action relieves pain</li>
-                        <li>Customized hydro-massage experience</li>
+                    	<li>Reduces stress and improves sleep through warm water</li>
+                        <li>Relieves pain through targeted jet action</li>
+                        <li>Customizeable hydromassage experience through adjustable jets</li>
                     </ul>
 				</div>
                 <div class="block span1of2 middle">
                 	<div class="overflow-right-1of2">
                         <figure class="span1of1">
                             <div class="img">
-                            	<img src="<?php bloginfo('template_url'); ?>/images/landing/brochure-hydrotherapy.jpg" alt="" />
+                            	<img src="<?php bloginfo('template_url'); ?>/images/landing/learn_about.png" alt="" />
                             </div>
                         </figure>
                 	</div>
                 </div>
 			</article>
-            <article class="row swap">
+        	<article class="row swap">
                 <div class="col span1of2 normalize middle">
-                    <h2>See How Easy it is to Own and Enjoy a Jacuzzi Hot Tub</h2>
+                    <h2>See How Easy it is to Own and Enjoy a Jacuzzi® Hot Tub</h2>
                     <ul>
-                    	<li>Cleaner water with fewer chemicals</li>
-                        <li>Carefree maintenance</li>
+                    	<li>Award-winning water purification system for cleaner water with fewer chemicals</li>
+                        <li>Less maintenance equals more time to enjoy your hot tub</li>
                         <li>Built-in energy efficiency</li>
                     </ul>
                 </div>
@@ -342,7 +342,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                     <div class="overflow-left-2of3">
                         <figure class="align-right">
                             <div class="img span1of1">
-                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/brochure-enjoy.jpg" alt="" />
+                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/see_how_easy.png" alt="" />
                             </div>
                         </figure>
                     </div>
@@ -355,7 +355,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             </article>
             <article class="row grad">
                 <div class="col span1of2 normalize middle">
-                    <img src="<?php bloginfo('template_url'); ?>/images/landing/edward.jpg" alt="Edward Aleman, Jacuzzi Hot Tub Owner" class="alignleft" width="45" height="45" /><blockquote>&ldquo;As we continued to do research...the name that continued to pop up was the Jacuzzi brand. The quality of the tub as I compared them to other tubs really stood out for me.&rdquo; <strong class="by">Edward Aleman, Jacuzzi Hot Tub Owner</strong></blockquote>
+                    <img src="<?php bloginfo('template_url'); ?>/images/landing/edward.jpg" alt="Edward Aleman, Jacuzzi Hot Tub Owner" class="alignleft" width="45" height="45" /><blockquote>&ldquo;As we continued to do research...the name that continued to pop up was the Jacuzzi Brand. The quality of the tub as I compared them to other tubs really stood out for me.&rdquo; <strong class="by">Edward Aleman, Jacuzzi Hot Tub Owner</strong></blockquote>
                 </div>
                 <div class="col span1of2 normalize middle">
                     <img src="<?php bloginfo('template_url'); ?>/images/landing/10yearwarranty.jpg" alt="10 Year Warranty" class="alignleft" /><h3>Rely on our Comprehensive Warranty&nbsp;Protection</h3>
@@ -364,9 +364,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             </article>
             <article class="row grad lastbro">
                 <div class="col span1of1">
-                	<img src="<?php bloginfo('template_url'); ?>/images/landing/brochure.png" alt="Brochure" class="alignleft brochure" />
-                    <h3>40 PAGES OF FACTS &amp; PHOTOS</h3>
-                    <span>Discover why Jacuzzi<sup>&copy;</sup> defines the hot tub experience through its high-performance products that celebrate water's ability to refresh and rejuvenate.</span>
+                	<img src="<?php bloginfo('template_url'); ?>/images/landing/bottom_brochure.png" alt="Brochure" class="alignleft brochure" />
+                    <h3>25 PAGES OF FACTS &amp; PHOTOS</h3>
+                    <?php /* ?><span>Discover why Jacuzzi<sup>&copy;</sup> defines the hot tub experience through its high-performance products that celebrate water's ability to refresh and rejuvenate.</span><?php */ ?>
                     <a id="to-download-form" class="btn alignright">Download Your Free Brochure Today</a>
                 </div>
             </article>
