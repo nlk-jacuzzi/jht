@@ -29,7 +29,7 @@
 			}
 		?>
 	</title>
-	<script src="http://www.jacuzzihottubs.com/mbox/mbox.js" type="text/javascript"></script> 
+	<!--script src="http://www.jacuzzihottubs.com/mbox/mbox.js" type="text/javascript"></script--> 
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<?php
 			/* We add some JavaScript to pages with the comment form
