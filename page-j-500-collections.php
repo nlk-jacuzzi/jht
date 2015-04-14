@@ -286,7 +286,7 @@ get_header();
 							<span class="text-uppercase">Lounge:</span> Yes
 						</li>
 						<li>
-							<span class="text-uppercase">Total Jets:</span> 55
+							<span class="text-uppercase">Total Jets:</span> 52
 						</li>
 					</ul>
 					<p class="fulldetailsp"><a href="<?php bloginfo('url'); ?>/j-500/j-585/" class="full-details-btn">FULL DETAILS</a></p>
