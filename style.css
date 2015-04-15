@@ -6112,10 +6112,10 @@ a#Quote_Grphic_sidebar {
 
 	#bbg-ctas-block1 form .ginput_container input {
 		width: 195px;
-		margin-left: 0px !important;
 	}
 	#bbg-ctas-block1 .gform_wrapper .gform_footer.left_label {
 		padding: 0;
+		margin-left: 0px !important;
 	}
 	#bbg-ctas-block1 form input[type="submit"] {
 		padding-left: inherit !important;
