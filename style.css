@@ -6097,7 +6097,9 @@ a#Quote_Grphic_sidebar {
 		position: absolute;
 		width: 20px;
 		height: 20px;
+		margin-left: 0px !important;
 	}
+	
 	#bbg-ctas-block1 .gform_wrapper ul.gfield_checkbox input {
 		top: -4px;
 	}
@@ -6110,6 +6112,7 @@ a#Quote_Grphic_sidebar {
 
 	#bbg-ctas-block1 form .ginput_container input {
 		width: 195px;
+		margin-left: 0px !important;
 	}
 	#bbg-ctas-block1 .gform_wrapper .gform_footer.left_label {
 		padding: 0;
