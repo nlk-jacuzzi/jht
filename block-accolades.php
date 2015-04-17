@@ -9,5 +9,5 @@
 
 <div class="bbg-accolades">
 	<h2>Accolades <strong>&amp;</strong> Awards</h2>
-	<img src="<?php echo get_template_directory_uri(); ?>/images/brochure/accolades.png" width="810" height="80" />
+	<img src="<?php echo get_template_directory_uri(); ?>/images/brochure/accolades_op.jpg" width="810" height="80" />
 </div>
