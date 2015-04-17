@@ -12,6 +12,8 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
 	<title>
 		<?php
 			if ( function_exists('get_wpseo_options') ) {
@@ -29,7 +31,6 @@
 			}
 		?>
 	</title>
-	<!--script src="http://www.jacuzzihottubs.com/mbox/mbox.js" type="text/javascript"></script--> 
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<?php
 			/* We add some JavaScript to pages with the comment form
