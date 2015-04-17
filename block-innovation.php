@@ -15,7 +15,7 @@
 		<div class="innov-sub-parts">
 			<p>The Jacuzzi<sup>&reg;</sup> Difference</p>
 			<ul>
-				<?php echo do_shortcode('[video_lightbox_youtube video_id="qxYknzV-yNQ" width="640" height="480" anchor="'.get_template_directory_uri().'/images/brochure/left1.png"]'); ?>
+				<?php echo do_shortcode('[video_lightbox_youtube video_id="qxYknzV-yNQ" width="640" height="480" anchor="'.get_template_directory_uri().'/images/brochure/left1_op.jpg"]'); ?>
 				<!--img src="<?php echo get_template_directory_uri(); ?>/images/brochure/left1.png" width="128" height="114" align="left"/-->
 				<li>50 years of hot tub innovation</li>
 				<li>The name that started an industry</li>
@@ -27,7 +27,7 @@
 		<div class="innov-sub-parts">
 			<p>Advanced Hydrotherapy</p>
 			<ul>
-				<img src="<?php echo get_template_directory_uri(); ?>/images/brochure/left2.png" width="128" height="114" align="left"/>
+				<img src="<?php echo get_template_directory_uri(); ?>/images/brochure/left2_op.jpg" width="128" height="114" align="left"/>
 				<li>Relaxation and stress relief</li>
 				<li>Speed recovery of injuries</li>
 				<li>Promote flow of endorphines</li>
