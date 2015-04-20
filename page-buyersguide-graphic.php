@@ -15,6 +15,23 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="hero buyersguide2">
     	<div class="wrap">
             <img src="<?php bloginfo('template_url'); ?>/images/brochure/hot-tub-buyers-guide.png"/>
+            <div id="leadForm">
+            	<span class="formtitle">Download Free Guide Now</span>
+            	<table width="320">
+                    <tr>
+                        <td colspan="2">
+                            <?php echo do_shortcode('[gravityform id="20" title="false" description="false"]'); ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="buttonarea">
+                            <p class="requiredtext">* indicates required field</p>
+                            <p class="privacytext">Your privacy is very important to us. We will never rent or sell your information, see our <a href="#">Privacy Policy</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <?php /* ?>
             <form action="<?php echo get_permalink(); ?>" method="post" id="leadForm">
                 <span class="formtitle">Download Free Guide Now</span>
                 <?php avala_hidden_fields( 15, 9, 20 ); ?>
@@ -49,6 +66,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                     </tr>
                 </table>
             </form>
+            <?php */ ?>
         </div>
     </div>
     <div class="goldBar10"></div>
