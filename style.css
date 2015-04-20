@@ -1151,7 +1151,7 @@ img.eschdr { position: relative; margin: 0 0 10px -13px }
 .hero.buyersguide2 { height: 312px; background:#000 url(images/heros/free-buyers-guide-grad.jpg) repeat-x 0 0; margin-top: 65px; z-index: 99; }
 .hero.buyersguide2 .wrap { height: 312px; background: url(images/heros/free-buyers-guide.jpg) no-repeat -30px 0px; }
 .hero.buyersguide2 .wrap img { position: absolute; left: 26px; top: 13px; height: 353px; width: 255px; }
-.hero.buyersguide2 .wrap form { position: absolute; top: -46px; right: 54px; height: 304px; width: 311px; background-color: #eee; box-shadow: inset 0 0 160px #aaa; border-radius: 9px; }
+/*.hero.buyersguide2 .wrap form { position: absolute; top: -46px; right: 54px; height: 304px; width: 311px; background-color: #eee; box-shadow: inset 0 0 160px #aaa; border-radius: 9px; }
 .hero.buyersguide2 .wrap form span.formtitle { display: block; padding: 13px 15px 5px; font: 700 16px "GSH", sans-serif; letter-spacing: -.5px; }
 .hero.buyersguide2 .wrap form tbody { display: block; margin-top: 5px; margin-left: 14px; width: 281px; }
 .hero.buyersguide2 .wrap form tbody td { padding: 0 6px 2px 0; width: 140px; }
@@ -1163,7 +1163,7 @@ img.eschdr { position: relative; margin: 0 0 10px -13px }
 .hero.buyersguide2 .wrap form tbody td.buttonarea input.sprite:hover { background-position: 100% 100%; }
 .hero.buyersguide2 .wrap form tbody td.buttonarea p.requiredtext { margin-top: 2px; font-size: 11px; font-style: italic; }
 .hero.buyersguide2 .wrap form tbody td.buttonarea p.privacytext { font-size: 11px; padding-top: 6px; line-height: 12px; }
-.hero.buyersguide2 .wrap form tbody td.buttonarea p.privacytext a { color: #333; }
+.hero.buyersguide2 .wrap form tbody td.buttonarea p.privacytext a { color: #333; } */
 .buyersguide2 + .goldBar10 { height: 5px; }
 table.buyers-guide-simple { margin: -28px auto 0; }
 table.buyers-guide-simple h3 { font: 900 18px "Lato"; padding-left: 5px; }
@@ -6841,3 +6841,164 @@ body.quote p.note a
     color: #0092CB;
     text-decoration: none;
 }
+
+
+/* Truck Load Form */
+
+.hot-tub-landing .hero.truckload .side .truckloadform h3 {
+    font-size: 19px;
+    text-transform: uppercase;
+    color: #FFF;
+    line-height: 22px;
+    border-bottom: medium none;
+    text-align: center;
+}
+
+.hot-tub-landing .hero.truckload .side form *
+{
+	font-size: 12px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+.hot-tub-landing .hero.truckload .side form label
+{
+	color: #CCC;
+}
+
+.hot-tub-landing .hero.truckload .side .gform_wrapper .gfield_required
+{
+	color: #CCC;
+}
+
+.hot-tub-landing .hero.truckload .side input[type="submit"]{
+	border:none;
+	height:28px;
+	line-height:28px;
+	color:#000;
+	text-shadow:none;
+	text-transform:uppercase;
+	font-family:"GSBQB";
+	font-size:14px;
+	padding: 0;
+	width: 180px;
+	text-align: center;
+	border-radius:10px;
+	cursor:pointer;
+	margin: 0 0 10px;	
+	
+	background: #e2ae00;
+	background: -moz-linear-gradient(top,  #e2ae00 0%, #b98100 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2ae00), color-stop(100%,#b98100));
+	background: -webkit-linear-gradient(top,  #e2ae00 0%,#b98100 100%);
+	background: -o-linear-gradient(top,  #e2ae00 0%,#b98100 100%);
+	background: -ms-linear-gradient(top,  #e2ae00 0%,#b98100 100%);
+	background: linear-gradient(top,  #e2ae00 0%,#b98100 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2ae00', endColorstr='#b98100',GradientType=0 );
+	font-weight: normal;
+}
+
+.newsletter_checkbox
+{
+	margin-top: 25px !important;	
+}
+
+.newsletter_checkbox label.gfield_label
+{
+	display: none !important;
+}
+
+/* Trade In Form */
+.trade-in-form .gform_wrapper .top_label li.gfield.gf_left_third, .trade-in-form .gform_wrapper .top_label li.gfield.gf_middle_third, .trade-in-form .gform_wrapper .top_label li.gfield.gf_right_third , .trade-in-form .gform_wrapper .top_label li.gfield.gfield_error.gf_right_third, .trade-in-form .gform_wrapper .top_label li.gfield.gfield_error.gf_middle_third
+{
+	width: 22.9%;
+	margin-top: 0px;
+}
+
+.trade-in-form .gform_wrapper .top_label li.gfield.gf_middle_third, .trade-in-form .gform_wrapper .top_label li.gfield.gf_right_third
+{
+	margin-left: 0% !important;	
+}
+
+.trade-in-form .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container, 
+.trade-in-form .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description, 
+.trade-in-form .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label, 
+.trade-in-form .gform_wrapper li.gfield.gfield_error.gfield_contains_required fieldset legend.gfield_label
+{
+	margin-top: 0px;
+	margin-left: 0px;	
+}
+
+.trade-in-form .gform_wrapper .top_label li.gfield.gf_right_third
+{
+	margin-left: 2% !important;
+}
+
+.trade-in-form .gform_wrapper *
+{
+	font-size: 12px;
+	font-family: Arial,Helvetica,sans-serif;
+	color: #414141;
+}
+
+.trade-in-form .gform_wrapper label
+{
+	font-weight: normal !important;
+}
+
+.trade-in-form .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield input[type=radio]
+{
+	margin-left: 1px !important;
+}
+
+
+/* Free Guide */
+
+#leadForm .gform_wrapper
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#leadForm .gform_wrapper ul li.gfield
+{
+	margin-bottom: 0px !important;
+}
+
+#leadForm .gform_wrapper .gform_footer
+{
+	padding-top: 5px;
+	margin: 0px;
+}
+
+.hero.buyersguide2 .wrap span.formtitle
+{
+	display: block;
+	padding: 13px 15px 5px;
+	font: 700 16px "GSH",sans-serif;
+	letter-spacing: -0.5px;
+}
+
+.gform_wrapper .top_label li.gfield input[type="text"]
+{
+	border-radius: 4px;
+}
+
+#leadForm .gform_wrapper .validation_error
+{
+	display: none !important;	
+}
+
+.hero.buyersguide2 .wrap #leadForm { position: absolute; top: -46px; right: 54px; height: 304px; width: 311px; background-color: #eee; box-shadow: inset 0 0 160px #aaa; border-radius: 9px; }
+.hero.buyersguide2 .wrap #leadForm span.formtitle { display: block; padding: 13px 15px 5px; font: 700 16px "GSH", sans-serif; letter-spacing: -.5px; }
+.hero.buyersguide2 .wrap #leadForm tbody { display: block; margin-top: 5px; margin-left: 14px; width: 281px; }
+.hero.buyersguide2 .wrap #leadForm tbody td { padding: 0 6px 2px 0; width: 140px; }
+.hero.buyersguide2 .wrap #leadForm tbody td.dropdowns { padding-top: 9px; }
+.hero.buyersguide2 .wrap #leadForm tbody td.dropdowns label { line-height: 15px; }
+.hero.buyersguide2 .wrap #leadForm tbody td.dropdowns select { margin: 0; width: 100%; }
+.hero.buyersguide2 .wrap #leadForm tbody td.buttonarea { padding-top: 0px; }
+.hero.buyersguide2 .wrap #leadForm input[type="submit"] { cursor: pointer; background-image: url(images/icons/gold-button_281px-sprite.png); width: 281px; height: 46px; border: none; background-color: transparent; font: 900 18px "Lato", arial, sans-serif; letter-spacing: 1px; text-shadow: -1px -1px 2px rgba(255,255,255,.8), 1px 1px 1px rgba(0,0,0,.25); }
+.hero.buyersguide2 .wrap #leadForm input[type="submit"]:hover { background-position: 100% 100%; }
+.hero.buyersguide2 .wrap #leadForm tbody td.buttonarea p.requiredtext { margin-top: 2px; font-size: 11px; font-style: italic; }
+.hero.buyersguide2 .wrap #leadForm tbody td.buttonarea p.privacytext { font-size: 11px; padding-top: 6px; line-height: 12px; }
+.hero.buyersguide2 .wrap #leadForm tbody td.buttonarea p.privacytext a { color: #333; }
+

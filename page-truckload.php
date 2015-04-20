@@ -50,7 +50,14 @@ if ( isset($pageopts['o']) ) if ( $pageopts['o'] != '' ) $titleoverride = $pageo
                 <div class="goldBar8"></div>
                 <div class="side">
             	
-                    <form action="<?php echo get_permalink(); ?>" method="post" id="requestform" class="truckloadform">
+                    <div id="requestform" class="truckloadform">
+                		<h3>Request the<br />Truckload Sale<br />In Your Town</h3>
+                		<?php echo do_shortcode('[gravityform id="18" title="false" description="false"]'); ?>
+                		<p class="note"><span class="rqd">*</span> Fields with an asterisk are required.<br />&nbsp;</p>
+                        <p class="note">Your privacy is very important to us. See our <a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a>.<br />&nbsp;</p>
+                	</div>
+            		<?php /* ?>
+					<form action="<?php echo get_permalink(); ?>" method="post" id="requestform" class="truckloadform">
 
                         <?php avala_hidden_fields( 15, 9, 10 ); ?>
 
@@ -130,6 +137,7 @@ if ( isset($pageopts['o']) ) if ( $pageopts['o'] != '' ) $titleoverride = $pageo
                         <p class="note"><span class="rqd">*</span> Fields with an asterisk are required.<br />&nbsp;</p>
                         <p class="note">Your privacy is very important to us. See our <a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a>.<br />&nbsp;</p>
                     </form>
+					<?php */ ?>
 
                 <div class="share">
                     <h3>Share This</h3>
