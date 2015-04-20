@@ -6858,6 +6858,10 @@ body.quote p.note a
 {
 	font-size: 12px;
 	font-family: Arial,Helvetica,sans-serif;
+}
+
+.hot-tub-landing .hero.truckload .side form label
+{
 	color: #CCC;
 }
 
@@ -6903,3 +6907,45 @@ body.quote p.note a
 	display: none !important;
 }
 
+/* Trade In Form */
+.trade-in-form .gform_wrapper .top_label li.gfield.gf_left_third, .trade-in-form .gform_wrapper .top_label li.gfield.gf_middle_third, .trade-in-form .gform_wrapper .top_label li.gfield.gf_right_third , .trade-in-form .gform_wrapper .top_label li.gfield.gfield_error.gf_right_third, .trade-in-form .gform_wrapper .top_label li.gfield.gfield_error.gf_middle_third
+{
+	width: 22.9%;
+	margin-top: 0px;
+}
+
+.trade-in-form .gform_wrapper .top_label li.gfield.gf_middle_third, .trade-in-form .gform_wrapper .top_label li.gfield.gf_right_third
+{
+	margin-left: 0% !important;	
+}
+
+.trade-in-form .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container, 
+.trade-in-form .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description, 
+.trade-in-form .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label, 
+.trade-in-form .gform_wrapper li.gfield.gfield_error.gfield_contains_required fieldset legend.gfield_label
+{
+	margin-top: 0px;
+	margin-left: 0px;	
+}
+
+.trade-in-form .gform_wrapper .top_label li.gfield.gf_right_third
+{
+	margin-left: 2% !important;
+}
+
+.trade-in-form .gform_wrapper *
+{
+	font-size: 12px;
+	font-family: Arial,Helvetica,sans-serif;
+	color: #414141;
+}
+
+.trade-in-form .gform_wrapper label
+{
+	font-weight: normal !important;
+}
+
+.trade-in-form .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield input[type=radio]
+{
+	margin-left: 1px !important;
+}
