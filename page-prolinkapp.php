@@ -38,7 +38,7 @@ if ( has_post_thumbnail() ) {
                 </a>
             </div>
             <div class="coll-right">
-                <?php echo do_shortcode('[video_lightbox_youtube video_id="fiW-DfNAJzM" width="640" height="480" anchor="' . get_template_directory_uri() . '/images/landing/imag1.jpg"]'); ?>
+                <?php echo do_shortcode('[video_lightbox_youtube video_id="fiW-DfNAJzM" width="640" height="480" anchor="' . get_template_directory_uri() . '/images/landing/imag1.jpg" autoplay="true"]'); ?>
             </div>
 <?php } ?>
         </div>
