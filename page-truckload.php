@@ -52,93 +52,10 @@ if ( isset($pageopts['o']) ) if ( $pageopts['o'] != '' ) $titleoverride = $pageo
             	
                     <div id="requestform" class="truckloadform">
                 		<h3>Request the<br />Truckload Sale<br />In Your Town</h3>
-                		<?php echo do_shortcode('[gravityform id="18" title="false" description="false"]'); ?>
+                		<?php echo do_shortcode('[gravityform id="15" title="false" description="false"]'); ?>
                 		<p class="note"><span class="rqd">*</span> Fields with an asterisk are required.<br />&nbsp;</p>
                         <p class="note">Your privacy is very important to us. See our <a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a>.<br />&nbsp;</p>
                 	</div>
-            		<?php /* ?>
-					<form action="<?php echo get_permalink(); ?>" method="post" id="requestform" class="truckloadform">
-
-                        <?php avala_hidden_fields( 15, 9, 10 ); ?>
-
-	                    <table cellpadding="0">
-    	                	<tr>
-    	                		<td>
-                    				<h3>Request the<br />Truckload Sale<br />In Your Town</h3>
-                    			</td>
-                    		</tr>
-                    		<tr>
-                    			<td>
-                    				<?php avala_field( 'first_name', 'text w170', true); ?>
-                    			</td>
-                    		</tr>
-                    		<tr>
-                    			<td>
-                    				<?php avala_field( 'last_name', 'text w170', true); ?>
-                    			</td>
-                    		</tr>
-                            <tr>
-                                <td>
-                                    <?php avala_field( 'email', 'text w170 email', true); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <?php avala_field( 'phone', 'text w170 number', true, NULL, array( 'maxlength' => 16)); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <?php avala_field( 'postal_code', 'text w170', true, NULL, array( 'maxlength' => 10 )); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <?php avala_field( 'country', 'country w170 select', true); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="gaptop">
-                                    <?php avala_field( 'currently_own', 'w170 select' ); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="gaptop">
-                                    <?php avala_field( 'product_id_list', 'w170 select' ); ?> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="gaptop">
-                                    <?php avala_field( 'buy_time_frame', 'w170' ); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="gaptop">
-                                    <?php avala_field( 'product_use', 'w170' ); ?>
-                                </td>
-                            </tr>
-                            <tr class="divider">
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <?php avala_field('newsletter', '', false, 'field' ); ?>
-                                </td>
-                            </tr>
-                            <tr class="divider">
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="submit" name="commit" class="submit medGoldBtn" value="Submit">
-                                </td>
-                            </tr>
-                        </table>
-                        <p class="note"><span class="rqd">*</span> Fields with an asterisk are required.<br />&nbsp;</p>
-                        <p class="note">Your privacy is very important to us. See our <a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a>.<br />&nbsp;</p>
-                    </form>
-					<?php */ ?>
-
                 <div class="share">
                     <h3>Share This</h3>
                     <div class="share-bar">
