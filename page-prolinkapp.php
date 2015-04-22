@@ -34,7 +34,7 @@ if ( has_post_thumbnail() ) {
                 <h1 class="title"><span class="gold">Jacuzzi&reg; Brand<br />Hot Tubs<br />Announces</span><br /><span class="white">the ProLink&trade; App</span></h1>
                 <p><span class="white">Jacuzzi&reg; Hot Tubs debuts a new way for spa owners to combine smartphone technology with tech-savvy J-500&trade; Collection hot tubs: the ProLink&trade; app.</span></p>
                 <a href="#thebuttonDoesWhat">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/landing/button.png" />
+                    <?php echo do_shortcode('[video_lightbox_youtube video_id="fiW-DfNAJzM" width="640" height="480" anchor="' . get_template_directory_uri() . '/images/landing/button.png" autoplay="true"]'); ?>
                 </a>
             </div>
             <div class="coll-right">
