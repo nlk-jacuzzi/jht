@@ -54,7 +54,7 @@ $truckloadObj = json_decode($json);
 				<p>Upcoming locations</p>
 				<ul>
 				<?php foreach ($truckloadObj as $key => $dealer) { ?>
-					<li><a href="<?php echo get_bloginfo('url') . '/dealer-locator' . $dealer->link; ?>"><?php echo ucwords($dealer->city) . ', ' . strtoupper($dealer->state); ?></a></li>
+					<li><a href="<?php echo ( !empty($dealer->website) ? $dealer->website : get_bloginfo('url') . '/dealer-locator' . $dealer->link ); ?>"><?php echo ( !empty($dealer->tl_city) ? ucwords($dealer->tl_city) : ucwords($dealer->city) ) . ', ' . strtoupper($dealer->state); ?></a></li>
 				<?php } ?>
 				</ul>
 			<?php endif; ?>
