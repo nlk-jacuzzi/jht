@@ -49,7 +49,7 @@ $truckloadObj = json_decode($json);
 		<div id="bbg-ctas-block3">
 			<h3>Factory Sale</h3>
 			<h4>Deeply Discounted<br>
-				Hot Tubs</h4>
+				Hot Tubs!</h4>
 			<?php if ( ! empty($truckloadObj) ) : ?>
 				<p>Upcoming locations</p>
 				<ul>
