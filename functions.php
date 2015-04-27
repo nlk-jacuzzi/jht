@@ -2481,8 +2481,8 @@ function jht_tub_collection_setup() {
 
 function jht_add_scripts() {
 	if ( ! is_admin() ) {
-		wp_deregister_script('jquery');
-		wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', array(), '1.7.2', true);
+		//wp_deregister_script('jquery');
+		//wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', array(), '1.7.2', true);
 		wp_register_script( 'mbox', 'http://www.jacuzzihottubs.com/mbox/mbox.js', array(), '1', true);
 		
 		if ( is_page(3888) ) {
@@ -3203,7 +3203,7 @@ add_action('wp_head', 'jht_copyright_meta');
 
 
 // Tracking codes enqueued in different file
-include('functions_trackingcodes.php');
+//include('functions_trackingcodes.php');
 
 
 
@@ -3418,9 +3418,9 @@ function geo_data( $zip = null, $debug = false ) {
 	// do nothing if viewing admin pages (geo not needed)
 	if ( is_admin() )
 		return false;
-	if( session_id() == '' ) {
+	/*if( session_id() == '' ) {
 		session_start();
-	}
+	}*/
 
 	$a = null;
 
@@ -3430,7 +3430,7 @@ function geo_data( $zip = null, $debug = false ) {
 
 	if ( !empty( $zip ) ) :
 		$a = geo_data_mysql_zip( $zip );
-		$_SESSION['geoDbLookupData'] = ( !empty($a) && is_array($a) ) ? $a : null;
+		//$_SESSION['geoDbLookupData'] = ( !empty($a) && is_array($a) ) ? $a : null;
 	elseif ( $ip ) :
 		$a = geo_data_mysql_ip( $ip );
 	//elseif ( isset($_SESSION['geoDbLookupData']) ) :
@@ -3817,9 +3817,101 @@ add_filter('gform_submit_button','form_submit_button',10,12);
 	if ( $_GET )
 		add_filter( 'wpseo_canonical', 'remove_yoast_canonical_link' );
 
+	function pixel_bazaarinvoice() {
+
+		global $post;
+		$custom = get_post_meta($post->ID,'jht_specs');
+		$jht_specs = $custom[0];
+		$prod = esc_attr($jht_specs['product_id']);
+		$val = get_post_meta( $post->ID, 'lead-type', true );
+
+		if ( !empty( $prod ) ) { ?>
+			<script type="text/javascript"> 
+			$BV.configure("global", { productId : "<?php echo $prod; ?>" });
+			</script>
+		<?php }
+		
+		if ( !empty( $val ) ) { ?>
+			<script>
+			$BV.SI.trackConversion({
+			"type" : "lead-<?php echo $val; ?>",
+			"value" : "<?php echo $val; ?>"
+			});
+			</script>
+		<?php }
+	}
+
+	if ( is_page_template('single-jht_tub.php') )
+		add_action('wp_head', 'pixel_bazaarinvoice');
+
 /** END BazaarVoice **/
 
 
+/** Site Catalyst **/
+function pixel_site_catalyst() { 
+  if(!is_page_template('page-dlresults.php') || strpos($_SERVER['URI'], 'dealer-locator') !== false) {
+		if ( !defined('JHTMOBPX') ) {
+			?>
+		<!-- SiteCatalyst code version: H.10.
+		Copyright 1997-2007 Omniture, Inc. More info available at
+		http://www.omniture.com -->
+		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/SiteCatalyst.js"></script>
+		<script type="text/javascript"><!--
+		/* You may give each page an identifying name, server, and channel on
+		the next lines. sidebar-trackingcode loaded. */
+		s.pageName=""
+		s.server=""
+		s.channel=""
+		s.pageType=""
+		s.prop1=""
+		s.prop2=""
+		s.prop3=""
+		s.prop4=""
+		s.prop5=""
+		s.referrer=""
+		/* Conversion Variables */
+		s.campaign=""
+		s.state=""
+		s.zip=""
+		s.events="<?php
+			if ( is_page(4422) ) { // brochure-thanks
+				print 'event2';
+			} elseif( is_page(4513) ) { // quote-thanks
+				print 'event4';
+			} elseif( is_page(6782) ) { // truckload-thanks 
+				print 'event9';
+			} elseif( is_page(6329) ) { // appointment-thanks 
+				print 'event10';
+			} elseif( is_page_template('page-dlresults.php') ) { // delaer result
+				print 'event7';
+			} elseif( is_page_template('page-dllanding.php') ) { // delaer landing
+				print '';
+			} elseif( is_page('thank-you') ) { // deals/thank-you/
+				print 'event3';
+			}
+			?>"
+		s.products=""
+		s.purchaseID=""
+		s.eVar1=""
+		s.eVar2=""
+		s.eVar3=""
+		s.eVar4=""
+		s.eVar5=""
+		/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+		var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+		<script language="JavaScript"><!--
+		if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+		//--></script>
+		<noscript><?php } ?>
+		<a href="http://www.omniture.com" title="Web Analytics"><img src="http://jacuzzipremiumhottubs.jacuzzi.com.112.2O7.net/b/ss/jacuzzipremiumhottubs.jacuzzi.com/1/H.10--NS/0" height="1" width="1" border="0" alt=""/></a>
+		<?php if ( !defined('JHTMOBPX') ) { ?></noscript><!--/DO NOT REMOVE/-->
+		<!-- End SiteCatalyst code version: H.10. -->
+		<?php 
+		}
+	}
+}
+add_action('wp_footer', 'pixel_site_catalyst');
+// end site catalyst
 
 
 add_action('wp_head', 'jht_do_hreflang');
