@@ -1,7 +1,8 @@
 <?php
 
-$geo = geo_data();
-$pickyPostal = ( $geo['country'] == 'US' ) ? 'Zip / Postal Code' : 'Postal Code' ;
+//$geo = geo_data();
+//$pickyPostal = ( $geo['country'] == 'US' ) ? 'Zip / Postal Code' : 'Postal Code' ;
+$pickyPostal = 'Zip / Postal Code';
 
 ?>
 			<ul class="topMenu">
