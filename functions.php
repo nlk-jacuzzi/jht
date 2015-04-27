@@ -3841,7 +3841,7 @@ add_filter('gform_submit_button','form_submit_button',10,12);
 		<?php }
 	}
 
-	if ( is_single() ) add_action('wp_head', 'pixel_bazaarinvoice');
+	add_action('wp_head', 'pixel_bazaarinvoice');
 
 /** END BazaarVoice **/
 
