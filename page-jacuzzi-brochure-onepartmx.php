@@ -196,7 +196,13 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		.emailblock
 		{
 			margin-top: 35px !important;				
-		}	
+		}
+		
+		#main-wrapper h1 {
+		    font-size: 56px;
+		    line-height: 64px;
+    	}
+    		
 	</style>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
