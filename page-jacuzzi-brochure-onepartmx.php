@@ -207,6 +207,13 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
 			jQuery('.gform_footer').append('<p><small><i>* Indica un campo requerido<br><a href="<?php echo get_permalink(3987) ?>">Aviso de Privacidad.</a></i></small></p><a id="click-me-spot" name="more-info"></a>');
+			jQuery('#to-download-form').click(function(){
+				  jQuery("html, body").animate({
+				    scrollTop: "480px"
+				  });
+				  //jQuery("#person_first_name").focus();
+				  return false;
+			});
 		});
 	</script>
 <div id="main-wrapper">
