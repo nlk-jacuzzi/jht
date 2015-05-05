@@ -206,7 +206,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 	</style>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
-			jQuery('.gform_footer').append('<p><small><i>* Indica un campo requerido<br><a href="<?php echo get_permalink(3987) ?>">Aviso de Privacidad.</a></i></small></p><a id="click-me-spot" name="more-info"></a>');
+			jQuery('.gform_footer').append('<p><small><i>* Indica un campo requerido<br><a href="<?php echo get_bloginfo('url') ?>/politicas/">Aviso de Privacidad.</a></i></small></p><a id="click-me-spot" name="more-info"></a>');
 			jQuery('#to-download-form').click(function(){
 				  jQuery("html, body").animate({
 				    scrollTop: "480px"
@@ -220,8 +220,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 	<div class="page-header" id="page-header">
     	<div class="content center ab-b">
         	<div class="block span1of1">
-            	<h1><strong class="small">El catálogo de Spas de la marca Jacuzzi® </strong>25 Páginas de Fotos y Datos - <strong>GRATIS</strong></h1>
-                <h2>Acceso instantáneo a detalles sobre los spa de marca Jacuzzi®, fotos de instalaciones, descripciones de las colecciones y mucho más.</h2>
+            	<h1><strong class="small">El catálogo de Spas de la marca Jacuzzi<sup>®</sup> </strong>25 Páginas de Fotos y Datos - <strong>GRATIS</strong></h1>
+                <h2>Acceso instantáneo a detalles sobre los spa de marca Jacuzzi<sup>®</sup>, fotos de instalaciones, descripciones de las colecciones y mucho más.</h2>
             </div>
             <?php echo do_shortcode('[gravityform id="22" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
             <a id="click-me-anchor" href="#more-info"></a>
@@ -234,7 +234,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
     	<div class="content" role="main">
             <article class="row swap">
                 <div class="col span1of2 normalize middle">
-                    <h2>Compare los modelos de spa marca Jacuzzi®</h2>
+                    <h2>Compare los modelos de spa marca Jacuzzi<sup>®</sup></h2>
                     <ul>
                     	<li>Encuentre el mejor spa para usted</li>
                         <li>Explore tamaños, especificaciones y opciones</li>
@@ -272,7 +272,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			</article>
         	<article class="row swap">
                 <div class="col span1of2 normalize middle">
-                    <h2>Vea lo fácil que es ser dueño y disfrutar de un spa de marca Jacuzzi®</h2>
+                    <h2>Vea lo fácil que es ser dueño y disfrutar de un spa de marca Jacuzzi<sup>®</sup></h2>
                     <ul>
                     	<li>El sistema de Purificación de Agua integrado reduce el uso de químicos</li>
                         <li>Menos mantenimiento significa más tiempo para disfrutar su spa</li>
@@ -296,16 +296,16 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             </article>
             <article class="row grad">
                 <div class="col span1of2 normalize middle">
-                    <img src="<?php bloginfo('template_url'); ?>/images/landing/edward.jpg" alt="Edward Aleman, Jacuzzi Hot Tub Owner" class="alignleft" width="45" height="45" /><blockquote>&ldquo;Entre más investigábamos, el nombre que siempre salía a relucir era el de Jacuzzi®. La calidad del spa, en comparación con otras marcas era superior.&rdquo; <strong class="by">Edward Aleman, Jacuzzi Hot Tub Owner</strong></blockquote>
+                    <img src="<?php bloginfo('template_url'); ?>/images/landing/edward.jpg" alt="Edward Aleman, Jacuzzi Hot Tub Owner" class="alignleft" width="45" height="45" /><blockquote>&ldquo;Entre más investigábamos, el nombre que siempre salía a relucir era el de Jacuzzi<sup>®</sup>. La calidad del spa, en comparación con otras marcas era superior.&rdquo; <strong class="by">Edward Aleman, Jacuzzi Hot Tub Owner</strong></blockquote>
                 </div>
                 <div class="col span1of2 normalize middle">
-                    <img src="<?php bloginfo('template_url'); ?>/images/landing/10yearwarranty.jpg" alt="10 Year Warranty" class="alignleft" /><h3>Confíe en nuestro Plan Completo de Protección contra defectos</h3>
-                    <p>Jacuzzi® respalda a sus productos con una garantía de amplia cobertura y una red mundial de distribuidores autorizados.</p>
+                    <img src="<?php bloginfo('template_url'); ?>/images/landing/tenanosdegarantia.png" alt="10 Year Warranty" class="alignleft" /><h3>Confíe en nuestro Plan Completo de Protección contra defectos</h3>
+                    <p>Jacuzzi<sup>®</sup> respalda a sus productos con una garantía de amplia cobertura y una red mundial de distribuidores autorizados.</p>
                 </div>
             </article>
             <article class="row grad lastbro">
                 <div class="col span1of1">
-                	<img src="<?php bloginfo('template_url'); ?>/images/landing/bottom_brochure.png" alt="Brochure" class="alignleft brochure" />
+                	<img src="<?php bloginfo('template_url'); ?>/images/landing/bottom_brochure_mx.png" alt="Brochure" class="alignleft brochure" />
                     <h3>25 PÁGINAS DE FOTOS Y DATOS</h3>
                     <?php /* ?><span>Discover why Jacuzzi<sup>&copy;</sup> defines the hot tub experience through its high-performance products that celebrate water's ability to refresh and rejuvenate.</span><?php */ ?>
                     <a id="to-download-form" class="btn alignright">Descargue Su Catálogo Gratuito Ahora</a>
