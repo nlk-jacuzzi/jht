@@ -88,7 +88,7 @@ $img_version = 2; // 0 or 1 or 2, etc, used to set the left side content image
 		<div class="right-twoth" style="background-color: #57575a; box-sizing: border-box; float: left; height: 387px; width: 302px;">
 			<p style="color: #fff; font: 16px 'GSBQ'; letter-spacing: 1.2px; margin: 46px 24px 0; text-align: center;" ><span style="color: #dba923;">DOWNLOAD</span> YOUR FREE<br />HOT TUB BROCHURE TODAY</p>
 			<form method="post" action="<?php echo get_bloginfo('url'); ?>/request-brochure/" id="leadFormModal" style="margin: 9px 24px;">
-				<?php avala_hidden_fields( 15, 9, 20 ); ?>
+				<?php avala_hidden_fields( 15, 9, 12 ); ?>
 				<input type="hidden" name="thanks_page" value="<?php echo get_bloginfo('url'); ?>/request-brochure/brochure-thanks/">
 				<div class="avala-row modal">
 					<label class="">Name*</label>
