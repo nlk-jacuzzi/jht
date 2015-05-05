@@ -72,7 +72,7 @@ $img_version = 2; // 0 or 1 or 2, etc, used to set the left side content image
 	.avala-row.modal input#person_first_name { margin-right: 6px; }
 	.avala-row.modal label[for="receive_email_campaigns"] { font-size: 11px; line-height: 1em; padding-left: 21px; text-indent: -23px; }
 	.avala-row.modal input#receive_email_campaigns { margin-top: 5px; }
-	.avala-row.modal input[type="submit"] { background: url("<?php echo get_template_directory_uri(); ?>/images/modals/gold-button.png") no-repeat; color: transparent; }
+	.avala-row.modal input[type="submit"] { background: url("<?php echo get_template_directory_uri(); ?>/images/modals/gold-button.png") no-repeat; color: transparent; width: 100%; border: none; height: 40px; margin-top: 10px; cursor: pointer;}
 	.avala-row.modal p.note { color: #fff; font-size: 11px; margin-top: 8px; text-align: center; }
 	.avala-row.modal p.note a { color: #fff; font-size: 11px; text-align: center; }
 	.close-this-modal a { background-color: #222; border: 2px solid #fff; border-radius: 20px; color: #fff; cursor: pointer; font: 700 11px/24px cursive; height: 24px; position: absolute; right: -14px; text-align: center; text-decoration: none; top: -14px; width: 24px; }
