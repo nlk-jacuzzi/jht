@@ -39,3 +39,4 @@ if ( isset($pageopts['x']) && $pageopts['x'] == 'Yes' ) { ?>
 <?php }
 
 ?>
+<!-- end pageopts sidebar -->
