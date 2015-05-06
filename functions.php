@@ -1570,6 +1570,17 @@ function jht_meta_save($post_id){
 		return $infos;
 	}
 
+	if($_POST['post_type'] == 'post') {
+		$infos = '';
+
+		$info = $_POST['jht_pageopts'];
+		update_post_meta($post_id, 'jht_pageopts', $info);
+		$infos .= $info;
+
+		return $infos;
+	}
+
+
 
 	if( in_array( $_POST['post_type'] , array( 'jht_cat', 'jht_vid' ) ) ) {
 		$info = $_POST['jht_info'];
