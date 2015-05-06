@@ -1986,6 +1986,8 @@ function jht_admin_init() {
 		add_meta_box( "jht_menuoptions_metabox", "Menu Display Options", "jht_menuoptions_metabox", "page", "side", "low" );
 		add_meta_box( "jht_nopopup_metabox", "Pop-up Options", "jht_nopopup_metabox", "page", "side", "low" );
 		add_meta_box( "jht_form_type_metabox", "Is this a Form Page?", "jht_form_type_metabox", "page", "side", "low" );
+
+		add_meta_box( "jht_pagemenu_metabox", "Left Sidebar", "jht_pagemenu_metabox", "post", "side", "low" );
 	}
 
 	if ( get_option( 'progo_direct_installed' ) != true ) {
