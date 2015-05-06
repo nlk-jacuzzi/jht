@@ -342,10 +342,13 @@ if ( ! function_exists( 'jht_posted_on' ) ) :
  * @since JHT 1.0
  */
 function jht_posted_on() {
+	/*  Old method was to show blog posts by author...
 	$linkit = ( get_the_author_meta('googleplus') ) ? '<a href="'.get_the_author_meta('googleplus').'">' : '';
 	$unlinkit = ( $linkit ) ? '</a>' : '';
 	echo 'Added by ' . $linkit . get_the_author() . $unlinkit;
 	edit_post_link( __( 'Edit', 'jht' ), ' : <span class="edit-link">', '</span>' );
+	*/
+	the_date( 'F j, Y', 'Posted on ', '', true );
 }
 endif;
 
