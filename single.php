@@ -12,6 +12,10 @@
  * @subpackage JHT
  * @since JHT 1.0
  */
+
+$custom = get_post_meta($post->ID,'jht_pageopts');
+$pageopts = $custom[0];
+
 get_header(); ?>
 		 <div class="hero">
     	<div class="wrap">
