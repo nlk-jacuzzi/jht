@@ -23,7 +23,16 @@ get_header(); ?>
     	<div class="wrap">
             <div class="twoCol">
                 <div class="side">
-                <?php get_sidebar('blog'); ?>
+                <?php //get_sidebar('blog'); ?>
+                <?php
+                    if ( isset($pageopts['menu']) ) {
+                        $mid = absint($pageopts['menu']);
+                        if ( $mid > 0 ) {
+                            wp_nav_menu(array('menu'=>$mid));
+                        }
+                    }
+                    get_sidebar('pageoptions');
+                    ?>
                 </div>
                 <div class="main">
 <?php while ( have_posts() ) : the_post();
