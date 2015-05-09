@@ -218,7 +218,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 	</script>
 <div id="main-wrapper">
 	<div class="page-header" id="page-header">
-    	<div class="content center ab-b">
+    	<div class="content center ab-b" style="background-image: url('<?php bloginfo("template_url"); ?>/images/landing/hot_tub_brochure_new_mx.jpg')">
         	<div class="block span1of1">
             	<h1><strong class="small">El catálogo de Spas de la marca Jacuzzi<sup>®</sup> </strong>25 Páginas de Fotos y Datos - <strong>GRATIS</strong></h1>
                 <h2>Acceso instantáneo a detalles sobre los spa de marca Jacuzzi<sup>®</sup>, fotos de instalaciones, descripciones de las colecciones y mucho más.</h2>
