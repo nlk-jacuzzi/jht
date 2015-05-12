@@ -1993,6 +1993,7 @@ function jht_admin_init() {
 			case 'page-quote-ppc.php':
 			case 'page-quote-special-promo.php':
 				add_meta_box( "jht_ppc_options_metabox", "PPC Header Options", "jht_ppc_options_metabox", "page", "normal", "low" );
+				break;
 		}
 		add_meta_box( "jht_menuoptions_metabox", "Menu Display Options", "jht_menuoptions_metabox", "page", "side", "low" );
 		add_meta_box( "jht_nopopup_metabox", "Pop-up Options", "jht_nopopup_metabox", "page", "side", "low" );

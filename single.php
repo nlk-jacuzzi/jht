@@ -28,7 +28,7 @@ get_header(); ?>
             <?php while ( have_posts() ) : the_post(); ?>
 
                 <?php
-                $custom = get_post_meta($post->ID,'jht_pageopts');
+                $custom = get_post_meta($post->ID,'jht_pageopts', true);
                 $pageopts = $custom[0];
                 ?>
 
