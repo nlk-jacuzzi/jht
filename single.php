@@ -28,13 +28,13 @@ get_header(); ?>
             <?php while ( have_posts() ) : the_post(); ?>
 
                 <?php
-                $custom = get_post_meta($post->ID,'jht_pageopts', true);
+                $custom = get_post_meta($post->ID,'jht_pageopts');
                 $pageopts = $custom[0];
                 ?>
 
                 <div class="twoCol">
                     <div class="side">
-                        <pre><?php print_r($custom); ?></pre>
+                        <pre><?php print_r($post); ?></pre>
                         <?php //get_sidebar('blog'); ?>
                         <?php
                         if ( isset($pageopts['menu']) ) {
