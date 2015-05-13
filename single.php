@@ -34,7 +34,6 @@ get_header(); ?>
 
                 <div class="twoCol">
                     <div class="side">
-                        <pre><?php print_r($post); ?></pre>
                         <?php //get_sidebar('blog'); ?>
                         <?php
                         if ( isset($pageopts['menu']) ) {

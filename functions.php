@@ -1508,7 +1508,7 @@ function jht_meta_save($post_id){
 	
 	// Check permissions
 	if ( isset( $_POST['post_type'] ) ) {
-		if (in_array($_POST['post_type'],array('jht_tub', 'jht_cat', 'page', 'jht_vid')) ) {
+		if (in_array($_POST['post_type'],array('jht_tub', 'jht_cat', 'page', 'jht_vid', 'post')) ) {
 			if ( !current_user_can( 'edit_page', $post_id ) ) return $post_id;
 		} else {
 		//if ( !current_user_can( 'edit_post', $post_id ) )
