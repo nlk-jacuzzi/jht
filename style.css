@@ -5036,7 +5036,7 @@ html#land, html#land body {
 	margin-bottom: 24px;
 }
 .tub-brochure-pricing > div {
-	padding-top: 24px;
+	padding-top: 0px;
 	margin-bottom: 12px;
 }
 .tub-brochure-pricing .pages40 {
@@ -6643,6 +6643,18 @@ a.getpricing
 {
 	padding-left: 15px; 
 }
+
+.onehalf
+{
+	width: 46%;
+	float: left;
+}
+
+.onehalf.last
+{
+	padding-left: 15px; 
+}
+
 
 /* Extra CSS for detail page */
 
