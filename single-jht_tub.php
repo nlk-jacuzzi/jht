@@ -217,8 +217,17 @@ if (class_exists('MultiPostThumbnails')) {
                     <?php */ ?>
                     <div class="tub-brochure-pricing">
                         <div class="fullrow">
-                        	<div class="twothird">
+                        	<div class="onehalf">
                             	<a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a>
+                            </div>
+                            <div class="onehalf last">
+                            	<a class="getpricing" href="<?php bloginfo('url'); ?>/dealer-locator">Find A Dealer</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="fullrow">
+                        	<div class="twothird">
+                            	&nbsp;
                             </div>
                             <div class="onethird last">
                             	<div class="share-bar">
