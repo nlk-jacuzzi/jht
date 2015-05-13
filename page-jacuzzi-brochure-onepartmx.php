@@ -230,7 +230,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 
         </div>
     </div>
-    <section class="section">
+    <section class="section" id="more-info">
     	<div class="content" role="main">
             <article class="row swap">
                 <div class="col span1of2 normalize middle">
