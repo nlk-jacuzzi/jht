@@ -43,8 +43,8 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     $promo_image_url = '/images/heros/' . $promo_image_filename; // hero image root
 
     ?>
-    <div class="hero" style="background: url(<?php echo get_template_directory_uri() . $promo_image_url; ?>) no-repeat 50% 85%;">
-        <div id="hero-slide-1" class="block" style="height: 316px;">
+    <div class="hero" style="background: url(<?php echo get_template_directory_uri() . $promo_image_url; ?>) no-repeat 50% 50%; background-color: #D7A52A;">
+        <div id="hero-slide-1" class="block" style="height: 390px;">
             <!--a id="hero-promotion-call-to-action" class="" href="<?php echo ( !empty($promo_cta_btn_url) ? $promo_cta_btn_url : get_bloginfo('url') . '/promo/' ); ?>" <?php echo $promo_cta_btn_style ?>>View Promotions</a-->
         </div>
     </div>
