@@ -26,12 +26,12 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     $promo_cta_btn_styles = array(
         "color"         => "transparent", //do not edit
         "display"       => "block", //do not edit
-        "height"        => "36px",
-        "left"          => "57px",
+        "height"        => "100%",
+        //"left"          => "57px",
         "position"      => "absolute", //do not edit
         "text-indent"   => "-9999px", //do not edit
-        "top"           => "249px",
-        "width"         => "231px",
+        //"top"           => "249px",
+        "width"         => "100%",
         );
 
     // do not edit
@@ -45,7 +45,7 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     ?>
     <div class="hero" style="background: url(<?php echo get_template_directory_uri() . $promo_image_url; ?>) no-repeat 50% 50%; background-color: #D7A52A;">
         <div id="hero-slide-1" class="block" style="height: 390px;">
-            <!--a id="hero-promotion-call-to-action" class="" href="<?php echo ( !empty($promo_cta_btn_url) ? $promo_cta_btn_url : get_bloginfo('url') . '/promo/' ); ?>" <?php echo $promo_cta_btn_style ?>>View Promotions</a-->
+            <a id="hero-promotion-call-to-action" class="" href="<?php echo ( !empty($promo_cta_btn_url) ? $promo_cta_btn_url : get_bloginfo('url') . '/promo/' ); ?>" <?php echo $promo_cta_btn_style ?>>View Promotions</a>
         </div>
     </div>
 
