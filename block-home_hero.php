@@ -9,8 +9,8 @@
 
 $show_promo = true;
 
-$promo_start = "11/26/2014"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
-$promo_end = "12/22/2014"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
+$promo_start = "5/15/2015"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
+$promo_end = "6/1/2015"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
 
 
 if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date("U", strtotime($promo_end)) ): ?>
@@ -18,7 +18,7 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     <?php /* * * * * PROMOTIONS HOME PAGE HERO BLOCK * * * * */ ?>
     <?php
 
-    $promo_image_filename .= 'USAHolidayHomeHero1920.jpg'; // promo image filename
+    $promo_image_filename .= 'spring-promo-2015.jpg'; // promo image filename
 
     // promo button settings
     $promo_cta_btn_url = get_bloginfo('url') . '/promo/'; //link for promo button
@@ -26,12 +26,12 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     $promo_cta_btn_styles = array(
         "color"         => "transparent", //do not edit
         "display"       => "block", //do not edit
-        "height"        => "36px",
-        "left"          => "57px",
+        "height"        => "100%",
+        //"left"          => "57px",
         "position"      => "absolute", //do not edit
         "text-indent"   => "-9999px", //do not edit
-        "top"           => "249px",
-        "width"         => "231px",
+        //"top"           => "249px",
+        "width"         => "100%",
         );
 
     // do not edit
@@ -43,8 +43,8 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     $promo_image_url = '/images/heros/' . $promo_image_filename; // hero image root
 
     ?>
-    <div class="hero" style="background: url(<?php echo get_template_directory_uri() . $promo_image_url; ?>) no-repeat 50% 85%;">
-        <div id="hero-slide-1" class="block" style="height: 316px;">
+    <div class="hero" style="background: url(<?php echo get_template_directory_uri() . $promo_image_url; ?>) no-repeat 50% 50%; background-color: #D7A52A;">
+        <div id="hero-slide-1" class="block" style="height: 390px;">
             <a id="hero-promotion-call-to-action" class="" href="<?php echo ( !empty($promo_cta_btn_url) ? $promo_cta_btn_url : get_bloginfo('url') . '/promo/' ); ?>" <?php echo $promo_cta_btn_style ?>>View Promotions</a>
         </div>
     </div>
