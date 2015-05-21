@@ -4,6 +4,10 @@ global $post;
 $custom = get_post_meta($post->ID,'jht_pageopts');
 $pageopts = $custom[0];
 
+if ( isset($pageopts['g'])  && $pageopts['g'] == 'Yes' ) {
+	get_sidebar('buyersguide');
+}
+
 if ( isset($pageopts['b'])  && $pageopts['b'] == 'Yes' ) { ?>
 	<div class="scall bro"><a href="<?php echo get_permalink(3745) ?>" class="free-brochure-thumb"><strong>Free</strong> Brochure</a></h1></div>
 <?php }
