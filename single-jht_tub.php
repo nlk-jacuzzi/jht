@@ -305,8 +305,8 @@ if (class_exists('MultiPostThumbnails')) {
                         <div class="half">
                             <div class="description">
                             	<div class="inner">
-                                    <h2>Get more jet satisfaction</h2>
-                                    <p>High-volume, low-pressure pumps support the exclusive PowerPro jet system in delivering a bold hydromassage. A Patented process creates a 50/50 air-to-water mixture that introduces air from all around the jets for a soothing, yet effective, professional-quality massage. To test the jets in a hot tub, contact your local dealer.</p>
+                                    <h2>EXCLUSIVE JET TECHNOLOGY</h2>
+                                    <p>Jacuzzi&reg; Brand PowerPro&reg; Jets deliver a high volume, low pressure hydromassage through Aqualibrium&trade;: the perfect mix of air and water. As the first company to pioneer jetted water technology, only Jacuzzi&reg; can deliver a massage experience that a legacy that spans nearly 60 years can bring.</p>
                                 	<!--div class="arrow-right"><a href="#">Roll Over Plus Signs for more Jet Info</a></div-->
                                 </div>
                             </div>
