@@ -1325,7 +1325,7 @@ function jht_pagemenu_metabox() {
     $menus = wp_get_nav_menus();
 	foreach ( $menus as $m ) echo '<option value="'. $m->term_id . ( $info['menu'] == $m->term_id ? '" selected="selected' : '') .'">'. esc_attr($m->name) .'</option>';
 	?></select></p>
-    <p><label for="jht_pageopts[g]"><input type="checkbox" name="jht_pageopts[g]" value="Yes"<?php echo isset($info['g']) ? ( $info['g'] == 'Yes' ? ' checked="checked"' : '' ) : '' ?> /> Include "Buyer's Guide Form" link?</label></p>
+    <p><label for="jht_pageopts[g]"><input type="checkbox" name="jht_pageopts[g]" value="Yes"<?php echo isset($info['g']) ? ( $info['g'] == 'Yes' ? ' checked="checked"' : '' ) : '' ?> /> Include "Buyer's Guide" form?</label></p>
     <p><label for="jht_pageopts[b]"><input type="checkbox" name="jht_pageopts[b]" value="Yes"<?php echo isset($info['b']) ? ( $info['b'] == 'Yes' ? ' checked="checked"' : '' ) : '' ?> /> Include "Free Brochure" link?</label></p>
     <p><label for="jht_pageopts[q]"><input type="checkbox" name="jht_pageopts[q]" value="Yes"<?php echo isset($info['q']) ? ( $info['q'] == 'Yes' ? ' checked="checked"' : '' ) : '' ?> /> Include "Request Quote" link?</label></p>
 	<p><label for="jht_pageopts[t]"><input type="checkbox" name="jht_pageopts[t]" value="Yes"<?php echo isset($info['t']) ? ( $info['t'] == 'Yes' ? ' checked="checked"' : '' ) : '' ?> /> Include "Trade-In Value" link?</label></p>
