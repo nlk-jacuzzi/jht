@@ -133,6 +133,5 @@ else {} ?>
     <script type='text/javascript' src='http://greeterware.com/Dashboard/cwgen/Company/LiveAdmins/jacuzzi.com/chatwindow.js?ver=1.0'></script>
     <script type='text/javascript' defer="defer" src='http://greeterware.com/Dashboard/cwgen/scripts/chatscriptyui.js?ver=1.0'></script>
 <?php } ?>
-
 </body>
 </html>
