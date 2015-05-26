@@ -221,7 +221,7 @@ if (class_exists('MultiPostThumbnails')) {
                     <div class="tub-brochure-pricing">
                         <div class="fullrow">
                             <div class="twothird">
-                                <a id="show-msrp" class="getpricing">Get MSRP Pricing</a>
+                                <a id="show-msrp" href="#" class="getpricing">Get MSRP Pricing</a>
                             </div>
                             <div class="onethird last">
                                 <div class="share-bar">
@@ -230,7 +230,6 @@ if (class_exists('MultiPostThumbnails')) {
                             </div>
                             <div class="clear"></div>
                         </div>
-                        <?php /* <p><i>Take a minute &amp; get a free quote</i><br />&nbsp;</p> */ ?>
                     </div>
 
                 <?php else : ?>
@@ -274,7 +273,10 @@ if (class_exists('MultiPostThumbnails')) {
         
         <?php if ( msrp_display() ) : ?>
 
-            <?php $msrp = NULL; ?>
+            <?php
+            $msrp = esc_attr($jht_specs['msrp']);
+            $msrp = ( $msrp[0] == '$' ? $msrp : '$'.$msrp );
+            ?>
 
             <div class="container msrp" style="display:none;">
                 <div class="l">
