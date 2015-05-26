@@ -2510,6 +2510,8 @@ function jht_add_scripts() {
 			wp_enqueue_script( 'thickbox' );
 		}
 
+		wp_enqueue_script( 'vidora-js', '//assets.vidora.com/js/ninthlink.36e3663509be5e4f.js' );
+
 	}
 }
 
