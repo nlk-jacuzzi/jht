@@ -221,7 +221,18 @@ if (class_exists('MultiPostThumbnails')) {
                     <div class="tub-brochure-pricing">
                         <div class="fullrow">
                             <div class="twothird">
-                                <a class="getpricing" onClick="jQuery(function($){ if ( $(this).hasClass('close') ) { $('.container.msrp').hide(); $(this).removeClass('close'); } else { $('.container.msrp').show(); $(this).addClass('close'); } });" href="#">Get MSRP Pricing</a>
+                                <a class="getpricing" 
+                                    onClick="jQuery(function($){ 
+                                        alert( $(this).attr('class') );
+                                        if ( $(this).hasClass('close') ) { 
+                                            $('.container.msrp').hide(); 
+                                            $(this).removeClass('msrp-close'); 
+                                        } else { 
+                                            $('.container.msrp').show(); 
+                                            $(this).addClass('close'); 
+                                        } 
+                                        });" 
+                                    href="#">Get MSRP Pricing</a>
                             </div>
                             <div class="onethird last">
                                 <div class="share-bar">
