@@ -158,6 +158,7 @@
                                             <?php /* <li class="title"><a href="<?php echo get_permalink(3884) ?>">Customer Support</a></li> */ ?>
                                         	<?php wp_list_pages('include=4392,3943,3999&title_li=&depth=-1'); ?>
                                         	<li><a href="<?php echo get_permalink(5) ?>">Blog</a></li>
+                                        	<li><a href="/careers">Careers</a></li>
                                         </ul>
                                     </li>
                                 </ul>
