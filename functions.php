@@ -127,6 +127,8 @@ function jht_setup() {
 	add_action( 'wp_print_styles', 'jht_add_styles');
 	add_action( 'login_head', 'jht_custom_login_logo' );
 	add_action( 'login_headerurl', 'jht_custom_login_url' );
+
+	add_action( 'wp_enqueue_scripts', 'jht_enqueued_scripts' );
 	
 	// cleanup some
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
@@ -2510,9 +2512,11 @@ function jht_add_scripts() {
 			wp_enqueue_script( 'thickbox' );
 		}
 
-		wp_enqueue_script( 'vidora-js', '//assets.vidora.com/js/ninthlink.36e3663509be5e4f.js' );
-
 	}
+}
+
+function jht_enqueued_scripts() {
+	wp_enqueue_script( 'vidora-js', '//assets.vidora.com/js/ninthlink.36e3663509be5e4f.js' );
 }
 
 function jht_add_styles() {
