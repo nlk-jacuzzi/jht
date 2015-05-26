@@ -21,11 +21,8 @@ function geo_data( $zip = null, $debug = false ) {
 
 	if ( !empty( $zip ) ) :
 		$a = geo_data_mysql_zip( $zip );
-		//$_SESSION['geoDbLookupData'] = ( !empty($a) && is_array($a) ) ? $a : null;
 	elseif ( $ip ) :
 		$a = geo_data_mysql_ip( $ip );
-	//elseif ( isset($_SESSION['geoDbLookupData']) ) :
-		//$a = $_SESSION['geoDbLookupData'];
 	else : 
 		$a = array(
 			'locId'				=>	0,
@@ -43,46 +40,6 @@ function geo_data( $zip = null, $debug = false ) {
 
 	// And finally we return the resulting array to wherever it is needed...
 	return $a;
-}
-
-function geo_data_curl( $ip ) { /*
-	// no longer using curl option / API
-	return false;
-
-	if ( !$ip ) {
-		$ip = 'me';
-	}
-	$username = '66659';
-	$password = 'FJv62Mz6ezIB';
-
-	$ch = curl_init('https://geoip.maxmind.com/geoip/v2.0/city/' . $ip . '');
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 1);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	$result = curl_exec($ch);
-	$httpResult = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
-	$a = json_decode($result, true);
-	$b = array(
-		'locId'				=>	0,
-		'country'			=>	$a['country']['iso_code'],
-		'region'			=>	$a['subdivisions'][0]['iso_code'],
-		'city'				=>	$a['city']['names']['en'],
-		'postalCode'		=>	$a['postal']['code'],
-		'latitude'			=>	$a['location']['latitude'],
-		'longitude'			=>	$a['location']['longitude'],
-		'metroCode'			=>	$a['location']['metro_code'],
-		'areacode'			=>	'',
-		'ip'				=>	$ip,
-		'queries_remaining'	=>	$a['maxmind']['queries_remaining'],
-		);
-	if ( $httpResult == 200 ) {
-		return $b;
-	}
-	return $result; */
-	return false;
 }
 
 function geo_data_mysql_connect() {
@@ -192,13 +149,13 @@ function msrp_display( $bool = true ) {
 		}
 		return false;
 	}
-	return $a['postalCode'];
+	return $a;
 }
 
 add_action('wp_head', 'meta_debug');
 function meta_debug() {
 	$o = msrp_display( false );
-	echo '<meta name="geo_debug" content="'.$o.'">';
+	echo '<meta name="geo_debug" content="'.implode(', ',$o).'">';
 }
 
 
