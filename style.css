@@ -7026,12 +7026,14 @@ body.quote p.note a
 	background-color: #efefef;
 	border: 1px solid #efefef;
 	border-top: none;
+	position: relative;
 }
 .container.msrp .l {
 	box-sizing: border-box;
 	display: inline-block;
 	float: left;
 	padding: 40px;
+	padding-right: 100px;
 	width: 66%;
 }
 .container.msrp .r {
@@ -7039,7 +7041,20 @@ body.quote p.note a
 	display: inline-block;
 	float: left;
 	padding-top: 40px;
+	padding-bottom: 40px;
+	position: relative;
 	width: 34%;
+}
+.container.msrp .r:before {
+	background-color: #fff;
+	content: '';
+	display: block;
+	height: 30px;
+	position: absolute;
+	right: 50%;
+	top: -15px;
+	transform: rotate(45deg);
+	width: 30px;
 }
 
 .msrp-disclaimer {
