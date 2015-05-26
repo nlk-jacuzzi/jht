@@ -198,9 +198,7 @@ function msrp_display( $bool = true ) {
 add_action('wp_head', 'meta_debug');
 function meta_debug() {
 	$o = msrp_display( false );
-	if ( $o ) {
-		echo '<meta name="geo_debug" content="'.$o.'">';
-	}
+	echo '<meta name="geo_debug" content="'.$o.'">';
 }
 
 
