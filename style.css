@@ -7022,6 +7022,10 @@ body.quote p.note a
 
 
 /* MSRP */
+a#show-msrp.close {
+	background: #cfcfcf;
+	background-color: #cfcfcf;
+}
 .container.msrp {
 	background-color: #efefef;
 	border: 1px solid #efefef;
