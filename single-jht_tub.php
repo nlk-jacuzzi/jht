@@ -215,6 +215,32 @@ if (class_exists('MultiPostThumbnails')) {
                         <div class="clear"></div>
                     </div>
                     <?php */ ?>
+
+                <?php if ( msrp_display() ) : ?>
+
+                    <div class="tub-brochure-pricing">
+                        <div class="fullrow">
+                            <div class="onehalf">
+                                <a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="fullrow">
+                            <div class="twothird">
+                                &nbsp;
+                            </div>
+                            <div class="onethird last">
+                                <div class="share-bar">
+                                    <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <?php /* <p><i>Take a minute &amp; get a free quote</i><br />&nbsp;</p> */ ?>
+                    </div>
+
+                <?php else : ?>
+
                     <div class="tub-brochure-pricing">
                         <div class="fullrow">
                         	<div class="onehalf">
@@ -238,6 +264,9 @@ if (class_exists('MultiPostThumbnails')) {
                         </div>
                         <?php /* <p><i>Take a minute &amp; get a free quote</i><br />&nbsp;</p> */ ?>
                     </div>
+
+                <?php endif; ?>
+
                     <?php
 					//get_sidebar('freeBrochure');
 					//get_sidebar('requestQuote');
@@ -255,7 +284,7 @@ if (class_exists('MultiPostThumbnails')) {
 
             <div class="container msrp">
                 <div class="l">
-                    <p>Disclaimer</p>
+                    <p class="msrp-disclaimer">Disclaimer</p>
                     <p>Prices listed are Manufacturer’s Suggested Retail Price (MSRP). Actual retail price may vary based on rebates and/or incentives that may be available at your local dealer. Please request a quote or visit your local dealer for current pricing information.</p>
                 </div>
                 <div class="r">
