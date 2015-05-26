@@ -220,14 +220,8 @@ if (class_exists('MultiPostThumbnails')) {
 
                     <div class="tub-brochure-pricing">
                         <div class="fullrow">
-                            <div class="onehalf">
-                                <a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="fullrow">
                             <div class="twothird">
-                                &nbsp;
+                                <a class="getpricing" onClick="jQuery(function($){ if ( $(this).hasClass('close') ) { $('.container.msrp').hide(); $(this).removeClass('close'); } else { $('.container.msrp').show(); $(this).addClass('close'); } });" href="#">Get MSRP Pricing</a>
                             </div>
                             <div class="onethird last">
                                 <div class="share-bar">
@@ -282,7 +276,7 @@ if (class_exists('MultiPostThumbnails')) {
 
             <?php $msrp = NULL; ?>
 
-            <div class="container msrp">
+            <div class="container msrp" style="display:none;">
                 <div class="l">
                     <p class="msrp-disclaimer">Disclaimer</p>
                     <p>Prices listed are Manufacturer’s Suggested Retail Price (MSRP). Actual retail price may vary based on rebates and/or incentives that may be available at your local dealer. Please request a quote or visit your local dealer for current pricing information.</p>
