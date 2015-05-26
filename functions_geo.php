@@ -13,7 +13,7 @@ function geo_data( $zip = null, $debug = false ) {
 		session_start();
 	}*/
 
-	$a = null;
+	$a = array();
 
 	$ip = get_the_ip();
 
@@ -38,7 +38,6 @@ function geo_data( $zip = null, $debug = false ) {
 			);
 	endif;
 
-	// And finally we return the resulting array to wherever it is needed...
 	return $a;
 }
 
@@ -155,7 +154,12 @@ function msrp_display( $bool = true ) {
 add_action('wp_head', 'meta_debug');
 function meta_debug() {
 	$o = msrp_display( false );
-	echo '<meta name="geo_debug" content="'.implode(', ',$o).'">';
+	if ( is_array( $o ) ) {
+		echo '<meta name="geo_debug" content="'.implode(', ',$o).'">';
+	}
+	else {
+		echo '<meta name="geo_debug" content="'.$o.'">';
+	}
 }
 
 
