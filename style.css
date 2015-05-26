@@ -7019,3 +7019,60 @@ body.quote p.note a
 .hero.buyersguide2 .wrap #leadForm tbody td.buttonarea p.privacytext { font-size: 11px; padding-top: 6px; line-height: 12px; }
 .hero.buyersguide2 .wrap #leadForm tbody td.buttonarea p.privacytext a { color: #333; }
 
+
+
+/* MSRP */
+.container.msrp {
+	background-color: #efefef;
+	border: 1px solid #efefef;
+	border-top: none;
+}
+.container.msrp .l {
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding: 40px;
+	width: 66%;
+}
+.container.msrp .r {
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding-top: 40px;
+	width: 34%;
+}
+
+.msrp-disclaimer {
+	font-family: "GSBQ", sans-serif;
+	font-size: 18px
+}
+.msrp-disclaimer + p {
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.msrp-price {
+	font-size: 16px;
+	text-align: center;
+}
+.msrp-price span {
+	font-size: 36px;
+}
+
+.container.msrp a[class^="msrp-"] {
+	background: url('/hot-tubs/wp-content/themes/jht/images/btn_pricing_bg.png') 0 0 repeat-x transparent;
+	border-radius: 5px;
+	height: 39px;
+	width: 100%;
+	max-width: 300px;
+	margin-top: 14px;
+	font-size: 16px;
+	line-height: 39px;
+	font-family: "GSMT";
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
