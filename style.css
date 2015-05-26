@@ -7023,8 +7023,8 @@ body.quote p.note a
 
 /* MSRP */
 a#show-msrp.close {
-	background: #cfcfcf;
-	background-color: #cfcfcf;
+	background: #d1d1d1;
+	background-color: #d1d1d1;
 }
 .container.msrp {
 	background-color: #efefef;
