@@ -757,10 +757,10 @@ jQuery(function($) {
 	$('#show-msrp').click(function(){
 		if ( $(this).hasClass('close') ) { 
 		    $('.container.msrp').hide(); 
-		    $(this).removeClass('close'); 
+		    $(this).removeClass('close').text('Get MSRP Pricing'); 
 		} else { 
 		    $('.container.msrp').show(); 
-		    $(this).addClass('close'); 
+		    $(this).addClass('close').text('Close'); 
 		}
 	});
 })(jQuery);
