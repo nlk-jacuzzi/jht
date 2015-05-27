@@ -66,7 +66,19 @@ function geo_data_mysql_connect() {
 
 function geo_data_mysql_ip( $ip ) {
 	$a = false;
-	$rows = $wpdb->get_results( "SELECT gl.* FROM geoip_locations gl LEFT JOIN geoip_blocks gb ON gb.locId = gl.locId WHERE gb.startIpNum <= INET_ATON( ? ) AND gb.endIpNum >= INET_ATON( ? ) LIMIT 1" );
+	
+	$rows = $wpdb->get_results(
+		"
+		SELECT gl.* 
+		FROM geoip_locations gl 
+		LEFT JOIN geoip_blocks gb 
+			ON gb.locId = gl.locId 
+		WHERE gb.startIpNum <= INET_ATON( $ip ) 
+			AND gb.endIpNum >= INET_ATON( $ip ) 
+		LIMIT 1
+		"
+	);
+	
 	if ( $rows ) :
 	foreach ($rows as $row) {
 		$a = array(
@@ -83,12 +95,22 @@ function geo_data_mysql_ip( $ip ) {
 			);
 	}
 	endif;
+	
 	return $a;
 }
 
 function geo_data_mysql_zip( $zip ) {
 	$a = false;
-	$rows = $wpdb->get_results( "SELECT * FROM geoip_locations WHERE postalCode = ? LIMIT 1" );
+	
+	$rows = $wpdb->get_results(
+		"
+		SELECT * 
+		FROM geoip_locations 
+		WHERE postalCode = $zip 
+		LIMIT 1
+		"
+	);
+	
 	if ( $rows ) :
 	foreach ($rows as $row) {
 		$a = array(
@@ -105,6 +127,7 @@ function geo_data_mysql_zip( $zip ) {
 			);
 	}
 	endif;
+	
 	return $a;
 }
 
