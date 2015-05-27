@@ -95,6 +95,10 @@ table {
 a img {
 	border: none;
 }
+img.emoji {
+	max-width: 18px !important;
+	vertical-align: middle !important;
+}
 sup {
 	font-size: .5em;
 	position: relative;
