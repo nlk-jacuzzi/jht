@@ -95,7 +95,7 @@ table {
 a img {
 	border: none;
 }
-img.emoji {
+body div[class^="bv"] img.emoji {
 	max-width: 18px !important;
 	vertical-align: middle !important;
 }
