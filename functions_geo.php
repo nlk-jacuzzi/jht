@@ -9,9 +9,6 @@ function geo_data( $zip = null, $debug = false ) {
 	// do nothing if viewing admin pages (geo not needed)
 	if ( is_admin() )
 		return false;
-	/*if( session_id() == '' ) {
-		session_start();
-	}*/
 
 	$a = array();
 
@@ -69,71 +66,45 @@ function geo_data_mysql_connect() {
 
 function geo_data_mysql_ip( $ip ) {
 	$a = false;
-
-	$mysqli = geo_data_mysql_connect();
-
-	// Unable to MySQL? Return false
-	if ($mysqli->connect_errno) {
-		$error = "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-		return false;
+	$rows = $wpdb->get_results( "SELECT gl.* FROM geoip_locations gl LEFT JOIN geoip_blocks gb ON gb.locId = gl.locId WHERE gb.startIpNum <= INET_ATON( ? ) AND gb.endIpNum >= INET_ATON( ? ) LIMIT 1" );
+	if ( $rows ) :
+	foreach ($rows as $row) {
+		$a = array(
+			'locId'			=>	$row->locId,
+			'country'		=>	$row->country,
+			'region'		=>	$row->region,
+			'city'			=>	$row->city,
+			'postalCode'	=>	$row->postalCode,
+			'latitude'		=>	$row->latitude,
+			'longitude'		=>	$row->longitude,
+			'metroCode'		=>	$row->metroCode,
+			'areacode'		=>	$row->areaCode,
+			'ip'			=>	$ip,
+			);
 	}
-	$query = "SELECT gl.* FROM geoip_locations gl LEFT JOIN geoip_blocks gb ON gb.locId = gl.locId WHERE gb.startIpNum <= INET_ATON( ? ) AND gb.endIpNum >= INET_ATON( ? ) LIMIT 1";
-	if ( $stmt = $mysqli->prepare( $query ) ) {
-		$stmt->bind_param( "ss", $ip, $ip );
-		$stmt->execute();
-		$stmt->bind_result( $locId, $country, $region, $city, $postalCode, $latitude, $longitude, $metroCode, $areaCode );
-		while ( $stmt->fetch() ) {
-			$a = array(
-				'locId'			=>	$locId,
-				'country'		=>	$country,
-				'region'		=>	$region,
-				'city'			=>	$city,
-				'postalCode'	=>	$postalCode,
-				'latitude'		=>	$latitude,
-				'longitude'		=>	$longitude,
-				'metroCode'		=>	$metroCode,
-				'areacode'		=>	$areaCode,
-				'ip'			=>	$ip,
-				);
-		}
-		$stmt->close();
-	}
-	$mysqli->close();
+	endif;
 	return $a;
 }
 
 function geo_data_mysql_zip( $zip ) {
 	$a = false;
-	$mysqli = geo_data_mysql_connect();
-	
-	// Unable to MySQL? Return false
-	if ($mysqli->connect_errno) {
-		$error = "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-		return false;
+	$rows = $wpdb->get_results( "SELECT * FROM geoip_locations WHERE postalCode = ? LIMIT 1" );
+	if ( $rows ) :
+	foreach ($rows as $row) {
+		$a = array(
+			'locId'			=>	$row->locId,
+			'country'		=>	$row->country,
+			'region'		=>	$row->region,
+			'city'			=>	$row->city,
+			'postalCode'	=>	$row->zip,
+			'latitude'		=>	$row->latitude,
+			'longitude'		=>	$row->longitude,
+			'metroCode'		=>	$row->metroCode,
+			'areacode'		=>	$row->areaCode,
+			'ip'			=>	get_the_ip(),
+			);
 	}
-	$clean_zip = clean_zip( $zip );
-	$query = "SELECT * FROM geoip_locations WHERE postalCode = ? LIMIT 1";
-	if ( $stmt = $mysqli->prepare( $query ) ) {
-		$stmt->bind_param( "s", $clean_zip );
-		$stmt->execute();
-		$stmt->bind_result( $locId, $country, $region, $city, $postalCode, $latitude, $longitude, $metroCode, $areaCode );
-		while ( $stmt->fetch() ) {
-			$a = array(
-				'locId'			=>	$locId,
-				'country'		=>	$country,
-				'region'		=>	$region,
-				'city'			=>	$city,
-				'postalCode'	=>	$zip,
-				'latitude'		=>	$latitude,
-				'longitude'		=>	$longitude,
-				'metroCode'		=>	$metroCode,
-				'areacode'		=>	$areaCode,
-				'ip'			=>	get_the_ip(),
-				);
-		}
-		$stmt->close();
-	}
-	$mysqli->close();
+	endif;
 	return $a;
 }
 
