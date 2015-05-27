@@ -4,7 +4,31 @@
  *
  */
 
-// GEO FUNCTIONS
+if ( ! function_exists('get_the_ip') ) :
+function get_the_ip() {
+
+	$s = $_SERVER['QUERY_STRING'];
+	parse_str($s, $o);
+
+	if ( array_key_exists('ip', $o) ) :
+		$ip = $o['ip'];
+	elseif ( !empty($_SERVER['HTTP_CLIENT_IP']) ) :
+		$ip = $_SERVER['HTTP_CLIENT_IP'];
+	elseif ( !empty($_SERVER['HTTP_X_FORWARDED_FOR']) ) :
+		$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	else :
+		$ip = $_SERVER['REMOTE_ADDR'];
+	endif;
+	
+	if ( !filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE) || !filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_RES_RANGE) || $ip == '127.0.0.1' ) {
+		return false;
+	}
+	
+	return $ip;
+}
+endif;
+
+
 function geo_data( $zip = null, $debug = false ) {
 	// do nothing if viewing admin pages (geo not needed)
 	if ( is_admin() )
@@ -38,33 +62,11 @@ function geo_data( $zip = null, $debug = false ) {
 	return $a;
 }
 
-function geo_data_mysql_connect() {
-	//$livehost		= array( 'jacuzzi.com', 'www.jacuzzi.com', 'www.jacuzzihottubs.com', 'www.jacuzzi.ca/hot-tubs', 'beta.jacuzzihottubs.com', 'www.jacuzzi.ca', 'beta.jacuzzi.com', 'beta.jacuzzi.ca' );
-	$devhost		= array( 'jht.ninthlink.me', 'www.nlkdevj.com' );
-	$localhost		= array( 'localhost', 'local.jht', 'localhost/jacuzzi.com', 'localhost.jacuzzi.com', 'localhost.jacuzzi.ca', 'local.jacuzzi' );
-	
-	//if ( in_array( $_SERVER['SERVER_NAME'], $livehost ) ) {
-	// set up "live" credentials by default
-	$the_user = "jacuzzi_geoip";
-	$the_pass = "g9WpMRjuPf";
-	$the_name = "jacuzzi_geoip";
-	//}
-	if ( in_array( $_SERVER['SERVER_NAME'], $devhost ) ) {
-		$the_user = "admin_geoip";
-		$the_pass = "r4e3w2q1";
-		$the_name = "admin_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $localhost ) ) {
-		$the_user = "root";
-		$the_pass = "";
-		$the_name = "nlk_geoip";
-	}
-	$mysqli = new mysqli(DB_HOST, $the_user, $the_pass, $the_name);
-	
-	return $mysqli;
-}
 
 function geo_data_mysql_ip( $ip ) {
+
+	global $wpdb;
+
 	$a = false;
 	
 	$rows = $wpdb->get_results(
@@ -100,13 +102,16 @@ function geo_data_mysql_ip( $ip ) {
 }
 
 function geo_data_mysql_zip( $zip ) {
+
+	global $wpdb;
+
 	$a = false;
 	
 	$rows = $wpdb->get_results(
 		"
 		SELECT * 
 		FROM geoip_locations 
-		WHERE postalCode = $zip 
+		WHERE postalCode = '$zip'
 		LIMIT 1
 		"
 	);
