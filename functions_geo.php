@@ -29,22 +29,65 @@ function get_the_ip() {
 endif;
 
 
-function geo_data( $zip = null, $debug = false ) {
-	// do nothing if viewing admin pages (geo not needed)
-	if ( is_admin() )
-		return false;
+function geo_data( $zip = false, $debug = false ) {
 
-	$a = array();
+	if ( is_admin() )
+		return false; // do nothing if viewing admin pages (geo not needed)
+
+	global $wpdb;
 
 	$ip = get_the_ip();
-
 	$zip = ( isset( $_POST['PostalCode'] ) ) ? $_POST['PostalCode'] : ( isset( $_GET['zip'] ) ) ? $_GET['zip'] : $zip;
 
-	if ( !empty( $zip ) ) :
-		$a = geo_data_mysql_zip( $zip );
+	$a = array();
+	$rows = false;
+
+	if ( $zip ) :
+		
+		$rows = $wpdb->get_results(
+			"
+			SELECT * 
+			FROM geoip_locations 
+			WHERE postalCode = '$zip'
+			LIMIT 1
+			"
+		);
+
 	elseif ( $ip ) :
-		$a = geo_data_mysql_ip( $ip );
+		
+		$rows = $wpdb->get_results(
+			"
+			SELECT gl.* 
+			FROM geoip_locations gl 
+			LEFT JOIN geoip_blocks gb 
+				ON gb.locId = gl.locId 
+			WHERE gb.startIpNum <= INET_ATON( $ip ) 
+				AND gb.endIpNum >= INET_ATON( $ip ) 
+			LIMIT 1
+			"
+		);
+
+	endif;
+
+	if ( $rows ) :
+
+		foreach ($rows as $row) {
+			$a = array(
+				'locId'			=>	$row->locId,
+				'country'		=>	$row->country,
+				'region'		=>	$row->region,
+				'city'			=>	$row->city,
+				'postalCode'	=>	$row->postalCode,
+				'latitude'		=>	$row->latitude,
+				'longitude'		=>	$row->longitude,
+				'metroCode'		=>	$row->metroCode,
+				'areacode'		=>	$row->areaCode,
+				'ip'			=>	$ip,
+				);
+		}
+
 	else : 
+
 		$a = array(
 			'locId'				=>	0,
 			'country'			=>	'US',
@@ -57,84 +100,13 @@ function geo_data( $zip = null, $debug = false ) {
 			'areacode'			=>	'',
 			'ip'				=>	'',
 			);
+
 	endif;
 
 	return $a;
 }
 
 
-function geo_data_mysql_ip( $ip ) {
-
-	global $wpdb;
-
-	$a = false;
-	
-	$rows = $wpdb->get_results(
-		"
-		SELECT gl.* 
-		FROM geoip_locations gl 
-		LEFT JOIN geoip_blocks gb 
-			ON gb.locId = gl.locId 
-		WHERE gb.startIpNum <= INET_ATON( $ip ) 
-			AND gb.endIpNum >= INET_ATON( $ip ) 
-		LIMIT 1
-		"
-	);
-	
-	if ( $rows ) :
-	foreach ($rows as $row) {
-		$a = array(
-			'locId'			=>	$row->locId,
-			'country'		=>	$row->country,
-			'region'		=>	$row->region,
-			'city'			=>	$row->city,
-			'postalCode'	=>	$row->postalCode,
-			'latitude'		=>	$row->latitude,
-			'longitude'		=>	$row->longitude,
-			'metroCode'		=>	$row->metroCode,
-			'areacode'		=>	$row->areaCode,
-			'ip'			=>	$ip,
-			);
-	}
-	endif;
-	
-	return $a;
-}
-
-function geo_data_mysql_zip( $zip ) {
-
-	global $wpdb;
-
-	$a = false;
-	
-	$rows = $wpdb->get_results(
-		"
-		SELECT * 
-		FROM geoip_locations 
-		WHERE postalCode = '$zip'
-		LIMIT 1
-		"
-	);
-	
-	if ( $rows ) :
-	foreach ($rows as $row) {
-		$a = array(
-			'locId'			=>	$row->locId,
-			'country'		=>	$row->country,
-			'region'		=>	$row->region,
-			'city'			=>	$row->city,
-			'postalCode'	=>	$row->zip,
-			'latitude'		=>	$row->latitude,
-			'longitude'		=>	$row->longitude,
-			'metroCode'		=>	$row->metroCode,
-			'areacode'		=>	$row->areaCode,
-			'ip'			=>	get_the_ip(),
-			);
-	}
-	endif;
-	
-	return $a;
-}
 
 
 // If geo_ip returns zip code, and zip code is in test_market array, return true
