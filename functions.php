@@ -344,10 +344,13 @@ if ( ! function_exists( 'jht_posted_on' ) ) :
  * @since JHT 1.0
  */
 function jht_posted_on() {
+	/*  Old method was to show blog posts by author...
 	$linkit = ( get_the_author_meta('googleplus') ) ? '<a href="'.get_the_author_meta('googleplus').'">' : '';
 	$unlinkit = ( $linkit ) ? '</a>' : '';
 	echo 'Added by ' . $linkit . get_the_author() . $unlinkit;
 	edit_post_link( __( 'Edit', 'jht' ), ' : <span class="edit-link">', '</span>' );
+	*/
+	the_date( 'F j, Y', 'Posted on ', '', true );
 }
 endif;
 
@@ -1324,6 +1327,7 @@ function jht_pagemenu_metabox() {
     $menus = wp_get_nav_menus();
 	foreach ( $menus as $m ) echo '<option value="'. $m->term_id . ( $info['menu'] == $m->term_id ? '" selected="selected' : '') .'">'. esc_attr($m->name) .'</option>';
 	?></select></p>
+    <p><label for="jht_pageopts[g]"><input type="checkbox" name="jht_pageopts[g]" value="Yes"<?php echo isset($info['g']) ? ( $info['g'] == 'Yes' ? ' checked="checked"' : '' ) : '' ?> /> Include "Buyer's Guide" form?</label></p>
     <p><label for="jht_pageopts[b]"><input type="checkbox" name="jht_pageopts[b]" value="Yes"<?php echo isset($info['b']) ? ( $info['b'] == 'Yes' ? ' checked="checked"' : '' ) : '' ?> /> Include "Free Brochure" link?</label></p>
     <p><label for="jht_pageopts[q]"><input type="checkbox" name="jht_pageopts[q]" value="Yes"<?php echo isset($info['q']) ? ( $info['q'] == 'Yes' ? ' checked="checked"' : '' ) : '' ?> /> Include "Request Quote" link?</label></p>
 	<p><label for="jht_pageopts[t]"><input type="checkbox" name="jht_pageopts[t]" value="Yes"<?php echo isset($info['t']) ? ( $info['t'] == 'Yes' ? ' checked="checked"' : '' ) : '' ?> /> Include "Trade-In Value" link?</label></p>
@@ -1507,7 +1511,7 @@ function jht_meta_save($post_id){
 	
 	// Check permissions
 	if ( isset( $_POST['post_type'] ) ) {
-		if (in_array($_POST['post_type'],array('jht_tub', 'jht_cat', 'page', 'jht_vid')) ) {
+		if (in_array($_POST['post_type'],array('jht_tub', 'jht_cat', 'page', 'jht_vid', 'post')) ) {
 			if ( !current_user_can( 'edit_page', $post_id ) ) return $post_id;
 		} else {
 		//if ( !current_user_can( 'edit_post', $post_id ) )
@@ -1568,6 +1572,17 @@ function jht_meta_save($post_id){
 
 		return $infos;
 	}
+
+	if($_POST['post_type'] == 'post') {
+		$infos = '';
+
+		$info = $_POST['jht_pageopts'];
+		update_post_meta($post_id, 'jht_pageopts', $info);
+		$infos .= $info;
+
+		return $infos;
+	}
+
 
 
 	if( in_array( $_POST['post_type'] , array( 'jht_cat', 'jht_vid' ) ) ) {
@@ -1981,10 +1996,13 @@ function jht_admin_init() {
 			case 'page-quote-ppc.php':
 			case 'page-quote-special-promo.php':
 				add_meta_box( "jht_ppc_options_metabox", "PPC Header Options", "jht_ppc_options_metabox", "page", "normal", "low" );
+				break;
 		}
 		add_meta_box( "jht_menuoptions_metabox", "Menu Display Options", "jht_menuoptions_metabox", "page", "side", "low" );
 		add_meta_box( "jht_nopopup_metabox", "Pop-up Options", "jht_nopopup_metabox", "page", "side", "low" );
 		add_meta_box( "jht_form_type_metabox", "Is this a Form Page?", "jht_form_type_metabox", "page", "side", "low" );
+
+		add_meta_box( "jht_pagemenu_metabox", "Left Sidebar", "jht_pagemenu_metabox", "post", "side", "low" );
 	}
 
 	if ( get_option( 'progo_direct_installed' ) != true ) {
