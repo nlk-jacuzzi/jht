@@ -757,7 +757,7 @@ jQuery(function($) {
 	$('#show-msrp').click(function(){
 		if ( $(this).hasClass('close') ) { 
 		    $('.container.msrp').hide(); 
-		    $(this).removeClass('close').text('Get MSRP Pricing'); 
+		    $(this).removeClass('close').text('View Suggested Retail Pricing'); 
 		} else { 
 		    $('.container.msrp').show(); 
 		    $(this).addClass('close').text('Close'); 
