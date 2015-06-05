@@ -7028,6 +7028,9 @@ body.quote p.note a
 
 
 /* MSRP */
+a#show-msrp {
+	font-size: 20px;
+}
 a#show-msrp.close {
 	background: #d1d1d1;
 	background-color: #d1d1d1;
