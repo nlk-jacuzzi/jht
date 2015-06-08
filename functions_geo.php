@@ -177,13 +177,13 @@ function msrp_display() {
 	return false;
 }
 
-/*
+
 add_action('wp_head', 'geo_meta_debug');
 function geo_meta_debug() {
 	$o = geo_data();
 	echo '<meta name="geo_debug" content="'.implode(', ',$o).'">';
 }
-*/
+
 
 
 ?>
