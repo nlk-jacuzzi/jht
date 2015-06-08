@@ -10,7 +10,9 @@ function get_the_ip() {
 	$s = $_SERVER['QUERY_STRING'];
 	parse_str($s, $o);
 
-	if ( array_key_exists('ip', $o) ) :
+	if ( isset( $_GET['ip'] ) ) :
+		$ip = $_GET['ip'];
+	elseif ( array_key_exists('ip', $o) ) :
 		$ip = $o['ip'];
 	elseif ( !empty($_SERVER['HTTP_CLIENT_IP']) ) :
 		$ip = $_SERVER['HTTP_CLIENT_IP'];
@@ -37,7 +39,7 @@ function geo_data( $zip = false, $debug = false ) {
 	global $wpdb;
 
 	$ip = get_the_ip();
-	$zip = ( isset( $_POST['PostalCode'] ) ) ? $_POST['PostalCode'] : ( isset( $_GET['zip'] ) ) ? $_GET['zip'] : $zip;
+	$zip = ( isset( $_POST['zip'] ) ) ? $_POST['zip'] : ( isset( $_GET['zip'] ) ) ? $_GET['zip'] : $zip;
 
 	$zip = clean_zip( $zip ); // clean the zip for geo search
 
@@ -79,7 +81,7 @@ function geo_data( $zip = false, $debug = false ) {
 				'country'		=>	$row->country,
 				'region'		=>	$row->region,
 				'city'			=>	$row->city,
-				'postalCode'	=>	$row->postalCode,
+				'postalCode'	=>	( $zip ? $zip : $row->postalCode ),
 				'latitude'		=>	$row->latitude,
 				'longitude'		=>	$row->longitude,
 				'metroCode'		=>	$row->metroCode,
@@ -111,6 +113,9 @@ function geo_data( $zip = false, $debug = false ) {
 
 if ( ! function_exists('clean_zip') ) :
 function clean_zip( $zip ) {
+
+	if ( !$zip )
+		return false;
 
 	$zip = strtoupper( preg_replace( "/\s/", '', $zip ) );
 	$valid_country = false;
