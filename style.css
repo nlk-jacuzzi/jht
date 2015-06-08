@@ -6507,13 +6507,13 @@ a.getpricing
 	background: url('images/btn_pricing_bg.png') 0 0 repeat-x transparent;
 	background-size: 1px 100%;
 	border-radius: 5px;
-	/*height: 39px;*/
+	height: 39px;
 	width: 100%;
 	max-width: 300px;
 	font-size: 18px;
-	line-height: 25px;
+	line-height: 39px;
 	font-family: "GSMT";
-	padding: 10px 0;
+	/*padding: 10px 0;*/
 	text-align:center;
 	text-transform: uppercase;
 	display: block;
@@ -7030,6 +7030,9 @@ body.quote p.note a
 /* MSRP */
 a#show-msrp {
 	font-size: 20px;
+	height: auto;
+	line-height: 25px;
+	padding: 10px 0;
 }
 a#show-msrp.close {
 	background: #d1d1d1;
