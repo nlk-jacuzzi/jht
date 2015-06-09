@@ -86,39 +86,6 @@ $bv = new BV(
     );
 
 ?>
-<?php /*
-<div class="hero"<?php
-if (class_exists('MultiPostThumbnails')) {
-	$img_id = MultiPostThumbnails::get_post_thumbnail_id('jht_tub', 'background-image', $post->ID);
-	if ( $img_id ) {
-		$img = get_post($img_id);
-		echo ' style="background: #000 url('. $img->guid .') 50% 0 no-repeat"';
-	}
-}
-?>>
-    	<div class="wrap">
-            <div class="inner"<?php
-			if (class_exists('MultiPostThumbnails')) {
-				$img_id = MultiPostThumbnails::get_post_thumbnail_id('jht_tub', 'overhead-large', $post->ID);
-				if ( $img_id ) {
-					$imgsrc = wp_get_attachment_image_src($img_id, 'overhead');
-					echo ' style="background: url('. $imgsrc[0] .') 0 65% no-repeat"';
-				}
-			}
-?>>
-                <h1><?php the_title(); ?></h1>
-                <!--<div id="BVRRSummaryContainer"></div>-->
-                <h2><?php esc_attr_e($jht_info['topheadline']); ?></h2>
-            </div>
-        </div>
-    </div>
-    <div class="goldBar8">
-        <div class="the-tab-buttons">
-            <a id="pricing-tab-link" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>"><b>Get</b> Pricing</a>
-            <a id="brochure-tab-link" href="<?php bloginfo('url'); ?>/request-brochure/?tid=<?php echo $post->ID; ?>"><b>Free</b> Brochure</a>
-        </div>
-    </div>
-    */ ?>
     <script type="text/javascript">
     	jQuery(document).ready(function(){
     		jQuery( "#monthly-cost" ).tooltip();
@@ -183,7 +150,10 @@ if (class_exists('MultiPostThumbnails')) {
                 <div class="side">
                 	<h1><?php the_title(); ?></h1>
                 	<h2><?php esc_attr_e($jht_info['topheadline']); ?></h2>
-                	<div id="BVRRSummaryContainer"></div>
+                	<div itemscope itemtype="http://schema.org/Product">
+                        <meta itemprop="name" content="<?php echo the_title(); ?>" />
+                        <div id="BVRRSummaryContainer"></div>
+                    </div>
                 	<div class="specifications">
                     	<p><strong>Seats:</strong> <?php esc_attr_e($jht_specs['seats']); ?></p>
                         <p><strong>PowerPro Jets:</strong> <?php echo absint($jetcount); ?></p>
@@ -518,53 +488,30 @@ if (class_exists('MultiPostThumbnails')) {
 
                     <div id="reviews" class="tab" >
                         <div class="inner">
-                            <div id="BVRRContainer">
-                                <?php echo $bv->reviews->getContent();?>
+                            <div itemscope itemtype="http://schema.org/Product">
+                                <meta itemprop="name" content="<?php echo the_title(); ?>" />
+                                <div id="BVRRContainer">
+                                    <?php echo $bv->reviews->getContent();?>
+                                </div>
+                                <script type="text/javascript">
+                                $BV.ui( 'rr', 'show_reviews', {
+                                doShowContent : function () {
+                                // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
+                                    var tab = $('ul#tubtabs li.current a').attr('href');
+                                    tab.replace('#','');
+                                    $('ul#tubtabs li.current').removeClass('current');
+                                    $('div#'+tab+'.tab').css('display','none');
+                                    $('li a[href="#reviews"]').parent().addClass('current');
+                                    $('#reviews').css('display', 'block');
+                                }
+                                });
+                                </script>
                             </div>
-                            <script type="text/javascript">
-                            $BV.ui( 'rr', 'show_reviews', {
-                            doShowContent : function () {
-                            // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
-                                var tab = $('ul#tubtabs li.current a').attr('href');
-                                tab.replace('#','');
-                                $('ul#tubtabs li.current').removeClass('current');
-                                $('div#'+tab+'.tab').css('display','none');
-                                $('li a[href="#reviews"]').parent().addClass('current');
-                                $('#reviews').css('display', 'block');
-                            }
-                            });
-                            </script>
                         </div>
                     </div>
                                             
                 </div>
                     <div class="side">
-                        <?php /*
-                        <h2>Acrylic Shell Colors</h2>
-                        <p>The Jacuzzi TriFusion&trade; System produces a durable acrylic spa shell that is eight times stronger than conventional fiberglass shells and rich in color and texture.</p>
-                            <div class="options">
-                                <ul class="colors">
-                                	<?php
-									foreach ( $jht_colors as $i => $t ) {
-										echo '<li><span>'. get_the_post_thumbnail( $i, 'right-thumbs') .'</span>';
-										echo $t;
-										echo '</li>';
-									}
-									?>
-                                </ul>
-                                <h2>Cabinetry</h2>
-                                <p>Our cabinetry is durable and UV-resistant.</p>
-                                <ul class="cabinetry">
-                                	<?php
-									foreach ( $jht_cabs as $i => $t ) {
-										echo '<li><span>'. get_the_post_thumbnail( $i, 'right-thumbs') .'</span>';
-										echo $t;
-										echo '</li>';
-									}
-									?>
-                                </ul>
-                        </div>
-                        */ ?>
                         <div class="scall bro newbro">
                         	<img src="<?php bloginfo('template_url'); ?>/images/free_brochure_title.png" class="title-img" />
                         	<a href="<?php echo get_permalink(3745); ?>?tid=<?php echo $post->ID; ?>"><strong>Free</strong> Brochure</a>

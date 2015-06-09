@@ -56,8 +56,11 @@ function submitGeneric() {
 
     <div class="bd">
         <div class="wrap">
-            <div id="BVRRContainer">
-                <?php echo $bv->reviews->getContent();?>
+            <div itemscope itemtype="http://schema.org/Product">
+                <meta itemprop="name" content="<?php echo the_title(); ?>" />
+                <div id="BVRRContainer">
+                    <?php echo $bv->reviews->getContent();?>
+                </div>
             </div>
         </div>
     </div>
