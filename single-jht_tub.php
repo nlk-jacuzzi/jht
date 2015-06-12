@@ -221,7 +221,7 @@ if (class_exists('MultiPostThumbnails')) {
                     <div class="tub-brochure-pricing">
                         <div class="fullrow">
                             <div class="twothird">
-                                <a id="show-msrp" href="#" class="getpricing">View Suggested Retail Pricing</a>
+                                <a id="show-msrp" href="#" class="getpricing">View MSRP</a>
                             </div>
                             <div class="onethird last">
                                 <div class="share-bar">
@@ -281,7 +281,7 @@ if (class_exists('MultiPostThumbnails')) {
             <div class="container msrp" style="display:none;">
                 <div class="l">
                     <p class="msrp-disclaimer">Disclaimer</p>
-                    <p>Prices listed are suggested retail price. Actual retail price may vary based on rebates and/or incentives that may be available at your local dealer. Please request a quote or visit your local dealer for current pricing information.</p>
+                    <p>Prices listed are Manufacturer's Suggested Retail Price (MSRP). Prices may not include additional fees, see authorized dealer for details.</p>
                 </div>
                 <div class="r">
                     <?php echo '<p class="msrp-price"><span>' . $msrp . '</span> Suggested Retail</p>'; ?>
