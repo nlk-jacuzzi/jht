@@ -1796,7 +1796,7 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 }
 .video-showcase #accord .ui-accordion-content{
 	float: left;
-	padding:10px 5px;
+	padding:0px 5px;
 	margin: 0 5px;
 }
 /* Let's get this party started */
