@@ -1749,8 +1749,9 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 /* - - - VIDEO SHOWCASE - - - -*/
 .video-showcase .hero{
 	background: url(images/heros/video-showcase.jpg) center top no-repeat;
-	height:405px;
-	padding: 96px 0 0;
+	background-size: cover;
+	/*height:405px;*/
+	padding: 96px 0 20px;
 }
 .video-showcase .hero .main{
 	display:inline-block;
@@ -1765,10 +1766,10 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 	background:#000;
 	border:1px solid #666;
 	float:right;
-	height:388px;
+	/*height:388px;*/
 	padding:1px;
 }
-.video-showcase #accord { float: left; width: 238px; height: 388px }
+.video-showcase #accord { float: left; width: 238px; /*height: 388px*/ }
 .video-showcase #accord h3{
 	float:left;
 	width: 224px;
@@ -1821,7 +1822,7 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 .video-showcase #accord ul.video-list { 
 	float: left;
 	width: 228px;
-	height: 244px;
+	height: 207px;
 	overflow-y: auto;
 	overflow-x: hidden;
 	display: inline;
