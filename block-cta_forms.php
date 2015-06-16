@@ -13,7 +13,7 @@ $truckloadObj = json_decode($json);
 <div id="bbg-ctas">
 	<div class="bbg-container">
 		<div id="bbg-ctas-block1">
-			<h3><strong>FREE</strong> Brochure &amp; Buyer's Guide</h3>
+			<h3><strong>FREE</strong> 25 Page Brochure</h3>
 			<ul>
 				<li>Compare models side-by-side</li>
 				<li>Learn about features &amp; options</li>
