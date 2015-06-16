@@ -105,9 +105,9 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 			</div>
 			<h2><strong>Cabinetry:</strong> <span class="skirt-name"></span></h2>
 			<div class="skirts">
-				<div class="shell thumb brazilianteak active" timg="brazilianteak" rel="Brazilian Teak" data-pdf="teak" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-thumb-brazilianteak.png" height="45" width="45" /></div>
-				<div class="shell thumb roastedchestnut" timg="roastedchestnut" rel="Roasted Chestnut" data-pdf="chest" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-thumb-roastedchestnut.png" height="45" width="45" /></div>
-				<div class="shell thumb silverwood" timg="silverwood" rel="Silverwood" data-pdf="silver" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-thumb-silverwood.png" height="45" width="45" /></div>
+				<div class="skirt thumb brazilianteak active" timg="brazilianteak" rel="Brazilian Teak" data-pdf="teak" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-thumb-brazilianteak.png" height="45" width="45" /></div>
+				<div class="skirt thumb roastedchestnut" timg="roastedchestnut" rel="Roasted Chestnut" data-pdf="chest" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-thumb-roastedchestnut.png" height="45" width="45" /></div>
+				<div class="skirt thumb silverwood" timg="silverwood" rel="Silverwood" data-pdf="silver" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-thumb-silverwood.png" height="45" width="45" /></div>
 			</div>
 			<a class="btn bigGoldBtn" href="<?php echo get_bloginfo('url'); ?>/get-a-quote/">Get Pricing</a>
 			<a class="pdf-download" href="" download="">Download Your Selected Color PDF</a>
