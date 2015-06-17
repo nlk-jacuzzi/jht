@@ -151,7 +151,6 @@ $bv = new BV(
                 	<h1><?php the_title(); ?></h1>
                 	<h2><?php esc_attr_e($jht_info['topheadline']); ?></h2>
                 	<div itemscope itemtype="http://schema.org/Product">
-                        <meta itemprop="name" content="<?php echo the_title(); ?>" />
                         <div id="BVRRSummaryContainer"></div>
                     </div>
                 	<div class="specifications">
