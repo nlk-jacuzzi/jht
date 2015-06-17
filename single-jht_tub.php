@@ -253,7 +253,7 @@ $bv = new BV(
                     <p>Prices listed are Manufacturer's Suggested Retail Price (MSRP). Prices may not include additional fees, see authorized dealer for details.</p>
                 </div>
                 <div class="r">
-                    <?php echo '<p class="msrp-price"><span>' . $msrp . '</span> Suggested Retail</p>'; ?>
+                    <?php echo '<p class="msrp-price"><span>' . $msrp . '</span> MSRP</p>'; ?>
                     <a class="msrp-dealer" href="<?php bloginfo('url'); ?>/dealer-locator/">Find Your Nearest Dealer</a>
                     <a class="msrp-pricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Request Pricing from Dealer</a>
                 </div>
