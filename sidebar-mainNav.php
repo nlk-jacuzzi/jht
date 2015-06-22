@@ -6,7 +6,6 @@
 	                <?php
 						//global $polylang;
 						global $tubcats;
-						print('<pre>'); print_r($tubcats); print('</pre>');
 						//echo '<pre style="display:none">'. print_r($tubcats,true) .'</pre>';
 						// transient for sundance_htdrop
 						//if ( false === ( $special_query_results = get_transient( 'jht_hdrop' ) ) ) {
