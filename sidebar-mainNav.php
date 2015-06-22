@@ -4,8 +4,9 @@
             <ul class="primaryMenu" id="tnav">
             	<li class="menu-item first parent<?php if ( in_array( get_post_type(), array('jht_cat', 'jht_tub'))) echo ' current'; ?>">
 	                <?php
-						global $polylang;
+						//global $polylang;
 						global $tubcats;
+						print('<pre>'); print_r($tubcats); print('</pre>');
 						//echo '<pre style="display:none">'. print_r($tubcats,true) .'</pre>';
 						// transient for sundance_htdrop
 						//if ( false === ( $special_query_results = get_transient( 'jht_hdrop' ) ) ) {
