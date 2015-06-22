@@ -451,6 +451,7 @@ print('<pre>'); print_r($bv); print('</pre>');
 
                     <div id="reviews" class="tab" >
                         <div class="inner">
+                        <?php if ( ! empty($bv->reviews->getContent()) ) : ?>
                                 <div id="BVRRContainer">
                                     <?php echo $bv->reviews->getContent();?>
                                 </div>
