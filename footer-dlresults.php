@@ -41,7 +41,7 @@ get_sidebar('bottomBlocks');
     <a href="<?php echo get_permalink(3743) ?>" class="bbtn">Get a Quote</a>
     <a href="<?php echo get_permalink(3745) ?>" class="bbtn">Free Brochure</a>
     <?php jht_socialmenu(); ?>
-    <div class="sites"><a href="http://www.jacuzzi.com/" class="bbtn" target="_blank">Jacuzzi Websites</a></div>
+    <div class="sites"><a href="<?php echo jht_rooturl(); ?>" class="bbtn" target="_blank">Jacuzzi Websites</a></div>
     </div></div>
 
     <?php get_template_part('modal', 'popup'); ?>
