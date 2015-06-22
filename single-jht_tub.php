@@ -169,48 +169,48 @@ $bv = new BV(
                             </div>
                             <div class="clear"></div>
                         </div>
-                    <?php if ( msrp_display() ) : ?>
-                        <div class="tub-brochure-pricing">
-                            <div class="fullrow">
-                                <div class="twothird">
-                                    <a id="show-msrp" href="#" class="getpricing">View MSRP</a>
-                                </div>
-                                <div class="onethird last">
-                                    <div class="share-bar">
-                                        <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+                        <?php if ( function_exists('msrp_display') && msrp_display() ) : ?>
+                            <div class="tub-brochure-pricing">
+                                <div class="fullrow">
+                                    <div class="twothird">
+                                        <a id="show-msrp" href="#" class="getpricing">View MSRP</a>
                                     </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    <?php else : ?>
-                        <div class="tub-brochure-pricing">
-                            <div class="fullrow">
-                                <div class="onehalf">
-                                    <a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a>
-                                </div>
-                                <div class="onehalf last">
-                                    <a class="getpricing" href="<?php bloginfo('url'); ?>/dealer-locator">Find A Dealer</a>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="fullrow">
-                                <div class="twothird">
-                                    &nbsp;
-                                </div>
-                                <div class="onethird last">
-                                    <div class="share-bar">
-                                        <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+                                    <div class="onethird last">
+                                        <div class="share-bar">
+                                            <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+                                        </div>
                                     </div>
+                                    <div class="clear"></div>
                                 </div>
-                                <div class="clear"></div>
                             </div>
-                        </div>
-                    <?php endif; ?>
+                        <?php else : ?>
+                            <div class="tub-brochure-pricing">
+                                <div class="fullrow">
+                                    <div class="onehalf">
+                                        <a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a>
+                                    </div>
+                                    <div class="onehalf last">
+                                        <a class="getpricing" href="<?php bloginfo('url'); ?>/dealer-locator">Find A Dealer</a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="fullrow">
+                                    <div class="twothird">
+                                        &nbsp;
+                                    </div>
+                                    <div class="onethird last">
+                                        <div class="share-bar">
+                                            <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
-        <?php if ( msrp_display() ) : ?>
+        <?php if ( function_exists('msrp_display') && msrp_display() ) : ?>
             <?php
             $msrp = esc_attr($jht_specs['msrp']);
             $msrp = ( $msrp[0] == '$' ? $msrp : '$'.$msrp );
@@ -256,203 +256,203 @@ $bv = new BV(
                 <div class="twoCol">
                     <div class="main">
                     
-                    <div id="features-options" class="tab" style="display:block">
-                        <h2 class="tabtitle">Features &amp; Options</h2>
-                        <p><?php esc_attr_e($jht_info['featureblurb']); ?></p>
-                        <div class="features">
-                            <?php
-                            foreach ( $jht_feats as $fid ) {
-                                $feat = get_post($fid);
-                                ?>
-                            <div class="feature withimage">
-                                <?php echo get_the_post_thumbnail($fid, 'feature-option'); ?>
-                                <h2><?php esc_attr_e($feat->post_title); ?></h2>
-                                <?php echo apply_filters('the_content', $feat->post_content); ?>
+                        <div id="features-options" class="tab" style="display:block">
+                            <h2 class="tabtitle">Features &amp; Options</h2>
+                            <p><?php esc_attr_e($jht_info['featureblurb']); ?></p>
+                            <div class="features">
+                                <?php
+                                foreach ( $jht_feats as $fid ) {
+                                    $feat = get_post($fid);
+                                    ?>
+                                <div class="feature withimage">
+                                    <?php echo get_the_post_thumbnail($fid, 'feature-option'); ?>
+                                    <h2><?php esc_attr_e($feat->post_title); ?></h2>
+                                    <?php echo apply_filters('the_content', $feat->post_content); ?>
+                                </div>
+                                <?php } ?>
                             </div>
-                            <?php } ?>
                         </div>
-                    </div>
-                        
-                    <div id="jets" class="tab" >
-                        <div class="half">
-                            <div class="description">
-                                <div class="inner">
-                                    <h2>EXCLUSIVE JET TECHNOLOGY</h2>
-                                    <p>Jacuzzi&reg; Brand PowerPro&reg; Jets deliver a high volume, low pressure hydromassage through Aqualibrium&trade;: the perfect mix of air and water. As the first company to pioneer jetted water technology, only Jacuzzi&reg; can deliver a massage experience that a legacy that spans nearly 60 years can bring.</p>
-                                    <!--div class="arrow-right"><a href="#">Roll Over Plus Signs for more Jet Info</a></div-->
+
+                        <div id="jets" class="tab" >
+                            <div class="half">
+                                <div class="description">
+                                    <div class="inner">
+                                        <h2>EXCLUSIVE JET TECHNOLOGY</h2>
+                                        <p>Jacuzzi&reg; Brand PowerPro&reg; Jets deliver a high volume, low pressure hydromassage through Aqualibrium&trade;: the perfect mix of air and water. As the first company to pioneer jetted water technology, only Jacuzzi&reg; can deliver a massage experience that a legacy that spans nearly 60 years can bring.</p>
+                                        <!--div class="arrow-right"><a href="#">Roll Over Plus Signs for more Jet Info</a></div-->
+                                    </div>
+                                </div>
+                                <div class="rollover">
+                                <?php
+                                    if (class_exists('MultiPostThumbnails')) {
+                                        MultiPostThumbnails::the_post_thumbnail('jht_tub', 'overhead-large', $post->ID, 'overhead');
+                                    }
+                                ?>
                                 </div>
                             </div>
-                            <div class="rollover">
-                            <?php
-                                if (class_exists('MultiPostThumbnails')) {
-                                    MultiPostThumbnails::the_post_thumbnail('jht_tub', 'overhead-large', $post->ID, 'overhead');
-                                }
-                            ?>
-                            </div>
-                        </div>
-                        <div class="jet-details">
-                        <?php
-                        $i = 0;
-                        foreach( $jht_jets as $j => $c ) {
-                            if ( absint($c) > 0 ) { ?>
-                            <div class="jet-detail">
-                                <?php echo get_the_post_thumbnail( $j, 'jet', array('class'=>'alignleft')); ?>
-                                <h2><?php esc_attr_e($alljets[$i]->post_title); ?> Jets <span class="count">(<?php echo absint($c); ?>)</span></h2>
-                                <?php echo apply_filters('the_content', $alljets[$i]->post_content); ?>
-                                <br class="clear" />
-                            </div>
-                            <?php
-                            }
-                            $i++;
-                        }?>
-                        </div>
-                    </div>
-                        
-                    <div id="specs" class="specifications tab" >
-                        <h3>Overview</h3>
-                        <table cellspacing="0">
-                            <tr class="line1">
-                                <td>Seating Capacity</td>
-                                <td><?php esc_attr_e($jht_specs['seats']); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Dimensions</td>
-                                <td><?php echo esc_attr($jht_specs['dim_us']) .(($jht_specs['dim_us'] . $jht_specs['dim_int']) != '' ? ' / ' : ''). esc_attr($jht_specs['dim_int']); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Average Spa Volume</td>
-                                <td><?php echo esc_attr($jht_specs['vol_us']) .(($jht_specs['vol_us'] . $jht_specs['vol_int']) != '' ? ' / ' : ''). esc_attr($jht_specs['vol_int']); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Dry Weight</td>
-                                <td><?php esc_attr_e($jht_specs['dry_weight']); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Total Filled Weight</td>
-                                <td><?php esc_attr_e($jht_specs['filled']); ?></td>
-                            </tr>
-                            <?php
-                            for ( $i = 1; $i < 4; $i++ ) {
-                            if ( isset($jht_specs['pump'.$i]) ) if ( $jht_specs['pump'. $i] != '' ) { ?>
-                            <tr>
-                                <td>Pump <?php echo $i ?></td>
-                                <td><?php echo nl2br(esc_attr($jht_specs['pump'. $i])); ?></td>
-                            </tr>
-                            <?php
-                            }
-                            }
-                            ?>
-                            <tr>
-                                <td>Circulation Pump</td>
-                                <td><?php esc_attr_e($jht_specs['circulation']); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Diverter Valves</td>
-                                <td><?php echo absint($jht_specs['diverter']); ?></td>
-                            </tr>
-                            <?php
-                            if ( !isset($jht_specs['wps']) ) $jht_specs['wps'] = 'CLEAR<strong>RAY</strong>&trade;'; // hax
-                            if ( isset($jht_specs['wps']) ) if ( $jht_specs['wps'] != '' ) { ?>
-                            <tr>
-                                <td>Water Purification System</td>
-                                <td><?php echo $jht_specs['wps']; ?></td>
-                            </tr>
-                            <?php } ?>
-                            <?php if ( isset($jht_specs['filtration']) ) if ( $jht_specs['filtration'] != '' ) { ?>
-                            <tr>
-                                <td>Filtration</td>
-                                <td><?php esc_attr_e($jht_specs['filtration']); ?></td>
-                            </tr>
-                            <?php } ?>
-                            <tr>
-                                <td>Filters</td>
-                                <td><?php echo nl2br(esc_attr($jht_specs['filters'])); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Electrical North America</td>
-                                <td><?php esc_attr_e($jht_specs['elec_na']); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Electrical International</td>
-                                <td><?php esc_attr_e($jht_specs['elec_int']); ?></td>
-                            </tr>
-                        </table>
-                        <h3>Colors &amp; Cabinetry</h3>
-                        <table cellspacing="0">
-                            <tr class="line1">
-                                <td>Cabinetry</td>
-                                <td><?php echo implode(', ', $jht_cabs); ?></td>
-                            </tr>
-                            <tr>
-                                <td>Shell Colors**</td>
-                                <td><?php echo implode(', ', $jht_colors); ?></td>
-                            </tr>
-                        </table>
-                        <h3>Jets</h3>
-                        <table cellspacing="0">
-                            <tr class="line1">
-                                <td>Total Jets</td>
-                                <td><?php echo absint($jetcount); ?></td>
-                            </tr>
+                            <div class="jet-details">
                             <?php
                             $i = 0;
-                            foreach ( $jht_jets as $j => $c ) {
-                                $c = absint($c);
-                                if ( $c > 0 ) {
-                                ?>
-                            <tr>
-                                <td><?php esc_attr_e($alljets[$i]->post_title); ?></td>
-                                <td><?php echo $c; ?></td>
-                            </tr><?php
+                            foreach( $jht_jets as $j => $c ) {
+                                if ( absint($c) > 0 ) { ?>
+                                <div class="jet-detail">
+                                    <?php echo get_the_post_thumbnail( $j, 'jet', array('class'=>'alignleft')); ?>
+                                    <h2><?php esc_attr_e($alljets[$i]->post_title); ?> Jets <span class="count">(<?php echo absint($c); ?>)</span></h2>
+                                    <?php echo apply_filters('the_content', $alljets[$i]->post_content); ?>
+                                    <br class="clear" />
+                                </div>
+                                <?php
                                 }
                                 $i++;
-                            }
-                            ?>
-                        </table>
-                        <p class="note"><small><strong>NOTE:</strong> Spa Volume is based on average fill.<br /><br />
-                            Jacuzzi Hot Tubs may make product modifications and enhancements. Specifications may change without notice. International products may be configured differently to meet local electrical requirements. Dimensions are approximate. Spa volume is based on average fill. Manufactured under one or more United States patent numbers. Other patents may apply.<br /><br />
-                            Estimated monthly cost is based on CEC test protocol for standby power consumption only. Test results measured in a controlled environment based on a kilowatt rate per hour of $0.10. Local and future energy rates, local conditions and individual use will alter these estimated monthly costs.For complete CEC test protocol and results visit http://www.energy.ca.gov<br /><br />
-                            * Pump input or brake horsepower (bhp) is the actual horsepower delivered to the pump shaft. Source: ITT Goulds Pumps, Centrifugal Pump Fundamentals.<br />
-                            ** Selection may vary by dealer</small></p>
-                    </div>
-
-                    <div id="warranty" class="tab" >
-                        <h2 class="tabtitle">Available Warranties</h2>
-                        <h2>Warranty Info: <?php the_title(); ?></h2>
-                        <div class="warranties">
-                            <?php foreach ( $jht_wars as $p ) { ?>
-                            <div class="warranty">
-                                <p><?php echo get_the_post_thumbnail($p->ID, 'warranty', array('class'=>'alignleft')); ?><?php echo esc_attr($p->post_title) .' - '. catch_warranty_details_h4( $p->post_content ); ?></p>
+                            }?>
                             </div>
-                            <?php } ?>
                         </div>
-                        <p class="note">For complete warranty information, please visit our <a href="<?php echo get_permalink(4169) ?>">warranty page</a></p>
-                    </div>
 
-                    <div id="reviews" class="tab" >
-                        <div class="inner">
-                            <?php if ( ! empty($bv) ) : ?>
-                                <div id="BVRRContainer">
-                                    <?php echo $bv->reviews->getContent();?>
-                                </div>
-                                <script type="text/javascript">
-                                $BV.ui( 'rr', 'show_reviews', {
-                                doShowContent : function () {
-                                // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
-                                    var tab = $('ul#tubtabs li.current a').attr('href');
-                                    tab.replace('#','');
-                                    $('ul#tubtabs li.current').removeClass('current');
-                                    $('div#'+tab+'.tab').css('display','none');
-                                    $('li a[href="#reviews"]').parent().addClass('current');
-                                    $('#reviews').css('display', 'block');
+                        <div id="specs" class="specifications tab" >
+                            <h3>Overview</h3>
+                            <table cellspacing="0">
+                                <tr class="line1">
+                                    <td>Seating Capacity</td>
+                                    <td><?php esc_attr_e($jht_specs['seats']); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Dimensions</td>
+                                    <td><?php echo esc_attr($jht_specs['dim_us']) .(($jht_specs['dim_us'] . $jht_specs['dim_int']) != '' ? ' / ' : ''). esc_attr($jht_specs['dim_int']); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Average Spa Volume</td>
+                                    <td><?php echo esc_attr($jht_specs['vol_us']) .(($jht_specs['vol_us'] . $jht_specs['vol_int']) != '' ? ' / ' : ''). esc_attr($jht_specs['vol_int']); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Dry Weight</td>
+                                    <td><?php esc_attr_e($jht_specs['dry_weight']); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Total Filled Weight</td>
+                                    <td><?php esc_attr_e($jht_specs['filled']); ?></td>
+                                </tr>
+                                <?php
+                                for ( $i = 1; $i < 4; $i++ ) {
+                                if ( isset($jht_specs['pump'.$i]) ) if ( $jht_specs['pump'. $i] != '' ) { ?>
+                                <tr>
+                                    <td>Pump <?php echo $i ?></td>
+                                    <td><?php echo nl2br(esc_attr($jht_specs['pump'. $i])); ?></td>
+                                </tr>
+                                <?php
                                 }
-                                });
-                                </script>
-                            <?php endif; ?>
+                                }
+                                ?>
+                                <tr>
+                                    <td>Circulation Pump</td>
+                                    <td><?php esc_attr_e($jht_specs['circulation']); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Diverter Valves</td>
+                                    <td><?php echo absint($jht_specs['diverter']); ?></td>
+                                </tr>
+                                <?php
+                                if ( !isset($jht_specs['wps']) ) $jht_specs['wps'] = 'CLEAR<strong>RAY</strong>&trade;'; // hax
+                                if ( isset($jht_specs['wps']) ) if ( $jht_specs['wps'] != '' ) { ?>
+                                <tr>
+                                    <td>Water Purification System</td>
+                                    <td><?php echo $jht_specs['wps']; ?></td>
+                                </tr>
+                                <?php } ?>
+                                <?php if ( isset($jht_specs['filtration']) ) if ( $jht_specs['filtration'] != '' ) { ?>
+                                <tr>
+                                    <td>Filtration</td>
+                                    <td><?php esc_attr_e($jht_specs['filtration']); ?></td>
+                                </tr>
+                                <?php } ?>
+                                <tr>
+                                    <td>Filters</td>
+                                    <td><?php echo nl2br(esc_attr($jht_specs['filters'])); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Electrical North America</td>
+                                    <td><?php esc_attr_e($jht_specs['elec_na']); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Electrical International</td>
+                                    <td><?php esc_attr_e($jht_specs['elec_int']); ?></td>
+                                </tr>
+                            </table>
+                            <h3>Colors &amp; Cabinetry</h3>
+                            <table cellspacing="0">
+                                <tr class="line1">
+                                    <td>Cabinetry</td>
+                                    <td><?php echo implode(', ', $jht_cabs); ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Shell Colors**</td>
+                                    <td><?php echo implode(', ', $jht_colors); ?></td>
+                                </tr>
+                            </table>
+                            <h3>Jets</h3>
+                            <table cellspacing="0">
+                                <tr class="line1">
+                                    <td>Total Jets</td>
+                                    <td><?php echo absint($jetcount); ?></td>
+                                </tr>
+                                <?php
+                                $i = 0;
+                                foreach ( $jht_jets as $j => $c ) {
+                                    $c = absint($c);
+                                    if ( $c > 0 ) {
+                                    ?>
+                                <tr>
+                                    <td><?php esc_attr_e($alljets[$i]->post_title); ?></td>
+                                    <td><?php echo $c; ?></td>
+                                </tr><?php
+                                    }
+                                    $i++;
+                                }
+                                ?>
+                            </table>
+                            <p class="note"><small><strong>NOTE:</strong> Spa Volume is based on average fill.<br /><br />
+                                Jacuzzi Hot Tubs may make product modifications and enhancements. Specifications may change without notice. International products may be configured differently to meet local electrical requirements. Dimensions are approximate. Spa volume is based on average fill. Manufactured under one or more United States patent numbers. Other patents may apply.<br /><br />
+                                Estimated monthly cost is based on CEC test protocol for standby power consumption only. Test results measured in a controlled environment based on a kilowatt rate per hour of $0.10. Local and future energy rates, local conditions and individual use will alter these estimated monthly costs.For complete CEC test protocol and results visit http://www.energy.ca.gov<br /><br />
+                                * Pump input or brake horsepower (bhp) is the actual horsepower delivered to the pump shaft. Source: ITT Goulds Pumps, Centrifugal Pump Fundamentals.<br />
+                                ** Selection may vary by dealer</small></p>
                         </div>
+
+                        <div id="warranty" class="tab" >
+                            <h2 class="tabtitle">Available Warranties</h2>
+                            <h2>Warranty Info: <?php the_title(); ?></h2>
+                            <div class="warranties">
+                                <?php foreach ( $jht_wars as $p ) { ?>
+                                <div class="warranty">
+                                    <p><?php echo get_the_post_thumbnail($p->ID, 'warranty', array('class'=>'alignleft')); ?><?php echo esc_attr($p->post_title) .' - '. catch_warranty_details_h4( $p->post_content ); ?></p>
+                                </div>
+                                <?php } ?>
+                            </div>
+                            <p class="note">For complete warranty information, please visit our <a href="<?php echo get_permalink(4169) ?>">warranty page</a></p>
+                        </div>
+
+                        <div id="reviews" class="tab" >
+                            <div class="inner">
+                                <?php if ( ! empty($bv) ) : ?>
+                                    <div id="BVRRContainer">
+                                        <?php echo $bv->reviews->getContent();?>
+                                    </div>
+                                    <script type="text/javascript">
+                                    $BV.ui( 'rr', 'show_reviews', {
+                                    doShowContent : function () {
+                                    // If the container is hidden (such as behind a tab), put code here to make it visible (open the tab).
+                                        var tab = $('ul#tubtabs li.current a').attr('href');
+                                        tab.replace('#','');
+                                        $('ul#tubtabs li.current').removeClass('current');
+                                        $('div#'+tab+'.tab').css('display','none');
+                                        $('li a[href="#reviews"]').parent().addClass('current');
+                                        $('#reviews').css('display', 'block');
+                                    }
+                                    });
+                                    </script>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
                     </div>
-                                            
-                </div>
                     <div class="side">
                         <div class="scall bro newbro">
                             <img src="<?php bloginfo('template_url'); ?>/images/free_brochure_title.png" class="title-img" />
@@ -460,10 +460,10 @@ $bv = new BV(
                             <div class="clear"></div>
                             <a class="getpricing" href="<?php echo get_permalink(3745); ?>?tid=<?php echo $post->ID; ?>">Download</a>
                         </div>
-                        <div class="scall quo"><a href="<?php echo get_bloginf('url'); ?>/financing/?tid=<?php echo $post->ID; ?>"><strong>Hot Tub</strong> Financing</a></div>
-                        <div class="scall quo"><a href="<?php echo get_bloginf('url'); ?>/trade-in-value/?tid=<?php echo $post->ID; ?>"><strong>Trade-In</strong> Value</a></div>
+                        <div class="scall quo"><a href="<?php echo get_bloginfo('url'); ?>/financing/?tid=<?php echo $post->ID; ?>"><strong>Hot Tub</strong> Financing</a></div>
+                        <div class="scall quo"><a href="<?php echo get_bloginfo('url'); ?>/trade-in-value/?tid=<?php echo $post->ID; ?>"><strong>Trade-In</strong> Value</a></div>
                         <!-- <div class="scall quo"><a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a></div> -->
-                        <a class="getpricing" href="<?php echo get_bloginf('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>" style="margin-top: 20px;">Get Pricing</a>
+                        <a class="getpricing" href="<?php echo get_bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>" style="margin-top: 20px;">Get Pricing</a>
                     </div>
                 </div>
                 <h3 class="to-top"><a href="#top"><span class="icon upArrow"></span>Back to Top</a></h3>
