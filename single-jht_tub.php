@@ -85,6 +85,7 @@ $bv = new BV(
         )
     );
 
+print('<pre>'); print_r($bv); print('</pre>');
 ?>
     <script type="text/javascript">
     	jQuery(document).ready(function(){
@@ -156,8 +157,8 @@ $bv = new BV(
                 	<div class="specifications">
                     	<p><strong>Seats:</strong> <?php esc_attr_e($jht_specs['seats']); ?></p>
                         <p><strong>PowerPro Jets:</strong> <?php echo absint($jetcount); ?></p>
-                        <p><strong>Dimensions:</strong> <?php esc_attr_e($jht_specs['dim_us']); ?></p>
-                        <p><strong>Spa Volume:</strong> <?php esc_attr_e($jht_specs['vol_us']); ?></p>
+                        <p><strong>Dimensions:</strong> <?php echo ( jht_isca() ) ? esc_attr($jht_specs['dim_int']) : esc_attr($jht_specs['dim_us']); ?></p>
+                        <p><strong>Spa Volume:</strong> <?php echo ( jht_isca() ) ? esc_attr($jht_specs['vol_int']) : esc_attr($jht_specs['vol_us']); ?></p>
                     </div>
                     <div class="energy">
                     	<h2 class="green"><strong>Energy Efficiency</strong></h2>
@@ -506,6 +507,7 @@ $bv = new BV(
                                 });
                                 </script>
                             </div>
+                        <?php endif; ?>
                         </div>
                     </div>
                                             
@@ -517,19 +519,10 @@ $bv = new BV(
                         	<div class="clear"></div>
                         	<a class="getpricing" href="<?php echo get_permalink(3745); ?>?tid=<?php echo $post->ID; ?>">Download</a>
                         </div>
-                        <?php /*
-                         <div class="scall quo"><a href="http://shop.jacuzzi.com" target="_blank"><strong>Accessories</strong> Store</a></div>
-                        <div class="scall quo"><a href="<?php echo get_permalink(3743); ?>?tid=<?php echo $post->ID; ?>"><strong>Request</strong> a Quote</a></div>
-                        */ ?>
-                        <div class="scall quo"><a href="<?php echo get_permalink(4397); ?>?tid=<?php echo $post->ID; ?>"><strong>Hot Tub</strong> Financing</a></div>
-                        <div class="scall quo"><a href="<?php echo get_permalink(7759); ?>?tid=<?php echo $post->ID; ?>"><strong>Trade-In</strong> Value</a></div>
+                        <div class="scall quo"><a href="<?php echo get_bloginf('url'); ?>/financing/?tid=<?php echo $post->ID; ?>"><strong>Hot Tub</strong> Financing</a></div>
+                        <div class="scall quo"><a href="<?php echo get_bloginf('url'); ?>/trade-in-value/?tid=<?php echo $post->ID; ?>"><strong>Trade-In</strong> Value</a></div>
                         <!-- <div class="scall quo"><a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a></div> -->
-                        <a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>" style="margin-top: 20px;">Get Pricing</a>
-                        <?php /*
-                        <div class="request-appointment">
-                            <h2><a href="<?php echo get_permalink(4414); ?>"><strong>Request Appointment</strong><br />Call Today: 877.411.5228</a></h2>
-                        </div>
-						*/ ?>
+                        <a class="getpricing" href="<?php echo get_bloginf('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>" style="margin-top: 20px;">Get Pricing</a>
                     </div>
                 </div>
                 <h3 class="to-top"><a href="#top"><span class="icon upArrow"></span>Back to Top</a></h3>

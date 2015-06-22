@@ -13,10 +13,10 @@
 global $post;
 
 $ppccustom = get_post_meta($post->ID,'jht_newppc_options');
-$ppcopts = $ppccustom[0];
+$ppcopts = isset($ppccustom[0]) ? $ppccustom[0] : '';
 
 $menucustom = get_post_meta($post->ID,'jht_menuoption');
-$menuopts = $menucustom[0];
+$menuopts = isset($menucustom[0]) ? $menucustom[0] : '';
 
 wp_reset_query();
 
