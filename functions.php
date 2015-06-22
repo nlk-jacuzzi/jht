@@ -1617,7 +1617,7 @@ function jht_meta_save($post_id){
 					$size = $_POST['jht_specs'];
 					$seats = $size['seats'];
 					
-					$sizekey = 'dim_us';
+					$sizekey = jht_isca() ? 'dim_int' : 'dim_us';
 					$sizekey = apply_filters('hottubsize', $sizekey);
 					if ( !isset( $size[$sizekey] ) ) {
 						$sizekey = 'dim_us';
