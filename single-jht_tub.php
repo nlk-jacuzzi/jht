@@ -85,40 +85,8 @@ $bv = new BV(
         )
     );
 
+print('<pre>'); print_r($bv); print('</pre>');
 ?>
-<?php /*
-<div class="hero"<?php
-if (class_exists('MultiPostThumbnails')) {
-	$img_id = MultiPostThumbnails::get_post_thumbnail_id('jht_tub', 'background-image', $post->ID);
-	if ( $img_id ) {
-		$img = get_post($img_id);
-		echo ' style="background: #000 url('. $img->guid .') 50% 0 no-repeat"';
-	}
-}
-?>>
-    	<div class="wrap">
-            <div class="inner"<?php
-			if (class_exists('MultiPostThumbnails')) {
-				$img_id = MultiPostThumbnails::get_post_thumbnail_id('jht_tub', 'overhead-large', $post->ID);
-				if ( $img_id ) {
-					$imgsrc = wp_get_attachment_image_src($img_id, 'overhead');
-					echo ' style="background: url('. $imgsrc[0] .') 0 65% no-repeat"';
-				}
-			}
-?>>
-                <h1><?php the_title(); ?></h1>
-                <!--<div id="BVRRSummaryContainer"></div>-->
-                <h2><?php esc_attr_e($jht_info['topheadline']); ?></h2>
-            </div>
-        </div>
-    </div>
-    <div class="goldBar8">
-        <div class="the-tab-buttons">
-            <a id="pricing-tab-link" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>"><b>Get</b> Pricing</a>
-            <a id="brochure-tab-link" href="<?php bloginfo('url'); ?>/request-brochure/?tid=<?php echo $post->ID; ?>"><b>Free</b> Brochure</a>
-        </div>
-    </div>
-    */ ?>
     <script type="text/javascript">
     	jQuery(document).ready(function(){
     		jQuery( "#monthly-cost" ).tooltip();
@@ -187,8 +155,8 @@ if (class_exists('MultiPostThumbnails')) {
                 	<div class="specifications">
                     	<p><strong>Seats:</strong> <?php esc_attr_e($jht_specs['seats']); ?></p>
                         <p><strong>PowerPro Jets:</strong> <?php echo absint($jetcount); ?></p>
-                        <p><strong>Dimensions:</strong> <?php esc_attr_e($jht_specs['dim_us']); ?></p>
-                        <p><strong>Spa Volume:</strong> <?php esc_attr_e($jht_specs['vol_us']); ?></p>
+                        <p><strong>Dimensions:</strong> <?php echo ( jht_isca() ) ? esc_attr($jht_specs['dim_int']) : esc_attr($jht_specs['dim_us']); ?></p>
+                        <p><strong>Spa Volume:</strong> <?php echo ( jht_isca() ) ? esc_attr($jht_specs['vol_int']) : esc_attr($jht_specs['vol_us']); ?></p>
                     </div>
                     <div class="energy">
                     	<h2 class="green"><strong>Energy Efficiency</strong></h2>
@@ -475,6 +443,7 @@ if (class_exists('MultiPostThumbnails')) {
 
                     <div id="reviews" class="tab" >
                         <div class="inner">
+                        <?php if ( ! empty($bv->reviews->getContent()) ) : ?>
                             <div id="BVRRContainer">
                                 <?php echo $bv->reviews->getContent();?>
                             </div>
@@ -491,56 +460,22 @@ if (class_exists('MultiPostThumbnails')) {
                             }
                             });
                             </script>
+                        <?php endif; ?>
                         </div>
                     </div>
                                             
                 </div>
                     <div class="side">
-                        <?php /*
-                        <h2>Acrylic Shell Colors</h2>
-                        <p>The Jacuzzi TriFusion&trade; System produces a durable acrylic spa shell that is eight times stronger than conventional fiberglass shells and rich in color and texture.</p>
-                            <div class="options">
-                                <ul class="colors">
-                                	<?php
-									foreach ( $jht_colors as $i => $t ) {
-										echo '<li><span>'. get_the_post_thumbnail( $i, 'right-thumbs') .'</span>';
-										echo $t;
-										echo '</li>';
-									}
-									?>
-                                </ul>
-                                <h2>Cabinetry</h2>
-                                <p>Our cabinetry is durable and UV-resistant.</p>
-                                <ul class="cabinetry">
-                                	<?php
-									foreach ( $jht_cabs as $i => $t ) {
-										echo '<li><span>'. get_the_post_thumbnail( $i, 'right-thumbs') .'</span>';
-										echo $t;
-										echo '</li>';
-									}
-									?>
-                                </ul>
-                        </div>
-                        */ ?>
                         <div class="scall bro newbro">
                         	<img src="<?php bloginfo('template_url'); ?>/images/free_brochure_title.png" class="title-img" />
                         	<a href="<?php echo get_permalink(3745); ?>?tid=<?php echo $post->ID; ?>"><strong>Free</strong> Brochure</a>
                         	<div class="clear"></div>
                         	<a class="getpricing" href="<?php echo get_permalink(3745); ?>?tid=<?php echo $post->ID; ?>">Download</a>
                         </div>
-                        <?php /*
-                         <div class="scall quo"><a href="http://shop.jacuzzi.com" target="_blank"><strong>Accessories</strong> Store</a></div>
-                        <div class="scall quo"><a href="<?php echo get_permalink(3743); ?>?tid=<?php echo $post->ID; ?>"><strong>Request</strong> a Quote</a></div>
-                        */ ?>
-                        <div class="scall quo"><a href="<?php echo get_permalink(4397); ?>?tid=<?php echo $post->ID; ?>"><strong>Hot Tub</strong> Financing</a></div>
-                        <div class="scall quo"><a href="<?php echo get_permalink(7759); ?>?tid=<?php echo $post->ID; ?>"><strong>Trade-In</strong> Value</a></div>
+                        <div class="scall quo"><a href="<?php echo get_bloginf('url'); ?>/financing/?tid=<?php echo $post->ID; ?>"><strong>Hot Tub</strong> Financing</a></div>
+                        <div class="scall quo"><a href="<?php echo get_bloginf('url'); ?>/trade-in-value/?tid=<?php echo $post->ID; ?>"><strong>Trade-In</strong> Value</a></div>
                         <!-- <div class="scall quo"><a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a></div> -->
-                        <a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>" style="margin-top: 20px;">Get Pricing</a>
-                        <?php /*
-                        <div class="request-appointment">
-                            <h2><a href="<?php echo get_permalink(4414); ?>"><strong>Request Appointment</strong><br />Call Today: 877.411.5228</a></h2>
-                        </div>
-						*/ ?>
+                        <a class="getpricing" href="<?php echo get_bloginf('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>" style="margin-top: 20px;">Get Pricing</a>
                     </div>
                 </div>
                 <h3 class="to-top"><a href="#top"><span class="icon upArrow"></span>Back to Top</a></h3>
