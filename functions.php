@@ -1623,7 +1623,7 @@ function jht_meta_save($post_id){
 					$sizekey = jht_isca() ? 'dim_int' : 'dim_us';
 					$sizekey = apply_filters('hottubsize', $sizekey);
 					if ( !isset( $size[$sizekey] ) ) {
-						$sizekey = 'dim_us';
+						$sizekey = jht_isca() ? 'dim_int' : 'dim_us';
 					}
 					$size = $size[$sizekey];
 					
