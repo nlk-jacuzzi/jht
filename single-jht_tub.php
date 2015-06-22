@@ -104,143 +104,130 @@ print('<pre>'); print_r($bv); print('</pre>');
     	<div class="clear"></div>
     	<div class="wrap">
             <div class="twoCol extendedCol">
-                <div class="main">
-					<div class="hotub-mainimg">
-						<?php
-							if (class_exists('MultiPostThumbnails')) {
-								MultiPostThumbnails::the_post_thumbnail('jht_tub', 'three-quarter', $post->ID, 'one-half-th', array('class'=>'onehalfs'));
-							}
-						?>
-					</div>
-                    <div class="options" style="width: 100%;">
-                        <div class="color-options-box">
-	                        <h3>Available Shells</h3>
-	                        <ul>
-	                            <?php foreach ( $jht_colors as $i => $t ) {
-	                                echo '<li class="has-img-tooltip"><a title="'. $t .'">'. get_the_post_thumbnail( $i, 'options-medium-thumbs') . '</a>';
-	                                echo '<div class="tooltip-img" style="display:none;"><div>' . get_the_post_thumbnail($i) . '<p style="padding-top: 6px;">' . $t . '</p></div></div>';
-	                                echo '</li>';
-	                            } ?>
-	                        </ul>
-                        </div>
-                        <div class="cabinetry-options-box">
-	                        <h3>Cabinets</h3>
-	                        <ul>
-	                            <?php foreach ( $jht_cabs as $i => $t ) {
-	                                echo '<li class="has-img-tooltip"><a title="'. $t .'">'. get_the_post_thumbnail( $i, 'options-medium-thumbs') . '</a>';
-	                                echo '<div class="tooltip-img" style="display:none;"><div>' . get_the_post_thumbnail($i) . '<p style="padding-top: 6px;">' . $t . '</p></div></div>';
-	                                echo '</li>';
-	                            } ?>
-	                        </ul>
-                        </div>
-                        <div class="clear" style="margin: 0 auto; clear: both;"></div>
-                        <div class="color-selector-link">
-	                        <a class="lightbox-link" onClick="jQuery('.color-selector-modal-bg').show();">View the Jacuzzi Shell & Cabinet Selector</a>
-	                    </div>
-                    </div>
-                    <?php /*
-					// not right now
-                    <div class="buy-now">
-                    	<h3>Call to Order: 844.411.5228 <!--span class="icon close"></span--></h3>
-                        <p class="inner">
-                        	<a href="#" class="btn gold">Request a Quote</a><a class="btn black" href="#">Buy</a>
-                        </p>
-                    </div>
-					*/ ?>
-                </div>
-                <div class="side">
-                	<h1><?php the_title(); ?></h1>
-                	<h2><?php esc_attr_e($jht_info['topheadline']); ?></h2>
-                	<div itemscope itemtype="http://schema.org/Product">
-                        <div id="BVRRSummaryContainer"></div>
-                    </div>
-                	<div class="specifications">
-                    	<p><strong>Seats:</strong> <?php esc_attr_e($jht_specs['seats']); ?></p>
-                        <p><strong>PowerPro Jets:</strong> <?php echo absint($jetcount); ?></p>
-                        <p><strong>Dimensions:</strong> <?php echo ( jht_isca() ) ? esc_attr($jht_specs['dim_int']) : esc_attr($jht_specs['dim_us']); ?></p>
-                        <p><strong>Spa Volume:</strong> <?php echo ( jht_isca() ) ? esc_attr($jht_specs['vol_int']) : esc_attr($jht_specs['vol_us']); ?></p>
-                    </div>
-                    <div class="energy">
-                    	<h2 class="green"><strong>Energy Efficiency</strong></h2>
-                        <div class="efficiency-block">
-	                        <table cellpadding="0">
-	                        	<tr>
-	                            	<td><p><strong>Monthly Cost<span><a href="#" id="monthly-cost" title="Monthly energy costs are estimates based on the results of the California Energy Commissions Portable Hot Tub Testing Protocol. Ambient temperature of 60°F / 15°C and national average of 10 cents per kWh. Actual monthly costs may vary depending on temperature, electricity costs and usage.
-">(?)</a></span>:</strong></p></td>
-	                                <td valign="bottom"><p class="green">$<?php esc_attr_e($jht_specs['emoc']); ?></p></td>
-	                            </tr>
-	                        </table>
-                        </div>
-                        <div class="warranty-box">
-                        	<img src="<?php bloginfo('template_url'); ?>/images/warranty_star.png" alt="Warranty 10 years" title="Warranty 10 years"/>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <?php /* ?>
-                    <div class="share newshare">
-                        <div class="default-img-details">
-                        	<p><strong>Shell Color:</strong> <?php esc_attr_e($jht_specs['featuredimgshell']); ?></p>
-                        	<p><strong>Cabinetry:</strong> <?php esc_attr_e($jht_specs['featuredimgcabinet']); ?></p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <?php */ ?>
-
-                <?php if ( msrp_display() ) : ?>
-
-                    <div class="tub-brochure-pricing">
-                        <div class="fullrow">
-                            <div class="twothird">
-                                <a id="show-msrp" href="#" class="getpricing">View MSRP</a>
+                <div itemscope itemtype="http://schema.org/Product">
+                    <div class="main">
+    					<div class="hotub-mainimg">
+    						<?php
+    							if (class_exists('MultiPostThumbnails')) {
+    								MultiPostThumbnails::the_post_thumbnail('jht_tub', 'three-quarter', $post->ID, 'one-half-th', array('class'=>'onehalfs'));
+    							}
+    						?>
+    					</div>
+                        <div class="options" style="width: 100%;">
+                            <div class="color-options-box">
+    	                        <h3>Available Shells</h3>
+    	                        <ul>
+    	                            <?php foreach ( $jht_colors as $i => $t ) {
+    	                                echo '<li class="has-img-tooltip"><a title="'. $t .'">'. get_the_post_thumbnail( $i, 'options-medium-thumbs') . '</a>';
+    	                                echo '<div class="tooltip-img" style="display:none;"><div>' . get_the_post_thumbnail($i) . '<p style="padding-top: 6px;">' . $t . '</p></div></div>';
+    	                                echo '</li>';
+    	                            } ?>
+    	                        </ul>
                             </div>
-                            <div class="onethird last">
-                                <div class="share-bar">
-                                    <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+                            <div class="cabinetry-options-box">
+    	                        <h3>Cabinets</h3>
+    	                        <ul>
+    	                            <?php foreach ( $jht_cabs as $i => $t ) {
+    	                                echo '<li class="has-img-tooltip"><a title="'. $t .'">'. get_the_post_thumbnail( $i, 'options-medium-thumbs') . '</a>';
+    	                                echo '<div class="tooltip-img" style="display:none;"><div>' . get_the_post_thumbnail($i) . '<p style="padding-top: 6px;">' . $t . '</p></div></div>';
+    	                                echo '</li>';
+    	                            } ?>
+    	                        </ul>
+                            </div>
+                            <div class="clear" style="margin: 0 auto; clear: both;"></div>
+                            <div class="color-selector-link">
+    	                        <a class="lightbox-link" onClick="jQuery('.color-selector-modal-bg').show();">View the Jacuzzi Shell & Cabinet Selector</a>
+    	                    </div>
+                        </div>
+                        <?php /*
+    					// not right now
+                        <div class="buy-now">
+                        	<h3>Call to Order: 844.411.5228 <!--span class="icon close"></span--></h3>
+                            <p class="inner">
+                            	<a href="#" class="btn gold">Request a Quote</a><a class="btn black" href="#">Buy</a>
+                            </p>
+                        </div>
+    					*/ ?>
+                    </div>
+                    <div class="side">
+                        <meta itemprop="name" content="<?php echo the_title(); ?>" />
+                    	<h1><?php the_title(); ?></h1>
+                    	<h2><?php esc_attr_e($jht_info['topheadline']); ?></h2>
+                            <div id="BVRRSummaryContainer"></div>
+                    	<div class="specifications">
+                        	<p><strong>Seats:</strong> <?php esc_attr_e($jht_specs['seats']); ?></p>
+                            <p><strong>PowerPro Jets:</strong> <?php echo absint($jetcount); ?></p>
+                            <p><strong>Dimensions:</strong> <?php echo ( jht_isca() ) ? esc_attr($jht_specs['dim_int']) : esc_attr($jht_specs['dim_us']); ?></p>
+                            <p><strong>Spa Volume:</strong> <?php echo ( jht_isca() ) ? esc_attr($jht_specs['vol_int']) : esc_attr($jht_specs['vol_us']); ?></p>
+                        </div>
+                        <div class="energy">
+                        	<h2 class="green"><strong>Energy Efficiency</strong></h2>
+                            <div class="efficiency-block">
+    	                        <table cellpadding="0">
+    	                        	<tr>
+    	                            	<td><p><strong>Monthly Cost<span><a href="#" id="monthly-cost" title="Monthly energy costs are estimates based on the results of the California Energy Commissions Portable Hot Tub Testing Protocol. Ambient temperature of 60°F / 15°C and national average of 10 cents per kWh. Actual monthly costs may vary depending on temperature, electricity costs and usage.">(?)</a></span>:</strong></p></td>
+    	                                <td valign="bottom"><p class="green">$<?php esc_attr_e($jht_specs['emoc']); ?></p></td>
+    	                            </tr>
+    	                        </table>
+                            </div>
+                            <div class="warranty-box">
+                            	<img src="<?php bloginfo('template_url'); ?>/images/warranty_star.png" alt="Warranty 10 years" title="Warranty 10 years"/>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <?php /* ?>
+                        <div class="share newshare">
+                            <div class="default-img-details">
+                            	<p><strong>Shell Color:</strong> <?php esc_attr_e($jht_specs['featuredimgshell']); ?></p>
+                            	<p><strong>Cabinetry:</strong> <?php esc_attr_e($jht_specs['featuredimgcabinet']); ?></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <?php */ ?>
+                    <?php if ( msrp_display() ) : ?>
+
+                        <div class="tub-brochure-pricing">
+                            <div class="fullrow">
+                                <div class="twothird">
+                                    <a id="show-msrp" href="#" class="getpricing">View MSRP</a>
                                 </div>
+                                <div class="onethird last">
+                                    <div class="share-bar">
+                                        <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
                             </div>
-                            <div class="clear"></div>
                         </div>
+                    <?php else : ?>
+
+                        <div class="tub-brochure-pricing">
+                            <div class="fullrow">
+                            	<div class="onehalf">
+                                	<a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a>
+                                </div>
+                                <div class="onehalf last">
+                                	<a class="getpricing" href="<?php bloginfo('url'); ?>/dealer-locator">Find A Dealer</a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="fullrow">
+                            	<div class="twothird">
+                                	&nbsp;
+                                </div>
+                                <div class="onethird last">
+                                	<div class="share-bar">
+    		                            <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+    		                        </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <?php /* <p><i>Take a minute &amp; get a free quote</i><br />&nbsp;</p> */ ?>
+                        </div>
+                    <?php endif; ?>
                     </div>
-
-                <?php else : ?>
-
-                    <div class="tub-brochure-pricing">
-                        <div class="fullrow">
-                        	<div class="onehalf">
-                            	<a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a>
-                            </div>
-                            <div class="onehalf last">
-                            	<a class="getpricing" href="<?php bloginfo('url'); ?>/dealer-locator">Find A Dealer</a>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="fullrow">
-                        	<div class="twothird">
-                            	&nbsp;
-                            </div>
-                            <div class="onethird last">
-                            	<div class="share-bar">
-		                            <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
-		                        </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <?php /* <p><i>Take a minute &amp; get a free quote</i><br />&nbsp;</p> */ ?>
-                    </div>
-
-                <?php endif; ?>
-
-                    <?php
-					//get_sidebar('freeBrochure');
-					//get_sidebar('requestQuote');
-                    //get_sidebar('tradeIn');
-                    //get_sidebar('colorSelector');
-					?>
-                    <?php /*<div class="scall bro"><a onClick="jQuery('.color-selector-modal-bg').show();" style="cursor: pointer;"><strong>Color</strong> Selector</a></h1></div> */ ?>
-                    
                 </div>
             </div>
-        
         <?php if ( msrp_display() ) : ?>
 
             <?php
@@ -259,9 +246,7 @@ print('<pre>'); print_r($bv); print('</pre>');
                     <a class="msrp-pricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Request Pricing from Dealer</a>
                 </div>
             </div>
-
         <?php endif; ?>
-
             <div class="container">
             	<div class="wrap hot-tub-extradesc">
             		<div class="twoCol">
@@ -467,7 +452,6 @@ print('<pre>'); print_r($bv); print('</pre>');
                     <div id="reviews" class="tab" >
                         <div class="inner">
                             <div itemscope itemtype="http://schema.org/Product">
-                                <meta itemprop="name" content="<?php echo the_title(); ?>" />
                                 <div id="BVRRContainer">
                                     <?php echo $bv->reviews->getContent();?>
                                 </div>
@@ -511,7 +495,6 @@ print('<pre>'); print_r($bv); print('</pre>');
                     <?php get_template_part('block', 'color_selector'); ?>
                 </div>
             </div>
-
 <?php
 endwhile;
 get_footer(); ?>
