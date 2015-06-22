@@ -13,10 +13,10 @@
 global $post;
 
 $ppccustom = get_post_meta($post->ID,'jht_newppc_options');
-$ppcopts = $ppccustom[0];
+$ppcopts = isset($ppccustom[0]) ? $ppccustom[0] : '';
 
 $menucustom = get_post_meta($post->ID,'jht_menuoption');
-$menuopts = $menucustom[0];
+$menuopts = isset($menucustom[0]) ? $menucustom[0] : '';
 
 wp_reset_query();
 
@@ -96,7 +96,7 @@ else {} ?>
                 <a href="<?php echo get_permalink(3745) ?>" class="bbtn">Free Brochure</a>
                 <?php jht_socialmenu(); ?>
                 <div class="sites">
-                    <a href="http://www.jacuzzi.com/" class="bbtn" target="_blank">Jacuzzi Websites</a>
+                    <a href="<?php echo jht_rooturl(); ?>" class="bbtn" target="_blank">Jacuzzi Websites</a>
                 </div>
             </div>
         </div>

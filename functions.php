@@ -1617,10 +1617,10 @@ function jht_meta_save($post_id){
 					$size = $_POST['jht_specs'];
 					$seats = $size['seats'];
 					
-					$sizekey = 'dim_us';
+					$sizekey = jht_isca() ? 'dim_int' : 'dim_us';
 					$sizekey = apply_filters('hottubsize', $sizekey);
 					if ( !isset( $size[$sizekey] ) ) {
-						$sizekey = 'dim_us';
+						$sizekey = jht_isca() ? 'dim_int' : 'dim_us';
 					}
 					$size = $size[$sizekey];
 					
@@ -3138,6 +3138,23 @@ function jht_get_collectionslandingid2() {
 	return $id;
 }
 
+function jht_getregion() {
+	if ( in_array( $_SERVER['SERVER_NAME'], array( 'www.jacuzzi.ca','beta.jacuzzi.ca' ) ) ) {
+		return 'ca';
+	}
+	return 'us';
+}
+function jht_isca() {
+	$r = jht_getregion();
+	if ( $r === 'ca' )
+		return true;
+	return false;
+}
+function jht_rooturl() {
+	$r = ( jht_isca() ) ? 'http://www.jacuzzi.ca/' : 'http://www.jacuzzi.com/';
+	return $r;
+}
+
 function jht_getslug() {
 	if ( is_admin() )
 		return;
@@ -3193,6 +3210,8 @@ function jht_my_server() {
 	switch ( $url ) {
 		case 'http://www.jacuzzi.com/hot-tubs' :
 		case 'http://www.jacuzzi.com/hot-tubs/' :
+		case 'http://www.jacuzzi.ca/hot-tubs' :
+		case 'http://www.jacuzzi.ca/hot-tubs/' :
 			return 'live';
 			break;
 		case 'http://www.nlkdevj.com/hot-tubs' :
@@ -3202,6 +3221,9 @@ function jht_my_server() {
 		case 'http://localhost/jacuzzi.com/hot-tubs' :
 		case 'http://localhost/jacuzzi.com/hot-tubs/' :
 		case 'http://localhost.jacuzzi.com/hot-tubs/' :
+		case 'http://localhost/jacuzzi.ca/hot-tubs' :
+		case 'http://localhost/jacuzzi.ca/hot-tubs/' :
+		case 'http://localhost.jacuzzi.ca/hot-tubs/' :
 			return 'local';
 			break;
 	}

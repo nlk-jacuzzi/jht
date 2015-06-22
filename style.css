@@ -6060,7 +6060,7 @@ a#Quote_Grphic_sidebar {
 	#bbg-ctas-block1 .gform_wrapper {
 		margin: 0;
 		position: absolute;
-		top: 113px;
+		top: 100px;
 		width: 300px;
 	}
 	#bbg-ctas-block1 form {
@@ -6153,6 +6153,7 @@ a#Quote_Grphic_sidebar {
 		top: 190px;
 	}
 	#bbg-ctas-block2 form input[name="zip"] {
+		vertical-align: top;
 		width: 90px;
 	}
 	#bbg-ctas-block2 form input[type="submit"] {
@@ -6178,6 +6179,7 @@ a#Quote_Grphic_sidebar {
 
 	#bbg-ctas label {
 		display: inline-block;
+		line-height: 15px;
 		width: 40px;
 	}
 	#bbg-ctas-block1 label[for="receive_email_campaigns"] {
@@ -6205,6 +6207,9 @@ a#Quote_Grphic_sidebar {
 		margin-top: 12px;
 		letter-spacing: 1px;
 		width: 294px;
+	}
+	#bbg-ctas input.submit[value="Download Now"] {
+		margin-top: 25px;
 	}
 
 /* - - - block-browse-the-tubs - - - */
