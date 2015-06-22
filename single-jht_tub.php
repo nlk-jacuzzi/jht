@@ -85,7 +85,7 @@ $bv = new BV(
         )
     );
 
-print('<pre>'); print_r($bv); print('</pre>');
+//print('<pre>'); print_r($bv); print('</pre>');
 ?>
     <script type="text/javascript">
     	jQuery(document).ready(function(){
@@ -139,15 +139,6 @@ print('<pre>'); print_r($bv); print('</pre>');
     	                        <a class="lightbox-link" onClick="jQuery('.color-selector-modal-bg').show();">View the Jacuzzi Shell & Cabinet Selector</a>
     	                    </div>
                         </div>
-                        <?php /*
-    					// not right now
-                        <div class="buy-now">
-                        	<h3>Call to Order: 844.411.5228 <!--span class="icon close"></span--></h3>
-                            <p class="inner">
-                            	<a href="#" class="btn gold">Request a Quote</a><a class="btn black" href="#">Buy</a>
-                            </p>
-                        </div>
-    					*/ ?>
                     </div>
                     <div class="side">
                         <meta itemprop="name" content="<?php echo the_title(); ?>" />
@@ -175,17 +166,7 @@ print('<pre>'); print_r($bv); print('</pre>');
                             </div>
                             <div class="clear"></div>
                         </div>
-                        <?php /* ?>
-                        <div class="share newshare">
-                            <div class="default-img-details">
-                            	<p><strong>Shell Color:</strong> <?php esc_attr_e($jht_specs['featuredimgshell']); ?></p>
-                            	<p><strong>Cabinetry:</strong> <?php esc_attr_e($jht_specs['featuredimgcabinet']); ?></p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <?php */ ?>
                     <?php if ( msrp_display() ) : ?>
-
                         <div class="tub-brochure-pricing">
                             <div class="fullrow">
                                 <div class="twothird">
@@ -200,7 +181,6 @@ print('<pre>'); print_r($bv); print('</pre>');
                             </div>
                         </div>
                     <?php else : ?>
-
                         <div class="tub-brochure-pricing">
                             <div class="fullrow">
                             	<div class="onehalf">
@@ -222,19 +202,16 @@ print('<pre>'); print_r($bv); print('</pre>');
                                 </div>
                                 <div class="clear"></div>
                             </div>
-                            <?php /* <p><i>Take a minute &amp; get a free quote</i><br />&nbsp;</p> */ ?>
                         </div>
                     <?php endif; ?>
                     </div>
                 </div>
             </div>
         <?php if ( msrp_display() ) : ?>
-
             <?php
             $msrp = esc_attr($jht_specs['msrp']);
             $msrp = ( $msrp[0] == '$' ? $msrp : '$'.$msrp );
             ?>
-
             <div class="container msrp" style="display:none;">
                 <div class="l">
                     <p class="msrp-disclaimer">Disclaimer</p>
@@ -451,6 +428,7 @@ print('<pre>'); print_r($bv); print('</pre>');
 
                     <div id="reviews" class="tab" >
                         <div class="inner">
+                            <?php if ( ! empty($bv) ) : ?>
                                 <div id="BVRRContainer">
                                     <?php echo $bv->reviews->getContent();?>
                                 </div>
@@ -467,6 +445,7 @@ print('<pre>'); print_r($bv); print('</pre>');
                                 }
                                 });
                                 </script>
+                            <?php endif; ?>
                         </div>
                     </div>
                                             
