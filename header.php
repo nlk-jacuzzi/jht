@@ -16,9 +16,9 @@
 		<?php
 			if ( function_exists('get_wpseo_options') ) {
 				wp_title('');
-				if ( $_GET['bvrrp'] )
+				if ( isset($_GET['bvrrp']) )
 					echo ' Reviews';
-				if ( $_GET['bvqap'] )
+				if ( isset($_GET['bvqap']) )
 					echo ' Questions';
 			} else {
 				$ti = wp_title('', false);
