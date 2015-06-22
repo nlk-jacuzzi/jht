@@ -451,7 +451,6 @@ print('<pre>'); print_r($bv); print('</pre>');
 
                     <div id="reviews" class="tab" >
                         <div class="inner">
-                            <div itemscope itemtype="http://schema.org/Product">
                                 <div id="BVRRContainer">
                                     <?php echo $bv->reviews->getContent();?>
                                 </div>
@@ -468,7 +467,6 @@ print('<pre>'); print_r($bv); print('</pre>');
                                 }
                                 });
                                 </script>
-                            </div>
                         <?php endif; ?>
                         </div>
                     </div>
