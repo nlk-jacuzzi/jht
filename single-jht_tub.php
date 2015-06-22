@@ -169,44 +169,44 @@ $bv = new BV(
                             </div>
                             <div class="clear"></div>
                         </div>
-                    <?php if ( msrp_display() ) : ?>
-                        <div class="tub-brochure-pricing">
-                            <div class="fullrow">
-                                <div class="twothird">
-                                    <a id="show-msrp" href="#" class="getpricing">View MSRP</a>
-                                </div>
-                                <div class="onethird last">
-                                    <div class="share-bar">
-                                        <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+                        <?php if ( function_exists('msrp_display') && msrp_display() ) : ?>
+                            <div class="tub-brochure-pricing">
+                                <div class="fullrow">
+                                    <div class="twothird">
+                                        <a id="show-msrp" href="#" class="getpricing">View MSRP</a>
                                     </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    <?php else : ?>
-                        <div class="tub-brochure-pricing">
-                            <div class="fullrow">
-                                <div class="onehalf">
-                                    <a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a>
-                                </div>
-                                <div class="onehalf last">
-                                    <a class="getpricing" href="<?php bloginfo('url'); ?>/dealer-locator">Find A Dealer</a>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="fullrow">
-                                <div class="twothird">
-                                    &nbsp;
-                                </div>
-                                <div class="onethird last">
-                                    <div class="share-bar">
-                                        <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+                                    <div class="onethird last">
+                                        <div class="share-bar">
+                                            <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+                                        </div>
                                     </div>
+                                    <div class="clear"></div>
                                 </div>
-                                <div class="clear"></div>
                             </div>
-                        </div>
-                    <?php endif; ?>
+                        <?php else : ?>
+                            <div class="tub-brochure-pricing">
+                                <div class="fullrow">
+                                    <div class="onehalf">
+                                        <a class="getpricing" href="<?php bloginfo('url'); ?>/get-a-quote/?tid=<?php echo $post->ID; ?>">Get Pricing</a>
+                                    </div>
+                                    <div class="onehalf last">
+                                        <a class="getpricing" href="<?php bloginfo('url'); ?>/dealer-locator">Find A Dealer</a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="fullrow">
+                                    <div class="twothird">
+                                        &nbsp;
+                                    </div>
+                                    <div class="onethird last">
+                                        <div class="share-bar">
+                                            <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
