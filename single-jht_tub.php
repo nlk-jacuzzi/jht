@@ -261,24 +261,9 @@ print('<pre>'); print_r($bv); print('</pre>');
                             </div>
                 			<?php } ?>
                         </div>
-                        <?php /*
-                        
-                        <div class="gallery">
-                        	<h1>Gallery &amp; Videos</h1>
-                            <div class="gallery-wrap">
-                            	<span class="icon prev"></span><span class="icon next"></span>
-                            	<div class="main-image"></div>
-                                <ul class="image-list"><li><img src="<?php bloginfo('template_url'); ?>/images/hot-tub-details/gallery/thumb1.jpg" /></li><li><img src="<?php bloginfo('template_url'); ?>/images/hot-tub-details/gallery/thumb2.jpg" /></li><li><img src="<?php bloginfo('template_url'); ?>/images/hot-tub-details/gallery/thumb3.jpg" /></li><li><img src="<?php bloginfo('template_url'); ?>/images/hot-tub-details/gallery/thumb4.jpg" /></li><li><img src="<?php bloginfo('template_url'); ?>/images/hot-tub-details/gallery/thumb5.jpg" /></li><li><img src="<?php bloginfo('template_url'); ?>/images/hot-tub-details/gallery/thumb6.jpg" /></li></ul>
-                            </div>
-                        </div>
-                		*/ ?>
                     </div>
                         
                     <div id="jets" class="tab" >
-                        <?php /*<div class="pro-power-jets">
-                            <h1>New ProPower jets</h1>
-                            <h2>with advanced power and capabilities</h2>
-                        </div> */?>
                         <div class="half">
                             <div class="description">
                             	<div class="inner">
@@ -288,14 +273,7 @@ print('<pre>'); print_r($bv); print('</pre>');
                                 </div>
                             </div>
                             <div class="rollover">
-                            <?php /*
-                                <div class="arrow arrow1"></div>
-                                <div class="arrow arrow1"></div>
-                                <div class="arrow arrow1"></div>
-                                <div class="arrow arrow1"></div>
-                                <div class="arrow arrow1"></div>
-                                <?php
-                				*/
+                            <?php
                                 if (class_exists('MultiPostThumbnails')) {
                                 	MultiPostThumbnails::the_post_thumbnail('jht_tub', 'overhead-large', $post->ID, 'overhead');
                                 }
