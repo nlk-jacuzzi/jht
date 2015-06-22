@@ -40,7 +40,7 @@ $truckloadObj = json_decode($json);
 			<form name="countryZipForm" method="post" action="<?php echo trailingslashit(get_bloginfo('url')) ?>dealer-locator/cities/">
 				<input type="hidden" value="1" name="zipcodeSearch" />
 				<input type="hidden" value="1" name="data[Dealer][country_id]" />
-				<label>Zip</label>
+				<label><?php echo ( jht_isca() ) ? 'Postal code' : 'Zip'; ?></label>
 				<input type="text" class="text zip" value="" name="zip" />
 				<input type="submit" class="submit bigGoldBtn" value="Locate Dealer" />
 			</form>
