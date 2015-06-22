@@ -60,7 +60,7 @@
                 <a href="<?php echo get_permalink(3745) ?>" class="bbtn">Free Brochure</a>
                 <?php jht_socialmenu(); ?>
                 <div class="sites">
-                    <a href="http://www.jacuzzi.com/" class="bbtn" target="_blank">Jacuzzi Websites</a>
+                    <a href="<?php echo jht_rooturl(); ?>" class="bbtn" target="_blank">Jacuzzi Websites</a>
                 </div>
             </div>
         </div>

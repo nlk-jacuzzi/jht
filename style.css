@@ -6157,6 +6157,7 @@ a#Quote_Grphic_sidebar {
 		top: 190px;
 	}
 	#bbg-ctas-block2 form input[name="zip"] {
+		vertical-align: top;
 		width: 90px;
 	}
 	#bbg-ctas-block2 form input[type="submit"] {
@@ -6182,6 +6183,7 @@ a#Quote_Grphic_sidebar {
 
 	#bbg-ctas label {
 		display: inline-block;
+		line-height: 15px;
 		width: 40px;
 	}
 	#bbg-ctas-block1 label[for="receive_email_campaigns"] {

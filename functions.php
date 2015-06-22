@@ -3153,6 +3153,10 @@ function jht_isca() {
 		return true;
 	return false;
 }
+function jht_rooturl() {
+	$r = ( jht_isca() ) ? 'http://www.jacuzzi.ca/' : 'http://www.jacuzzi.com/';
+	return $r;
+}
 
 function jht_getslug() {
 	if ( is_admin() )
@@ -3209,6 +3213,8 @@ function jht_my_server() {
 	switch ( $url ) {
 		case 'http://www.jacuzzi.com/hot-tubs' :
 		case 'http://www.jacuzzi.com/hot-tubs/' :
+		case 'http://www.jacuzzi.ca/hot-tubs' :
+		case 'http://www.jacuzzi.ca/hot-tubs/' :
 			return 'live';
 			break;
 		case 'http://www.nlkdevj.com/hot-tubs' :
@@ -3218,6 +3224,9 @@ function jht_my_server() {
 		case 'http://localhost/jacuzzi.com/hot-tubs' :
 		case 'http://localhost/jacuzzi.com/hot-tubs/' :
 		case 'http://localhost.jacuzzi.com/hot-tubs/' :
+		case 'http://localhost/jacuzzi.ca/hot-tubs' :
+		case 'http://localhost/jacuzzi.ca/hot-tubs/' :
+		case 'http://localhost.jacuzzi.ca/hot-tubs/' :
 			return 'local';
 			break;
 	}
