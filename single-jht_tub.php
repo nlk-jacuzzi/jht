@@ -76,12 +76,13 @@ if ( false === ( $special_query_results = get_transient( 'jht_alljets' ) ) ) {
 $alljets = get_transient( 'jht_alljets' );
 
 $prod = esc_attr($jht_specs['product_id']);
+$is_staging = jht_my_server() == 'live' ? FALSE : TRUE;
 $bv = new BV(
     array(
         'deployment_zone_id' => 'Main_Site-en_US',
         'product_id' => $prod, // must match ExternalID in the BV product feed
         'cloud_key' => 'jacuzzi-6e973cecb3ca4a2d532da7d906a4cc84',
-        'staging' => FALSE
+        'staging' => $is_staging
         )
     );
 
