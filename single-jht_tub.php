@@ -90,7 +90,9 @@ $bv = new BV(
 ?>
     <script type="text/javascript">
         jQuery(document).ready(function(){
-            jQuery( "#monthly-cost" ).tooltip();
+            if (typeof tooltip !== 'undefined' && jQuery.isFunction(tooltip)) {
+                jQuery( "#monthly-cost" ).tooltip();
+            }
         });
     </script>
     <div class="bd" style="margin-top: 110px;">
