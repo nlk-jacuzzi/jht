@@ -210,7 +210,7 @@ $bv = new BV(
                     </div>
                 </div>
             </div>
-        <?php if ( msrp_display() ) : ?>
+        <?php if ( function_exists('msrp_display') && msrp_display() ) : ?>
             <?php
             $msrp = esc_attr($jht_specs['msrp']);
             $msrp = ( $msrp[0] == '$' ? $msrp : '$'.$msrp );
