@@ -7032,6 +7032,7 @@ a#show-msrp {
 	font-size: 20px;
 	height: auto;
 	line-height: 25px;
+	margin-top: 24px;
 	padding: 10px 0;
 }
 a#show-msrp.close {
