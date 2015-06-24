@@ -1400,6 +1400,7 @@ function jht_specs_metabox() {
 		'headrests' => '',
 		'waterfall' => '',
 		'stereo' => '',
+		'haslounge' => '',
 		'lounge' => '',
 		'faces' => '',
 	);
@@ -1426,16 +1427,16 @@ function jht_specs_metabox() {
     <td width="187"><label for="jht_specs[vol_int]">Spa Volume (INT)</label></td><td><input type="text" name="jht_specs[vol_int]" value="<?php esc_attr_e($info['vol_int']); ?>" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[dry_weight]">Dry Weight</label></td><td><input type="text" name="jht_specs[dry_weight]" value="<?php esc_attr_e($info['dry_weight']); ?>" size="120" /></td>
+    <td width="187"><label for="jht_specs[dry_weight]">Dry Weight</label></td><td><input type="text" name="jht_specs[dry_weight]" value="<?php esc_attr_e($info['dry_weight']); ?>" size="75%" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[filled]">Total Filled Weight</label></td><td><input type="text" name="jht_specs[filled]" value="<?php esc_attr_e($info['filled']); ?>" size="120" /></td>
+    <td width="187"><label for="jht_specs[filled]">Total Filled Weight</label></td><td><input type="text" name="jht_specs[filled]" value="<?php esc_attr_e($info['filled']); ?>" size="75%" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[emoc]">Estimated Monthly<br />Operating Cost 60&deg;F / 15&deg;C </label></td><td><input type="text" name="jht_specs[emoc]" value="<?php esc_attr_e($info['emoc']); ?>" size="120" /></td>
+    <td width="187"><label for="jht_specs[emoc]">Estimated Monthly<br />Operating Cost 60&deg;F / 15&deg;C </label></td><td><input type="text" name="jht_specs[emoc]" value="<?php esc_attr_e($info['emoc']); ?>" size="75%" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[smartseal]">Monthly Operating Cost<br />with SmartSeal</label></td><td><input type="text" name="jht_specs[smartseal]" value="<?php esc_attr_e($info['smartseal']); ?>" size="120" /></td>
+    <td width="187"><label for="jht_specs[smartseal]">Monthly Operating Cost<br />with SmartSeal</label></td><td><input type="text" name="jht_specs[smartseal]" value="<?php esc_attr_e($info['smartseal']); ?>" size="75%" /></td>
     </tr>
     <tr valign="top">
     <td width="187"><label for="jht_specs[pump1]">Pump 1</label></td><td><textarea name="jht_specs[pump1]" cols="120"><?php esc_attr_e($info['pump1']); ?></textarea></td>
@@ -1458,23 +1459,23 @@ function jht_specs_metabox() {
     <td width="187"><label for="jht_specs[diverter]">Diverter Valves</label></td><td><input type="text" name="jht_specs[diverter]" value="<?php esc_attr_e($info['diverter']); ?>" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[wps]">Water Purification System</label></td><td><input type="text" name="jht_specs[wps]" value="<?php esc_attr_e($info['wps']); ?>" size="120" /></td>
+    <td width="187"><label for="jht_specs[wps]">Water Purification System</label></td><td><input type="text" name="jht_specs[wps]" value="<?php esc_attr_e($info['wps']); ?>" size="75%" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[filtration]">Filtration</label></td><td><input type="text" name="jht_specs[filtration]" value="<?php esc_attr_e($info['filtration']); ?>" size="120" /></td>
+    <td width="187"><label for="jht_specs[filtration]">Filtration</label></td><td><input type="text" name="jht_specs[filtration]" value="<?php esc_attr_e($info['filtration']); ?>" size="75%" /></td>
     </tr>
     <tr valign="top">
     <td width="187"><label for="jht_specs[filters]">Filters</label></td><td><textarea name="jht_specs[filters]" cols="120"><?php esc_attr_e($info['filters']); ?></textarea></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[elec_na]">Electrical North America</label></td><td><input type="text" name="jht_specs[elec_na]" value="<?php esc_attr_e($info['elec_na']); ?>" size="120" /></td>
+    <td width="187"><label for="jht_specs[elec_na]">Electrical North America</label></td><td><input type="text" name="jht_specs[elec_na]" value="<?php esc_attr_e($info['elec_na']); ?>" size="75%" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[elec_int]">Electrical International</label></td><td><input type="text" name="jht_specs[elec_int]" value="<?php esc_attr_e($info['elec_int']); ?>" size="120" /></td>
+    <td width="187"><label for="jht_specs[elec_int]">Electrical International</label></td><td><input type="text" name="jht_specs[elec_int]" value="<?php esc_attr_e($info['elec_int']); ?>" size="75%" /></td>
     </tr>
     <tr><td colspan="2"><p><strong>Features</strong></p></td></tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[lighting]">Lighting</label></td><td><input type="text" name="jht_specs[lighting]" value="<?php esc_attr_e($info['lighting']); ?>" size="120" /></td>
+    <td width="187"><label for="jht_specs[lighting]">Lighting</label></td><td><input type="text" name="jht_specs[lighting]" value="<?php esc_attr_e($info['lighting']); ?>" size="75%" /></td>
     </tr>
     <tr valign="top">
     <td width="187"><label for="jht_specs[headrests]">Headrests</label></td><td><input type="text" name="jht_specs[headrests]" value="<?php esc_attr_e($info['headrests']); ?>" /></td>
@@ -1483,13 +1484,20 @@ function jht_specs_metabox() {
     <td width="187"><label for="jht_specs[waterfall]">Waterfalls</label></td><td><input type="text" name="jht_specs[waterfall]" value="<?php esc_attr_e($info['waterfall']); ?>" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[stereo]">Stereo</label></td><td><input type="text" name="jht_specs[stereo]" value="<?php esc_attr_e($info['stereo']); ?>" size="120" /></td>
+    <td width="187"><label for="jht_specs[stereo]">Stereo</label></td><td><input type="text" name="jht_specs[stereo]" value="<?php esc_attr_e($info['stereo']); ?>" size="75%" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[lounge]">Lounge Seating</label></td><td><input type="text" name="jht_specs[lounge]" value="<?php esc_attr_e($info['lounge']); ?>" size="120" /></td>
+    <td width="187"><label for="jht_specs[lounge]">Lounge Seating</label></td><td><select name="jht_specs[haslounge]"><option value="no" <?php echo ( esc_attr_e($info['haslounge']) == 'no' ? 'selected="selected"' : '' ); ?>>No</option><option value="yes" <?php echo ( esc_attr_e($info['haslounge']) == 'yes' ? 'selected="selected"' : '' ); ?>>Yes</option></select><input type="text" name="jht_specs[lounge]" value="<?php esc_attr_e($info['lounge']); ?>" size="50%" /></td>
     </tr>
     <tr valign="top">
     <td width="187"><label for="jht_specs[faces]">Stainless Steel Jet Faces</label></td><td><input type="text" name="jht_specs[faces]" value="<?php esc_attr_e($info['faces']); ?>" /></td>
+    </tr>
+    <tr valign="top">
+    <td width="187"><label for="jht_specs[wizid]">Wizard Identifier</label></td><td><select name="jht_specs[wizid]">
+		<option value="price" <?php echo ( esc_attr_e($info['wizid']) == 'price' ? 'selected="selected"' : '' ); ?>>Price</option>
+		<option value="performance" <?php echo ( esc_attr_e($info['wizid']) == 'performance' ? 'selected="selected"' : '' ); ?>>Performance</option>
+		<option value="design" <?php echo ( esc_attr_e($info['wizid']) == 'design' ? 'selected="selected"' : '' ); ?>>Design</option></select>
+	</td>
     </tr>
     <tr><td colspan="2"><p><strong>Featured Image Details</strong></p></td></tr>
     <tr valign="top">
