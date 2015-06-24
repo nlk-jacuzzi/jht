@@ -1686,8 +1686,14 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 #bbg-ctas :-ms-input-placeholder { /* Internet Explorer 10+ */
     color:    #d8d8d8;
 }
-
-
+#bbg-ctas .gform_wrapper .ginput_complex span.name_first,
+#bbg-ctas .gform_wrapper .ginput_complex span.name_middle,
+#bbg-ctas .gform_wrapper .ginput_complex span.name_last {
+	min-height: 2.18em;
+}
+#bbg-ctas input.submit[value="Download Now"] {
+	margin-top: 14px;
+}
 /* - - - MODALS - - - */
 .black-out {
 	width: 100%;
