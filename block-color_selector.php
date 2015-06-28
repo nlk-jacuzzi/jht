@@ -57,22 +57,22 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 
 			<div class="tub-container">
 				<div class="tub-skirt">
-					<img class="lazy active" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-brazilianteak.png" timg="brazilianteak" height="410" width="576" />
-					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-roastedchestnut.png" timg="roastedchestnut" height="410" width="576" />
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-silverwood.png" timg="silverwood" height="410" width="576" />
+					<img class="lazy active" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/skirts/skirt-brazilianteak.png" timg="brazilianteak" height="410" width="576" />
+					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/skirts/skirt-roastedchestnut.png" timg="roastedchestnut" height="410" width="576" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/skirts/skirt-silverwood.png" timg="silverwood" height="410" width="576" />
 				</div>
 				<div class="tub-shell">
-					<img class="lazy active" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/platinum.png" timg="platinum" height="410" width="576" />
-					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/silverpearl.png" timg="silverpearl" height="410" width="576" />
-					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/monaco.png" timg="monaco" height="410" width="576" />
-					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/midnight.png" timg="midnight" height="410" width="576" />
-					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/opal.png" timg="opal" height="410" width="576" />
-					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sahara.png" timg="sahara" height="410" width="576" />
-					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/sand.png" timg="sand" height="410" width="576" />
-					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/desertsand.png" timg="desertsand" height="410" width="576" />
-					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/caribbeansurf.png" timg="caribbeansurf" height="410" width="576" />
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/titanium.png" timg="titanium" height="410" width="576" />
-					<!--img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/slategreen.png" timg="slategreen" height="410" width="576" /-->
+					<img class="lazy active" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/platinum.png" timg="platinum" height="410" width="576" />
+					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/silverpearl.png" timg="silverpearl" height="410" width="576" />
+					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/monaco.png" timg="monaco" height="410" width="576" />
+					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/midnight.png" timg="midnight" height="410" width="576" />
+					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/opal.png" timg="opal" height="410" width="576" />
+					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/sahara.png" timg="sahara" height="410" width="576" />
+					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/sand.png" timg="sand" height="410" width="576" />
+					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/desertsand.png" timg="desertsand" height="410" width="576" />
+					<img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/caribbeansurf.png" timg="caribbeansurf" height="410" width="576" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/titanium.png" timg="titanium" height="410" width="576" />
+					<!--img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/slategreen.png" timg="slategreen" height="410" width="576" /-->
 				</div>
 			</div>
 			<div class="tub-details">
@@ -91,23 +91,23 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 
 			<h2><strong>Shell:</strong> <span class="shell-name"></span></h2>
 			<div class="shells">
-				<div class="shell thumb active" timg="platinum" data-pdf="platinum" rel="Platinum" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/acrylic-thumb-platinum.png" height="45" width="45"/></div>
-				<div class="shell thumb" timg="silverpearl" data-pdf="silverpearl" rel="Silver Pearl" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/acrylic-thumb-silverpearl.png" height="45" width="45" /></div>
-				<div class="shell thumb" timg="monaco" data-pdf="monaco" rel="Monaco" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/acrylic-thumb-monaco.png" height="45" width="45" /></div>
-				<div class="shell thumb" timg="midnight" data-pdf="midnight" rel="Midnight" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/acrylic-thumb-midnight.png" height="45" width="45" /></div>
-				<div class="shell thumb" timg="opal" data-pdf="opal" rel="Opal" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/acrylic-thumb-opal.png" height="45" width="45" /></div>
-				<div class="shell thumb" timg="sahara" data-pdf="sahara" rel="Sahara" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/acrylic-thumb-sahara.png" height="45" width="45" /></div>
-				<div class="shell thumb" timg="sand" data-pdf="sand" rel="Sand" ><img class="lazy" src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/acrylic-thumb-sand.png" height="45" width="45" /></div>
-				<div class="shell thumb" timg="desertsand" data-pdf="desertsand" rel="Desert Sand" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/acrylic-thumb-desertsand.png" height="45" width="45" /></div>
-				<div class="shell thumb" timg="caribbeansurf" data-pdf="caribbeansurf" rel="Caribbean Surf" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/acrylic-thumb-caribbeansurf.png" height="45" width="45" /></div>
-				<div class="shell thumb" timg="titanium" data-pdf="titanium" rel="Titanium" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/acrylic-thumb-titanium.png" height="45" width="45" /></div>
-				<!--div class="shell thumb" timg="slategreen" data-pdf="slategreen" rel="Slate Green" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/shells/acrylic-thumb-slategreen.png" height="45" width="45" /></div-->
+				<div class="shell thumb active" timg="platinum" data-pdf="platinum" rel="Platinum" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/acrylic-thumb-platinum.png" height="45" width="45"/></div>
+				<div class="shell thumb" timg="silverpearl" data-pdf="silverpearl" rel="Silver Pearl" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/acrylic-thumb-silverpearl.png" height="45" width="45" /></div>
+				<div class="shell thumb" timg="monaco" data-pdf="monaco" rel="Monaco" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/acrylic-thumb-monaco.png" height="45" width="45" /></div>
+				<div class="shell thumb" timg="midnight" data-pdf="midnight" rel="Midnight" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/acrylic-thumb-midnight.png" height="45" width="45" /></div>
+				<div class="shell thumb" timg="opal" data-pdf="opal" rel="Opal" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/acrylic-thumb-opal.png" height="45" width="45" /></div>
+				<div class="shell thumb" timg="sahara" data-pdf="sahara" rel="Sahara" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/acrylic-thumb-sahara.png" height="45" width="45" /></div>
+				<div class="shell thumb" timg="sand" data-pdf="sand" rel="Sand" ><img class="lazy" src="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/acrylic-thumb-sand.png" height="45" width="45" /></div>
+				<div class="shell thumb" timg="desertsand" data-pdf="desertsand" rel="Desert Sand" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/acrylic-thumb-desertsand.png" height="45" width="45" /></div>
+				<div class="shell thumb" timg="caribbeansurf" data-pdf="caribbeansurf" rel="Caribbean Surf" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/acrylic-thumb-caribbeansurf.png" height="45" width="45" /></div>
+				<div class="shell thumb" timg="titanium" data-pdf="titanium" rel="Titanium" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/acrylic-thumb-titanium.png" height="45" width="45" /></div>
+				<!--div class="shell thumb" timg="slategreen" data-pdf="slategreen" rel="Slate Green" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/shells/acrylic-thumb-slategreen.png" height="45" width="45" /></div-->
 			</div>
 			<h2><strong>Cabinetry:</strong> <span class="skirt-name"></span></h2>
 			<div class="skirts">
-				<div class="skirt thumb brazilianteak active" timg="brazilianteak" rel="Brazilian Teak" data-pdf="teak" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-thumb-brazilianteak.png" height="45" width="45" /></div>
-				<div class="skirt thumb roastedchestnut" timg="roastedchestnut" rel="Roasted Chestnut" data-pdf="chest" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-thumb-roastedchestnut.png" height="45" width="45" /></div>
-				<div class="skirt thumb silverwood" timg="silverwood" rel="Silverwood" data-pdf="silver" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/colorselector/skirts/skirt-thumb-silverwood.png" height="45" width="45" /></div>
+				<div class="skirt thumb brazilianteak active" timg="brazilianteak" rel="Brazilian Teak" data-pdf="teak" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/skirts/skirt-thumb-brazilianteak.png" height="45" width="45" /></div>
+				<div class="skirt thumb roastedchestnut" timg="roastedchestnut" rel="Roasted Chestnut" data-pdf="chest" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/skirts/skirt-thumb-roastedchestnut.png" height="45" width="45" /></div>
+				<div class="skirt thumb silverwood" timg="silverwood" rel="Silverwood" data-pdf="silver" ><img class="lazy" data-original="<?php echo get_stylesheet_directory_uri(); ?>/images/lowres-colorselector/skirts/skirt-thumb-silverwood.png" height="45" width="45" /></div>
 			</div>
 			<a class="btn bigGoldBtn" href="<?php echo get_bloginfo('url'); ?>/get-a-quote/">Get Pricing</a>
 			<a class="pdf-download" href="" download="">Download Your Selected Color PDF</a>
