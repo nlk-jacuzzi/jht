@@ -14,9 +14,9 @@ $truckloadObj = json_decode($json);
 	<div class="bbg-container">
 		<div id="bbg-ctas-block1">
 			<h3><strong>FREE</strong> 25 Page Brochure</h3>
-			<ul>
-				<li>Compare models side-by-side</li>
-				<li>Learn about features &amp; options</li>
+			<ul class="bullets">
+				<li>Explore sizes, features &amp; options</li>
+				<li>Learn about the power of hydromassage</li>
 			</ul>
 			<?php 
 			if ( jht_my_server() == 'local' ) :
