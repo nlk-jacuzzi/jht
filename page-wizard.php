@@ -64,12 +64,12 @@ $args = array(
     'meta_query' => array(
         'relation' => 'AND',
         array(
-            'key'     => 'haslounge',
+            'key'     => 'wizard_lounge',
             'value'   => 'yes',
             'compare' => '=',
         ),
         array(
-            'key'     => 'wizid',
+            'key'     => 'wizard_id',
             'value'   => 'performance',
             'compare' => '=',
         ),
