@@ -1400,11 +1400,13 @@ function jht_specs_metabox() {
 		'headrests' => '',
 		'waterfall' => '',
 		'stereo' => '',
-		'haslounge' => '',
 		'lounge' => '',
 		'faces' => '',
 	);
-	?><table width="100%">
+	$wiz_lounge = get_post_meta($post->ID,'jht_wizard_lounge');
+	$wiz_id = get_post_meta($post->ID,'jht_wizard_id');
+	?>
+	<table width="100%">
 	<tr valign="top">
     <td width="187"><label for="jht_specs[product_id]">Product ID</label></td><td><input type="text" name="jht_specs[product_id]" value="<?php esc_attr_e($info['product_id']); ?>" size="20" /></td>
     </tr>
@@ -1487,16 +1489,23 @@ function jht_specs_metabox() {
     <td width="187"><label for="jht_specs[stereo]">Stereo</label></td><td><input type="text" name="jht_specs[stereo]" value="<?php esc_attr_e($info['stereo']); ?>" size="75%" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[lounge]">Lounge Seating</label></td><td><select name="jht_specs[haslounge]"><option value="no" <?php echo ( esc_attr_e($info['haslounge']) == 'no' ? 'selected="selected"' : '' ); ?>>No</option><option value="yes" <?php echo ( esc_attr_e($info['haslounge']) == 'yes' ? 'selected="selected"' : '' ); ?>>Yes</option></select><input type="text" name="jht_specs[lounge]" value="<?php esc_attr_e($info['lounge']); ?>" size="50%" /></td>
+    <td width="187"><label for="jht_specs[lounge]">Lounge Seating</label></td>
+    <td>
+    	<select name="jht_wizard_haslounge">
+    		<option value="no" <?php echo ( esc_attr($wiz_lounge) == 'no' ? 'selected="selected"' : '' ); ?>>No</option>
+    		<option value="yes" <?php echo ( esc_attr($wiz_lounge) == 'yes' ? 'selected="selected"' : '' ); ?>>Yes</option>
+		</select>
+    	<input type="text" name="jht_specs[lounge]" value="<?php esc_attr_e($info['lounge']); ?>" size="50%" />
+	</td>
     </tr>
     <tr valign="top">
     <td width="187"><label for="jht_specs[faces]">Stainless Steel Jet Faces</label></td><td><input type="text" name="jht_specs[faces]" value="<?php esc_attr_e($info['faces']); ?>" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[wizid]">Wizard Identifier</label></td><td><select name="jht_specs[wizid]">
-		<option value="price" <?php echo ( esc_attr_e($info['wizid']) == 'price' ? 'selected="selected"' : '' ); ?>>Price</option>
-		<option value="performance" <?php echo ( esc_attr_e($info['wizid']) == 'performance' ? 'selected="selected"' : '' ); ?>>Performance</option>
-		<option value="design" <?php echo ( esc_attr_e($info['wizid']) == 'design' ? 'selected="selected"' : '' ); ?>>Design</option></select>
+    <td width="187"><label for="jht_wizard_id">Wizard Identifier</label></td><td><select name="jht_wizard_id">
+		<option value="price" <?php echo ( esc_attr($wiz_id) == 'price' ? 'selected="selected"' : '' ); ?>>Price</option>
+		<option value="performance" <?php echo ( esc_attr($wiz_id) == 'performance' ? 'selected="selected"' : '' ); ?>>Performance</option>
+		<option value="design" <?php echo ( esc_attr($wiz_id) == 'design' ? 'selected="selected"' : '' ); ?>>Design</option></select>
 	</td>
     </tr>
     <tr><td colspan="2"><p><strong>Featured Image Details</strong></p></td></tr>
@@ -1522,16 +1531,15 @@ function jht_meta_save($post_id){
 	return $post_id;
 	
 	// Check permissions
-	if ( isset( $_POST['post_type'] ) ) {
-		if (in_array($_POST['post_type'],array('jht_tub', 'jht_cat', 'page', 'jht_vid', 'post')) ) {
-			if ( !current_user_can( 'edit_page', $post_id ) ) return $post_id;
-		} else {
-		//if ( !current_user_can( 'edit_post', $post_id ) )
-		  return $post_id;
-		} 
-	}else {
-	  return $post_id;
-	}
+	if ( ! isset( $_POST['post_type'] ) ) return $post_id;
+
+	if ( in_array( $_POST['post_type'],arr ay('jht_tub', 'jht_cat', 'page', 'jht_vid', 'post') ) ) {
+		if ( !current_user_can( 'edit_page', $post_id ) ) return $post_id;
+		//else continue...
+	} else {
+		//not in array of acceptable post types...
+		return $post_id;
+	} 
 	
 	if ( isset( $_POST['_progo'] ) ) {
 		$direct = $_POST['_progo'];
@@ -1595,8 +1603,6 @@ function jht_meta_save($post_id){
 		return $infos;
 	}
 
-
-
 	if( in_array( $_POST['post_type'] , array( 'jht_cat', 'jht_vid' ) ) ) {
 		$info = $_POST['jht_info'];
 		update_post_meta($post_id, 'jht_info', $info);
@@ -1654,45 +1660,6 @@ function jht_meta_save($post_id){
 						// image
 					);
 					update_post_meta($post_id, 'jht_quickinfo', $quickinfo);
-					/*
-					// rather than looping through only the cats that this tub is IN
-					// also want to make sure it is NOT in any cats it shouldnt be in, so
-					
-					// transient for jht_allcats
-					if ( false === ( $special_query_results = get_transient( 'jht_allcats' ) ) ) {
-						// It wasn't there, so regenerate the data and save the transient
-						$special_query_results = get_posts(array('numberposts'=>-1,'post_type'=>'jht_cat','orderby'=>'menu_order','order'=>'ASC','exclude'=>8));
-						set_transient( 'jht_allcats', $special_query_results, 60*60*12 );
-					}
-					// Use the data like you would have normally...
-					$allcats = get_transient( 'jht_allcats' );
-					
-					foreach($allcats as $c) {
-						$cat_id = $c->ID;
-						$custom = get_post_meta($cat_id, 'jht_cat_tubs');
-						$cat_tubs = $custom[0];
-						if($cat_tubs=='') $cat_tubs = array();
-						
-						if ( ( in_array($cat_id, $info) == false ) || $not_published ) {
-							unset($cat_tubs[$post_id]);
-						} else {
-							$cat_tubs[$post_id] = array(
-								'name' => $post->post_title,
-								'slug' => $post->post_name,
-								'menu_order' => $post->menu_order,
-								'url' => $post_url,
-								'size' => $size,
-								'seats' => $seats,
-								'jets' => $jetcount,
-								'id' => $post->ID,
-								'tag' => $tag,
-								// image
-							);
-						}
-						//uasort($cat_tubs, 'jht_tub_sort');
-						update_post_meta($cat_id, 'jht_cat_tubs', $cat_tubs);
-					}
-					*/
 				}
 			}
 		}
