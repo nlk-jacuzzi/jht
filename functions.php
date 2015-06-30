@@ -1488,7 +1488,8 @@ function jht_specs_metabox() {
     <td width="187"><label for="jht_specs[stereo]">Stereo</label></td><td><input type="text" name="jht_specs[stereo]" value="<?php esc_attr_e($info['stereo']); ?>" size="75%" /></td>
     </tr>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[lounge]">Lounge Seating</label></td><td><select name="jht_specs[haslounge]"><option value="no" <?php echo ( esc_attr($info['haslounge']) == 'no' ? 'selected="selected"' : '' ); ?>>No</option><option value="yes" <?php echo ( esc_attr($info['haslounge']) == 'yes' ? 'selected="selected"' : '' ); ?>>Yes</option></select><input type="text" name="jht_specs[lounge]" value="<?php esc_attr_e($info['lounge']); ?>" size="50%" /></td>
+    <td width="187"><label for="jht_specs[lounge]">Lounge Seating</label></td><td><select name="jht_specs[haslounge]"><option value="no" <?php echo ( esc_attr($info['haslounge']) == 'no' ? 'selected="selected"' : '' ); ?>>No</option><option value="yes" <?php echo ( esc_attr($info['haslounge']) == 'yes' ? 'selected="selected"' : '' ); ?>>Yes</option></select>
+    	<input type="text" name="jht_specs[lounge]" value="<?php echo ( empty($info['lounge']) ? ( empty($info['haslounge']) ? 'No' : $info['haslounge'] ) : esc_attr($info['lounge']) ); ?>" size="50%" /></td>
     </tr>
     <tr valign="top">
     <td width="187"><label for="jht_specs[faces]">Stainless Steel Jet Faces</label></td><td><input type="text" name="jht_specs[faces]" value="<?php esc_attr_e($info['faces']); ?>" /></td>
