@@ -117,7 +117,7 @@ get_header();
 							<span class="text-uppercase">Seating:</span> 5-6 adults
 						</li>
 						<li>
-							<span class="text-uppercase">Lounge:</span> No
+							<span class="text-uppercase">Lounge:</span> Yes
 						</li>
 						<li>
 							<span class="text-uppercase">Total Jets:</span> 53
@@ -138,7 +138,7 @@ get_header();
 							<span class="text-uppercase">Seating:</span> 5-6 adults
 						</li>
 						<li>
-							<span class="text-uppercase">Lounge:</span> Yes
+							<span class="text-uppercase">Lounge:</span> No
 						</li>
 						<li>
 							<span class="text-uppercase">Total Jets:</span> 52
