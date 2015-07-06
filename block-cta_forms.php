@@ -28,7 +28,7 @@ $truckloadObj = json_decode($json);
 			endif;
 			?>
 			<p class="note">* Required.&nbsp; &nbsp;<a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a></p>
-			<a href="<?php echo get_bloginfo('url'); ?>/brochure-buyers-guide/">See what's included</a>
+			<a href="<?php echo get_bloginfo('url'); ?>/request-brochure/">See what's included</a>
 		</div>
 		<div id="bbg-ctas-block2">
 			<h3>Find Your Nearest Dealer</h3>
