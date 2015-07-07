@@ -61,7 +61,7 @@ $args = array(
     'category_name'    => '',
     'post_type'        => 'jht_tub',
     'post_status'      => 'publish',
-    'meta_query' => array(
+    /*'meta_query' => array(
         'relation' => 'AND',
         array(
             'key'     => 'wizard_lounge',
@@ -73,7 +73,7 @@ $args = array(
             'value'   => 'performance',
             'compare' => '=',
         ),
-    ),
+    ),*/
 );
 // The Query
 $the_query = new WP_Query( $args );

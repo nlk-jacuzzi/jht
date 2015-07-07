@@ -1389,6 +1389,7 @@ function jht_specs_metabox() {
 		'pump1' => '',
 		'pump2' => '',
 		'pump3' => '',
+		'pumpcount' => '',
 		'circulation' => '',
 		'diverter' => '',
 		'wps' => '',
@@ -1447,6 +1448,9 @@ function jht_specs_metabox() {
     </tr>
     <tr valign="top">
     <td width="187"><label for="jht_specs[pump3]">Pump 3</label></td><td><textarea name="jht_specs[pump3]" cols="120"><?php esc_attr_e($info['pump3']); ?></textarea></td>
+    </tr>
+    <tr valign="top">
+    <td width="187"><label for="jht_specs[pumpcount]">Total No. of Pumps</label></td><td><input type="number" name="jht_specs[pumpcount]" value="<?php esc_attr_e($info['pumpcount']); ?>"/></td>
     </tr>
     <tr valign="top">
     <td width="187"><label for="jht_specs[circulation]">Circulation Pump</label></td><td><select name="jht_specs[circulation]"><?php
@@ -4153,3 +4157,164 @@ function set_page_template($template){
 }
 add_filter('single_template', 'set_page_template');
 
+
+
+add_filter( 'gform_confirmation_21', 'custom_confirmation', 10, 4 );
+function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
+	var_dump($form);
+	$tpid = array(
+		'j210' => 3864,
+		'j235' => 5307,
+		'j245' => 5320,
+		'j275' => 5316,
+		'j280' => 3852,
+		'j315' => 3839,
+		'j325' => 3844,
+		'j335' => 3840,
+		'j345' => 3833,
+		'j355' => 3827,
+		'j365' => 3821,
+		'j375' => 3737,
+		'j385' => 9691,
+		'j415' => 4517,
+		'j425' => 4143,
+		'j465' => 3728,
+		'j470' => 3724,
+		'j480' => 3719,
+		'j495' => 4129,
+		'j575' => 11845,
+		'j585' => 11488,
+		'jLX' => 152,
+		'jLXL' => 159,
+		)
+	$wizard_results_array = array(
+		'2-3' => array(
+			'relaxation' => array(
+				'design' => array(415, 425, 325),
+				'performance' => array(415, 425, 325),
+				'price' => array(415, 425, 325),
+				),
+			'hydrotherapy' => array(
+				'design' => array(315, 465, 335),
+				'performance' => array(315, 465, 335),
+				'price' => array(315, 465, 335),
+				),
+			),
+		'4-5' => array(
+			'relaxation' => array(
+				'design' => array(585, 425),
+				'performance' => array(425, 365, 345),
+				'price' => array(325, 345, 210),
+				),
+			'hydrotherapy' => array(
+				'design' => array(575, 465, LXL),
+				'performance' => array(465, 375, 575),
+				'price' => array(335, 235, 355),
+				),
+			),
+		'5-6' => array(
+			'relaxation' => array(
+				'design' => array(585, LX, 425),
+				'performance' => array(365, 585, 470),
+				'price' => array(345, 280, 245),
+				),
+			'hydrotherapy' => array(
+				'design' => array(575, LXL, 480),
+				'performance' => array(575, 480, 375),
+				'price' => array(235, 275, 355),
+				),
+			),
+		'6+' => array(
+			'relaxation' => array(
+				'design' => array(585, LX, 495),
+				'performance' => array(585, 495, 470),
+				'price' => array(280, 245, 385),
+				),
+			'hydrotherapy' => array(
+				'design' => array(480, LXL, 275),
+				'performance' => array(480, LXL, 275),
+				'price' => array(480, LXL, 275),
+				),
+			),
+		);
+	//var_dump($entry);
+	$results = $wizard_results_array[ $entry[2] ][ $entry[1] ][ $entry[3] ];
+	$args = array(
+	    'posts_per_page'   => 3,
+	    'offset'           => 0,
+	    'category'         => '',
+	    'category_name'    => '',
+	    'post_type'        => 'jht_tub',
+	    'post_status'      => 'publish',
+	);
+	// The Query
+	$the_query = new WP_Query( $args );
+
+	// The Loop
+	if ( $the_query->have_posts() ) {
+
+		$confirmation = '<div class="wizard-page-title"><h2 class="wizard-results">Your Hot Tub <strong>Results</strong></h2></div>
+			<div class="wizard-page-options">
+				<ul>
+					<li>(1) Use: <span>'.ucfirst($entry[1]).'</span></li>
+					<li>(2) Seats: <span>'.ucfirst($entry[2]).'</span></li>
+					<li>(3) Importance: <span>'.ucfirst($entry[3]).'</span></li>
+				</ul>
+				<button class="reset">Reset <span class="icon-reset"></span></button>
+			</div>';
+
+		while ( $the_query->have_posts() ) : $the_query->the_post();
+			global $post; 
+			$custom = get_post_meta($post->ID,'jht_info');
+			$jht_info = $custom[0];
+			$custom = get_post_meta($post->ID,'jht_colors');
+			$jht_colors = $custom[0];
+			$custom = get_post_meta($post->ID,'jht_cabs');
+			$jht_cabs = $custom[0];
+			$custom = get_post_meta($post->ID,'jht_specs');
+			$jht_specs = $custom[0];
+			$custom = get_post_meta($post->ID,'jht_feats');
+			$jht_feats = $custom[0];
+			$custom = get_post_meta($post->ID,'jht_wars');
+			$jht_wars = $custom[0];
+			$custom = get_post_meta($post->ID,'jht_jets');
+			$jht_jets = $custom[0];
+			$jetcount = 0;
+			foreach ( $jht_jets as $v ) $jetcount += $v;
+			$is_staging = jht_my_server() == 'live' ? FALSE : TRUE;
+			$bv = new BV(
+			    array(
+			        'deployment_zone_id' => 'Main_Site-en_US',
+			        'product_id' => esc_attr($jht_specs['product_id']), // must match ExternalID in the BV product feed
+			        'cloud_key' => 'jacuzzi-6e973cecb3ca4a2d532da7d906a4cc84',
+			        'staging' => $is_staging
+			        )
+			    );
+			$confirmation .= '<div id="post-'.get_the_ID().'" class="entry wizard-result-tub">
+	            <h3 class="title">'.get_the_title().'</h3>
+				<h4 class="sub-header">'.esc_attr($jht_info['topheadline']).'</h4>
+				<div class="hotub-mainimg">'.(class_exists('MultiPostThumbnails') ? MultiPostThumbnails::get_the_post_thumbnail('jht_tub', 'three-quarter', $post->ID, 'one-half-th', array('class'=>'onehalfs')) : '' ).'</div>
+				<div class="spec">
+					<p><strong>Seats: '.esc_attr($jht_specs['seats']).'</strong></p>
+					<p><strong>Jets: '.absint($jetcount).'</strong></p>
+					<p><strong>'.( jht_isca() ? esc_attr($jht_specs['dim_int']) : esc_attr($jht_specs['dim_us']) ).'</strong></p>
+					<div id="BVRRSummaryContainer"></div>
+				</div>
+				<div class="rows">
+					<div class="odd">Lounge Seat: <strong>'.esc_attr(ucfirst($jht_specs['haslounge'])).'</strong></div>
+					<div class="even">Spa Volume: <strong>'.( jht_isca() ? esc_attr($jht_specs['vol_int']) : esc_attr($jht_specs['vol_us']) ).'</strong></div>
+					<div class="odd">Spa Pumps: <strong>'.esc_attr($jht_specs['pumpcount']).'</strong></div>
+				</div>
+	            <a href="'.get_the_permalink().'" class="btn bigGoldBtn">View Hot Tub</a>
+	        </div>';
+		endwhile; // End the loop.
+
+	} else {
+		// No results...
+	}
+
+	/* Restore original Post Data */
+	wp_reset_postdata();
+
+	return $confirmation;
+}
