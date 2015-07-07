@@ -178,20 +178,19 @@ function msrp_display() {
 		// San Diego and Chino TEST
 		//'92101', '92103', '91945', '90001', '91710', '92589', '92883', '10116', '06492', '10400', '01901', '91709',
 		);
-	/*
+
 	$a = geo_data();
 	
 	if ( in_array( $a['postalCode'], $test_market ) ) {
 		return true;
 	}
-	*/
-	
+	/*
 	$zipfromip = getzipfromip(); //geo_data();
 	
 	if ( in_array( $zipfromip, $test_market ) ) {
 		return true;
 	}
-	
+	*/
 	return false;
 }
 
