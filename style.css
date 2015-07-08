@@ -7128,3 +7128,5 @@ a#show-msrp.close {
 	color: #000;
 	font-weight: bold;
 }
+
+.tub-brochure-pricing .msrp+.onethird.last {margin-top: 26px;}
