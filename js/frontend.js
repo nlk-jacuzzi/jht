@@ -750,3 +750,17 @@ jQuery(function($) {
 		}
 	});
 })(jQuery);
+
+
+
+(function($){
+	$('#show-msrp').click(function(){
+		if ( $(this).hasClass('close') ) { 
+		    $('.container.msrp').hide(); 
+		    $(this).removeClass('close').text('View MSRP'); 
+		} else { 
+		    $('.container.msrp').show(); 
+		    $(this).addClass('close').text('Close'); 
+		}
+	});
+})(jQuery);

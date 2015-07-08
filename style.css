@@ -1686,8 +1686,14 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 #bbg-ctas :-ms-input-placeholder { /* Internet Explorer 10+ */
     color:    #d8d8d8;
 }
-
-
+#bbg-ctas .gform_wrapper .ginput_complex span.name_first,
+#bbg-ctas .gform_wrapper .ginput_complex span.name_middle,
+#bbg-ctas .gform_wrapper .ginput_complex span.name_last {
+	min-height: 2.18em;
+}
+#bbg-ctas input.submit[value="Download Now"] {
+	margin-top: 14px;
+}
 /* - - - MODALS - - - */
 .black-out {
 	width: 100%;
@@ -6078,6 +6084,10 @@ a#Quote_Grphic_sidebar {
 	#bbg-ctas-block1 form .ginput_container.ginput_complex input {
 		width: 90px !important;
 	}
+	#bbg-ctas-block1 form .ginput_container.ginput_complex span.name_first {
+		margin-left: 1px;
+		width: 96px;
+	}
 	#bbg-ctas-block1 .gform_wrapper .ginput_complex .ginput_left,
 	#bbg-ctas-block1 .gform_wrapper .ginput_complex .ginput_right {
 		width: 102px;
@@ -6512,13 +6522,15 @@ a.lightbox-link
 a.getpricing
 {
 	background: url('images/btn_pricing_bg.png') 0 0 repeat-x transparent;
+	background-size: 1px 100%;
 	border-radius: 5px;
 	height: 39px;
 	width: 100%;
 	max-width: 300px;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 39px;
 	font-family: "GSMT";
+	/*padding: 10px 0;*/
 	text-align:center;
 	text-transform: uppercase;
 	display: block;
@@ -7030,3 +7042,91 @@ body.quote p.note a
 .hero.buyersguide2 .wrap #leadForm tbody td.buttonarea p.privacytext { font-size: 11px; padding-top: 6px; line-height: 12px; }
 .hero.buyersguide2 .wrap #leadForm tbody td.buttonarea p.privacytext a { color: #333; }
 
+
+
+/* MSRP */
+a#show-msrp {
+	font-size: 20px;
+	height: auto;
+	line-height: 25px;
+	margin-top: 24px;
+	padding: 10px 0;
+}
+a#show-msrp.close {
+	background: #d1d1d1;
+	background-color: #d1d1d1;
+}
+.container.msrp {
+	background-color: #efefef;
+	border: 1px solid #efefef;
+	border-top: none;
+	position: relative;
+}
+.container.msrp .l {
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding: 40px;
+	padding-right: 100px;
+	width: 66%;
+}
+.container.msrp .r {
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	position: relative;
+	width: 34%;
+}
+.container.msrp .r:before {
+	background-color: #fff;
+	content: '';
+	display: block;
+	height: 30px;
+	position: absolute;
+	right: 50%;
+	top: -15px;
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	width: 30px;
+}
+
+.msrp-disclaimer {
+	font-family: "GSBQ", sans-serif;
+	font-size: 18px
+}
+.msrp-disclaimer + p {
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.msrp-price {
+	font-size: 16px;
+	text-align: center;
+}
+.msrp-price span {
+	font-size: 36px;
+}
+
+.container.msrp a[class^="msrp-"] {
+	background: url('/hot-tubs/wp-content/themes/jht/images/btn_pricing_bg.png') 0 0 repeat-x transparent;
+	border-radius: 5px;
+	height: 39px;
+	width: 100%;
+	max-width: 300px;
+	margin-top: 14px;
+	font-size: 16px;
+	line-height: 39px;
+	font-family: "GSMT";
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+.tub-brochure-pricing .msrp+.onethird.last {margin-top: 26px;}

@@ -172,7 +172,7 @@ $bv = new BV(
                         <?php if ( function_exists('msrp_display') && msrp_display() ) : ?>
                             <div class="tub-brochure-pricing">
                                 <div class="fullrow">
-                                    <div class="twothird">
+                                    <div class="twothird msrp">
                                         <a id="show-msrp" href="#" class="getpricing">View MSRP</a>
                                     </div>
                                     <div class="onethird last">

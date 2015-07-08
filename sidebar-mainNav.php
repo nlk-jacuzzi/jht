@@ -47,7 +47,7 @@
 												$o .= '<li class="cell ';
 												if ( isset( $c['tubs'][$i] ) ) {
 													$t = $c['tubs'][$i];
-													$t_size = split('-', str_replace(' in','"',$t['size']));
+													$t_size = explode('-', str_replace(' in','"',$t['size']));
 													
 													$o .= $t['slug'] .'"><a href="'. get_bloginfo('url') . $t['url'] .'">'. $t['name'] .'<span>'. $t_size[0] .'</span>';
 													if ( $t['imgs']['rollover'] != '' ) {

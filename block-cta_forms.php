@@ -13,10 +13,10 @@ $truckloadObj = json_decode($json);
 <div id="bbg-ctas">
 	<div class="bbg-container">
 		<div id="bbg-ctas-block1">
-			<h3><strong>FREE</strong> Brochure &amp; Buyer's Guide</h3>
-			<ul>
-				<li>Compare models side-by-side</li>
-				<li>Learn about features &amp; options</li>
+			<h3><strong>FREE</strong> 25 Page Brochure</h3>
+			<ul class="bullets">
+				<li>Explore sizes, features &amp; options</li>
+				<li>Learn about the power of hydromassage</li>
 			</ul>
 			<?php 
 			if ( jht_my_server() == 'local' ) :
@@ -28,7 +28,7 @@ $truckloadObj = json_decode($json);
 			endif;
 			?>
 			<p class="note">* Required.&nbsp; &nbsp;<a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a></p>
-			<a href="<?php echo get_bloginfo('url'); ?>/brochure-buyers-guide/">See what's included</a>
+			<a href="<?php echo get_bloginfo('url'); ?>/request-brochure/">See what's included</a>
 		</div>
 		<div id="bbg-ctas-block2">
 			<h3>Find Your Nearest Dealer</h3>
