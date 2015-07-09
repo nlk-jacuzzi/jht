@@ -88,6 +88,13 @@ $bv = new BV(
 
 //print('<pre>'); print_r($bv); print('</pre>');
 ?>
+<script>
+dataLayer.push({ 
+    'pageType':'productPage',
+    'msrpStatus':<?php echo ( msrp_display() ? 'MSRP Available' : 'MSRP Not Available' ); ?>, // status if in test market or not - optional
+    'event':'pageReady'
+});
+</script>
     <script type="text/javascript">
         jQuery(document).ready(function(){
             if (typeof tooltip !== 'undefined' && jQuery.isFunction(tooltip)) {
