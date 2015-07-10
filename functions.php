@@ -3890,9 +3890,8 @@ add_filter('single_template', 'set_page_template');
 
 
 
-add_filter( 'gform_confirmation_21', 'custom_confirmation', 10, 4 );
+add_filter( 'gform_confirmation_20', 'custom_confirmation', 10, 4 );
 function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
-	var_dump($form);
 	$tpid = array(
 		'j210' => 3864,
 		'j235' => 5307,
@@ -3918,57 +3917,61 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 		'jLX' => 152,
 		'jLXL' => 159,
 		);
+	if ( jht_my_server() == 'dev' ) {
+		$tpid['j575'] = 11069;
+		$tpid['j585'] = 11058;
+	}
+
 	$wizard_results_array = array(
 		'2-3' => array(
 			'relaxation' => array(
-				'design' => array(415, 425, 325),
-				'performance' => array(415, 425, 325),
-				'price' => array(415, 425, 325),
+				'design' => array($tpid['j415'], $tpid['j425'], $tpid['j325']),
+				'performance' => array($tpid['j415'], $tpid['j425'], $tpid['j325']),
+				'price' => array($tpid['j415'], $tpid['j425'], $tpid['j325']),
 				),
 			'hydrotherapy' => array(
-				'design' => array(315, 465, 335),
-				'performance' => array(315, 465, 335),
-				'price' => array(315, 465, 335),
+				'design' => array($tpid['j315'], $tpid['j465'], $tpid['j335']),
+				'performance' => array($tpid['j315'], $tpid['j465'], $tpid['j335']),
+				'price' => array($tpid['j315'], $tpid['j465'], $tpid['j335']),
 				),
 			),
 		'4-5' => array(
 			'relaxation' => array(
-				'design' => array(585, 425),
-				'performance' => array(425, 365, 345),
-				'price' => array(325, 345, 210),
+				'design' => array($tpid['j585'], $tpid['j425']),
+				'performance' => array($tpid['j425'], $tpid['j365'], $tpid['j345']),
+				'price' => array($tpid['j325'], $tpid['j345'], $tpid['j210']),
 				),
 			'hydrotherapy' => array(
-				'design' => array(575, 465, LXL),
-				'performance' => array(465, 375, 575),
-				'price' => array(335, 235, 355),
+				'design' => array($tpid['j575'], $tpid['j465'], $tpid['jLXL']),
+				'performance' => array($tpid['j465'], $tpid['j375'], $tpid['j575']),
+				'price' => array($tpid['j335'], $tpid['j235'], $tpid['j355']),
 				),
 			),
 		'5-6' => array(
 			'relaxation' => array(
-				'design' => array(585, LX, 425),
-				'performance' => array(365, 585, 470),
-				'price' => array(345, 280, 245),
+				'design' => array($tpid['j585'], $tpid['jLX'], $tpid['j425']),
+				'performance' => array($tpid['j365'], $tpid['j585'], $tpid['j470']),
+				'price' => array($tpid['j345'], $tpid['j280'], $tpid['j245']),
 				),
 			'hydrotherapy' => array(
-				'design' => array(575, LXL, 480),
-				'performance' => array(575, 480, 375),
-				'price' => array(235, 275, 355),
+				'design' => array($tpid['j575'], $tpid['jLXL'], $tpid['j480']),
+				'performance' => array($tpid['j575'], $tpid['j480'], $tpid['j375']),
+				'price' => array($tpid['j235'], $tpid['j275'], $tpid['j355']),
 				),
 			),
 		'6+' => array(
 			'relaxation' => array(
-				'design' => array(585, LX, 495),
-				'performance' => array(585, 495, 470),
-				'price' => array(280, 245, 385),
+				'design' => array($tpid['j585'], $tpid['jLX'], $tpid['j495']),
+				'performance' => array($tpid['j585'], $tpid['j495'], $tpid['j470']),
+				'price' => array($tpid['j280'], $tpid['j245'], $tpid['j385']),
 				),
 			'hydrotherapy' => array(
-				'design' => array(480, LXL, 275),
-				'performance' => array(480, LXL, 275),
-				'price' => array(480, LXL, 275),
+				'design' => array($tpid['j480'], $tpid['jLXL'], $tpid['j275']),
+				'performance' => array($tpid['j480'], $tpid['jLXL'], $tpid['j275']),
+				'price' => array($tpid['j480'], $tpid['jLXL'], $tpid['j275']),
 				),
 			),
 		);
-	//var_dump($entry);
 	$results = $wizard_results_array[ $entry[2] ][ $entry[1] ][ $entry[3] ];
 	$args = array(
 	    'posts_per_page'   => 3,
@@ -3977,6 +3980,8 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	    'category_name'    => '',
 	    'post_type'        => 'jht_tub',
 	    'post_status'      => 'publish',
+	    'post__in'         => $results,
+	    'orderby'          => 'none',
 	);
 	// The Query
 	$the_query = new WP_Query( $args );
