@@ -3889,8 +3889,11 @@ function set_page_template($template){
 add_filter('single_template', 'set_page_template');
 
 
-
-add_filter( 'gform_confirmation_20', 'custom_confirmation', 10, 4 );
+if ( jht_my_server() == 'dev' ) {
+	add_filter( 'gform_confirmation_23', 'custom_confirmation', 10, 4 );
+} else {
+	add_filter( 'gform_confirmation_20', 'custom_confirmation', 10, 4 );
+}
 function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	$tpid = array(
 		'j210' => 3864,
