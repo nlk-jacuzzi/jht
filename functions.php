@@ -3917,7 +3917,7 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 		'j585' => 11488,
 		'jLX' => 152,
 		'jLXL' => 159,
-		)
+		);
 	$wizard_results_array = array(
 		'2-3' => array(
 			'relaxation' => array(
