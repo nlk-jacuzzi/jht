@@ -4,6 +4,13 @@
  *
  */
 
+
+
+add_action( 'wp_enqueue_scripts', 'geo_enqueued_scripts' );
+function geo_enqueued_scripts() {
+	wp_enqueue_script('google_places_library', 'https://maps.googleapis.com/maps/api/js?libraries=places');// Google Geo Scripts
+}
+
 if ( ! function_exists('get_the_ip') ) :
 function get_the_ip() {
 
@@ -36,6 +43,21 @@ function geo_data( $zip = false, $debug = false ) {
 	if ( is_admin() )
 		return false; // do nothing if viewing admin pages (geo not needed)
 
+	if ( isset($_COOKIE['geoz']) ) {
+		$a = array(
+			'locId'				=>	0,
+			'country'			=>	'US',
+			'region'			=>	'',
+			'city'				=>	'',
+			'postalCode'		=>	$_COOKIE['geoz'],
+			'latitude'			=>	'',
+			'longitude'			=>	'',
+			'metroCode'			=>	'',
+			'areacode'			=>	'',
+			'ip'				=>	'',
+			);
+		return $a;
+	}
 	global $wpdb;
 
 	$ip = get_the_ip();
