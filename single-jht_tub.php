@@ -88,6 +88,13 @@ $bv = new BV(
 
 //print('<pre>'); print_r($bv); print('</pre>');
 ?>
+<script>
+dataLayer.push({ 
+    'pageType':'productPage',
+    'msrpStatus':<?php echo ( msrp_display() ? '"MSRP Available"' : '"MSRP Not Available"' ); ?>, // status if in test market or not - optional
+    'event':'pageReady'
+});
+</script>
     <script type="text/javascript">
         jQuery(document).ready(function(){
             if (typeof tooltip !== 'undefined' && jQuery.isFunction(tooltip)) {
@@ -144,7 +151,7 @@ $bv = new BV(
                         </div>
                     </div>
                     <div class="side">
-                        <meta itemprop="name" content="<?php echo the_title(); ?>" />
+                        <meta itemprop="name" content="<?php echo preg_replace( "/[^A-Za-z0-9 \-]/", '', the_title() ); ?>" />
                         <h1><?php the_title(); ?></h1>
                         <h2><?php esc_attr_e($jht_info['topheadline']); ?></h2>
                             <div id="BVRRSummaryContainer"></div>
