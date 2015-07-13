@@ -129,6 +129,7 @@ function geo_data( $zip = false, $debug = false ) {
 
 	endif;
 
+	setcookie('geoz', $a['postalCode'], time()+60*60*24*30, '/');
 	return $a;
 }
 
