@@ -129,7 +129,7 @@ function geo_data( $zip = false, $debug = false ) {
 
 	endif;
 
-	setcookie('geoz', $a['postalCode'], time()+60*60*24*30, '/');
+	setcookie("geoz", $a['postalCode'], time()+60*60*24*30, "/");
 	return $a;
 }
 
@@ -214,8 +214,12 @@ function msrp_display() {
 
 add_action('wp_head', 'geo_meta_debug');
 function geo_meta_debug() {
-	$o = geo_data();
-	echo '<meta name="geo_debug" content="'.implode(', ',$o).'">';
+	if ( isset($_COOKIE['geoz']) ) {
+		echo '<meta name="geo_debug" content="set from cookie: '.$_COOKIE['geoz'].'">';
+	} else {
+		$o = geo_data();
+		echo '<meta name="geo_debug" content="'.implode(', ',$o).'">';
+	}
 }
 
 
