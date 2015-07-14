@@ -129,7 +129,7 @@ function geo_data( $zip = false, $debug = false ) {
 
 	endif;
 
-	setcookie("geoz", $a['postalCode'], time()+60*60*24*30, "/");
+	//setcookie("geoz", $a['postalCode'], time()+60*60*24*30, "/"); // throws headers error, don't need it anyway
 	return $a;
 }
 
