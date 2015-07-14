@@ -240,7 +240,7 @@ function geo_meta_debug() {
 		echo '<meta name="geo_debug" content="set from cookie: '.$_COOKIE['geoz'].'">';
 	} else {
 		$o = geo_data();
-		echo '<meta name="geo_debug" content="'.implode(', ',$o).'">';
+		echo '<meta name="geo_debug" content="geo database used: '.implode(', ',$o).'">';
 	}
 }
 
