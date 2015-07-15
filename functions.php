@@ -1408,6 +1408,7 @@ function jht_specs_metabox() {
 		'lounge' => '',
 		'faces' => '',
 		'wizid' => '',
+		'wiz_bullets' => '',
 	);
 	?><table width="100%">
 	<tr valign="top">
@@ -1501,12 +1502,15 @@ function jht_specs_metabox() {
     <tr valign="top">
     <td width="187"><label for="jht_specs[faces]">Stainless Steel Jet Faces</label></td><td><input type="text" name="jht_specs[faces]" value="<?php esc_attr_e($info['faces']); ?>" /></td>
     </tr>
-    <tr valign="top">
+    <?php /* <tr valign="top">
     <td width="187"><label for="jht_specs[wizid]">Wizard Identifier</label></td><td><select name="jht_specs[wizid]">
 		<option value="price" <?php echo ( esc_attr($info['wizid']) == 'price' ? 'selected="selected"' : '' ); ?>>Price</option>
 		<option value="performance" <?php echo ( esc_attr($info['wizid']) == 'performance' ? 'selected="selected"' : '' ); ?>>Performance</option>
 		<option value="design" <?php echo ( esc_attr($info['wizid']) == 'design' ? 'selected="selected"' : '' ); ?>>Design</option></select>
 	</td>
+    </tr> */ ?>
+    <tr valign="top">
+    <td width="187"><label for="jht_specs[wiz_bullets]">Wizard Bullet Points<br /><small>One per line. No HTML or list markers (for example - or •).</small></label></td><td><textarea name="jht_specs[wiz_bullets]" cols="120"><?php esc_attr_e($info['wiz_bullets']); ?></textarea></td>
     </tr>
     <tr><td colspan="2"><p><strong>Featured Image Details</strong></p></td></tr>
     <tr valign="top">
@@ -4029,20 +4033,23 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 			        'staging' => $is_staging
 			        )
 			    );
+			$wiz_bullets = explode( "\r\n", esc_attr($jht_specs['wiz_bullets']) );
 			$confirmation .= '<div id="post-'.get_the_ID().'" class="entry wizard-result-tub">
 	            <h3 class="title">'.get_the_title().'</h3>
 				<h4 class="sub-header">'.esc_attr($jht_info['topheadline']).'</h4>
 				<div class="hotub-mainimg">'.(class_exists('MultiPostThumbnails') ? MultiPostThumbnails::get_the_post_thumbnail('jht_tub', 'three-quarter', $post->ID, 'one-half-th', array('class'=>'onehalfs')) : '' ).'</div>
 				<div class="spec">
 					<p><strong>Seats: '.esc_attr($jht_specs['seats']).'</strong></p>
-					<p><strong>Jets: '.absint($jetcount).'</strong></p>
+					<p><strong>Lounge: '.esc_attr(ucfirst($jht_specs['haslounge'])).'</strong></p>
 					<p><strong>'.( jht_isca() ? esc_attr($jht_specs['dim_int']) : esc_attr($jht_specs['dim_us']) ).'</strong></p>
 					<div id="BVRRSummaryContainer"></div>
-				</div>
-				<div class="rows">
-					<div class="odd">Lounge Seat: <strong>'.esc_attr(ucfirst($jht_specs['haslounge'])).'</strong></div>
-					<div class="even">Spa Volume: <strong>'.( jht_isca() ? esc_attr($jht_specs['vol_int']) : esc_attr($jht_specs['vol_us']) ).'</strong></div>
-					<div class="odd">Spa Pumps: <strong>'.esc_attr($jht_specs['pumpcount']).'</strong></div>
+				</div>';
+			$confirmation .= '<div class="wiz-bullets">
+					<ul>';
+			foreach ($wiz_bullets as $wiz_bullet) {
+				$confirmation .= '<li>'.$wiz_bullet.'</li>';
+			}
+			$confirmation .= '<ul>
 				</div>
 	            <a href="'.get_the_permalink().'" class="btn bigGoldBtn">View Hot Tub</a>
 	        </div>';
