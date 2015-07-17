@@ -65,9 +65,10 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     */ ?>
 
     <?php /* * * * * DEFAULT HOME PAGE J-500 HERO BLOCK * * * * */ ?>
-    <div class="hero" style="background: url(<?php echo get_template_directory_uri(); ?>/images/heros/Final-Home-Hero-J500_op.jpg) no-repeat 50% 50%;">
+    <div class="hero" style="background: url(<?php echo get_template_directory_uri(); ?>/images/heros/Prolink-Hotubs-hero.jpg) no-repeat 50% 50%;">
         <div id="hero-slide-1" class="block">
-            <a href="<?php echo get_bloginfo('url'); ?>/j-500/" target="_blank" style="position: absolute; color: transparent; width: 190px; height: 40px; top: 240px; left: 3px;">See it in person</a>
+            <a href="<?php echo get_bloginfo('url'); ?>/j-500/" target="_blank" style="position: absolute; color: transparent; width: 330px; height: 40px; top: 127px; left: 10px;">See it in person</a>
+            <a href="<?php echo get_bloginfo('url'); ?>/owners-corner/remote-control/" target="_blank" style="position: absolute; color: transparent; width: 116px; height: 20px; top: 295px; left: 80px;">Prolink App</a>
         </div>
     </div>
 
