@@ -63,7 +63,7 @@ function geo_data( $zip = false, $debug = false ) {
 		return false; // do nothing if viewing admin pages (geo not needed)
 
 	if ( isset($_COOKIE['georesult']) ) {
-		$a = json_decode($_COOKIE['georesult']);
+		$a = json_decode($_COOKIE['georesult'], true);
 		return $a; // Geo Data already set in cookie so do not re-run lookup...
 	}
 
@@ -181,7 +181,7 @@ function geo_location_meta() {
 	$a = array();
 	$str = '';
 	if ( isset($_COOKIE['georesult']) ) {
-		$a = json_decode($_COOKIE['georesult']);
+		$a = json_decode($_COOKIE['georesult'], true);
 		$str = 'cookie:: ';
 	} else {
 		$a = geo_data();
