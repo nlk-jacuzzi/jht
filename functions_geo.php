@@ -15,7 +15,7 @@ add_action( 'wp_head', 'geo_location_meta' );
 function set_geo_cookie() {
 	if ( ! is_admin() && ( ! isset($_COOKIE['georesult']) || ( isset($_GET['geo']) && $_GET['geo'] == 'reset' ) ) ) {
 		$a = geo_data(); // Re-run geo lookup if no cookie
-		setcookie("georesult", serialize( $a ), time()+60*60*24*30, "/");
+		setcookie("georesult", json_encode( $a ), time()+60*60*24*30, "/");
 	}
 	if ( ! is_admin() && isset($_COOKIE['georesult']) && isset($_GET['geo']) && $_GET['geo'] == 'remove' ) {
 		setcookie("georesult", '', time() - 60*60*24); // remove cookie
@@ -63,7 +63,7 @@ function geo_data( $zip = false, $debug = false ) {
 		return false; // do nothing if viewing admin pages (geo not needed)
 
 	if ( isset($_COOKIE['georesult']) ) {
-		$a = unserialize($_COOKIE['georesult']);
+		$a = json_decode($_COOKIE['georesult']);
 		return $a; // Geo Data already set in cookie so do not re-run lookup...
 	}
 
@@ -181,20 +181,23 @@ function geo_location_meta() {
 	$a = array();
 	$str = '';
 	if ( isset($_COOKIE['georesult']) ) {
-		$a = unserialize($_COOKIE['georesult']);
+		$a = json_decode($_COOKIE['georesult']);
 		$str = 'cookie:: ';
 	} else {
 		$a = geo_data();
 		$str = 'database:: ';
 	}
-	foreach ($a as $k => $v) {
-		$str .= $k . ': ' . $v . '; ';
-	}
 	echo '<meta name="ICBM" content="'.$a['latitude'].', '.$a['longitude'].'">';
 	echo '<meta name="geo.position" content="'.$a['latitude'].';'.$a['longitude'].'">';
 	echo '<meta name="geo.placename" content="'.$a['city'].', '.$a['region'].', '.$a['country'].' '.$a['postalCode'].'">';
-	echo '<meta name="geo.region" content="'.$a['region'].'">';
+	echo '<meta name="geo.region" content="'.$a['country'].'-'.$a['region'].'">';
 	echo '<meta name="geo.language" content="'.$_SERVER['HTTP_ACCEPT_LANGUAGE'].'">';
+	if ( is_array($a) ) {
+		foreach ($a as $k => $v) {
+			$str .= $k . ': ' . $v . '; ';
+		}
+		echo '<meta name="geo.lookup.result" content="'.$str.'">';
+	}
 }
 
 
