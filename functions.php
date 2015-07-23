@@ -39,8 +39,8 @@
  */
 
 
-if ( !session_id() )
-	add_action( 'init', 'session_start' );
+//if ( !session_id() )
+//	add_action( 'init', 'session_start' );
 
 
 /**
