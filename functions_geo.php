@@ -15,7 +15,8 @@ add_action( 'wp_head', 'geo_location_meta' );
 function set_geo_cookie() {
 	if ( ! is_admin() && ( ! isset($_COOKIE['georesult']) || ( isset($_GET['geo']) && $_GET['geo'] == 'reset' ) ) ) {
 		$a = geo_data(); // Re-run geo lookup if no cookie
-		setcookie("georesult", json_encode( $a ), time()+60*60*24*30, "/");
+		$json = json_encode( $a );
+		setcookie("georesult", $json, time()+60*60*24*30, "/");
 	}
 	if ( ! is_admin() && isset($_COOKIE['georesult']) && isset($_GET['geo']) && $_GET['geo'] == 'remove' ) {
 		setcookie("georesult", '', time() - 60*60*24); // remove cookie
@@ -62,8 +63,8 @@ function geo_data( $zip = false, $debug = false ) {
 	if ( is_admin() )
 		return false; // do nothing if viewing admin pages (geo not needed)
 
-	if ( isset($_COOKIE['georesult']) ) {
-		$a = json_decode($_COOKIE['georesult'], true);
+	if ( isset($_COOKIE['georesult']) && !isset($_GET['geo']) ) {
+		$a = json_decode(stripcslashes($_COOKIE['georesult']), true);
 		return $a; // Geo Data already set in cookie so do not re-run lookup...
 	}
 
@@ -181,7 +182,7 @@ function geo_location_meta() {
 	$a = array();
 	$str = '';
 	if ( isset($_COOKIE['georesult']) ) {
-		$a = json_decode($_COOKIE['georesult'], true);
+		$a = json_decode(stripcslashes($_COOKIE['georesult']), true);
 		$str = 'cookie:: ';
 	} else {
 		$a = geo_data();
