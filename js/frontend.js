@@ -767,3 +767,56 @@ jQuery(function($) {
 
 
 
+
+/* GeoLocation with Google */
+function getLocation() {
+    	if (navigator.geolocation) {
+	        navigator.geolocation.getCurrentPosition( function(position) {
+	        	var theUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+','+position.coords.longitude+'&key=AIzaSyCpr2dLs45lmXetGPQRVtfd0CDkyKOjUhg';
+	        	$.getJSON(theUrl, function(data) {
+    				console.log(data); //data is the JSON string
+				});
+				var xmlHttp;
+				if (window.XMLHttpRequest)
+				{// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlHttp=new XMLHttpRequest();
+				}
+				else
+				{// code for IE6, IE5
+					xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlHttp.open( "GET", theUrl, false );
+				xmlHttp.send();
+				var r = xmlHttp.responseXML;
+				var s = JSON.stringify(r);
+				jQuery.cookie('geoloc', s, { expires: 30, path: '/' });
+				console.log(theUrl);
+				console.log(r);
+	        });
+	    }
+}
+function codeLatLng() {
+	var geocoder = new google.maps.Geocoder();
+	if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition( function(position) {
+        	var latlng = new google.maps.LatLng( position.coords.latitude, position.coords.longitude );
+        	geocoder.geocode( {'location': latlng}, function(results, status) {
+        		//console.log(results);
+        		var zip = false;
+        		var addy = results[0].address_components;
+        		for (var i = 0; i < addy.length; i++) {
+        			//console.log(addy[i]);
+        			if( addy[i].types[0] == 'postal_code' ){
+        				zip = addy[i].long_name;
+        			}
+        		};
+        		//console.log(zip);
+        		if(zip){
+        			jQuery.cookie('geoz', zip, { expires: 30, path: '/' });
+        		}
+        	});
+		});
+	}
+}
+//codeLatLng();
+
