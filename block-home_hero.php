@@ -43,9 +43,9 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     $promo_image_url = '/images/heros/' . $promo_image_filename; // hero image root
 
     ?>
-    <div class="hero" style="background: url(<?php echo get_template_directory_uri() . $promo_image_url; ?>) no-repeat 50% 50%; background-color: #fff;">
+    <div class="hero" style="background: url(http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht<?php echo $promo_image_url; ?>) no-repeat 50% 50%; background-color: #fff;">
         <div id="hero-slide-1" class="block" style="height: 390px;">
-            <a id="hero-promotion-call-to-action" class="" href="<?php echo ( !empty($promo_cta_btn_url) ? $promo_cta_btn_url : get_bloginfo('url') . '/promo/' ); ?>" <?php echo $promo_cta_btn_style ?>>View Promotions</a>
+            <a id="hero-promotion-call-to-action" class="" href="<?php echo ( !empty($promo_cta_btn_url) ? $promo_cta_btn_url : 'http://www.jacuzzi.com/hot-tubs' . '/promo/' ); ?>" <?php echo $promo_cta_btn_style ?>>View Promotions</a>
         </div>
     </div>
 
@@ -65,10 +65,10 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     */ ?>
 
     <?php /* * * * * DEFAULT HOME PAGE J-500 HERO BLOCK * * * * */ ?>
-    <div class="hero" style="background: url(<?php echo get_template_directory_uri(); ?>/images/heros/Prolink-Hotubs-hero.jpg) no-repeat 50% 50%;">
+    <div class="hero" style="background: url(http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/heros/Prolink-Hotubs-hero.jpg) no-repeat 50% 50%;">
         <div id="hero-slide-1" class="block">
-            <a href="<?php echo get_bloginfo('url'); ?>/j-500/" style="position: absolute; color: transparent; width: 330px; height: 40px; top: 127px; left: 10px;">See it in person</a>
-            <a href="<?php echo get_bloginfo('url'); ?>/owners-corner/remote-control/" style="position: absolute; color: transparent; width: 116px; height: 20px; top: 295px; left: 80px;">Prolink App</a>
+            <a href="http://www.jacuzzi.com/hot-tubs/j-500/" style="position: absolute; color: transparent; width: 330px; height: 40px; top: 127px; left: 10px;">See it in person</a>
+            <a href="http://www.jacuzzi.com/hot-tubs/owners-corner/remote-control/" style="position: absolute; color: transparent; width: 116px; height: 20px; top: 295px; left: 80px;">Prolink App</a>
         </div>
     </div>
 

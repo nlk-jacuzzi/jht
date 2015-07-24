@@ -4,7 +4,7 @@
  *
  **/
 
-$truckload_url = get_bloginfo('url') . '/dealer-locator/dealers/get_truckload_cities_json';
+$truckload_url = 'http://www.jacuzzi.com/hot-tubs/dealer-locator/dealers/get_truckload_cities_json';
 $json = file_get_contents($truckload_url);
 $truckloadObj = json_decode($json);
 
@@ -28,7 +28,7 @@ $truckloadObj = json_decode($json);
 			endif;
 			?>
 			<p class="note">* Required.&nbsp; &nbsp;<a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a></p>
-			<a href="<?php echo get_bloginfo('url'); ?>/request-brochure/">See what's included</a>
+			<a href="http://www.jacuzzi.com/hot-tubs/request-brochure/">See what's included</a>
 		</div>
 		<div id="bbg-ctas-block2">
 			<h3>Find Your Nearest Dealer</h3>
@@ -37,7 +37,7 @@ $truckloadObj = json_decode($json);
 				<li>Browse models &amp; pricing</li>
 				<li>Come take a wet test in a store</li>
 			</ul>
-			<form name="countryZipForm" method="post" action="<?php echo trailingslashit(get_bloginfo('url')) ?>dealer-locator/cities/">
+			<form name="countryZipForm" method="post" action="http://www.jacuzzi.com/hot-tubs/dealer-locator/cities/">
 				<input type="hidden" value="1" name="zipcodeSearch" />
 				<input type="hidden" value="1" name="data[Dealer][country_id]" />
 				<label><?php echo ( jht_isca() ) ? 'Postal code' : 'Zip'; ?></label>
@@ -54,11 +54,11 @@ $truckloadObj = json_decode($json);
 				<p>Upcoming locations</p>
 				<ul>
 				<?php foreach ($truckloadObj as $key => $dealer) { ?>
-					<li><a href="<?php echo ( !empty($dealer->website) ? $dealer->website : get_bloginfo('url') . '/dealer-locator' . $dealer->link ); ?>"><?php echo ( !empty($dealer->tl_city) ? ucwords($dealer->tl_city) : ucwords($dealer->city) ) . ', ' . strtoupper($dealer->state); ?></a></li>
+					<li><a href="<?php echo ( !empty($dealer->website) ? $dealer->website : 'http://www.jacuzzi.com/hot-tubs/dealer-locator' . $dealer->link ); ?>"><?php echo ( !empty($dealer->tl_city) ? ucwords($dealer->tl_city) : ucwords($dealer->city) ) . ', ' . strtoupper($dealer->state); ?></a></li>
 				<?php } ?>
 				</ul>
 			<?php endif; ?>
-			<a href="<?php echo get_bloginfo('url'); ?>/truckload/">Learn More</a>
+			<a href="http://www.jacuzzi.com/hot-tubs/truckload/">Learn More</a>
 		</div>
 	</div>
 </div>

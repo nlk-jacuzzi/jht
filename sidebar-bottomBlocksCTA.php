@@ -20,7 +20,7 @@ if ( !isset($menuopts['ctafoot']) || $menuopts['ctafoot'] !== 'No' ) { ?>
                 </div>
                 <div class="col col3 warranty">
                     <h3 class="bigtitle">Industry Leading <span>10 Year Warranty!</span></h3>
-                    <a href="<?php echo get_permalink(3881) ?>"><img class="alignleft" src="<?php bloginfo('template_url'); ?>/images/icons/warranty-star.jpg" style="padding-bottom:50px;" /></a>
+                    <a href="<?php echo get_permalink(3881) ?>"><img class="alignleft" src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/icons/warranty-star.jpg" style="padding-bottom:50px;" /></a>
                 </div>
             </div>
 <?php } ?>

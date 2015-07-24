@@ -35,7 +35,7 @@ get_sidebar('bottomBlocks');
     <div class="loc"><form name="countryZipForm" method="post" action="<?php echo trailingslashit(get_bloginfo('url')) ?>dealer-locator/cities/"><input type="hidden" value="1" name="zipcodeSearch" /><input type="hidden" value="1" name="data[Dealer][country_id]" />
                     <a href="<?php bloginfo('url'); ?>/dealer-locator/">Locate a Dealer</a>
                     <input type="text" class="text zip" value="Zip" onfocus="if(jQuery(this).val() == 'Zip') jQuery(this).val('')" onblur="if(jQuery(this).val() == '') jQuery(this).val('Zip')" name="zip" />
-                    <input type="image" value="submit" src="<?php bloginfo('template_url') ?>/images/icons/topsub.png" class="sub" />
+                    <input type="image" value="submit" src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/icons/topsub.png" class="sub" />
                     </form></div>
     <a href="<?php bloginfo('url'); ?>/hot-tubs/" class="bbtn">Explore Tubs</a>
     <a href="<?php echo get_permalink(3743) ?>" class="bbtn">Get a Quote</a>
