@@ -9,7 +9,7 @@
 
 //avala_form_submit();
 
-wp_enqueue_style('Lato', 'http://fonts.googleapis.com/css?family=Lato:400,900');
+wp_enqueue_style('Lato', 'http://fonts.googleapis.com/css?family=Lato:400,900', array(), null);
 
 get_header( 'newdirect' );
 

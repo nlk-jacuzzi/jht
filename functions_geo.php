@@ -27,7 +27,7 @@ function set_geo_cookie() {
  * Google API
  */
 function geo_enqueued_scripts() {
-	wp_enqueue_script('google_places_library', 'https://maps.googleapis.com/maps/api/js?libraries=places');// Google Geo Scripts
+	wp_enqueue_script('google_places_library', 'https://maps.googleapis.com/maps/api/js?libraries=places', array(), null, true);// Google Geo Scripts
 }
 
 if ( ! function_exists('get_the_ip') ) :
