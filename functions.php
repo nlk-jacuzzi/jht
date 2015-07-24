@@ -2536,10 +2536,10 @@ function jht_add_scripts() {
 		wp_register_script( 'mbox', 'http://www.jacuzzi.com/hot-tubs/mbox/mbox.js', array(), null, true);
 		
 		if ( is_page(3888) ) {
-			wp_enqueue_script( 'jquery-ui-accordion' );
+			wp_enqueue_script( 'jquery-ui-accordion', 'URL', array('jquery'), null, true );
 		}
 		if ( is_page_template('page-mobile.php') ) {
-			wp_enqueue_script( 'jht-html5', get_template_directory_uri() .'/js/html5.js' );
+			wp_enqueue_script( 'jht-html5', get_template_directory_uri() .'/js/html5.js', array(), null, true );
 			wp_enqueue_script( 'jht-mobile', get_template_directory_uri() .'/js/mobile.js', array('jquery'), null, true );
 		} else {
 /*
@@ -2568,14 +2568,15 @@ function jht_add_scripts() {
 			wp_enqueue_script( 'cufon', get_template_directory_uri() .'/js/cufon-yui.js', array('jquery'), null, true );
 			wp_enqueue_script( 'cufon-GillSans', get_template_directory_uri() .'/js/GillSans_400.font.js', array('cufon'), null, true );
 			wp_enqueue_script( 'progo', get_template_directory_uri() .'/js/progo-frontend.js', array('jquery','swfobject','cufon-GillSans'), null, true );
-			wp_enqueue_script( 'thickbox' );
+			wp_enqueue_script('thickbox', 'URL', array(), null, true);
+			
 		}
 
 	}
 }
 
 function jht_enqueued_scripts() {
-	wp_enqueue_script( 'vidora-js', '//assets.vidora.com/js/ninthlink.36e3663509be5e4f.js' );
+	wp_enqueue_script( 'vidora-js', '//assets.vidora.com/js/ninthlink.36e3663509be5e4f.js', array(), null, true );
 }
 
 function jht_add_styles() {
@@ -2588,9 +2589,9 @@ function jht_add_styles() {
 		}
 		wp_enqueue_style( 'jquery-ui-css', get_template_directory_uri() . '/css/ui-lightness/jquery-ui-1.10.3.custom.min.css', array(), null );
 		wp_enqueue_style('dealer-landing', get_bloginfo( 'template_url' ) .'/style-dlanding.css', array(), null );
-		wp_enqueue_style('thickbox');
-		wp_enqueue_style('Lato', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,900');
-		wp_enqueue_style('Coustard', 'http://fonts.googleapis.com/css?family=Coustard:900');
+		wp_enqueue_style('thickbox', 'URL', array(), null);
+		wp_enqueue_style('Lato', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,900', array(), null);
+		wp_enqueue_style('Coustard', 'http://fonts.googleapis.com/css?family=Coustard:900', array(), null);
 		if ( is_page_template('page-direct.php') 
 			|| is_page_template('page-directtwo.php')
 			|| is_page_template('page-directcanada.php')
@@ -2598,8 +2599,8 @@ function jht_add_styles() {
 			|| is_page_template('page-directthankscanada.php') ) {
 			wp_enqueue_style( 'direct-base', get_bloginfo( 'template_url' ) .'/css/base.css', array(), null );
 			wp_enqueue_style( 'direct-ppc', get_bloginfo( 'template_url' ) .'/css/ppc.css', array(), null );
-			wp_enqueue_style( 'proGoColorschemeLightGrey', get_stylesheet_directory_uri() .'/css/styleLightGrey.css' );
-			wp_enqueue_style( 'thickbox' );
+			wp_enqueue_style( 'proGoColorschemeLightGrey', get_stylesheet_directory_uri() .'/css/styleLightGrey.css', array(), null );
+			wp_enqueue_style('thickbox', 'URL', array(), null);
 		}
 	}
 }
@@ -3607,18 +3608,18 @@ add_filter('gform_submit_button','form_submit_button',10,12);
 			// load bvpai.js
 			if ( is_page('reviews') ) {
 				if ( jht_my_server() != 'live' ) {
-					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/jacuzzi/ReadOnly/en_US/bvapi.js', array(), '1.0', false);
+					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/jacuzzi/ReadOnly/en_US/bvapi.js', array(), null, false);
 				}
 				else {
-					wp_enqueue_script( 'bvapi-js', '//display.ugc.bazaarvoice.com/static/jacuzzi/ReadOnly/en_US/bvapi.js', array(), '1.0', false);
+					wp_enqueue_script( 'bvapi-js', '//display.ugc.bazaarvoice.com/static/jacuzzi/ReadOnly/en_US/bvapi.js', array(), null, false);
 				}
 			}
 			else {
 				if ( jht_my_server() != 'live' ) {
-					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/jacuzzi/en_US/bvapi.js', array(), '1.0', false); //staging
+					wp_enqueue_script( 'bvapi-js', '//display-stg.ugc.bazaarvoice.com/static/jacuzzi/en_US/bvapi.js', array(), null, false); //staging
 				}
 				else {
-					wp_enqueue_script( 'bvapi-js', '//display.ugc.bazaarvoice.com/static/jacuzzi/en_US/bvapi.js', array(), '1.0', false); //production
+					wp_enqueue_script( 'bvapi-js', '//display.ugc.bazaarvoice.com/static/jacuzzi/en_US/bvapi.js', array(), null, false); //production
 				}
 			}
 		}
