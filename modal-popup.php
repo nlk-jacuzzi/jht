@@ -72,7 +72,7 @@ $img_version = 2; // 0 or 1 or 2, etc, used to set the left side content image
 	.avala-row.modal input#person_first_name { margin-right: 6px; }
 	.avala-row.modal label[for="receive_email_campaigns"] { font-size: 11px; line-height: 1em; padding-left: 21px; text-indent: -23px; }
 	.avala-row.modal input#receive_email_campaigns { margin-top: 5px; }
-	.avala-row.modal input[type="submit"] { background: url("<?php echo get_template_directory_uri(); ?>/images/modals/gold-button.png") no-repeat; color: transparent; width: 100%; border: none; height: 40px; margin-top: 10px; cursor: pointer;}
+	.avala-row.modal input[type="submit"] { background: url("http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/modals/gold-button.png") no-repeat; color: transparent; width: 100%; border: none; height: 40px; margin-top: 10px; cursor: pointer;}
 	.avala-row.modal p.note { color: #fff; font-size: 11px; margin-top: 8px; text-align: center; }
 	.avala-row.modal p.note a { color: #fff; font-size: 11px; text-align: center; }
 	.close-this-modal a { background-color: #222; border: 2px solid #fff; border-radius: 20px; color: #fff; cursor: pointer; font: 700 11px/24px cursive; height: 24px; position: absolute; right: -14px; text-align: center; text-decoration: none; top: -14px; width: 24px; }
@@ -83,13 +83,13 @@ $img_version = 2; // 0 or 1 or 2, etc, used to set the left side content image
 	</style>
 	<div class="wrapper" style="height: 387px; left: 50%; margin-left: -480px; margin-top: -169px; position: relative; top: 50%; width: 960px;">
 		<div class="left-twoth" style="background-color: #fff; box-sizing: border-box; float: left; height: 387px; width: 658px;">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/modals/<?php echo $image[ $img_version ]; ?>-pop.png" />
+			<img src="<?php echo get_template_directory_uri(); ?>/images/modals/<?php echo $image[ $img_version ]; ?>-pop.png" height="387" width="658" />
 		</div>
 		<div class="right-twoth" style="background-color: #57575a; box-sizing: border-box; float: left; height: 387px; width: 302px;">
 			<p style="color: #fff; font: 16px 'GSBQ'; letter-spacing: 1.2px; margin: 46px 24px 0; text-align: center;" ><span style="color: #dba923;">DOWNLOAD</span> YOUR FREE<br />HOT TUB BROCHURE TODAY</p>
-			<form method="post" action="<?php echo get_bloginfo('url'); ?>/request-brochure/" id="leadFormModal" style="margin: 9px 24px;">
+			<form method="post" action="http://www.jacuzzi.com/hot-tubs/request-brochure/" id="leadFormModal" style="margin: 9px 24px;">
 				<?php avala_hidden_fields( 15, 9, 12 ); ?>
-				<input type="hidden" name="thanks_page" value="<?php echo get_bloginfo('url'); ?>/request-brochure/brochure-thanks/">
+				<input type="hidden" name="thanks_page" value="http://www.jacuzzi.com/hot-tubs/request-brochure/brochure-thanks/">
 				<div class="avala-row modal">
 					<label class="">Name*</label>
 					<?php avala_field( 'first_name', 'short text', true, 'field', array( 'placeholder' => 'First' ) ); ?>
@@ -110,7 +110,7 @@ $img_version = 2; // 0 or 1 or 2, etc, used to set the left side content image
 					<input type="submit" class="submit" value="Download Now" />
 				</div>
 				<div class="avala-row modal center">
-					<p class="note">* Required.&nbsp; &nbsp;<a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a></p>
+					<p class="note">* Required.&nbsp; &nbsp;<a href="http://www.jacuzzi.com/hot-tubs/about/policies/">Privacy Policy</a></p>
 				</div>
 			</form>
 		</div>

@@ -15,18 +15,18 @@
             <div class="aware-rows">
                 <div class="aware-row">
                     <div class="aware-row-left">
-                        <img id="aware-foot-pic1" src="<?php bloginfo('template_url'); ?>/images/awareness/new-tubs-advice-pic.jpg">
+                        <img id="aware-foot-pic1" src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/awareness/new-tubs-advice-pic.jpg">
                         <input type="button" id="aw-btn-1" class="aware-btn" onclick='location.href="../dealer-locator/";' value="Locate Your Nearest Dealer" />
                     </div>
                     <div class="aware-row-right">
-                        <img id="aware-foot-pic2" src="<?php bloginfo('template_url'); ?>/images/awareness/find-the-tub-for-you-pic.jpg">
+                        <img id="aware-foot-pic2" src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/awareness/find-the-tub-for-you-pic.jpg">
                         <input type="button" id="aw-btn-2" class="aware-btn" onclick='location.href="../collections/";' value="View hot tub collections" />
                     </div>
                 </div>
             </div>
             <div class="aware-side">
                 <div class="aware-right-sidebar">
-                    <img id="aware-foot-pic3" src="<?php bloginfo('template_url'); ?>/images/awareness/most-popular-tubs-pic.jpg">
+                    <img id="aware-foot-pic3" src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/awareness/most-popular-tubs-pic.jpg">
                     <input type="button" id="aw-btn-3" class="aware-btn" onclick='location.href="../best-selling-hot-tubs/";' value="View Our Best Selling Spa Models" />
                 </div>
             </div>

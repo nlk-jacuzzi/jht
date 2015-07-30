@@ -9,7 +9,7 @@
 ?>
             <div class="threeCol">
                 <div class="col col1">
-                    <a href="<?php echo get_permalink(3881) ?>"><img class="alignleft" src="<?php bloginfo('template_url'); ?>/images/icons/warranty-star.jpg" style="padding-bottom:50px;" /></a>
+                    <a href="<?php echo get_permalink(3881) ?>"><img class="alignleft" src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/icons/warranty-star.jpg" style="padding-bottom:50px;" /></a>
                     <h3 class="bigtitle">Industry Leading 10 Year Warranty!</h3>
                     <p>When shopping for a hot tub, be sure to consider the warranty. Other manufacturers offer warranties that last 1 or 2 years, but our quality tubs feature limited warranties for up to 10 years! In addition, Jacuzzi's network of authorized dealers is standing by to ensure years of worry-free enjoyment. <a href="<?php echo get_permalink(4169) ?>">VIEW WARRANTY OPTIONS</a></p>
                 </div>
