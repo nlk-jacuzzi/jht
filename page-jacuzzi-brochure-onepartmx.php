@@ -199,7 +199,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		}
 		.selection-field
 		{
-			margin-top: -32px;
+			margin-top: -32px !important;
 		}
 		
 		#main-wrapper h1 {
