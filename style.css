@@ -3120,7 +3120,7 @@ body.blog .scall.bro a {
 	color:#333;
 }
 .blog .main .entry .post-content img{
-	border:1px solid #CCC;
+	/*border:1px solid #CCC;*/
 	padding:5px;
 }
 .blog .main .entry .post-content .more{
