@@ -6066,7 +6066,7 @@ a#Quote_Grphic_sidebar {
 	#bbg-ctas-block1 .gform_wrapper {
 		margin: 0;
 		position: absolute;
-		top: 100px;
+		top: 113px;
 		width: 300px;
 	}
 	#bbg-ctas-block1 form {
@@ -6219,7 +6219,7 @@ a#Quote_Grphic_sidebar {
 		width: 294px;
 	}
 	#bbg-ctas input.submit[value="Download Now"] {
-		margin-top: 25px;
+		margin-top: 12px;
 	}
 
 /* - - - block-browse-the-tubs - - - */
@@ -6237,22 +6237,22 @@ a#Quote_Grphic_sidebar {
 	text-decoration: none;
 }
 #block-browse-the-tubs .container #browse-tubs-6person {
-	background: url(images/tubs/6person.png) no-repeat 0 0;
+	background: url(images/tubs/6person_op.jpg) no-repeat 0 0;
 	margin-right: 6px;
 	width: 271px;
 }
 #block-browse-the-tubs .container #browse-tubs-5person {
-	background: url(images/tubs/5person.png) no-repeat 0 0;
+	background: url(images/tubs/5person_op.jpg) no-repeat 0 0;
 	margin-right: 6px;
 	width: 244px;
 }
 #block-browse-the-tubs .container #browse-tubs-4person {
-	background: url(images/tubs/4person.png) no-repeat 0 0;
+	background: url(images/tubs/4person_op.jpg) no-repeat 0 0;
 	margin-right: 6px;
 	width: 219px;
 }
 #block-browse-the-tubs .container #browse-tubs-3person {
-	background: url(images/tubs/3person.png) no-repeat 0 0;
+	background: url(images/tubs/3person_op.jpg) no-repeat 0 0;
 	width: 198px;
 }
 #block-browse-the-tubs .container a h3 {
