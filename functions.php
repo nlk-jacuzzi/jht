@@ -4076,3 +4076,18 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 
 	return $confirmation;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+add_filter( 'searchwp_debug', '__return_true' );
