@@ -208,18 +208,6 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
     	}
     		
 	</style>
-	<script type="text/javascript">
-		jQuery(document).ready(function(){
-			jQuery('.gform_footer').append('<p><small><i>* Indica un campo requerido<br><a href="<?php echo get_bloginfo('url') ?>/politicas/">Aviso de Privacidad.</a></i></small></p><a id="click-me-spot" name="more-info"></a>');
-			jQuery('#to-download-form').click(function(){
-				  jQuery("html, body").animate({
-				    scrollTop: "480px"
-				  });
-				  //jQuery("#person_first_name").focus();
-				  return false;
-			});
-		});
-	</script>
 <div id="main-wrapper">
 	<div class="page-header" id="page-header">
     	<div class="content center ab-b" style="background-image: url('<?php bloginfo("template_url"); ?>/images/landing/hot_tub_brochure_new_mx.jpg')">
@@ -227,11 +215,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             	<h1><strong class="small">El catálogo de Spas de la marca Jacuzzi<sup>®</sup> </strong>25 Páginas de Fotos y Datos - <strong>GRATIS</strong></h1>
                 <h2>Acceso instantáneo a detalles sobre los spa de marca Jacuzzi<sup>®</sup>, fotos de instalaciones, descripciones de las colecciones y mucho más.</h2>
             </div>
-            <?php echo do_shortcode('[gravityform id="22" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
+            <?php echo do_shortcode('[gravityform id="19" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
             <a id="click-me-anchor" href="#more-info"></a>
-
-                <script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1183768",type:"1",revenue:"250",actionid:"28343"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/analytics.html?dedup=1&domainId=1183768&type=1&revenue=250&actionid=28343" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe></noscript>
-
         </div>
     </div>
     <section class="section">
@@ -318,5 +303,20 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		</div>
     </section>
 </div>
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('.gform_footer').append('<p><small><i>* Indica un campo requerido<br><a href="<?php echo get_bloginfo('url') ?>/politicas/">Aviso de Privacidad.</a></i></small></p><a id="click-me-spot" name="more-info"></a>');
+		jQuery('#to-download-form').click(function(){
+			  jQuery("html, body").animate({
+			    scrollTop: "480px"
+			  });
+			  //jQuery("#person_first_name").focus();
+			  return false;
+		});
+	});
+</script>
+<script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1183768",type:"1",revenue:"250",actionid:"28343"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/analytics.html?dedup=1&domainId=1183768&type=1&revenue=250&actionid=28343" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe></noscript>
+
 <?php endwhile; // end of the loop. ?>
 <?php get_footer( 'newdirectmx' ); ?>
