@@ -180,7 +180,7 @@ dataLayer.push({
                                 <div class="tub-brochure-pricing">
                                     <div class="fullrow">
                                         <div class="twothird msrp">
-                                            <a id="show-msrp" href="#" class="getpricing" style="visibility: hidden;">View MSRP</a>
+                                            <a id="show-msrp" href="#" class="getpricing">View MSRP</a>
                                         </div>
                                         <div class="onethird last">
                                             <div class="share-bar">

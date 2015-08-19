@@ -7046,6 +7046,7 @@ body.quote p.note a
 
 /* MSRP */
 a#show-msrp {
+	display: none; /* https://ninthlink.atlassian.net/browse/JAC-879 */
 	font-size: 20px;
 	height: auto;
 	line-height: 25px;
@@ -7129,4 +7130,4 @@ a#show-msrp.close {
 	font-weight: bold;
 }
 
-.tub-brochure-pricing .msrp+.onethird.last {margin-top: 26px;}
+.tub-brochure-pricing .msrp+.onethird.last { /*margin-top: 26px;*/ }
