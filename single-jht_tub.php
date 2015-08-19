@@ -180,7 +180,7 @@ dataLayer.push({
                                 <div class="tub-brochure-pricing">
                                     <div class="fullrow">
                                         <div class="twothird msrp">
-                                            <a id="show-msrp" href="#" class="getpricing">View MSRP</a>
+                                            <a id="show-msrp" href="#" class="getpricing" style="visibility: hidden;">View MSRP</a>
                                         </div>
                                         <div class="onethird last">
                                             <div class="share-bar">
@@ -221,7 +221,7 @@ dataLayer.push({
                     $msrp = esc_attr($jht_specs['msrp']);
                     $msrp = ( $msrp[0] == '$' ? $msrp : '$'.$msrp );
                     ?>
-                    <div class="container msrp" style="display:none;">
+                    <div class="container msrp" style="/*display: none;*/">
                         <div class="l">
                             <p class="msrp-disclaimer">Disclaimer</p>
                             <p>Prices listed are Manufacturer's Suggested Retail Price (MSRP). Prices may not include additional fees, see authorized dealer for details.</p>

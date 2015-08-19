@@ -7081,7 +7081,7 @@ a#show-msrp.close {
 }
 .container.msrp .r:before {
 	background-color: #fff;
-	content: '';
+	/*content: '';*/
 	display: block;
 	height: 30px;
 	position: absolute;
