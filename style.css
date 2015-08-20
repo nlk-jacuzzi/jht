@@ -1224,7 +1224,7 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 }
 .hero .getquoteb .form-container .right label[for="receive_email_campaigns"] { position: absolute; top: 386px; left: 330px; width: 260px; line-height: 16px; text-indent: -23px; }
 
-.bighero .hreo.request-pricing {
+.bighero .hero.request-pricing {
 	background: none;
 	height: 0;
 }
