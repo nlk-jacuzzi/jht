@@ -34,10 +34,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     	<div class="wrap">
             <div class="twoCol">
                 <div class="main request-pricing">
-                    <h1 class="title"><?php the_title(); ?></h1>
-                    <p>Simply fill in this quick form to request pricing on your perfect hot tub. Your local authorized Jacuzzi dealer will reach out to you with expert selection advice, pricing, and any current specials in your area.<br><br>*Indicates required fields.</p>
-					<?php echo do_shortcode('[gravityform id="14" name="No-Obligation Price Quote" title="false" description="false"]'); ?>
-					<p class="note"><a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a></p>
+                    <?php the_content(); ?>
                 </div>
                 <script type="text/javascript">
                 (function($){
@@ -53,6 +50,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                         echo '<p style="font-size: 24px;margin-bottom: .5em;margin-top: -68px;font-family: \'GSBQ\';">' . get_the_title($new_post->ID) . '</p>';
                         $the_img = MultiPostThumbnails::the_post_thumbnail('jht_tub', 'three-quarter', $new_post->ID, 'large');
                         echo '<p class="request-pricing_tub-seo" style="font-size: 24px;margin-top: 10px;font-family: \'GSBQ\';">' . esc_attr($jht_info['topheadline']) . '</p>';
+                    }
+                    elseif ( has_post_thumbnail() ) {
+                        the_post_thumbnail();
                     }
                     else { ?>
                         <p style="font-size: 24px;margin-bottom: .5em;margin-top: -68px;font-family: 'GSBQ';"></p>
