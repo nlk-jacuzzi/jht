@@ -183,6 +183,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		.gform_wrapper li.gfield.gfield_error.gfield_contains_required
 		{
 			padding: 0px !important;
+			margin-bottom: 0.25em !important;
 		}
 		
 		li.email-right
