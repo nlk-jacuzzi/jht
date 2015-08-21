@@ -230,7 +230,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                     <div class="overflow-left-2of3">
                         <figure class="align-right">
                             <div class="img span1of1">
-                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/easy_compare.png" alt="" />
+                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/easy_compare.jpg" alt="" />
                             </div>
                         </figure>
                     </div>
@@ -249,7 +249,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 	<div class="overflow-right-1of2">
                         <figure class="span1of1">
                             <div class="img">
-                            	<img src="<?php bloginfo('template_url'); ?>/images/landing/learn_about.png" alt="" />
+                            	<img src="<?php bloginfo('template_url'); ?>/images/landing/learn_about.jpg" alt="" />
                             </div>
                         </figure>
                 	</div>
@@ -268,7 +268,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                     <div class="overflow-left-2of3">
                         <figure class="align-right">
                             <div class="img span1of1">
-                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/see_how_easy.png" alt="" />
+                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/see_how_easy.jpg" alt="" />
                             </div>
                         </figure>
                     </div>
