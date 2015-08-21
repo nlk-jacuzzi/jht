@@ -384,6 +384,20 @@ function jht_posted_in() {
 }
 endif;
 
+
+function jht_is_form_page() {
+	global $wp_query;
+	$post = $wp_query->post;
+	$jht_form = get_post_meta($post->ID, 'jht_form');
+	$form_type = (array_key_exists( 0, $jht_form ) ? $jht_form[0] : null); //$jht_form[0]
+	if ( isset($form_type['form']) && in_array( $form_type['form'], array('other','Brochure','BuyersGuide','Quote','TradeIn','Truckload' ) ) ) {
+		return true;
+	}
+	return false;
+}
+
+
+
 if ( ! function_exists( 'jht_cleanclass' ) ):
 function jht_cleanclass( $classes, $ar = array('page'), $keepers = array('admin-bar') ) {
 	$keepers = apply_filters('jht_cleanclass_keepers', $keepers);
@@ -3974,7 +3988,7 @@ add_filter('single_template', 'set_page_template');
 if ( jht_my_server() == 'dev' ) {
 	add_filter( 'gform_confirmation_23', 'custom_confirmation', 10, 4 );
 } else {
-	add_filter( 'gform_confirmation_20', 'custom_confirmation', 10, 4 );
+	//add_filter( 'gform_confirmation_20', 'custom_confirmation', 10, 4 );
 }
 function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	$tpid = array(

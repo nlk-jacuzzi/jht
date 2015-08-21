@@ -13,19 +13,7 @@ function google_tracking_codes_footer() {
 
 
 	// Remarketing tags on form pages only (to be phased out)
-	if ( ( is_page_template('page-quote.php') == true ) 
-		|| ( is_page_template('page-quoteb.php') == true ) 
-		|| ( is_page_template('page-tradein.php') == true ) 
-		|| ( is_page_template('page-brochure.php') == true ) 
-		|| ( is_page_template('page-jacuzzi-brochure-onepart.php') == true ) 
-		|| ( is_page_template('page-twoColForm.php') == true ) 
-		|| ( is_page_template('page-newlanding1.php') == true ) 
-		|| ( is_page_template('page-newlanding1b.php') == true ) 
-		|| ( is_page_template('page-newlanding2.php') == true )
-		|| ( is_page_template('page-direct.php') == true )
-		|| ( is_page_template('page-direct2.php') == true )
-		|| ( is_page_template('page-directcanada.php') == true )
-		|| ( is_page_template('page-directtwo.php') == true ) ) {
+	if ( jht_is_form_page() ) {
 		?>
 			<!-- Google Code for Form Pages :: Remarketing Tag -->
 			<script type="text/javascript">
@@ -94,7 +82,7 @@ add_action('wp_footer', 'google_tracking_codes_footer');
 
 
 	function pixel_site_catalyst() { 
-	  if(!is_page_template('page-dlresults.php') || strpos($_SERVER['URI'], 'dealer-locator') !== false) {
+		if(!is_page_template('page-dlresults.php') || strpos($_SERVER['URI'], 'dealer-locator') !== false) {
 			if ( !defined('JHTMOBPX') ) {
 				?>
 			<!-- SiteCatalyst code version: H.10.
@@ -159,6 +147,8 @@ add_action('wp_footer', 'google_tracking_codes_footer');
 
 
 	function pixel_bazaarinvoice() {
+
+		if ( jht_is_form_page() ) return false;
 
 		global $post;
 		$custom = get_post_meta($post->ID,'jht_specs');

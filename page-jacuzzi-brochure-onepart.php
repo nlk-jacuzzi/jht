@@ -183,6 +183,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		.gform_wrapper li.gfield.gfield_error.gfield_contains_required
 		{
 			padding: 0px !important;
+			margin-bottom: 0.25em !important;
 		}
 		
 		li.email-right
@@ -198,11 +199,6 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			margin-top: 35px !important;				
 		}	
 	</style>
-	<script type="text/javascript">
-		jQuery(document).ready(function(){
-			jQuery('.gform_footer').append('<p><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p><a id="click-me-spot" name="more-info"></a>');
-		});
-	</script>
 <div id="main-wrapper">
 	<div class="page-header" id="page-header">
     	<div class="content center ab-b">
@@ -211,14 +207,16 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 <h2>Get instant access to Jacuzzi® Hot Tub features , stunning lifestyle photos,<br />collection descriptions and more.</h2>
             </div>
             <?php echo do_shortcode('[gravityform id="13" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
+            <p style="position: absolute; right: 167px; bottom: 87px;"><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p>
             <a id="click-me-anchor" href="#more-info"></a>
 
-                <script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1183768",type:"1",revenue:"250",actionid:"28343"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/analytics.html?dedup=1&domainId=1183768&type=1&revenue=250&actionid=28343" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe></noscript>
+                <?php /* <script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1183768",type:"1",revenue:"250",actionid:"28343"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/analytics.html?dedup=1&domainId=1183768&type=1&revenue=250&actionid=28343" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe></noscript> */ ?>
 
         </div>
     </div>
     <section class="section">
     	<div class="content" role="main">
+    		<a id="click-me-spot" name="more-info"></a>
             <article class="row swap">
                 <div class="col span1of2 normalize middle">
                     <h2>Easily See Hot Tub Models Side-by-Side</h2>
@@ -232,7 +230,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                     <div class="overflow-left-2of3">
                         <figure class="align-right">
                             <div class="img span1of1">
-                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/easy_compare.png" alt="" />
+                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/easy_compare.jpg" alt="" />
                             </div>
                         </figure>
                     </div>
@@ -251,7 +249,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 	<div class="overflow-right-1of2">
                         <figure class="span1of1">
                             <div class="img">
-                            	<img src="<?php bloginfo('template_url'); ?>/images/landing/learn_about.png" alt="" />
+                            	<img src="<?php bloginfo('template_url'); ?>/images/landing/learn_about.jpg" alt="" />
                             </div>
                         </figure>
                 	</div>
@@ -270,7 +268,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                     <div class="overflow-left-2of3">
                         <figure class="align-right">
                             <div class="img span1of1">
-                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/see_how_easy.png" alt="" />
+                           	 <img src="<?php bloginfo('template_url'); ?>/images/landing/see_how_easy.jpg" alt="" />
                             </div>
                         </figure>
                     </div>
