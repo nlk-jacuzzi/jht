@@ -198,11 +198,6 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			margin-top: 35px !important;				
 		}	
 	</style>
-	<script type="text/javascript">
-		jQuery(document).ready(function(){
-			jQuery('.gform_footer').append('<p><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p><a id="click-me-spot" name="more-info"></a>');
-		});
-	</script>
 <div id="main-wrapper">
 	<div class="page-header" id="page-header">
     	<div class="content center ab-b">
@@ -211,14 +206,16 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 <h2>Get instant access to Jacuzzi® Hot Tub features , stunning lifestyle photos,<br />collection descriptions and more.</h2>
             </div>
             <?php echo do_shortcode('[gravityform id="13" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
+            <p style="position: absolute; right: 167px; bottom: 87px;"><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p>
             <a id="click-me-anchor" href="#more-info"></a>
 
-                <script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1183768",type:"1",revenue:"250",actionid:"28343"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/analytics.html?dedup=1&domainId=1183768&type=1&revenue=250&actionid=28343" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe></noscript>
+                <?php /* <script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1183768",type:"1",revenue:"250",actionid:"28343"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/analytics.html?dedup=1&domainId=1183768&type=1&revenue=250&actionid=28343" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe></noscript> */ ?>
 
         </div>
     </div>
     <section class="section">
     	<div class="content" role="main">
+    		<a id="click-me-spot" name="more-info"></a>
             <article class="row swap">
                 <div class="col span1of2 normalize middle">
                     <h2>Easily See Hot Tub Models Side-by-Side</h2>
