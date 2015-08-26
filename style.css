@@ -6417,14 +6417,15 @@ a#Quote_Grphic_sidebar {
 	text-align: center;	
 }
 
-.hotub-mainimg img.video_lightbox_anchor_image
+.hotub-mainimg a[rel="wp-video-lightbox"]
 {
 	left: 50%;
 	margin-left: -45px;
 	margin-top: -37px;
-	position: relative;
+	position: absolute;
 	top: 50%;
 }
+
 .hot-tub-detail .twoCol.extendedCol .side
 {
 	width: 320px;
