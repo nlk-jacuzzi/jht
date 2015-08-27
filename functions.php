@@ -4092,14 +4092,27 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	// The Loop
 	if ( $the_query->have_posts() ) {
 
+		$str1 = ($entry[1] == 'relaxation' ? 'personal relaxation and entertaining friends and family' : 'hydrotherapy to relieve joint and muscle pain');
+		switch ($entry[2]) {
+			case '2-3':
+				$str2 = '2 to 3 people';
+				break;
+			case '4-5':
+				$str2 = '4 to 5 people';
+				break;
+			case '5-6':
+				$str2 = '5 to 6 people';
+				break;
+			case '6+':
+			default:
+				$str2 = '6 or more people';
+				break;
+		}
+		$str3 = $entry[3];
 		$confirmation = '<div class="wizard-page-title"><h2 class="wizard-results">Your Hot Tub <strong>Results</strong></h2></div>
 			<div class="wizard-page-options">
-				<ul>
-					<li>(1) Use: <span>'.ucfirst($entry[1]).'</span></li>
-					<li>(2) Seats: <span>'.ucfirst($entry[2]).'</span></li>
-					<li>(3) Importance: <span>'.ucfirst($entry[3]).'</span></li>
-				</ul>
-				<button class="reset">Reset <span class="icon-reset"></span></button>
+				<p>Your primary hot tub use will be for '.$str1.', which will accommodate '.$str2.', where '.$str3.' is the most important factor in your decision.</p>
+				<a class="reset">Start Over <span class="icon-reset"></span></a>
 			</div>';
 
 		while ( $the_query->have_posts() ) : $the_query->the_post();
