@@ -31,7 +31,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                     <p class="subnote">Your privacy is very important to us. We will never sell, share, or rent your personal information and<br />
                             email address to anyone. We hate spam as much as you do. See our <a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a>.</p>
                 </div>
-                <div class="side">
+                <div class="side tradeinside">
                 </div>
             </div>
 <?php endwhile; // end of the loop. ?>
