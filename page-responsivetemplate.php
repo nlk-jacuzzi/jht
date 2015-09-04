@@ -16,6 +16,7 @@ if ( isset($pageopts['o']) ) if ( $pageopts['o'] != '' ) $titleoverride = $pageo
 
 ?>
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/wizard.css" type="text/css" media="all">
 <style type="text/css">
 .vc_responsive .wpb_row .vc_span12.column_container .wrap {
     width: 960px !important;
