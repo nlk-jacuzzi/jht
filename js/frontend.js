@@ -707,7 +707,8 @@ jQuery(document).ready( function($) {
 
 // Show More Ellipses
 jQuery(function($){
-	$('detail-desc-intro span.more').bind('click', function(){
+	$('.detail-desc-intro span.more').bind('click', function( e ){
+		e.preventDefault();
 		$('a#MoreInfo').click();
 	});
 });

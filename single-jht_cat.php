@@ -37,7 +37,7 @@ global $post;
 					$morecontent = '';
 					$morestart = strpos($allcontent, '<!--more-->');
 					if ( $morestart ) {
-						$firstcontent = substr($allcontent, 0, $morestart) .'<span class="more">...</span>';
+						$firstcontent = substr($allcontent, 0, $morestart) .'<a href="#" class="more">...</a>';
 						$hasmore = true;
 					}
 					echo apply_filters( 'the_content', $firstcontent );
