@@ -4115,6 +4115,8 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 				<a class="reset">Start Over <span class="icon-reset"></span></a>
 			</div>';
 
+		$confirmation .= '<div class="wizard-results">';
+		$n = 0;
 		while ( $the_query->have_posts() ) : $the_query->the_post();
 			global $post; 
 			$custom = get_post_meta($post->ID,'jht_info');
@@ -4143,7 +4145,7 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 			        )
 			    );
 			$wiz_bullets = explode( "\r\n", esc_attr($jht_specs['wiz_bullets']) );
-			$confirmation .= '<div id="post-'.get_the_ID().'" class="entry wizard-result-tub">
+			$confirmation .= '<div id="post-'.get_the_ID().'" class="entry wizard-result-tub '.($n==0?'best-result-tub':'').'">
 	            <h3 class="title">'.get_the_title().'</h3>
 				<h4 class="sub-header">'.esc_attr($jht_info['topheadline']).'</h4>
 				<div class="hotub-mainimg">'.(class_exists('MultiPostThumbnails') ? MultiPostThumbnails::get_the_post_thumbnail('jht_tub', 'three-quarter', $post->ID, 'one-half-th', array('class'=>'onehalfs')) : '' ).'</div>
@@ -4162,7 +4164,9 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 				</div>
 	            <a href="'.get_the_permalink().'" class="btn bigGoldBtn">View Hot Tub</a>
 	        </div>';
+	        $n++;
 		endwhile; // End the loop.
+		$confirmation .= '</div>';
 
 	} else {
 		// No results...
