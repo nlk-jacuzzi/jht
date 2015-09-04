@@ -860,6 +860,7 @@ var MoreInfo;
 		toggleMore : function(){
 			more.mainButton.toggleClass('open').children('.plus').html( more.mainButton.hasClass('open') ? '&ndash;' : '+' );
 			more.infoContainer.slideToggle();
+			console.log('toggle moreinfo');
 		},
 	}
 
