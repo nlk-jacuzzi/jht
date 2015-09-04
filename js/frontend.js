@@ -865,4 +865,4 @@ var MoreInfo;
 	}
 
 	$(document).ready(function(){ MoreInfo.init(); });
-})
+})(jQuery);
