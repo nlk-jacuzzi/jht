@@ -1336,7 +1336,7 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 
 /* Owners Corner specific */
 	.bighero.oc .hero{ background-image: none; height: 328px; }
-	.bighero.oc .hero.owners { background: #000 url(images/ownerscorner/owners-hero.jpg) no-repeat 380px 0px; height: 470px; }
+	.bighero.oc .hero.owners { background: #000 url(images/ownerscorner/owners-corner-new.jpg) no-repeat 380px 0px; height: 470px; }
 	.bighero.oc .hero .inner { width: 930px; left: 0; top: 88px; padding-left: 30px; min-height: 120px; background: url(images/ownerscorner/genuine-parts-logo.png) no-repeat 100% 50%; }
 	.bighero.oc .hero.owners .inner { background: none; }
 	.bighero.oc .hero .inner h1 { color: #fff; font-size: 46px; }
