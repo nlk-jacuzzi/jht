@@ -1,0 +1,407 @@
+/*Wizard CSS*/
+
+.gform_wrapper.stepwizard_wrapper
+{
+	
+}
+
+.gform_wrapper.stepwizard_wrapper .gform_heading
+{
+	width: 50%;
+	float: left;
+}
+
+.gform_wrapper.stepwizard_wrapper .gform_heading
+{
+	width: 65%;
+	float: left;
+}
+
+.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper {
+    clear: none;
+    width: 99%;
+    margin: 0px 0px 0.5em;
+    padding: 0px 0px 1em;
+    border-bottom: 0px dotted #CCC;
+    max-width: 218px;
+    float: right;
+    margin-top: 34px;
+}
+
+.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper:after
+{
+	clear: both;
+}
+
+.gform_wrapper.stepwizard_wrapper h3.gform_title
+{
+	color: #414141;
+    font-size: 34px;
+    line-height: 40px;
+    font-family: "GSMT";
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+.gform_wrapper.stepwizard_wrapper span.gform_description
+{
+	color: #414042;
+	font-size: 18px;
+	line-height: 22px;
+	font-family: "GSMT";
+	font-weight: 400;
+}
+
+.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title
+{
+	color: #000;
+	font-size: 16px;
+	line-height: 35px;
+	font-family: "GSMT";
+	opacity: 1;
+	text-align: right;
+	font-weight: 400;
+}
+
+.gform_wrapper.stepwizard_wrapper .gf_progressbar {
+    width: 99%;
+    height: 20px;
+    overflow: hidden;
+    line-height: 20px !important;
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-color: #FFF;
+    border-radius: 0px;
+    border: 1px solid rgb(205, 151, 0);
+    background-image: none;
+    box-shadow: none;
+}
+
+.gform_wrapper.stepwizard_wrapper .percentbar_custom
+{
+	background-image: none;
+}
+
+.gform_wrapper.stepwizard_wrapper .gform_body
+{
+	clear: both;
+	padding-top: 40px;
+	border-top: 1px solid #acacac;
+	background: url('../images/wizard/wizard_tub_bg.jpg') no-repeat right 50px transparent;
+	min-height: 250px;
+}
+
+.gform_wrapper.stepwizard_wrapper .gform_page_footer
+{
+	border-top: 0px solid #FFF;
+}
+
+.gform_wrapper.stepwizard_wrapper .percentbar_custom.percentbar_33
+{
+	width: 25% !important;
+}
+
+.gform_wrapper.stepwizard_wrapper .percentbar_custom span
+{
+	display: none;
+}
+
+.gform_wrapper.stepwizard_wrapper .percentbar_custom.percentbar_33::after
+{
+	content: "25%";
+	padding-right: 2px;
+	line-height: 24px;
+}
+
+.gform_wrapper.stepwizard_wrapper .percentbar_custom.percentbar_66
+{
+	width: 50% !important;
+}
+
+.gform_wrapper.stepwizard_wrapper .percentbar_custom.percentbar_66::after
+{
+	content: "50%";
+	padding-right: 2px;
+	line-height: 24px;
+}
+
+.gform_wrapper.stepwizard_wrapper .percentbar_custom.percentbar_100
+{
+	width: 75% !important;
+}
+
+.gform_wrapper.stepwizard_wrapper .percentbar_custom.percentbar_100::after
+{
+	content: "75%";
+	padding-right: 2px;
+	line-height: 24px;
+}
+
+.gform_wrapper.stepwizard_wrapper .gform_page_footer .button.gform_next_button, .gform_wrapper.stepwizard_wrapper form input.bigGoldBtn
+{
+	min-width: 235px;
+	border:none;
+	height:38px;
+	line-height:35px;
+	text-transform:uppercase;
+	font-family:"GSMT";
+	font-weight:bold;
+	font-size:18px;
+	padding: 0 35px;
+	border-radius:4px;
+	cursor:pointer;
+	margin: 0 0 10px;	
+	color: #000;
+	background: #e5c871;
+	background: -moz-linear-gradient(top,  #e5c871 0%, #d9b444 36%, #c69200 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5c871), color-stop(36%,#d9b444), color-stop(100%,#c69200));
+	background: -webkit-linear-gradient(top,  #e5c871 0%,#d9b444 36%,#c69200 100%);
+	background: -o-linear-gradient(top,  #e5c871 0%,#d9b444 36%,#c69200 100%);
+	background: -ms-linear-gradient(top,  #e5c871 0%,#d9b444 36%,#c69200 100%);
+	background: linear-gradient(top,  #e5c871 0%,#d9b444 36%,#c69200 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5c871', endColorstr='#c69200',GradientType=0 );
+	box-shadow: none !important;
+	text-shadow: none !important;
+}
+
+.gform_wrapper.stepwizard_wrapper .gform_page_footer .button.gform_next_button
+{
+	
+}
+
+.gform_wrapper.stepwizard_wrapper .gform_page_footer
+{
+	position: relative;	
+	min-height: 80px;
+}
+
+.gform_wrapper.stepwizard_wrapper .gform_page_footer .button.gform_previous_button
+{
+	border: 0px none;
+	background: transparent none repeat scroll 0% 0%;
+	margin-bottom: -9px;
+	position: absolute;
+	bottom: 10px;
+	padding: 0px;
+	font-family:"GSBQ";
+	font-size:18px;
+	line-height: 22px;
+	color: #000;
+	left: 22px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.gform_wrapper.stepwizard_wrapper .top_label .gfield_label
+{
+	color: 414141;
+	font-family:"GSMT";
+	font-size:22px;
+	line-height:35px;
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+
+.gform_wrapper.stepwizard_wrapper ul.gfield_radio {
+    margin: 6px 0px;
+    padding: 0px;
+}
+
+.gform_wrapper.stepwizard_wrapper .gfield_radio li label
+{
+	color: 414141;
+	font-family:"Arial";
+	font-size:14px;
+	line-height:18px;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+
+.gform_wrapper.stepwizard_wrapper ul.gfield_radio li input[type="radio"]:checked + label
+{
+	
+}
+
+.wizard-page-title
+{
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+.wizard-page-title h2, .wizard-page-title h2.wizard-results
+{
+	color: #414141;
+    font-size: 34px;
+    line-height: 40px;
+    font-family: "GSMT";
+    margin-bottom: 0px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.wizard-page-title p, .wizard-page-options p
+{
+	color: #414141;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: "GSMT";
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.wizard-page-options a.reset
+{
+	outline: none;
+	background: url('../images/wizard/start_over_icon.png') right center no-repeat transparent;
+	display: block;
+	margin-bottom: 20px;
+	cursor: pointer;
+	font-size: 18px;
+    line-height: 22px;
+    font-family: "GSMT";
+    color: #cd9700;
+    padding-right: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.gforms_confirmation_message .entry.wizard-result-tub
+{
+	width: 28%;
+	float: left;
+	border: 1px solid #bdbdbd;
+	padding: 20px;
+	min-height: 785px;
+	position: relative;
+	padding: 2.5%;
+	overflow: hidden;
+}
+
+.entry.wizard-result-tub.best-result-tub
+{
+	border: 5px solid #cd9601;
+	margin-left: -10px;
+	margin-top: -2px;
+	background: url('../images/wizard/best_match_star.png') -2px 0 no-repeat transparent;
+}
+
+.gforms_confirmation_message::after
+{
+	clear: both;
+}
+
+.gforms_confirmation_message .entry.wizard-result-tub img
+{
+	max-width: 100%;
+	height: auto; 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gforms_confirmation_message .entry.wizard-result-tub .btn
+{
+	box-shadow: none !important;
+	text-shadow: none !important;
+	position: absolute;
+	bottom: 30px;
+	margin: auto;
+	left: 0px;
+	right: 0px;
+	max-width: 145px;
+	display: block;
+	text-transform: uppercase;
+	font-size: 16px;
+    color: #000 !important;
+    font-family: "GSBQ";
+}
+
+.gforms_confirmation_message .entry.wizard-result-tub h3.title
+{
+	font-size: 34px;
+    line-height: 38px;
+    font-family: "GSMT";
+    color: #000;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+.gforms_confirmation_message .entry.wizard-result-tub h4.sub-header
+{
+	font-size: 18px;
+    line-height: 20px;
+    font-family: "GSMT";
+    color: #000;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.gforms_confirmation_message .entry.wizard-result-tub .hotub-mainimg
+{
+	margin-bottom: 20px;
+	min-height: 205px;
+}
+
+.gforms_confirmation_message .entry.wizard-result-tub .spec
+{
+	margin-bottom: 15px;	
+}
+
+.gforms_confirmation_message .entry.wizard-result-tub #BVRRSummaryContainer
+{
+	margin-bottom: 30px;
+}
+
+.gforms_confirmation_message .entry.wizard-result-tub .spec p
+{
+	font-size: 16px;
+    line-height: 22px;
+    font-family: "GSBQ";
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.gforms_confirmation_message .entry.wizard-result-tub .spec strong
+{
+	font-weight: 400;
+}
+
+.gforms_confirmation_message .wiz-bullets
+{
+	margin-left: -24px;
+	margin-right: -24px;
+	width: 119%;
+}
+
+.gforms_confirmation_message .wiz-bullets ul li
+{
+	list-style: none;
+	font-size: 14px;
+    line-height: 18px;
+    font-family: "Arial";
+    color: #000;
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.gforms_confirmation_message .wiz-bullets ul li:nth-child(odd)
+{
+	background: #ebebeb;
+}
+
+.gforms_confirmation_message .wiz-bullets ul li:nth-child(even)
+{
+	background: #fff;
+}
+
+
