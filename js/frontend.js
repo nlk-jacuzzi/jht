@@ -310,6 +310,11 @@ jQuery(function($) {
 			$('#moreinfo').slideToggle();
 			return false;
 		});
+		$('.detail-desc-intro a.more').click(function(){
+			$('#MoreInfo').toggleClass('open').children('.plus').html( $(this).hasClass('open') ? '&ndash;' : '+' );
+			$('#moreinfo').slideToggle();
+			return false;
+		});
 	}
 	
 	if ( $('body').hasClass('video-showcase') ) {
@@ -705,13 +710,6 @@ jQuery(document).ready( function($) {
 });
 
 
-// Show More Ellipses
-jQuery(function($){
-	$('.detail-desc-intro a.more').click(function( e ){
-		e.preventDefault();
-		$('a#MoreInfo').click();
-	});
-});
 
 // create video modal
 jQuery(function($){
