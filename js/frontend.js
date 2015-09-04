@@ -705,6 +705,13 @@ jQuery(document).ready( function($) {
 });
 
 
+// Show More Ellipses
+jQuery(function($){
+	$('detail-desc-intro span.more').bind('click', function(){
+		$('a#MoreInfo').click();
+	});
+});
+
 // create video modal
 jQuery(function($){
 	$('div[goto="vidmodal"]').click(function(){
@@ -819,4 +826,6 @@ function codeLatLng() {
 	}
 }
 //codeLatLng();
+
+
 
