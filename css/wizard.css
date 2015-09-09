@@ -97,9 +97,25 @@
 	clear: both;
 	padding-top: 40px;
 	border-top: 1px solid #acacac;
-	background: url('../images/wizard/wizard_tub_bg.jpg') no-repeat right 50px transparent;
 	min-height: 250px;
 }
+
+.gform_wrapper.stepwizard_wrapper .gform_body .gform_page:first-child
+{
+	background: url('../images/wizard/wizard_step1.png') no-repeat right 25px transparent;
+}
+
+
+.gform_wrapper.stepwizard_wrapper .gform_body .gform_page:nth-child(2)
+{
+	background: url('../images/wizard/wizard_step2.png') no-repeat right 25px transparent;
+}
+
+.gform_wrapper.stepwizard_wrapper .gform_body .gform_page:last-child
+{
+	background: url('../images/wizard/wizard_step3.png') no-repeat right 25px transparent;
+}
+
 
 .gform_wrapper.stepwizard_wrapper .gform_page_footer
 {
