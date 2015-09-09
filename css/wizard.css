@@ -102,20 +102,19 @@
 
 .gform_wrapper.stepwizard_wrapper .gform_body .gform_page:first-child
 {
-	background: url('../images/wizard/wizard_step1.png') no-repeat right 25px transparent;
+	background: url('../images/wizard/wizard_step1.png') no-repeat right -65px transparent;
 }
 
 
 .gform_wrapper.stepwizard_wrapper .gform_body .gform_page:nth-child(2)
 {
-	background: url('../images/wizard/wizard_step2.png') no-repeat right 25px transparent;
+	background: url('../images/wizard/wizard_step2.png') no-repeat right -65px transparent;
 }
 
 .gform_wrapper.stepwizard_wrapper .gform_body .gform_page:last-child
 {
-	background: url('../images/wizard/wizard_step3.png') no-repeat right 25px transparent;
+	background: url('../images/wizard/wizard_step3.png') no-repeat right -65px transparent;
 }
-
 
 .gform_wrapper.stepwizard_wrapper .gform_page_footer
 {
