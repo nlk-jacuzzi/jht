@@ -4115,7 +4115,7 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 		$confirmation = '<div class="wizard-page-title"><h2 class="wizard-results">Recommended hot tubs based on your selections:</h2></div>
 			<div class="wizard-page-options">
 				<p>Your primary hot tub use will be for <b>'.$str1.'</b>, which will accommodate <b>'.$str2.'</b>, where <b>'.$str3.'</b> is the most important factor in your decision.</p>
-				<a class="reset">Start Over <span class="icon-reset"></span></a>
+				<a class="reset" href="'.get_permalink().'">Start Over <span class="icon-reset"></span></a>
 			</div>';
 
 		$confirmation .= '<div class="wizard-results">';
