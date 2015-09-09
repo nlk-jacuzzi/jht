@@ -1423,6 +1423,8 @@ function jht_specs_metabox() {
 		'faces' => '',
 		'wizid' => '',
 		'wiz_bullets' => '',
+		'featuredimgshell' => '',
+		'featuredimgcabinet' => '',
 		'yt_video' => '',
 	);
 	?><table width="100%">
@@ -1525,7 +1527,7 @@ function jht_specs_metabox() {
 	</td>
     </tr> */ ?>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[wiz_bullets]">Wizard Bullet Points<br /><small>One per line. No HTML or list markers (for example - or •).</small></label></td><td><textarea name="jht_specs[wiz_bullets]" cols="120" rows="5"><?php esc_attr_e(html_entity_decode($info['wiz_bullets'])); ?></textarea></td>
+    <td width="187"><label for="jht_specs[wiz_bullets]">Wizard Bullet Points<br /><small>One per line. No HTML or list markers (for example - or •).</small></label></td><td><textarea name="jht_specs[wiz_bullets]" cols="120" rows="5"><?php esc_attr_e($info['wiz_bullets']); ?></textarea></td>
     </tr>
     <tr valign="top">
     <td width="187"><label for="jht_specs[yt_video]">YouTube Video ID</label></td><td><input type="text" name="jht_specs[yt_video]" value="<?php esc_attr_e($info['yt_video']); ?>" /></td>
@@ -4158,7 +4160,7 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 			$confirmation .= '<div class="wiz-bullets">
 					<ul>';
 			foreach ($wiz_bullets as $wiz_bullet) {
-				$confirmation .= '<li>'.wp_kses_stripslashes($wiz_bullet).'</li>';
+				$confirmation .= '<li>'.html_entity_decode($wiz_bullet).'</li>';
 			}
 			$confirmation .= '<ul>
 				</div>
