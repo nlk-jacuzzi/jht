@@ -1524,7 +1524,7 @@ function jht_specs_metabox() {
 	</td>
     </tr> */ ?>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[wiz_bullets]">Wizard Bullet Points<br /><small>One per line. No HTML or list markers (for example - or •).</small></label></td><td><textarea name="jht_specs[wiz_bullets]" cols="120" rows="5"><?php esc_attr_e($info['wiz_bullets']); ?></textarea></td>
+    <td width="187"><label for="jht_specs[wiz_bullets]">Wizard Bullet Points<br /><small>One per line. No HTML or list markers (for example - or •).</small></label></td><td><textarea name="jht_specs[wiz_bullets]" cols="120" rows="5"><?php esc_attr_e(html_entity_decode($info['wiz_bullets'])); ?></textarea></td>
     </tr>
     <tr><td colspan="2"><p><strong>Featured Image Details</strong></p></td></tr>
     <tr valign="top">
@@ -4154,7 +4154,7 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 			$confirmation .= '<div class="wiz-bullets">
 					<ul>';
 			foreach ($wiz_bullets as $wiz_bullet) {
-				$confirmation .= '<li>'.$wiz_bullet.'</li>';
+				$confirmation .= '<li>'.wp_kses_stripslashes($wiz_bullet).'</li>';
 			}
 			$confirmation .= '<ul>
 				</div>
