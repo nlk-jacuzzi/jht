@@ -4075,14 +4075,15 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 		);
 	$results = $wizard_results_array[ $entry[2] ][ $entry[1] ][ $entry[3] ];
 	$args = array(
-	    'posts_per_page'   => 3,
-	    'offset'           => 0,
-	    'category'         => '',
-	    'category_name'    => '',
-	    'post_type'        => 'jht_tub',
-	    'post_status'      => 'publish',
-	    'post__in'         => $results,
-	    'orderby'          => 'none',
+	    'posts_per_page'      => 3,
+	    'offset'              => 0,
+	    'category'            => '',
+	    'category_name'       => '',
+	    'post_type'           => 'jht_tub',
+	    'post_status'         => 'publish',
+	    'post__in'            => $results,
+	    'orderby'             => 'post__in',
+	    'ignore_sticky_posts' => true,
 	);
 	// The Query
 	$the_query = new WP_Query( $args );
