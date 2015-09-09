@@ -63,6 +63,16 @@
 	font-weight: 400;
 }
 
+.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title:first-child
+{
+	display: none !important;
+}
+
+.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title:before
+{
+	content: "Question";
+}
+
 .gform_wrapper.stepwizard_wrapper .gf_progressbar {
     width: 99%;
     height: 20px;
@@ -99,6 +109,7 @@
 .gform_wrapper.stepwizard_wrapper .percentbar_custom.percentbar_33
 {
 	width: 25% !important;
+	text-align: center;
 }
 
 .gform_wrapper.stepwizard_wrapper .percentbar_custom span
@@ -116,6 +127,7 @@
 .gform_wrapper.stepwizard_wrapper .percentbar_custom.percentbar_66
 {
 	width: 50% !important;
+	text-align: center;
 }
 
 .gform_wrapper.stepwizard_wrapper .percentbar_custom.percentbar_66::after
@@ -128,6 +140,7 @@
 .gform_wrapper.stepwizard_wrapper .percentbar_custom.percentbar_100
 {
 	width: 75% !important;
+	text-align: center;
 }
 
 .gform_wrapper.stepwizard_wrapper .percentbar_custom.percentbar_100::after
@@ -254,7 +267,7 @@
 .wizard-page-options a.reset
 {
 	outline: none;
-	background: url('../images/wizard/start_over_icon.png') right center no-repeat transparent;
+	xbackground: url('../images/wizard/start_over_icon.png') right center no-repeat transparent;
 	display: block;
 	margin-bottom: 20px;
 	cursor: pointer;
@@ -281,10 +294,10 @@
 
 .entry.wizard-result-tub.best-result-tub
 {
-	border: 5px solid #cd9601;
+	border: 5px solid #24617F;
 	margin-left: -10px;
 	margin-top: -2px;
-	background: url('../images/wizard/best_match_star.png') -2px 0 no-repeat transparent;
+	background: url('../images/wizard/best_match_star_blue.png') -2px 0 no-repeat transparent;
 }
 
 .gforms_confirmation_message::after
