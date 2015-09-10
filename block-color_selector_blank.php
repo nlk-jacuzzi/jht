@@ -89,6 +89,27 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	display: none;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 959px) 
+{
+	.color-selector.color-selector-container .color-selector-wrapper .left {
+	    margin-right: 2%;
+	    width: 59.8%;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img {
+	    height: auto;
+	    width: 450px;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .right {
+	    box-sizing: border-box;
+	    float: left;
+	    height: auto;
+	    padding-top: 22px;
+	    width: 33%;
+	}
+}
+
 @media only screen and (max-width: 767px) 
 {
 	.color-selector.color-selector-container .color-selector-wrapper {
@@ -105,6 +126,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	.color-selector.color-selector-container .color-selector-wrapper .right {
 	    float: none;
 	    width: 100%;
+	    padding-left: 15px;
+	    padding-right: 15px;
 	}
 	
 	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
