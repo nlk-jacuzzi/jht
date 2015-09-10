@@ -13,7 +13,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="bd color-selector-landing">
         <div class="wrap">
             <h1 class="title"><?php the_title(); ?></h1>
-            <h2 class="sub-title">Use the color palette to the right to pick out your shell and cabinet color.</h2>
+            <h2 class="sub-title hide-for-small">Use the color palette to the right to pick out your shell and cabinet color.</h2>
+            <h2 class="sub-title show-for-small">Use the color palette at the bottom to pick out your shell and cabinet color.</h2>
         </div>
 
         <?php get_template_part('block', 'color_selector_blank'); ?>
