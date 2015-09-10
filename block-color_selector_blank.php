@@ -87,17 +87,19 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 @media only screen and (max-width: 767px) 
 {
 	.color-selector.color-selector-container .color-selector-wrapper {
-		padding-left: 15px;
-		padding-right: 15px;
+		
 	}	
 	.color-selector.color-selector-container .color-selector-wrapper .left {
 	    float: none;
 	    width: 100%;
+	    padding-left: 15px;
+	    padding-right: 15px;
+	    height: auto;
 	}
 	
 	.color-selector.color-selector-container .color-selector-wrapper .right {
 	    float: none;
-	    width: 30%;
+	    width: 100%;
 	}
 	
 	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
