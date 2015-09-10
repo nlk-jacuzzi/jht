@@ -48,6 +48,69 @@ div[timg="brazilianteak"] img { background-color: #be9969; }
 div[timg="roastedchestnut"] img { background-color: #47312c; }
 div[timg="silverwood"] img { background-color: #635e5f; }
 
+/* For Responsiveness */
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper {
+    margin: auto;
+    max-width: 960px;
+    width: 100%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .left {
+    box-sizing: border-box;
+    float: left;
+    height: 400px;
+    margin-right: 2%;
+    text-align: center;
+    width: 67.8%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .right {
+    box-sizing: border-box;
+    float: left;
+    height: 400px;
+    padding-top: 22px;
+    width: 30%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .right .pdf-download{
+	width: 100%;
+	max-width: 240px;
+}
+
+@media only screen and (max-width: 767px) 
+{
+	.color-selector.color-selector-container .color-selector-wrapper {
+		padding-left: 15px;
+		padding-right: 15px;
+	}	
+	.color-selector.color-selector-container .color-selector-wrapper .left {
+	    float: none;
+	    width: 100%;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .right {
+	    float: none;
+	    width: 30%;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
+	{
+		width: 350px;
+		height: auto;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container
+	{
+		height: 255px;
+	}
+}	
 </style>
 <div class="color-selector color-selector-container">
 
