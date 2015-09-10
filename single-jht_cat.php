@@ -37,7 +37,7 @@ global $post;
 					$morecontent = '';
 					$morestart = strpos($allcontent, '<!--more-->');
 					if ( $morestart ) {
-						$firstcontent = substr($allcontent, 0, $morestart) .'...';
+						$firstcontent = substr($allcontent, 0, $morestart) .'<a href="#" rel="ShowMoreInfoAlt">...</a>';
 						$hasmore = true;
 					}
 					echo apply_filters( 'the_content', $firstcontent );
@@ -46,7 +46,7 @@ global $post;
             </div>
             <div class="tub-grid">
             <?php if ( $hasmore ) {
-				echo '<div class="more"><a href="#"><span>More Info </span><span class="plus">+</span></a></div>';
+				echo '<div class="more"><a href="#" rel="ShowMoreInfo"><span>More Info </span><span class="plus">+</span></a></div>';
 				echo '<div id="moreinfo">'. apply_filters( 'the_content', $post->post_content ) .'</div>';
 			} ?>
             	<div class="goldBar8"></div>

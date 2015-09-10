@@ -2558,21 +2558,21 @@ function jht_add_scripts() {
 		} else {
 /*
  * Removing query string for optimization
- * 
+ */ 
 			wp_enqueue_script( 'jquery.cookie', get_template_directory_uri() .'/js/jquery.cookie.js', array('jquery'), '1.0', true );
 			wp_enqueue_script( 'jquery-ui-tooltip', get_template_directory_uri() .'/js/jquery-ui-1.10.3.custom.min.js', array('jquery'), '1.10.3', false );
 			wp_enqueue_script( 'jht-frontend', get_template_directory_uri() .'/js/frontend.js', array('jquery', 'jquery.cookie', 'thickbox'), '1.2.2', true );
 			wp_enqueue_script( 'jht-modal', get_template_directory_uri() .'/js/modalmaker.min.js', array('jquery'), '1.0', true );
 			wp_enqueue_script( 'youTubeTracker', get_template_directory_uri() .'/js/youTubeTracker.min.js', array('jquery'), '2.1', true );
 			wp_enqueue_script( 'jquery.placeholder', get_stylesheet_directory_uri() .'/js/jquery.placeholder.js', array('jquery'), '1.0', true );
-*/
+/*/
 			wp_enqueue_script( 'jquery.cookie', 'http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/js/jquery.cookie.js', array('jquery'), null, true );
 			wp_enqueue_script( 'jquery-ui-tooltip', 'http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/js/jquery-ui-1.10.3.custom.min.js', array('jquery'), null, true );
 			wp_enqueue_script( 'jht-frontend', 'http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/js/frontend.js', array('jquery', 'jquery.cookie', 'thickbox'), null, true );
 			wp_enqueue_script( 'jht-modal', 'http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/js/modalmaker.min.js', array('jquery'), null, true );
 			wp_enqueue_script( 'youTubeTracker', 'http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/js/youTubeTracker.min.js', array('jquery'), null, true );
 			wp_enqueue_script( 'jquery.placeholder', 'http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/js/jquery.placeholder.js', array('jquery'), null, true );
-			
+*/			
 		}
 		if ( is_page_template('page-direct.php') 
 			|| is_page_template('page-directtwo.php')

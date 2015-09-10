@@ -304,14 +304,6 @@ jQuery(function($) {
 	});
 	*/
 	
-	if ( $('#moreinfo').size() > 0 ) {
-		$('#moreinfo').prev().children('a').click(function() {
-			$(this).toggleClass('open').children('.plus').html( $(this).hasClass('open') ? '&ndash;' : '+' );
-			$('#moreinfo').slideToggle();
-			return false;
-		});
-	}
-	
 	if ( $('body').hasClass('video-showcase') ) {
 		var icons = {
 			header: "off",
@@ -705,6 +697,7 @@ jQuery(document).ready( function($) {
 });
 
 
+
 // create video modal
 jQuery(function($){
 	$('div[goto="vidmodal"]').click(function(){
@@ -820,3 +813,35 @@ function codeLatLng() {
 }
 //codeLatLng();
 
+
+
+var MoreInfo;
+(function($){
+	/* Category Pages - More Info */
+	var more;
+	more = MoreInfo = {
+		// Variables
+		allButtons : undefined,
+		mainButton : undefined,
+		infoContainer : undefined,
+		// Functions
+		init : function(){
+			more.allButtons = $('a[rel="ShowMoreInfo"], a[rel="ShowMoreInfoAlt"]');
+			more.mainButton = $('a[rel="ShowMoreInfo"]');
+			more.infoContainer = $('div#moreinfo');
+			this.buttonsClickedListener();
+		},
+		buttonsClickedListener : function() {
+			more.allButtons.bind('click', function(e) {
+				e.preventDefault();
+				more.toggleMore();
+			});
+		},
+		toggleMore : function(){
+			more.mainButton.toggleClass('open').children('.plus').html( more.mainButton.hasClass('open') ? '&ndash;' : '+' );
+			more.infoContainer.slideToggle("slow");
+			console.log('toggle moreinfo');
+		},
+	}
+	$(document).ready(function(){ MoreInfo.init(); });
+})(jQuery);
