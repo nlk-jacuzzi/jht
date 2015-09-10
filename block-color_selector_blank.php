@@ -108,6 +108,11 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	    padding-top: 22px;
 	    width: 33%;
 	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
+	{
+		top: 40px;
+	}
 }
 
 @media only screen and (max-width: 767px) 
