@@ -84,6 +84,11 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	max-width: 240px;
 }
 
+.show-for-small
+{
+	display: none;
+}
+
 @media only screen and (max-width: 767px) 
 {
 	.color-selector.color-selector-container .color-selector-wrapper {
@@ -111,6 +116,29 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container
 	{
 		height: 255px;
+	}
+	
+	.hide-for-small
+	{
+		display: none !important;
+	}
+	
+	.show-for-small
+	{
+		display: block;
+	}
+	
+	.color-selector-landing h1.title
+	{
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	
+	
+	.color-selector-landing h1.title, .color-selector-landing h2.sub-title
+	{
+		margin-left: 15px;
+		margin-right: 15px;
 	}
 }	
 </style>
