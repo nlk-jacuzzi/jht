@@ -7,7 +7,7 @@ $pickyPostal = 'Zip / Postal Code';
 ?>
 			<ul class="topMenu">
                 <!--li class="forOwner menu-item first"><a href="<?php echo get_site_url() ?>/owners-corner/" name="top">For Owners</a></li-->
-                <li class="brochure menu-item"><a href="http://shop.jacuzzi.com" target="_blank">Accessories Store</a></li>
+                <!--li class="brochure menu-item"><a href="http://shop.jacuzzi.com" target="_blank">Accessories Store</a></li-->
                 <li class="brochure menu-item"><a class="download-icon" href="<?php echo get_permalink(3745) ?>">Free Brochure</a></li>
                 <!--li class="quote menu-item"><a href="<?php echo get_permalink(3743) ?>">Request a Quote</a></li-->
                 <!--li class="quote menu-item"><a href="<?php echo get_permalink(7759) ?>">Trade-In Value</a></li-->
