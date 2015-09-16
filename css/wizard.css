@@ -436,6 +436,13 @@
 	background: #fff;
 }
 
+<<<<<<< HEAD
+=======
+.gform_wrapper.gf_browser_chrome.stepwizard_wrapper ul.gform_fields li.gfield input[type=radio] {
+    margin-left: 0.263em;
+}
+
+>>>>>>> JAC-775
 @media only screen and (max-width: 767px)
 {
 	.gform_wrapper.stepwizard_wrapper .gform_heading {
@@ -474,7 +481,11 @@
 	}
 	
 	.gforms_confirmation_message .entry.wizard-result-tub {
+<<<<<<< HEAD
 	    border: 1px solid #BDBDBD;
+=======
+	    xborder: 1px solid #BDBDBD;
+>>>>>>> JAC-775
 	    min-height: 785px;
 	    position: relative;
 	    overflow: hidden;
@@ -495,3 +506,22 @@
 	
 	
 }
+<<<<<<< HEAD
+=======
+
+
+@media only screen and (max-width: 440px)
+{
+	.gforms_confirmation_message .entry.wizard-result-tub {
+	    min-height: 785px;
+	    position: relative;
+	    overflow: hidden;
+	    width: 92%;
+	    max-width: 328px;
+	    float: none;
+	    padding: 4%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+}	
+>>>>>>> JAC-775
