@@ -63,14 +63,18 @@
 	font-weight: 400;
 }
 
-.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title:first-child
+.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title
 {
-	display: none !important;
+	position: relative;
 }
 
-.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title:before
+.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title::before
 {
 	content: "Question";
+    background: #FFF none repeat scroll 0% 0%;
+    position: absolute;
+    right: 41px;
+    height: 20px;
 }
 
 .gform_wrapper.stepwizard_wrapper .gf_progressbar {
@@ -432,4 +436,82 @@
 	background: #fff;
 }
 
+.gform_wrapper.gf_browser_chrome.stepwizard_wrapper ul.gform_fields li.gfield input[type=radio] {
+    margin-left: 0.263em;
+}
 
+@media only screen and (max-width: 767px)
+{
+	.gform_wrapper.stepwizard_wrapper .gform_heading {
+	    float: none;
+	    width: 100%;
+	}
+	
+	.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper {
+	    clear: none;
+	    width: 100%;
+	    margin: 30px 0px 0.5em;
+	    padding: 0px 0px 1em;
+	    border-bottom: 0px dotted #CCC;
+	    float: none;
+	    max-width: 100%;
+	}
+	
+	.gform_wrapper.stepwizard_wrapper .gform_body .gform_page
+	{
+		background: none !important;
+	}
+	
+	.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title::before {
+	    background: #FFF none repeat scroll 0% 0%;
+	    position: absolute;
+	    height: 20px;
+	    content: "Question";
+	    left: 0px;
+	    width: 64px;
+	}
+
+	.gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title
+	{
+		padding-left: 35px !important;
+		text-align: left;
+	}
+	
+	.gforms_confirmation_message .entry.wizard-result-tub {
+	    xborder: 1px solid #BDBDBD;
+	    min-height: 785px;
+	    position: relative;
+	    overflow: hidden;
+	    width: 100%;
+	    max-width: 328px;
+	    float: none;
+	    padding: 20px;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	
+	.entry.wizard-result-tub.best-result-tub {
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 0px;
+	    max-width: 328px;
+	}
+	
+	
+}
+
+
+@media only screen and (max-width: 440px)
+{
+	.gforms_confirmation_message .entry.wizard-result-tub {
+	    min-height: 785px;
+	    position: relative;
+	    overflow: hidden;
+	    width: 92%;
+	    max-width: 328px;
+	    float: none;
+	    padding: 4%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+}	
