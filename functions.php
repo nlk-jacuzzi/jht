@@ -1423,6 +1423,7 @@ function jht_specs_metabox() {
 		'faces' => '',
 		'wizid' => '',
 		'wiz_bullets' => '',
+		'yt_video' => '',
 	);
 	?><table width="100%">
 	<tr valign="top">
@@ -1525,6 +1526,9 @@ function jht_specs_metabox() {
     </tr> */ ?>
     <tr valign="top">
     <td width="187"><label for="jht_specs[wiz_bullets]">Wizard Bullet Points<br /><small>One per line. No HTML or list markers (for example - or •).</small></label></td><td><textarea name="jht_specs[wiz_bullets]" cols="120" rows="5"><?php esc_attr_e($info['wiz_bullets']); ?></textarea></td>
+    </tr>
+    <tr valign="top">
+    <td width="187"><label for="jht_specs[yt_video]">YouTube Video ID</label></td><td><input type="text" name="jht_specs[yt_video]" value="<?php esc_attr_e($info['yt_video']); ?>" /></td>
     </tr>
     <tr><td colspan="2"><p><strong>Featured Image Details</strong></p></td></tr>
     <tr valign="top">

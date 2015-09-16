@@ -122,6 +122,7 @@ dataLayer.push({
                                         MultiPostThumbnails::the_post_thumbnail('jht_tub', 'three-quarter', $post->ID, 'one-half-th', array('class'=>'onehalfs'));
                                     }
                                 ?>
+                                <?php echo ( isset($jht_specs['yt_video']) && !empty($jht_specs['yt_video']) ? do_shortcode('[video_lightbox_youtube video_id="'.$jht_specs['yt_video'].'&rel=false&showinfo=0" width="640" height="480" anchor="'.get_template_directory_uri().'/images/icons/PlayBTN.png"]') : '' ); ?>
                             </div>
                             <div class="options" style="width: 100%;">
                                 <div class="color-options-box">

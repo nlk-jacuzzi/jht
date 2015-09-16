@@ -6419,7 +6419,17 @@ a#Quote_Grphic_sidebar {
 
 .hotub-mainimg
 {
+	position: relative;
 	text-align: center;	
+}
+
+.hotub-mainimg a[rel="wp-video-lightbox"]
+{
+	left: 50%;
+	margin-left: -45px;
+	margin-top: -37px;
+	position: absolute;
+	top: 50%;
 }
 
 .hot-tub-detail .twoCol.extendedCol .side
