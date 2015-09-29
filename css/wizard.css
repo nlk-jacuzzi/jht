@@ -318,7 +318,7 @@
 	border: 5px solid #24617F;
 	margin-left: -10px;
 	margin-top: -2px;
-	background: url('../images/wizard/best_match_star_blue.png') -1px 0 no-repeat transparent;
+	background: url('../images/wizard/best_match_star_blue.png') 0px 0px no-repeat transparent;
 }
 
 .gforms_confirmation_message::after
@@ -424,8 +424,8 @@
     font-weight: 400;
     padding: 10px;
     text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .gforms_confirmation_message .wiz-bullets ul li:nth-child(odd)
