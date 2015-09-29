@@ -20,12 +20,12 @@
 .gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper {
     clear: none;
     width: 99%;
-    margin: 0px 0px 0.5em;
+    margin: 0px 0px 0px;
     padding: 0px 0px 1em;
     border-bottom: 0px dotted #CCC;
     max-width: 218px;
     float: right;
-    margin-top: 34px;
+    margin-top: 64px;
 }
 
 .gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper:after
@@ -61,6 +61,7 @@
 	opacity: 1;
 	text-align: right;
 	font-weight: 400;
+	margin-bottom: 0px !important;
 }
 
 .gform_wrapper.stepwizard_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title
@@ -89,6 +90,7 @@
     border: 1px solid rgb(205, 151, 0);
     background-image: none;
     box-shadow: none;
+    display: none !important;
 }
 
 .gform_wrapper.stepwizard_wrapper .percentbar_custom
@@ -293,10 +295,10 @@
 	font-size: 18px;
     line-height: 22px;
     font-family: "GSMT";
-    color: #cd9700;
+    color: #B98100;
     padding-right: 20px;
     display: inline-block;
-    text-decoration: none;
+    xtext-decoration: none;
 }
 
 .gforms_confirmation_message .entry.wizard-result-tub
@@ -316,7 +318,7 @@
 	border: 5px solid #24617F;
 	margin-left: -10px;
 	margin-top: -2px;
-	background: url('../images/wizard/best_match_star_blue.png') -2px 0 no-repeat transparent;
+	background: url('../images/wizard/best_match_star_blue.png') -1px 0 no-repeat transparent;
 }
 
 .gforms_confirmation_message::after
@@ -407,14 +409,14 @@
 
 .gforms_confirmation_message .wiz-bullets
 {
-	margin-left: -24px;
-	margin-right: -24px;
-	width: 119%;
+	xmargin-left: -24px;
+	xmargin-right: -24px;
+	xwidth: 119%;
 }
 
 .gforms_confirmation_message .wiz-bullets ul li
 {
-	list-style: none;
+	xlist-style: none;
 	font-size: 14px;
     line-height: 18px;
     font-family: "Arial";
@@ -428,7 +430,7 @@
 
 .gforms_confirmation_message .wiz-bullets ul li:nth-child(odd)
 {
-	background: #ebebeb;
+	xbackground: #ebebeb;
 }
 
 .gforms_confirmation_message .wiz-bullets ul li:nth-child(even)
@@ -439,6 +441,12 @@
 .gform_wrapper.gf_browser_chrome.stepwizard_wrapper ul.gform_fields li.gfield input[type=radio] {
     margin-left: 0.263em;
 }
+
+.gform_wrapper.stepwizard_wrapper .gfield_label .gfield_required
+{
+	display: none !important;
+}
+
 
 @media only screen and (max-width: 767px)
 {
