@@ -424,8 +424,8 @@
     font-weight: 400;
     padding: 10px;
     text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .gforms_confirmation_message .wiz-bullets ul li:nth-child(odd)
