@@ -339,7 +339,7 @@
 {
 	box-shadow: none !important;
 	text-shadow: none !important;
-	position: absolute;
+	xposition: absolute;
 	bottom: 30px;
 	margin: auto;
 	left: 0px;
@@ -350,6 +350,7 @@
 	font-size: 16px;
     color: #000 !important;
     font-family: "GSBQ";
+    margin-top: 20px;
 }
 
 .gforms_confirmation_message .entry.wizard-result-tub h3.title
@@ -373,6 +374,7 @@
     margin-bottom: 25px;
     text-align: center;
     font-weight: 400;
+    min-height: 20px;
 }
 
 .gforms_confirmation_message .entry.wizard-result-tub .hotub-mainimg
@@ -383,8 +385,21 @@
 
 .gforms_confirmation_message .entry.wizard-result-tub .spec
 {
-	margin-bottom: 15px;	
+	margin-bottom: 15px;
+	margin-left: -24px;
+	margin-right: -24px;	
 }
+
+.gforms_confirmation_message .entry.wizard-result-tub .spec p:nth-child(odd)
+{
+	background: #ebebeb;
+}
+
+.gforms_confirmation_message .entry.wizard-result-tub .spec p:nth-child(even)
+{
+	background: #fff;
+}
+
 
 .gforms_confirmation_message .entry.wizard-result-tub #BVRRSummaryContainer
 {
@@ -447,6 +462,17 @@
 	display: none !important;
 }
 
+
+/* Hide CTA Blocks */
+.bd ul.silverMenu, div.threeCol.ctafoot
+{
+	display: none !important;
+}
+
+.ft
+{
+	margin-top: 45px;	
+}
 
 @media only screen and (max-width: 767px)
 {
