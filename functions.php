@@ -4164,7 +4164,10 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 					
 				if(trim($wiz_bullet) != '')
 					$confirmation .= '<li>'.html_entity_decode($wiz_bullet).'</li>';
+<<<<<<< HEAD
 				
+=======
+>>>>>>> JAC-775
 			}
 			$confirmation .= '<ul>
 				</div>
