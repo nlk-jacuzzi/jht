@@ -4155,7 +4155,7 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 					<ul>';
 			foreach ($wiz_bullets as $wiz_bullet) {
 				if(trim($wiz_bullet) != '')
-					$confirmation .= '<li>'.$wiz_bullet.'</li>';
+					$confirmation .= '<li>'.html_entity_decode($wiz_bullet).'</li>';
 			}
 			$confirmation .= '<ul>
 				</div>
