@@ -4161,13 +4161,8 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 			$confirmation .= '<div class="wiz-bullets">
 					<ul>';
 			foreach ($wiz_bullets as $wiz_bullet) {
-					
 				if(trim($wiz_bullet) != '')
 					$confirmation .= '<li>'.html_entity_decode($wiz_bullet).'</li>';
-<<<<<<< HEAD
-				
-=======
->>>>>>> JAC-775
 			}
 			$confirmation .= '<ul>
 				</div>
