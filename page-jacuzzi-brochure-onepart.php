@@ -203,8 +203,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 	<div class="page-header" id="page-header">
     	<div class="content center ab-b">
         	<div class="block span1of1">
-            	<h1><strong class="small">THE JACUZZI HOT TUB BROCHURE </strong>25 Pages of Facts &amp; Photos - <strong>Free</strong></h1>
-                <h2>Get instant access to Jacuzzi® Hot Tub features , stunning lifestyle photos,<br />collection descriptions and more.</h2>
+            	<h1><strong class="small">THE JACUZZI&reg; HOT TUB BROCHURE </strong>25 Pages of Facts &amp; Photos - <strong>Free</strong></h1>
+                <h2>Get instant access to Jacuzzi&reg; Hot Tub features , stunning lifestyle photos,<br />collection descriptions and more.</h2>
             </div>
             <?php echo do_shortcode('[gravityform id="13" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
             <p style="position: absolute; right: 167px; bottom: 87px;"><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p>
