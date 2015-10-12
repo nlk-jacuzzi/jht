@@ -9,8 +9,8 @@
 
 $show_promo = true;
 
-$promo_start = "8/20/2015"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
-$promo_end = "9/8/2015 01:00:00"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
+$promo_start = "10/08/2015"; // promo to begin displaying on... leave time blank to start showing at 00:00:00 morning of
+$promo_end = "10/27/2015 01:00:00"; // promo to end display as of... add an extra day to stop display at midnight the day before, otherwise include time as 00:00:00
 
 
 if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date("U", strtotime($promo_end)) ): ?>
@@ -18,7 +18,7 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     <?php /* * * * * PROMOTIONS HOME PAGE HERO BLOCK * * * * */ ?>
     <?php
 
-    $promo_image_filename .= 'home-hero-1920x386.png'; // promo image filename
+    $promo_image_filename .= 'october2015-promo.jpg'; // promo image filename
 
     // promo button settings
     $promo_cta_btn_url = get_bloginfo('url') . '/promo/'; //link for promo button

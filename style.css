@@ -4686,7 +4686,9 @@ html#land, html#land body {
 	height: 69px;
 	left: 0;
 	top: 0;
-	background-image:url(images/landing/land-logo.png);
+	background-image:url(images/logow2.png);
+	background-size: 100%;
+	background-size: contain;
 }
 #land .hd .wrap {
 	width: 1024px;
