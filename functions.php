@@ -3329,6 +3329,21 @@ function jht_my_server() {
 	}
 	return 'live';
 }
+function jht_is_ca() {
+	$url = get_bloginfo('url');
+	switch ( $url ) {
+		case 'http://www.jacuzzi.ca/hot-tubs' :
+		case 'http://www.jacuzzi.ca/hot-tubs/' :
+			return true;
+			break;
+		case 'http://www.jacuzzi.com/hot-tubs' :
+		case 'http://www.jacuzzi.com/hot-tubs/' :
+		default :
+			return false;
+			break;
+	}
+	return false;
+}
 
 // Should we include the main flop navigation? [ bool ]
 function jht_incl_navflop() {
