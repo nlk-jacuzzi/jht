@@ -108,7 +108,7 @@
 									//$acts = get_transient( 'jht_acc_cats' );
 									foreach ( $acts as $s ) { $o .= '<li><a href="'. get_term_link($s) .'">'. $s->name .'</a></li>'; }
 								$o .= '</ul></li></ul></div></li>';
-								$o .= ( ( function_exists('jht_is_ca') && jht_is_ca() ) ? '<li><a href="' . get_bloginfo('url') . '/reviews/">Reviews</a></li>' : '' );
+								$o .= ( ( function_exists('jht_is_ca') && ! jht_is_ca() ) ? '<li><a href="' . get_bloginfo('url') . '/reviews/">Reviews</a></li>' : '' );
 							$o .= '</ul>';
 							//set_transient( 'jht_hdrop', $o, 60*60*12 );
 						//}
