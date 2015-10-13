@@ -3336,10 +3336,10 @@ function jht_is_ca() {
 	switch ( $url ) {
 		case 'http://www.jacuzzi.ca/hot-tubs' :
 		case 'http://www.jacuzzi.ca/hot-tubs/' :
+		case 'http://beta.jacuzzi.ca/hot-tubs' :
+		case 'http://beta.jacuzzi.ca/hot-tubs/' :
 			return true;
 			break;
-		case 'http://www.jacuzzi.com/hot-tubs' :
-		case 'http://www.jacuzzi.com/hot-tubs/' :
 		default :
 			return false;
 			break;
@@ -3737,6 +3737,7 @@ add_filter('gform_submit_button','form_submit_button',10,12);
 	function pixel_bazaarinvoice() {
 
 		global $post;
+		if ( ! is_singular('jht_tub') ) return false;
 		$custom = get_post_meta($post->ID,'jht_specs');
 		$jht_specs = $custom[0];
 		$prod = esc_attr($jht_specs['product_id']);

@@ -6058,10 +6058,10 @@ a#Quote_Grphic_sidebar {
 	#bbg-ctas-block1 > ul li:before,
 	#bbg-ctas-block2 ul li:before,
 	#bbg-ctas-block3 ul li:before {
-	    content: "› ";
+	    content: "> ";
 	    color: #ce9603;
 	    color: rgb(206, 150, 3); /* or whatever color you prefer */
-	    font-size: 17px;
+	    font-size: 12px;
 	    margin-right: 9px;
 	}
 	#bbg-ctas-block1 > ul {
@@ -6077,7 +6077,7 @@ a#Quote_Grphic_sidebar {
 	#bbg-ctas-block1 .gform_wrapper {
 		margin: 0;
 		position: absolute;
-		top: 113px;
+		top: 100px;
 		width: 300px;
 	}
 	#bbg-ctas-block1 form {
@@ -6230,7 +6230,7 @@ a#Quote_Grphic_sidebar {
 		width: 294px;
 	}
 	#bbg-ctas input.submit[value="Download Now"] {
-		margin-top: 12px;
+		margin-top: 24px;
 	}
 
 /* - - - block-browse-the-tubs - - - */
