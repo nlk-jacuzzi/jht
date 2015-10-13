@@ -3334,10 +3334,10 @@ function jht_is_ca() {
 	switch ( $url ) {
 		case 'http://www.jacuzzi.ca/hot-tubs' :
 		case 'http://www.jacuzzi.ca/hot-tubs/' :
+		case 'http://beta.jacuzzi.ca/hot-tubs' :
+		case 'http://beta.jacuzzi.ca/hot-tubs/' :
 			return true;
 			break;
-		case 'http://www.jacuzzi.com/hot-tubs' :
-		case 'http://www.jacuzzi.com/hot-tubs/' :
 		default :
 			return false;
 			break;
