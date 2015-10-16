@@ -258,7 +258,7 @@ dataLayer.push({
                         <li><a href="#jets">Jets</a></li>
                         <li><a href="#specs">Specifications</a></li>
                         <li><a href="#warranty">Warranty</a></li>
-                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#reviews" id="show_reviews">Reviews</a></li>
                     </ul>
                     <div class="twoCol">
                         <div class="main">
@@ -438,7 +438,7 @@ dataLayer.push({
                                         <script type="text/javascript">
                                             $BV.ui( 'rr', 'show_reviews', {
                                                 doShowContent : function () {
-                                                    jQuery("#reviews").click();
+                                                    jQuery("#show_reviews").click();
                                                 } });
                                         </script>
                                     <?php endif; ?>
