@@ -438,12 +438,7 @@ dataLayer.push({
                                         <script type="text/javascript">
                                             $BV.ui( 'rr', 'show_reviews', {
                                                 doShowContent : function () {
-                                                    var tab = $('ul#tubtabs li.current a').attr('href');
-                                                    tab.replace('#','');
-                                                    $('ul#tubtabs li.current').removeClass('current');
-                                                    $('div#'+tab+'.tab').css('display','none');
-                                                    $('li a[href="#reviews"]').parent().addClass('current');
-                                                    $('#reviews').css('display', 'block'); 
+                                                    jQuery("#reviews").click();
                                                 } });
                                         </script>
                                     <?php endif; ?>
