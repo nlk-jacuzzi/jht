@@ -1,28 +1,37 @@
 <?php
 
-$test = ( isset( $_GET['test'] ) ) ? strtolower( $_GET['test'] ) : false;
 
-$form_success = avala_form_submit( false );
 
 ?>
-
+<style>
+.gform_anchor { visibility: hidden; }
+.guidecta.form label { display: none !important; }
+.guidecta.form .gform_wrapper .top_label li input[type="text"] { 
+	border-radius: 0;
+	padding: 4px;
+}
+.guidecta.form .gform_wrapper .top_label li .address_zip input[type="text"] {
+	margin-left: 12px;
+}
+.guidecta.form .gform_wrapper .top_label li {
+	margin: auto;
+	position: relative;
+	width: 95% !important;
+}
+.scall.bguide .guidecta.form form input[type="submit"] { left: 14px; }
+.guidecta.form .bigGoldBtn { box-shadow: none; }
+.page .twoCol .side .guidecta.form li { background: none; border-bottom: none; }
+.scall.bguide .guidecta.form div#gforms_confirmation_message {
+	width: 95%;
+	top: 275px;
+	position: absolute;
+	left: 14px;
+}
+</style>
 <div class="scall bguide optA">
-	<?php if ( !$form_success ) { ?>
 	<div class="guidecta form">
-		<form action="<?php echo getUrl( true ); ?>" method="post" id="downloadForm" class="straight-to-dl">
-			<?php avala_hidden_fields( 15, 9, 20 ); ?>
-			<?php avala_field( 'first_name', 'text ', true, 'field', array( 'placeholder' => 'first name' ) ); ?>
-			<?php avala_field( 'last_name', 'text ', true, 'field', array( 'placeholder' => 'last name' ) ); ?>
-			<?php avala_field( 'email', 'text email', true, 'field', array( 'placeholder' => 'email' ) ); ?>
-			<?php avala_field( 'postal_code', 'text ', true, 'field', array( 'maxlength' => 10, 'placeholder' => 'zip / postal code' ) ); ?>
-			<input type="submit" class="submit" value="Download Now" download="http://www.jacuzzihottubs.com/brochures/Jacuzzi_Hottubs_BuyersGuide_43.pdf" />
-		</form>
+		<?php echo do_shortcode( '[gravityform id=23 description=false title=false ajax=true]' ); ?>
 	</div>
-	<?php } else { ?>
-	<div class="guidecta dlnow">
-		<a href="<?php echo get_site_url(); ?>/brochures/Jacuzzi_Hottubs_BuyersGuide_43.pdf" target="_blank" /></a>
-	</div>
-	<?php } ?>
 </div>
 <div class="scall bguide optB" style="display:none;" >
 	<div class="guidecta link">

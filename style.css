@@ -2639,21 +2639,19 @@ body.blog .scall.bro a {
 }
 .scall.bguide .guidecta.form form {
 	position: absolute;
-	top: 240px;
+	top: 256px;
 }
-.scall.bguide .guidecta.form form input.text {
+.scall.bguide .guidecta.form form input[type="text"] {
 	width: 200px;
 	padding: 6px;
-	margin: 6px 15px;
+	margin: 2px 15px;
 	text-align: center;
 }
 .scall.bguide .guidecta.form form input[type="submit"] {
 	display: block;
 	position: relative;
-	top: 26px;
 	width: 218px;
 	height: 54px;
-	margin: auto;
 	border: none;
 	background: url(images/bg/bg_widget_button.png) no-repeat 0 0;
 	cursor: pointer;
