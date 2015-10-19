@@ -27,6 +27,9 @@
 	position: absolute;
 	left: 14px;
 }
+.validation_error {
+	display: none;
+}
 </style>
 <div class="scall bguide optA">
 	<div class="guidecta form">
