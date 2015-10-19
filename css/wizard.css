@@ -518,6 +518,7 @@
 	}
 	
 	.gforms_confirmation_message .entry.wizard-result-tub {
+	    border: 1px solid #BDBDBD;
 	    min-height: 785px;
 	    position: relative;
 	    overflow: hidden;

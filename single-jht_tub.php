@@ -258,7 +258,7 @@ dataLayer.push({
                         <li><a href="#jets">Jets</a></li>
                         <li><a href="#specs">Specifications</a></li>
                         <li><a href="#warranty">Warranty</a></li>
-                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#reviews" id="show_reviews">Reviews</a></li>
                     </ul>
                     <div class="twoCol">
                         <div class="main">
@@ -438,12 +438,7 @@ dataLayer.push({
                                         <script type="text/javascript">
                                             $BV.ui( 'rr', 'show_reviews', {
                                                 doShowContent : function () {
-                                                    var tab = $('ul#tubtabs li.current a').attr('href');
-                                                    tab.replace('#','');
-                                                    $('ul#tubtabs li.current').removeClass('current');
-                                                    $('div#'+tab+'.tab').css('display','none');
-                                                    $('li a[href="#reviews"]').parent().addClass('current');
-                                                    $('#reviews').css('display', 'block'); 
+                                                    jQuery("#show_reviews").click();
                                                 } });
                                         </script>
                                     <?php endif; ?>

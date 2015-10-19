@@ -587,6 +587,7 @@ jQuery(function($) {
     $("form#downloadForm").submit(function(e) {
         var cancel = false,
         	theDownload = $('form#downloadForm input[type="submit"]').attr('download');
+        console.log(theDownload);
         $("." + required).each(function () {
             if ($(this).val() === "" || $(this).val() === 'XX') {
                 $(this).addClass(error);
@@ -597,8 +598,10 @@ jQuery(function($) {
             }
         });
         if (cancel) {
+        	alert('no!');
         	e.preventDefault();
         } else {
+        	alert('yes!');
         	$('form#downloadForm input[type=submit]').attr('disabled', 'disabled').val('Thank You');
         	window.open( theDownload, "_blank", "width=720, height=600, menubar=no, toolbar=no");
         }
