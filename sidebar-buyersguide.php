@@ -19,7 +19,7 @@ if ( ! jht_is_ca() ) { ?>
 .scall.bguide .guidecta.form form input[type="submit"] { left: 14px; }
 .guidecta.form .bigGoldBtn { box-shadow: none; }
 .page .twoCol .side .guidecta.form li { background: none; border-bottom: none; }
-.scall.bguide .guidecta.form div#gforms_confirmation_message {
+.scall.bguide .guidecta.form div.gforms_confirmation_message {
 	width: 95%;
 	top: 275px;
 	position: absolute;
