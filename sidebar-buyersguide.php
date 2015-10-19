@@ -1,8 +1,6 @@
 <?php
 
-
-
-?>
+if ( ! jht_is_ca() ) { ?>
 <style>
 .gform_anchor { visibility: hidden; }
 .guidecta.form label { display: none !important; }
@@ -41,3 +39,4 @@
 		<a href="<?php echo get_site_url(); ?>/buyers-guide/" /></a>
 	</div>
 </div>
+<?php  } ?>
