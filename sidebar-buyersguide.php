@@ -33,7 +33,7 @@
 </style>
 <div class="scall bguide optA">
 	<div class="guidecta form">
-		<?php echo do_shortcode( '[gravityform id=23 description=false title=false ajax=true]' ); ?>
+		<?php echo do_shortcode( '[gravityform id=25 description=false title=false ajax=true]' ); ?>
 	</div>
 </div>
 <div class="scall bguide optB" style="display:none;" >
