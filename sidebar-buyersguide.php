@@ -28,6 +28,7 @@ if ( ! jht_is_ca() ) { ?>
 .scall.bguide .guidecta.form div.gforms_confirmation_message a {
 	background: none;
 	border-bottom: none;
+	color: #B98100;
 }
 .validation_error {
 	display: none;
