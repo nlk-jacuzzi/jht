@@ -25,6 +25,10 @@ if ( ! jht_is_ca() ) { ?>
 	position: absolute;
 	left: 14px;
 }
+.scall.bguide .guidecta.form div.gforms_confirmation_message a {
+	background: none;
+	border-bottom: none;
+}
 .validation_error {
 	display: none;
 }
