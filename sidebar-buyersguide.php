@@ -1,8 +1,6 @@
 <?php
 
-
-
-?>
+if ( ! jht_is_ca() ) { ?>
 <style>
 .gform_anchor { visibility: hidden; }
 .guidecta.form label { display: none !important; }
@@ -21,11 +19,16 @@
 .scall.bguide .guidecta.form form input[type="submit"] { left: 14px; }
 .guidecta.form .bigGoldBtn { box-shadow: none; }
 .page .twoCol .side .guidecta.form li { background: none; border-bottom: none; }
-.scall.bguide .guidecta.form div#gforms_confirmation_message {
+.scall.bguide .guidecta.form div.gforms_confirmation_message {
 	width: 95%;
 	top: 275px;
 	position: absolute;
 	left: 14px;
+}
+.scall.bguide .guidecta.form div.gforms_confirmation_message a {
+	background: none;
+	border-bottom: none;
+	color: #B98100;
 }
 .validation_error {
 	display: none;
@@ -33,7 +36,7 @@
 </style>
 <div class="scall bguide optA">
 	<div class="guidecta form">
-		<?php echo do_shortcode( '[gravityform id=26 description=false title=false ajax=true]' ); ?>
+		<?php echo do_shortcode( '[gravityform id=25 description=false title=false ajax=true]' ); ?>
 	</div>
 </div>
 <div class="scall bguide optB" style="display:none;" >
@@ -41,3 +44,4 @@
 		<a href="<?php echo get_site_url(); ?>/buyers-guide/" /></a>
 	</div>
 </div>
+<?php  } ?>
