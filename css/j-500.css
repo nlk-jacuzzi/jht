@@ -124,6 +124,11 @@ section
 	width: 143px;
 	height: 61px;
 }
+.banner-block a[rel="wp-video-lightbox"] {
+	left: 50%;
+	margin-left: -74px;
+	position: absolute;
+}
 
 .tubs-block
 {
