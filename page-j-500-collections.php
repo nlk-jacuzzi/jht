@@ -99,7 +99,7 @@ get_header();
 				With the market cornered in advanced hydromassage, the J-500™ Collection combines innovative technology and ground-breaking hot tub design. The new series features a unique curve design and outer architectural lighting never seen before. They also bring an exterior skirt design inspired from woven textiles that steal the spotlight. Regardless of which model you choose, the J-500™ Collection does more than enhance your wellbeing; it makes a statement.
 			</p>
 			<p>
-				<?php echo do_shortcode('[video_lightbox_youtube video_id="oaI6NdIUcYc" width="640" height="480" anchor="'.get_template_directory_uri().'/images/j500/play_video.png"]'); ?>
+				<?php echo do_shortcode('[video_lightbox_youtube video_id="oaI6NdIUcYc?rel=0" width="640" height="480" anchor="'.get_template_directory_uri().'/images/j500/play_video.png"]'); ?>
 			</p>
 		</div>
 		<div class="tubs-block">
