@@ -172,7 +172,7 @@ include("Mobile_Detect.php");
 
 // [jht_mobile_dealer_link]
 function mobile_dealer_link_func( $atts ) {
-    $link = gat_bloginfo('url');
+    $link = get_bloginfo('url');
 	$detect = new Mobile_Detect();
 	if ( $detect->isMobile() ) {
 		$link .= '/mobile-dealer-locator/';
