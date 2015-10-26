@@ -168,6 +168,8 @@ endif;
 // Require GEO-IP functions
 require('functions_geo.php');
 
+include("Mobile_Detect.php");
+
 
 if ( ! function_exists( 'jht_page_menu_args' ) ):
 /**
@@ -2793,7 +2795,7 @@ function jht_template_redir_check() {
 		if ( $checkmobileredir ) {
 			// we are on a page that SHOULD redir
 			// check if mobile
-			include("Mobile_Detect.php");
+			//include("Mobile_Detect.php");
 			$detect = new Mobile_Detect();
 		
 			if ( $detect->isMobile() && ( $detect->isTablet() == false ) ) {
@@ -3114,7 +3116,6 @@ function jht_404fix2() {
 	$GLOBALS['wp_the_query'] = $wp_query;
 	
 	if ( is_page('mobile-dealer-locator') ) {
-		include("Mobile_Detect.php");
 		$detect = new Mobile_Detect();
 		$redir = true;
 		if ( $detect->isMobile() ) {
