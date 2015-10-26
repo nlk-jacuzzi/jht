@@ -170,6 +170,20 @@ require('functions_geo.php');
 
 include("Mobile_Detect.php");
 
+// [jht_mobile_dealer_link]
+function mobile_dealer_link_func( $atts ) {
+    $link = gat_bloginfo('url');
+	$detect = new Mobile_Detect();
+	if ( $detect->isMobile() ) {
+		$link .= '/mobile-dealer-locator/';
+	}
+	else {
+		$link .= '/dealer-locator/';
+	}
+    return $link;
+}
+add_shortcode( 'jht_mobile_dealer_link', 'mobile_dealer_link_func' );
+
 
 if ( ! function_exists( 'jht_page_menu_args' ) ):
 /**
@@ -3118,6 +3132,7 @@ function jht_404fix2() {
 	$GLOBALS['wp_the_query'] = $wp_query;
 	
 	if ( is_page('mobile-dealer-locator') ) {
+		//include("Mobile_Detect.php");
 		$detect = new Mobile_Detect();
 		$redir = true;
 		if ( $detect->isMobile() ) {
