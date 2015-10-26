@@ -6,16 +6,7 @@
  * @subpackage JHT
  * @since JHT 2.012
  */
-
-
-include("Mobile_Detect.php");
-$detect = new Mobile_Detect();
-if ( $detect->isMobile() ) {
-    wp_redirect( get_bloginfo('url') .'/mobile-dealer-locator/' );
-}
-
-
-
+ 
 get_sidebar('bottomBlocks');
 ?>
         </div><!-- /wrap -->
