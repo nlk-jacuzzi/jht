@@ -170,9 +170,10 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 var messageVal = "Address: <?php echo $dealer_address ?>" + "\n" + "Phone: <?php echo $dealer_phone ?>" + "\n" + "Website: <?php echo $dealer_website; ?>";
                 var data = { action: 'sms_dealer_email', emailTo: emailToVal, subject: subjectVal, message: messageVal };
 
+                console.log('canSubmit: ' + canSubmit);
                 if ( canSubmit == true ) {
                     $.post(
-                        "<?php bloginfo( 'wpurl' ); ?>/wp-admin/admin-ajax.php",
+                        "<?php echo get_bloginfo( 'url' ); ?>/wp-admin/admin-ajax.php",
                         data,
                         function(response) {
                             $('#sms-form').hide();
