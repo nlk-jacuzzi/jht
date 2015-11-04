@@ -177,6 +177,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                         function(response) {
                             $('#sms-form').hide();
                             $("#sms-form-success").show("normal");
+                            console.log(response);
                         }
                     );
                     _gaq.push(['_trackEvent', 'DealerLocator', 'Send-to-phone']);
