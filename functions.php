@@ -453,10 +453,8 @@ function jht_body_class($classes) {
 			$classes = jht_cleanclass( $classes );
 			break;
 	}
-	if ( isset($nopop['popup'])) {
-		if ( $nopop['popup'] == 'Yes' ) {
-			$classes[] = 'nopop';
-		}
+	if ( ( isset($nopop['popup']) && $nopop['popup'] == 'Yes' ) || is_singlular('jht_tub') ) {
+		$classes[] = 'nopop';
 	}
 	if (isset($form_type['form'])) {
 		if ( $form_type['form'] == 'other' ) {
