@@ -453,7 +453,7 @@ function jht_body_class($classes) {
 			$classes = jht_cleanclass( $classes );
 			break;
 	}
-	if ( ( isset($nopop['popup']) && $nopop['popup'] == 'Yes' ) || is_singular('jht_tub') ) {
+	if ( ( isset($nopop['popup']) && $nopop['popup'] == 'Yes' ) || is_singular('jht_tub') || is_singular('jht_cat') ) {
 		$classes[] = 'nopop';
 	}
 	if (isset($form_type['form'])) {
