@@ -44,11 +44,16 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 					$mod = $wpdb->get_var( "SELECT value FROM wp_rg_lead_detail WHERE lead_id = ". $i ." AND field_number = 4" );
 					$descID = $wpdb->get_var( "SELECT id FROM wp_rg_lead_detail WHERE lead_id = ". $i ." AND field_number = 5" );
 					// check for longer desc
-					$desc = $wpdb->get_row( "SELECT * FROM wp_rg_lead_detail_long WHERE lead_detail_id = ". $descID );
-					if ( $desc == null ) {
-						$desc = $wpdb->get_row( "SELECT * FROM wp_rg_lead_detail WHERE id = ". $descID );
+					if($descID){
+						$desc = $wpdb->get_row( "SELECT * FROM wp_rg_lead_detail_long WHERE lead_detail_id = ". $descID );
+						if ( $desc == null ) {
+							$desc = $wpdb->get_row( "SELECT * FROM wp_rg_lead_detail WHERE id = ". $descID );
+						}
+						$desc = $desc->value;
 					}
-					$desc = $desc->value;
+					else {
+						$desc = '';
+					}
 				?>
 					<div class="showimages">
                     <?php

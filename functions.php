@@ -2652,6 +2652,8 @@ function jht_custom_login_url() {
 
 // takes in img src URL
 // returns URL of resized image, or FALSE if error
+/*
+ * old resize code
 function jht_get_resized_src( $src, $width, $height, $crop = true ) {
 	$width = absint($width);
 	$height = absint($height);
@@ -2667,7 +2669,38 @@ function jht_get_resized_src( $src, $width, $height, $crop = true ) {
 	}
 	return $src;
 }
+*/
 
+function jht_get_resized_src( $src, $width, $height, $crop = true ) {
+	$width = absint($width);
+	$height = absint($height);
+	$crop = ($crop==false ? false : true );
+	$updir = wp_upload_dir();
+	$baseurl = $updir['baseurl'];
+	$basedir = $updir['basedir'];
+	$imgpath = $basedir . substr($src, strpos($src, '/wp-content/uploads') + 19);
+	$path_parts = pathinfo(substr($src, strpos($src, '/wp-content/uploads') + 19));
+	
+	/*
+	$thm = image_resize($imgpath, $width, $height, $crop);
+	if ( is_wp_error($thm) == false ) {
+		$thmsrc = $baseurl . substr($thm, strpos($thm, '/wp-content/uploads') + 19);
+		return $thmsrc;
+	}
+	*/
+	
+	$thm = wp_get_image_editor( $imgpath );
+	if ( is_wp_error($thm) == false ) {
+		$thm->resize( $width, $height, $crop );
+		$thmsrc =  $basedir. '/'. $path_parts['dirname'].'/'.$path_parts['filename'].'-'.$width.'x'.$height.'.'.$path_parts['extension'];
+		$thm->save( $thmsrc );
+		$thmsrc = $baseurl . '/'. $path_parts['dirname'].'/'.$path_parts['filename'].'-'.$width.'x'.$height.'.'.$path_parts['extension'];
+		return $thmsrc;
+	}
+	
+	return $src;
+	
+}
 
 function jht_embed($oembvideo, $url, $attr) {
 	if(strpos($url,'youtube.com') || strpos($url,'youtu.be') ) {
