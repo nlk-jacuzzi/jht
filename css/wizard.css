@@ -371,10 +371,11 @@
     line-height: 20px;
     font-family: "GSMT";
     color: #000;
-    margin-bottom: 25px;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
     text-align: center;
     font-weight: 400;
-    min-height: 20px;
+    min-height: 40px;
 }
 
 .gforms_confirmation_message .entry.wizard-result-tub .hotub-mainimg
