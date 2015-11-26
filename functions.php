@@ -4144,7 +4144,7 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 			$confirmation .= '<div id="post-'.get_the_ID().'" class="entry wizard-result-tub '.($n==0?'best-result-tub':'').'">
 	            <h3 class="title">'.get_the_title().'</h3>
 				<h4 class="sub-header">'.esc_attr($jht_info['topheadline']).'</h4>
-				<div class="hotub-mainimg">'.(class_exists('MultiPostThumbnails') ? MultiPostThumbnails::get_the_post_thumbnail('jht_tub', 'three-quarter', $post->ID, 'one-half-th', array('class'=>'onehalfs')) : '' ).'</div>
+				<div class="hotub-mainimg"><a href="'.get_permalink(get_the_ID()).'">'.(class_exists('MultiPostThumbnails') ? MultiPostThumbnails::get_the_post_thumbnail('jht_tub', 'three-quarter', $post->ID, 'one-half-th', array('class'=>'onehalfs')) : '' ).'</a></div>
 				<div class="spec">
 					<p><strong>Seats: '.esc_attr($jht_specs['seats']).'</strong></p>
 					<p><strong>Lounge: '.esc_attr(ucfirst($jht_specs['haslounge'])).'</strong></p>
