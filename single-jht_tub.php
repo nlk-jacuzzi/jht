@@ -173,7 +173,22 @@ dataLayer.push({
                                     </table>
                                 </div>
                                 <div class="warranty-box">
-                                    <img src="<?php bloginfo('template_url'); ?>/images/warranty_star.png" alt="Warranty 10 years" title="Warranty 10 years"/>
+                                	<?php
+                                		//$terms = wp_get_post_terms( get_the_ID(), '', $args );
+                                		$permalink = get_permalink(get_the_ID());
+										if (strpos($permalink,'/j-200/') !== false) {
+										    ?>
+										    <img src="<?php bloginfo('template_url'); ?>/images/5_year_warranty.jpg" alt="Warranty 5 years" title="Warranty 5 years"/>	
+										    <?php
+										}
+										else {
+											?>
+											<img src="<?php bloginfo('template_url'); ?>/images/warranty_star.png" alt="Warranty 10 years" title="Warranty 10 years"/>
+											<?php		
+										}
+										
+                                	?>
+                                    
                                 </div>
                                 <div class="clear"></div>
                             </div>
