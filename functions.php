@@ -4135,9 +4135,9 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 				'price' => array($tpid['j280'], $tpid['j245'], $tpid['j385']),
 				),
 			'hydrotherapy' => array(
-				'design' => array( $tpid['jLXL'], $tpid['j480'], $tpid['j275']),
-				'performance' => array($tpid['j480'], $tpid['jLXL'], $tpid['j275']),
-				'price' => array( $tpid['j275'], $tpid['j480'], $tpid['jLXL']),
+				'design' => array($tpid['j275'],  $tpid['j480'], $tpid['jLXL']),
+				'performance' => array($tpid['j275'],  $tpid['j480'], $tpid['jLXL']),
+				'price' => array($tpid['j275'],  $tpid['j480'], $tpid['jLXL']),
 				),
 			),
 		);
