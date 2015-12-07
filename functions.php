@@ -4115,7 +4115,7 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	    'post_type'        => 'jht_tub',
 	    'post_status'      => 'publish',
 	    'post__in'         => $results,
-	    'orderby'          => 'none',
+	    'orderby'          => 'post__in',
 	);
 	// The Query
 	$the_query = new WP_Query( $args );
