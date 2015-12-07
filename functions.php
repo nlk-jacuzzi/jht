@@ -4011,7 +4011,8 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 		'j470' => 3724,
 		'j480' => 3719,
 		'j495' => 4129,
-		'j575' => 11845,
+		//'j575' => 11845,
+		'j575' => 11485,
 		'j585' => 11488,
 		'jLX' => 152,
 		'jLXL' => 159,
@@ -4065,9 +4066,9 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 				'price' => array($tpid['j280'], $tpid['j245'], $tpid['j385']),
 				),
 			'hydrotherapy' => array(
-				'design' => array($tpid['j480'], $tpid['jLXL'], $tpid['j275']),
+				'design' => array( $tpid['jLXL'], $tpid['j480'], $tpid['j275']),
 				'performance' => array($tpid['j480'], $tpid['jLXL'], $tpid['j275']),
-				'price' => array($tpid['j480'], $tpid['jLXL'], $tpid['j275']),
+				'price' => array( $tpid['j275'], $tpid['j480'], $tpid['jLXL']),
 				),
 			),
 		);
