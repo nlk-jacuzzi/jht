@@ -70,8 +70,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/sand.png" timg="sand" height="410" width="576" />
 					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/desertsand.png" timg="desertsand" height="410" width="576" />
 					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/caribbeansurf.png" timg="caribbeansurf" height="410" width="576" />
-					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/titanium.png" timg="titanium" height="410" width="576" />
-					<!--img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/slategreen.png" timg="slategreen" height="410" width="576" /-->
+					<?php /* ?><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/titanium.png" timg="titanium" height="410" width="576" />
+					<!--img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/slategreen.png" timg="slategreen" height="410" width="576" /--><?php */?>
 				</div>
 			</div>
 			<div class="tub-details">
@@ -99,8 +99,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<div class="shell thumb" timg="sand" data-pdf="sand" rel="Sand" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-sand.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="desertsand" data-pdf="desertsand" rel="Desert Sand" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-desertsand.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="caribbeansurf" data-pdf="caribbeansurf" rel="Caribbean Surf" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-caribbeansurf.png" height="45" width="45" /></div>
-				<div class="shell thumb" timg="titanium" data-pdf="titanium" rel="Titanium" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-titanium.png" height="45" width="45" /></div>
-				<!--div class="shell thumb" timg="slategreen" data-pdf="slategreen" rel="Slate Green" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-slategreen.png" height="45" width="45" /></div-->
+				<?php /* ?><div class="shell thumb" timg="titanium" data-pdf="titanium" rel="Titanium" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-titanium.png" height="45" width="45" /></div>
+				<!--div class="shell thumb" timg="slategreen" data-pdf="slategreen" rel="Slate Green" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-slategreen.png" height="45" width="45" /></div--><?php */?>
 			</div>
 			<h2><strong>Cabinetry:</strong> <span class="skirt-name"></span></h2>
 			<div class="skirts">
