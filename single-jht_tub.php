@@ -497,7 +497,7 @@ dataLayer.push({
                 </div>
                 <div id="color-selector-j500" class="color-selector-modal-bg" style="display: none;">
                     <div class="color-selector-modal">
-                        <div class="color-selector-modal-title"><h2><?php the_title(); ?> Color Selector</h2><span><a id="close-cs-modal">close</a></span></div>
+                        <div class="color-selector-modal-title"><h2><?php the_title(); ?> Color Selector</h2><span><a id="close-cs-modal" class="close-cs-modal">close</a></span></div>
                         <?php get_template_part('block', 'color_selector_j500'); ?>
                     </div>
                 </div>

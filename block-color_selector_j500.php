@@ -48,6 +48,25 @@ div[timg="brazilianteak"] img { background-color: #be9969; }
 div[timg="roastedchestnut"] img { background-color: #47312c; }
 div[timg="silverwood"] img { background-color: #635e5f; }
 
+/* Extra Styling  */
+#color-selector-j500 .color-selector-modal
+{
+	background: url('<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/black_stripe_bg2.jpg') -55px 0 repeat-y #FFF;
+}
+
+.tub-bottom
+{
+	bottom: 67px;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .left .tub-container .tub-bottom img
+{
+	opacity: 1;
+    height: 71px;
+    width: 512px;
+    left: 35px;
+}
+
 </style>
 <div class="color-selector color-selector-container">
 
@@ -57,8 +76,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 
 			<div class="tub-container">
 				<div class="tub-skirt">
-					<img class="lazy active" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/skirts/skirt-brazilianteak.png" timg="brazilianteak" height="410" width="576" />
-					<img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/skirts/skirt-roastedchestnut.png" timg="roastedchestnut" height="410" width="576" />
+					<img class="lazy active" src="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/skirts/skirt-roastedchestnut.png" timg="roastedchestnut" height="410" width="576" />
+					<img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/skirts/skirt-silverwood.png" timg="silverwood" height="410" width="576" />
 				</div>
 				<div class="tub-shell">
 					<img class="lazy active" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/platinum.png" timg="platinum" height="410" width="576" />
@@ -71,15 +90,19 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 					<img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/titanium.png" timg="titanium" height="410" width="576" />
 					<?php /*?><!--img src="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/slategreen.png" timg="slategreen" height="410" width="576" /--><?php */ ?>
 				</div>
+				<div class="tub-bottom">
+					<img src="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/skirts/skirt_bottom.jpg" height="71" width="576" />
+				</div>
 			</div>
 			<div class="tub-details">
 				<?php /*
 				<h3><strong>Shell:</strong> <span class="shell-name"></span></h3>
 				<h3><strong>Cabinetry:</strong> <span class="skirt-name"></span></h3>
-				*/ ?>
+				
 				<ul>
 					<li><i>J-355<sup>&trade;</sup> model shown for visualization purposes only. Tub size and jet placement will vary by model.<br />Not all colors available in all models. See individual product pages for available colors.</i></li>
 				</ul>
+				  */ ?>
 			</div>
 
 		</div>
@@ -100,8 +123,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 			</div>
 			<h2><strong>Cabinetry:</strong> <span class="skirt-name"></span></h2>
 			<div class="skirts">
-				<div class="skirt thumb brazilianteak active" timg="brazilianteak" rel="Brazilian Teak" data-pdf="teak" ><img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/skirts/skirt-thumb-brazilianteak.png" height="45" width="45" /></div>
-				<div class="skirt thumb roastedchestnut" timg="roastedchestnut" rel="Roasted Chestnut" data-pdf="chest" ><img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/skirts/skirt-thumb-roastedchestnut.png" height="45" width="45" /></div>
+				<div class="skirt thumb roastedchestnut active" timg="roastedchestnut" rel="Roasted Chestnut" data-pdf="chest" ><img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/skirts/skirt-thumb-roastedchestnut.png" height="45" width="45" /></div>
+				<div class="skirt thumb silverwood" timg="silverwood" rel="Silverwood" data-pdf="silver" ><img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/skirts/skirt-thumb-silverwood.png" height="45" width="45" /></div>
 			</div>
 			<a class="btn bigGoldBtn" href="<?php echo get_bloginfo('url'); ?>/get-a-quote/">Get Pricing</a>
 			<a class="pdf-download" href="" download="">Download Your Selected Color PDF</a>
@@ -188,7 +211,7 @@ jQuery(function($){
 		var skirtname = $('.color-selector div.skirt.thumb.active').attr('rel');
 		$('.color-selector span.skirt-name').html( skirtname );
 	});
-	$('#close-cs-modal').click(function(){
+	$('#close-cs-modal, .close-cs-modal').click(function(){
 		$('.color-selector-modal-bg').hide();
 	});
 	$('a.pdf-download').click(function(){
