@@ -51,7 +51,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 /* Extra Styling  */
 #color-selector-j500 .color-selector-modal
 {
-	background: url('<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/black_stripe_bg2.jpg') -55px 0 repeat-y #FFF;
+	xbackground: url('<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/black_stripe_bg2.jpg') -55px 0 repeat-y #FFF;
 }
 
 .tub-bottom
@@ -90,9 +90,11 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 					<img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/titanium.png" timg="titanium" height="410" width="576" />
 					<?php /*?><!--img src="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/slategreen.png" timg="slategreen" height="410" width="576" /--><?php */ ?>
 				</div>
+				<?php /*?>
 				<div class="tub-bottom">
 					<img src="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/skirts/skirt_bottom.jpg" height="71" width="576" />
 				</div>
+				<?php */?>
 			</div>
 			<div class="tub-details">
 				<?php /*
