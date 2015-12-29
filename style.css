@@ -7150,3 +7150,12 @@ a#show-msrp.close {
 }
 
 .tub-brochure-pricing .msrp+.onethird.last { /*margin-top: 26px;*/ }
+
+#land a.btn{
+	background: #FF4500 !important;
+}
+
+#land a.btn:hover
+{
+	background: #ca3b06 !important;
+}
