@@ -27,9 +27,16 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			-webkit-box-shadow: 0px 5px 10px 0px rgba(136, 133, 142, 0.75);
 			-moz-box-shadow:    0px 5px 10px 0px rgba(136, 133, 142, 0.75);
 			box-shadow:         0px 5px 10px 0px rgba(136, 133, 142, 0.75);
-			color: #fff;
+			color: #FFF !important;
+			background: #FF4500 !important;
 		}
 		
+		.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type="submit"]:hover
+		{
+			color: #FFF !important;
+			background: #ca3b06 !important;
+ 		}
+ 		
 		.gform_wrapper {
     		margin: 0;
 		}
