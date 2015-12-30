@@ -147,7 +147,21 @@ dataLayer.push({
                                 </div>
                                 <div class="clear" style="margin: 0 auto; clear: both;"></div>
                                 <div class="color-selector-link">
-                                    <a class="lightbox-link" onClick="jQuery('.color-selector-modal-bg').show();">View the Jacuzzi Shell & Cabinet Selector</a>
+                                    <?php
+                                		//$terms = wp_get_post_terms( get_the_ID(), '', $args );
+                                		$permalink = get_permalink(get_the_ID());
+										if (strpos($permalink,'/j-500/') !== false) {
+										    ?>
+										    <a class="lightbox-link" onClick="jQuery('#color-selector-j500').show();">View the Jacuzzi Shell & Cabinet Selector</a>	
+										    <?php
+										}
+										else {
+											?>
+											<a class="lightbox-link" onClick="jQuery('#color-selector-general').show();">View the Jacuzzi Shell & Cabinet Selector</a>
+											<?php		
+										}
+										
+                                	?>
                                 </div>
                             </div>
                         </div>
@@ -475,10 +489,16 @@ dataLayer.push({
                     </div>
                     <h3 class="to-top"><a href="#top"><span class="icon upArrow"></span>Back to Top</a></h3>
                 </div><br /><br />
-                <div class="color-selector-modal-bg" style="display: none;">
+                <div id="color-selector-general" class="color-selector-modal-bg" style="display: none;">
                     <div class="color-selector-modal">
                         <div class="color-selector-modal-title"><h2>Hot Tub Color Selector</h2><span><a id="close-cs-modal">close</a></span></div>
                         <?php get_template_part('block', 'color_selector'); ?>
+                    </div>
+                </div>
+                <div id="color-selector-j500" class="color-selector-modal-bg" style="display: none;">
+                    <div class="color-selector-modal">
+                        <div class="color-selector-modal-title"><h2><?php the_title(); ?> Color Selector</h2><span><a id="close-cs-modal" class="close-cs-modal">close</a></span></div>
+                        <?php get_template_part('block', 'color_selector_j500'); ?>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@
 
 global $post;
 $menucustom = get_post_meta($post->ID,'jht_menuoption');
-$menuopts = $menucustom[0];
+$menuopts = isset($menucustom[0]) ? $menucustom[0] : array();
 
 if ( !isset($menuopts['silver']) || $menuopts['silver'] !== 'No' ) {
 	get_sidebar('silverMenu');

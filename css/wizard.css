@@ -460,6 +460,27 @@
 	background: #fff;
 }
 
+.gform_wrapper.gf_browser_chrome.stepwizard_wrapper ul.gform_fields li.gfield input[type=radio] {
+    margin-left: 0.263em;
+}
+
+.gform_wrapper.stepwizard_wrapper .gfield_label .gfield_required
+{
+	display: none !important;
+}
+
+
+/* Hide CTA Blocks */
+.bd ul.silverMenu, div.threeCol.ctafoot
+{
+	display: none !important;
+}
+
+.ft
+{
+	margin-top: 45px;	
+}
+
 @media only screen and (max-width: 767px)
 {
 	.gform_wrapper.stepwizard_wrapper .gform_heading {
@@ -518,4 +539,19 @@
 	}
 	
 	
+}
+
+@media only screen and (max-width: 440px)
+{
+	.gforms_confirmation_message .entry.wizard-result-tub {
+	    min-height: 785px;
+	    position: relative;
+	    overflow: hidden;
+	    width: 92%;
+	    max-width: 328px;
+	    float: none;
+	    padding: 4%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
 }

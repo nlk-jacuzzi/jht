@@ -1437,6 +1437,8 @@ function jht_specs_metabox() {
 		'faces' => '',
 		'wizid' => '',
 		'wiz_bullets' => '',
+		'featuredimgshell' => '',
+		'featuredimgcabinet' => '',
 		'yt_video' => '',
 	);
 	?><table width="100%">
@@ -1539,7 +1541,7 @@ function jht_specs_metabox() {
 	</td>
     </tr> */ ?>
     <tr valign="top">
-    <td width="187"><label for="jht_specs[wiz_bullets]">Wizard Bullet Points<br /><small>One per line. No HTML or list markers (for example - or •).</small></label></td><td><textarea name="jht_specs[wiz_bullets]" cols="120" rows="5"><?php esc_attr_e($info['wiz_bullets']); ?></textarea></td>
+    <td width="187"><label for="jht_specs[wiz_bullets]">Wizard Bullet Points<br /><small>One per line. No list markers (for example - or •).</small></label></td><td><textarea name="jht_specs[wiz_bullets]" cols="120" rows="5"><?php esc_attr_e($info['wiz_bullets']); ?></textarea></td>
     </tr>
     <tr valign="top">
     <td width="187"><label for="jht_specs[yt_video]">YouTube Video ID</label></td><td><input type="text" name="jht_specs[yt_video]" value="<?php esc_attr_e($info['yt_video']); ?>" /></td>
@@ -2650,6 +2652,8 @@ function jht_custom_login_url() {
 
 // takes in img src URL
 // returns URL of resized image, or FALSE if error
+/*
+ * old resize code
 function jht_get_resized_src( $src, $width, $height, $crop = true ) {
 	$width = absint($width);
 	$height = absint($height);
@@ -2665,7 +2669,38 @@ function jht_get_resized_src( $src, $width, $height, $crop = true ) {
 	}
 	return $src;
 }
+*/
 
+function jht_get_resized_src( $src, $width, $height, $crop = true ) {
+	$width = absint($width);
+	$height = absint($height);
+	$crop = ($crop==false ? false : true );
+	$updir = wp_upload_dir();
+	$baseurl = $updir['baseurl'];
+	$basedir = $updir['basedir'];
+	$imgpath = $basedir . substr($src, strpos($src, '/wp-content/uploads') + 19);
+	$path_parts = pathinfo(substr($src, strpos($src, '/wp-content/uploads') + 19));
+	
+	/*
+	$thm = image_resize($imgpath, $width, $height, $crop);
+	if ( is_wp_error($thm) == false ) {
+		$thmsrc = $baseurl . substr($thm, strpos($thm, '/wp-content/uploads') + 19);
+		return $thmsrc;
+	}
+	*/
+	
+	$thm = wp_get_image_editor( $imgpath );
+	if ( is_wp_error($thm) == false ) {
+		$thm->resize( $width, $height, $crop );
+		$thmsrc =  $basedir. '/'. $path_parts['dirname'].'/'.$path_parts['filename'].'-'.$width.'x'.$height.'.'.$path_parts['extension'];
+		$thm->save( $thmsrc );
+		$thmsrc = $baseurl . '/'. $path_parts['dirname'].'/'.$path_parts['filename'].'-'.$width.'x'.$height.'.'.$path_parts['extension'];
+		return $thmsrc;
+	}
+	
+	return $src;
+	
+}
 
 function jht_embed($oembvideo, $url, $attr) {
 	if(strpos($url,'youtube.com') || strpos($url,'youtu.be') ) {
@@ -4108,14 +4143,15 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 		);
 	$results = $wizard_results_array[ $entry[2] ][ $entry[1] ][ $entry[3] ];
 	$args = array(
-	    'posts_per_page'   => 3,
-	    'offset'           => 0,
-	    'category'         => '',
-	    'category_name'    => '',
-	    'post_type'        => 'jht_tub',
-	    'post_status'      => 'publish',
-	    'post__in'         => $results,
-	    'orderby'          => 'post__in',
+	    'posts_per_page'      => 3,
+	    'offset'              => 0,
+	    'category'            => '',
+	    'category_name'       => '',
+	    'post_type'           => 'jht_tub',
+	    'post_status'         => 'publish',
+	    'post__in'            => $results,
+	    'orderby'             => 'post__in',
+	    'ignore_sticky_posts' => true,
 	);
 	// The Query
 	$the_query = new WP_Query( $args );

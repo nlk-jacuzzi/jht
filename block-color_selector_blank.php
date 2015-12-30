@@ -3,6 +3,7 @@
 // something'
 
 ?>
+<script src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/js/jquery.lazyload.min.js"></script>
 <style>
 .color-selector.color-selector-container { height: 500px; margin-top: 1px; width: 100%; }
 .color-selector.color-selector-container .color-selector-wrapper { margin: auto; width: 960px; }
@@ -47,6 +48,127 @@ div[timg="brazilianteak"] img { background-color: #be9969; }
 div[timg="roastedchestnut"] img { background-color: #47312c; }
 div[timg="silverwood"] img { background-color: #635e5f; }
 
+/* For Responsiveness */
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper {
+    margin: auto;
+    max-width: 960px;
+    width: 100%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .left {
+    box-sizing: border-box;
+    float: left;
+    height: 400px;
+    margin-right: 2%;
+    text-align: center;
+    width: 67.8%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .right {
+    box-sizing: border-box;
+    float: left;
+    height: 400px;
+    padding-top: 22px;
+    width: 30%;
+}
+
+.color-selector.color-selector-container .color-selector-wrapper .right .pdf-download{
+	width: 100%;
+	max-width: 240px;
+}
+
+.show-for-small
+{
+	display: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) 
+{
+	.color-selector.color-selector-container .color-selector-wrapper .left {
+	    margin-right: 2%;
+	    width: 59.8%;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img {
+	    height: auto;
+	    width: 450px;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .right {
+	    box-sizing: border-box;
+	    float: left;
+	    height: auto;
+	    padding-top: 22px;
+	    width: 33%;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
+	{
+		top: 40px;
+	}
+}
+
+@media only screen and (max-width: 767px) 
+{
+	.color-selector.color-selector-container .color-selector-wrapper {
+		
+	}	
+	.color-selector.color-selector-container .color-selector-wrapper .left {
+	    float: none;
+	    width: 100%;
+	    padding-left: 15px;
+	    padding-right: 15px;
+	    height: auto;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .right {
+	    float: none;
+	    width: 100%;
+	    padding-left: 15px;
+	    padding-right: 15px;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container img
+	{
+		width: 350px;
+		height: auto;
+	}
+	
+	.color-selector.color-selector-container .color-selector-wrapper .left .tub-container
+	{
+		height: 255px;
+	}
+	
+	.hide-for-small
+	{
+		display: none !important;
+	}
+	
+	.show-for-small
+	{
+		display: block;
+	}
+	
+	.color-selector-landing h1.title
+	{
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	
+	
+	.color-selector-landing h1.title, .color-selector-landing h2.sub-title
+	{
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}	
 </style>
 <div class="color-selector color-selector-container">
 
@@ -56,8 +178,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 
 			<div class="tub-container">
 				<div class="tub-skirt">
-					<img class="active" src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/skirts/skirt-brazilianteak.png" timg="brazilianteak" height="410" width="576" />
-					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/skirts/skirt-roastedchestnut.png" timg="roastedchestnut" height="410" width="576" />
+					<img class="lazy active" data-original="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/skirts/skirt-brazilianteak.png" timg="brazilianteak" height="410" width="576" />
+					<img class="lazy" data-original="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/skirts/skirt-roastedchestnut.png" timg="roastedchestnut" height="410" width="576" />
 					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/skirts/skirt-silverwood.png" timg="silverwood" height="410" width="576" />
 				</div>
 				<div class="tub-shell">
@@ -90,7 +212,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 
 			<h2><strong>Shell:</strong> <span class="shell-name"></span></h2>
 			<div class="shells">
-				<div class="shell thumb active" timg="platinum" data-pdf="platinum" rel="Platinum" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-platinum.png" height="45" width="45"/></div>
+<				<div class="shell thumb active" timg="platinum" data-pdf="platinum" rel="Platinum" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-platinum.png" height="45" width="45"/></div>
 				<div class="shell thumb" timg="silverpearl" data-pdf="silverpearl" rel="Silver Pearl" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-silverpearl.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="monaco" data-pdf="monaco" rel="Monaco" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-monaco.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="midnight" data-pdf="midnight" rel="Midnight" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-midnight.png" height="45" width="45" /></div>
@@ -104,9 +226,9 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 			</div>
 			<h2><strong>Cabinetry:</strong> <span class="skirt-name"></span></h2>
 			<div class="skirts">
-				<div class="skirt thumb brazilianteak active" timg="brazilianteak" rel="Brazilian Teak" data-pdf="teak" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/skirts/skirt-thumb-brazilianteak.png" height="45" width="45" /></div>
-				<div class="skirt thumb roastedchestnut" timg="roastedchestnut" rel="Roasted Chestnut" data-pdf="chest" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/skirts/skirt-thumb-roastedchestnut.png" height="45" width="45" /></div>
-				<div class="skirt thumb silverwood" timg="silverwood" rel="Silverwood" data-pdf="silver" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/skirts/skirt-thumb-silverwood.png" height="45" width="45" /></div>
+				<div class="skirt thumb brazilianteak active" timg="brazilianteak" rel="Brazilian Teak" data-pdf="teak" ><img class="lazy" data-original="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/skirts/skirt-thumb-brazilianteak.png" height="45" width="45" /></div>
+				<div class="skirt thumb roastedchestnut" timg="roastedchestnut" rel="Roasted Chestnut" data-pdf="chest" ><img class="lazy" data-original="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/skirts/skirt-thumb-roastedchestnut.png" height="45" width="45" /></div>
+				<div class="skirt thumb silverwood" timg="silverwood" rel="Silverwood" data-pdf="silver" ><img class="lazy" data-original="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/skirts/skirt-thumb-silverwood.png" height="45" width="45" /></div>
 			</div>
 			<?php /* ?><a class="btn bigGoldBtn" href="<?php echo get_bloginfo('url'); ?>/get-a-quote/" target="_parent">Get Pricing</a><?php */ ?>
 			<a class="btn bigGoldBtn pdf-download" href="" download="">Download Your Selected Color PDF</a>
@@ -117,6 +239,18 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 
 </div>
 <script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery("img.lazy").lazyload({
+	        event : "sporty"
+	    });
+	});
+	
+	jQuery(window).bind("load", function() {
+	    var timeout = setTimeout(function() {
+	        jQuery("img.lazy").trigger("sporty")
+	    }, 5000);
+	});
+	
 jQuery(function($){
 
 	function updatepdf() {
