@@ -36,10 +36,17 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type="submit"]:hover
 		{
 			color: #000 !important;
-			background: #ca3b06 !important;
+			background: #FF4500 !important;
 			text-shadow: none !important;
 		}
 		
+		.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type="submit"]:hover
+		{
+			color: #000 !important;
+			background: #ca3b06 !important;
+			text-shadow: none !important;
+ 		}
+ 		
 		.gform_wrapper {
     		margin: 0;
 		}
@@ -222,7 +229,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             	<h1><strong class="small">THE JACUZZI&reg; HOT TUB BROCHURE </strong>25 Pages of Facts &amp; Photos - <strong>Free</strong></h1>
                 <h2>Get instant access to Jacuzzi&reg; Hot Tub features , stunning lifestyle photos,<br />collection descriptions and more.</h2>
             </div>
-            <?php echo do_shortcode('[gravityform id="16" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
+            <?php echo do_shortcode('[gravityform id="13" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false" ajax="true"]'); ?>
             <p style="position: absolute; right: 167px; bottom: 87px; color: #000 !important;"><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p>
             <a id="click-me-anchor" href="#more-info"></a>
 
