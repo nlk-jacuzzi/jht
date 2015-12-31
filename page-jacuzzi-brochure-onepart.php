@@ -29,12 +29,14 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			box-shadow:         0px 5px 10px 0px rgba(136, 133, 142, 0.75);
 			color: #000 !important;
 			background: #FF4500 !important;
+			text-shadow: none !important;
 		}
 		
 		.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type="submit"]:hover
 		{
 			color: #000 !important;
 			background: #ca3b06 !important;
+			text-shadow: none !important;
  		}
  		
 		.gform_wrapper {
