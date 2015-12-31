@@ -27,13 +27,13 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			-webkit-box-shadow: 0px 5px 10px 0px rgba(136, 133, 142, 0.75);
 			-moz-box-shadow:    0px 5px 10px 0px rgba(136, 133, 142, 0.75);
 			box-shadow:         0px 5px 10px 0px rgba(136, 133, 142, 0.75);
-			color: #FFF !important;
+			color: #000 !important;
 			background: #FF4500 !important;
 		}
 		
 		.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type="submit"]:hover
 		{
-			color: #FFF !important;
+			color: #000 !important;
 			background: #ca3b06 !important;
  		}
  		
@@ -204,7 +204,13 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		.emailblock
 		{
 			margin-top: 35px !important;				
-		}	
+		}
+		
+		#land a.btn
+		{
+			color: #000 !important;
+			text-shadow: none !important;
+  		}
 	</style>
 <div id="main-wrapper">
 	<div class="page-header" id="page-header">
@@ -214,7 +220,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 <h2>Get instant access to Jacuzzi&reg; Hot Tub features , stunning lifestyle photos,<br />collection descriptions and more.</h2>
             </div>
             <?php echo do_shortcode('[gravityform id="13" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false" ajax="true"]'); ?>
-            <p style="position: absolute; right: 167px; bottom: 87px;"><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p>
+            <p style="position: absolute; right: 167px; bottom: 87px; color: #000 !important;"><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p>
             <a id="click-me-anchor" href="#more-info"></a>
 
                 <?php /* <script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1183768",type:"1",revenue:"250",actionid:"28343"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/analytics.html?dedup=1&domainId=1183768&type=1&revenue=250&actionid=28343" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe></noscript> */ ?>
