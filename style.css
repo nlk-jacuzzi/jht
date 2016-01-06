@@ -6373,7 +6373,16 @@ a#Quote_Grphic_sidebar {
 	font: 400 60px/1em "GSL";
 	letter-spacing: -1px;
 	margin-top: 34px;
+	text-align: center;
+	margin-bottom: 10px
 }
+#block-title-tubs-landing .container a {
+	color: #0092CC;
+	font: 700 14px "Helvetica Neue",sans-serif;
+	margin-bottom: 10px
+	text-align: center;
+}
+
 #block-title-tubs-landing .container h1 strong {
 	font-family: "GSBQ";
 	font-size: 56px;
