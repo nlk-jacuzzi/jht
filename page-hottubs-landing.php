@@ -27,7 +27,7 @@ get_header(); ?>
     <div id="block-title-tubs-landing" class="block">
         <div class="container">
             <h1>Find the Perfect <strong>Hot Tub</strong></h1>
-            <a href="<?php bloginfo('url'); ?>/hot-tubs">Help Me Find the Right Model</a>
+            <a href="<?php bloginfo('url'); ?>/hot-tub-wizard/">Help Me Find the Right Model</a>
         </div>
     </div>
 
