@@ -6379,8 +6379,10 @@ a#Quote_Grphic_sidebar {
 #block-title-tubs-landing .container a {
 	color: #0092CC;
 	font: 700 14px "Helvetica Neue",sans-serif;
-	margin-bottom: 10px
+	margin: 0px auto 20px;
+	display: block;
 	text-align: center;
+	text-decoration: none;
 }
 
 #block-title-tubs-landing .container h1 strong {
