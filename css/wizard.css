@@ -460,6 +460,13 @@
 	background: #fff;
 }
 
+
+.gform_wrapper.stepwizard_wrapper .gfield_label .gfield_required
+{
+	display: none !important;	
+}
+
+
 @media only screen and (max-width: 767px)
 {
 	.gform_wrapper.stepwizard_wrapper .gform_heading {
