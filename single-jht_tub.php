@@ -150,7 +150,9 @@ dataLayer.push({
                                     <?php
                                 		//$terms = wp_get_post_terms( get_the_ID(), '', $args );
                                 		$permalink = get_permalink(get_the_ID());
+										$isj500 = false;
 										if (strpos($permalink,'/j-500/') !== false) {
+											$isj500 = true;
 										    ?>
 										    <a class="lightbox-link" onClick="jQuery('#color-selector-j500').show();">View the Jacuzzi Shell & Cabinet Selector</a>	
 										    <?php
@@ -489,18 +491,21 @@ dataLayer.push({
                     </div>
                     <h3 class="to-top"><a href="#top"><span class="icon upArrow"></span>Back to Top</a></h3>
                 </div><br /><br />
+                <?php if(!$isj500): ?>
                 <div id="color-selector-general" class="color-selector-modal-bg" style="display: none;">
                     <div class="color-selector-modal">
                         <div class="color-selector-modal-title"><h2>Hot Tub Color Selector</h2><span><a id="close-cs-modal">close</a></span></div>
                         <?php get_template_part('block', 'color_selector'); ?>
                     </div>
                 </div>
+                <?php else: ?>
                 <div id="color-selector-j500" class="color-selector-modal-bg" style="display: none;">
                     <div class="color-selector-modal">
                         <div class="color-selector-modal-title"><h2><?php the_title(); ?> Color Selector</h2><span><a id="close-cs-modal" class="close-cs-modal">close</a></span></div>
                         <?php get_template_part('block', 'color_selector_j500'); ?>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
 <?php
 endwhile;
