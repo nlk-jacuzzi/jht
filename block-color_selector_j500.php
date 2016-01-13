@@ -87,8 +87,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 					<img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/opal.png" timg="opal" height="410" width="576" />
 					<img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/desertsand.png" timg="desertsand" height="410" width="576" />
 					<img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/caribbeansurf.png" timg="caribbeansurf" height="410" width="576" />
-					<img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/titanium.png" timg="titanium" height="410" width="576" />
-					<?php /*?><!--img src="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/slategreen.png" timg="slategreen" height="410" width="576" /--><?php */ ?>
+					<?php /*?><img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/titanium.png" timg="titanium" height="410" width="576" />
+					<!--img src="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/slategreen.png" timg="slategreen" height="410" width="576" /--><?php */ ?>
 				</div>
 				<?php /*?>
 				<div class="tub-bottom">
@@ -120,8 +120,8 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<div class="shell thumb" timg="opal" data-pdf="opal" rel="Opal" ><img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/acrylic-thumb-opal.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="desertsand" data-pdf="desertsand" rel="Desert Sand" ><img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/acrylic-thumb-desertsand.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="caribbeansurf" data-pdf="caribbeansurf" rel="Caribbean Surf" ><img class="lazy" data-original="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/acrylic-thumb-caribbeansurf.png" height="45" width="45" /></div>
-				<div class="shell thumb" timg="titanium" data-pdf="titanium" rel="Titanium" ><img src="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/acrylic-thumb-titanium.png" height="45" width="45" /></div>
-				<?php /*?><!--div class="shell thumb" timg="slategreen" data-pdf="slategreen" rel="Slate Green" ><img src="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/acrylic-thumb-slategreen.png" height="45" width="45" /></div--><?php */?>
+				<?php /*?><div class="shell thumb" timg="titanium" data-pdf="titanium" rel="Titanium" ><img src="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/acrylic-thumb-titanium.png" height="45" width="45" /></div>
+				<!--div class="shell thumb" timg="slategreen" data-pdf="slategreen" rel="Slate Green" ><img src="<?php bloginfo('template_url'); ?>/images/lowres-colorselector/j500/shells/acrylic-thumb-slategreen.png" height="45" width="45" /></div--><?php */?>
 			</div>
 			<h2><strong>Cabinetry:</strong> <span class="skirt-name"></span></h2>
 			<div class="skirts">
