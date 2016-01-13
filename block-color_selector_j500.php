@@ -155,7 +155,7 @@ jQuery(function($){
 	function updatepdf() {
 		var pdf1 = $('.color-selector div.shell.thumb.active').attr('data-pdf'),
 			pdf2 = $('.color-selector div.skirt.thumb.active').attr('data-pdf'),
-			pdfroot = "<?php echo network_site_url('/brochures/shellskirtoptions/'); ?>";
+			pdfroot = "<?php echo network_site_url('/brochures/shellskirtoptions/j-500/'); ?>";
 		if ( $(this).hasClass('shell') ) {
 			pdf1 = $(this).attr('data-pdf');
 		}
