@@ -3789,14 +3789,26 @@ add_filter('gform_submit_button','form_submit_button',10,12);
 		$jht_specs = $custom[0];
 		$prod = esc_attr($jht_specs['product_id']);
 		$val = get_post_meta( $post->ID, 'lead-type', true );
+		$bvtype = get_post_meta( $post->ID, 'bvtype', true );
+		$bvlabel = get_post_meta( $post->ID, 'bvlabel', true );
+		$bvvalue = get_post_meta( $post->ID, 'bvval', true );
 
 		if ( !empty( $prod ) ) { ?>
 			<script type="text/javascript"> 
 			$BV.configure("global", { productId : "<?php echo $prod; ?>" });
 			</script>
 		<?php }
-		
-		if ( !empty( $val ) ) { ?>
+
+		if ( !empty( $bvtype ) && !empty( $bvlabel ) ) { ?>
+			<script>
+			$BV.SI.trackConversion({
+			"type" : "<?php echo $bvtype; ?>",
+			"label" : "<?php echo $bvlabel; ?>",
+			"value" : "<?php echo ( !empty($bvvalue) ? $bvvalue : 1 ); ?>"
+			});
+			</script>
+		<?php }
+		else if ( !empty( $val ) ) { ?>
 			<script>
 			$BV.SI.trackConversion({
 			"type" : "lead-<?php echo $val; ?>",
