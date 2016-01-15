@@ -6383,6 +6383,8 @@ a#Quote_Grphic_sidebar {
 	display: block;
 	text-align: center;
 	text-decoration: none;
+	line-height: 38px;
+	max-width: 300px;
 }
 
 #block-title-tubs-landing .container h1 strong {
