@@ -39,7 +39,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                 <script type="text/javascript">
                 (function($){
                     var str = "<?php echo get_the_title($new_post->ID); ?>";
-                    var sel = str.replace(/[^a-z0-9\-]/gi, '');
+                    var sel = str.replace(/[^JLX0-9\-]/gi, '');
                     var opt = $('.avalaFieldProductId option').filter(function () { return $(this).html() == sel; }).val();
                     $('.avalaFieldProductId option[value="'+opt+'"]').attr('selected', 'selected');
                 })(jQuery);
