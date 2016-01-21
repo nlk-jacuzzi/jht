@@ -410,10 +410,10 @@ function avala_get_thanks_page( $thanks_page = false ) {
 	$thanks_page = get_permalink();
 	$thanks_meta = '';
 
-	if ( $custom_progo[0]['thx'] !== null ) {
+	if ( isset($custom_progo[0]['thx']) && $custom_progo[0]['thx'] !== null ) {
 		$thanks_meta 	= $custom_progo[0]['thx'];
 	}
-	if ( $custom_meta['thanks_page'][0] !== null ) {
+	if ( isset($custom_meta['thanks_page'][0]) && $custom_meta['thanks_page'][0] !== null ) {
 		$thanks_meta 	= get_post_meta( $post->ID, 'thanks_page', true );
 	}
 
