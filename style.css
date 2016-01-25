@@ -6377,14 +6377,20 @@ a#Quote_Grphic_sidebar {
 	margin-bottom: 10px
 }
 #block-title-tubs-landing .container a {
-	color: #0092CC;
-	font: 700 14px "Helvetica Neue",sans-serif;
+	color: rgb(37, 37, 37) !important;
+	font: 400 18px/42px "GSBQ";
 	margin: 0px auto 20px;
 	display: block;
 	text-align: center;
 	text-decoration: none;
 	line-height: 38px;
 	max-width: 300px;
+	opacity: 0.9;
+}
+
+#block-title-tubs-landing .container a:hover
+{
+	opacity: 1;	
 }
 
 #block-title-tubs-landing .container h1 strong {
