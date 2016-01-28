@@ -864,7 +864,7 @@ function jht_init() {
 			//'exclude_from_search' => true,
 			'show_in_menu' => true,
 			//'menu_position' => 7,
-			'menu_icon' => get_bloginfo('template_url') .'/images/icons/coupon.png',
+			'menu_icon' => get_bloginfo('template_url') .'/images/icons/coupon2.png',
 			'supports' => array('title','editor','thumbnail','page-attributes','revisions', 'custom-fields'),
 			'rewrite' => array(
 				'slug' => 'coupons',
