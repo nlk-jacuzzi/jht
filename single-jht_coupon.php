@@ -140,9 +140,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
     			<div  class="row social_icons">
     				<div class="col-xs-12">
     					<ul>
-    						<li class="facebookli"><a href="#">Facebook</a></li>
-    						<li class="twitterli"><a href="#">Twitter</a></li>
-    						<li class="youtubeli"><a href="#">Youtube</a></li>
+    						<li class="facebookli"><a href="http://www.facebook.com/jacuzziofficial">Facebook</a></li>
+    						<li class="twitterli"><a href="http://twitter.com/jacuzziofficial">Twitter</a></li>
+    						<li class="youtubeli"><a href="http://www.youtube.com/jacuzziofficial">Youtube</a></li>
     						<li class="googleli"><a href="#">Google+</a></li>
     					</ul>
     				</div>
