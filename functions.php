@@ -844,6 +844,36 @@ function jht_init() {
 			//'has_archive'=>true
 		)
 	);
+	register_post_type( 'jht_coupon',
+		array(
+			'labels' => array(
+				'name' => 'Coupons',
+				'singular_name' => 'Coupon',
+				'add_new' => 'Add New Coupon',
+				'add_new_item' => 'Add New Coupon',
+				'edit_item' => 'Edit Coupon',
+				'new_item' => 'New Coupon',
+				'view_item' => 'View Coupon',
+				'search_items' => 'Search Coupons',
+				'not_found' =>  'No coupons found',
+				'not_found_in_trash' => 'No coupons found in Trash', 
+				'parent_item_colon' => '',
+				'menu_name' => 'Coupons'
+			),
+			'public' => true,
+			//'exclude_from_search' => true,
+			'show_in_menu' => true,
+			//'menu_position' => 7,
+			'menu_icon' => get_bloginfo('template_url') .'/images/icons/coupon2.png',
+			'supports' => array('title','editor','thumbnail','page-attributes','revisions', 'custom-fields'),
+			'rewrite' => array(
+				'slug' => 'coupons',
+				'with_front' => false
+			),
+			//'has_archive'=>true
+		)
+	);
+	
 	// more FEATURED IMAGES functionality
 	if (class_exists('MultiPostThumbnails')) {
 		// jht_cat
