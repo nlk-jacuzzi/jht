@@ -86,7 +86,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 					<div class="col-xs-6 col-sm-4 col-md-4 get_coupon">
                 						<a href="#" id="printcoupon" class="btn btn-primary btn-print">GET COUPON</a>
                 					</div>
-                					<div class="col-xs-7 col-sm-8 col-md-8 share_coupon">
+                					<div class="col-xs-6 col-sm-8 col-md-8 share_coupon">
                 						<ul>
                 							<li><span class='st_email_large' displayText='Email'></span></li>
                 							<li class="share_all"><span class='st_sharethis_large' displayText='ShareThis'></span></li>

@@ -502,6 +502,16 @@ a
 	{
 		padding-bottom: 0px;
 	}
+	
+	.shareicons ul {
+	    margin-left: 0px;
+	    padding-left: 0px;
+	    list-style: none;
+	    float: none;
+	    display: block;
+	    width: 210px;
+	    margin: 10px auto 0px;
+	}
 }
 
 @media screen and (max-width: 515px) {
