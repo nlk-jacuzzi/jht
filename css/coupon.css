@@ -43,7 +43,7 @@ a
 
 .shareicons 
 {
-	padding: 15px 0px 0px;
+	padding: 15px 15px 0px;
 }
 
 .shareicons ul
@@ -92,7 +92,8 @@ a
 {
 	max-width: 1060px;
 	margin: 0px auto;
-	width: 100%;
+	width: auto;
+	padding: 0px 15px;
 }
 
 .banner-section
@@ -417,4 +418,98 @@ a
 {
 	background-position: -118px 0px;
 }
+
+@media screen and (max-width: 767px) {
+    .logosection h1 a
+    {
+    	margin-left: auto;
+    	margin-right: auto;
+    	margin-bottom: 15px;
+    	background: transparent url("../images/coupons/logo_jacuzzi_2x.png") no-repeat scroll 0px 0px;
+		height: 94px;
+		width: 240px;
+    }
+    
+    .taglinesection h2
+    {
+    	margin-left: 0px;
+    	text-align: center;
+    	font-size: 28px;
+    	line-height: 32px;
+    }
+    
+    .shareicons {
+	    padding: 25px 0px;
+	    background: #f1f1f1;
+	}
+	
+    .shareicons li:first-child
+    {
+    	display: none;
+    }
+	    
+	    
+	.shareicons li .st_email_large .stButton .stLarge, .main-content .share_coupon li .st_email_large .stButton .stLarge
+	{
+		background: url('../images/coupons/icon_share_email_2x.png') 0 0 no-repeat transparent !important;
+		height: 24px;
+		width: 39px;
+	}
+	
+	.shareicons li .st_twitter_large .stButton .stLarge
+	{
+		background: url('../images/coupons/icon_share_twitter_2x.png') 0 0 no-repeat transparent !important;
+		height: 31px;
+		width: 38px;
+	}
+	
+	.shareicons li .st_facebook_large .stButton .stLarge
+	{
+		background: url('../images/coupons/icon_share_facebook_2x.png') 0 0 no-repeat transparent !important;
+		height: 38px;
+		width: 18px;
+	}
+	
+	.main-content .share_coupon li .st_sharethis_large .stButton .stLarge {
+	    background: transparent url("../images/coupons/icon_share_arrow_2x.png") no-repeat scroll 0px 0px !important;
+	    height: 30px;
+	    width: 33px;
+	}
+	
+	.banner-section .arrow_down
+	{
+		display: none;
+	}
+	
+	.wrapper.footer_section
+	{
+		margin-top: 0px;
+	}
+	
+	.main-wrap
+	{
+		padding-bottom: 0px;
+	}
+	
+	
+	.main-content .btn.btn-primary.btn-print , .sidebarsection .eachSidebarWidget.googleMap a.btn
+	{
+		font-size: 26px;
+		padding: 15px 30px;
+	}
+	
+	.wrapper.coupon_head
+	{
+		padding-bottom: 0px;
+	}
+}
+
+@media screen and (max-width: 515px) {
+	.coupon_action .get_coupon , .coupon_action .share_coupon
+	{
+		float: none;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}	
 

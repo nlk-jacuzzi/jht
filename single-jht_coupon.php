@@ -46,10 +46,10 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 					<div class="col-xs-12 col-sm-3 col-md-2 logosection">
 						<h1><a href="#">Jacuzzi</a></h1>
 					</div>
-					<div class="col-xs-12 col-sm-5 col-md-6 taglinesection">
+					<div class="col-xs-12 col-sm-4 col-md-6 taglinesection">
 						<h2>Aqua Paradise Hot Tubs & Spas. San Diego</h2>
 					</div>
-					<div class="col-xs-12 col-sm-4 col-md-4 shareicons">
+					<div class="col-xs-12 col-sm-5 col-md-4 shareicons">
 						<ul>
 							<li>Share This</li>
 							<li><span class='st_email_large' displayText='Email'></span></li>
@@ -83,10 +83,10 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 			</div>
                 			<div class="coupon_action">
                 				<div class="row">
-                					<div class="col-xs-5 col-sm-4 col-md-4">
+                					<div class="col-xs-6 col-sm-4 col-md-4 get_coupon">
                 						<a href="#" id="printcoupon" class="btn btn-primary btn-print">GET COUPON</a>
                 					</div>
-                					<div class="col-xs-7 col-sm-8 col-md-8 share_coupon">
+                					<div class="col-xs-6 col-sm-8 col-md-8 share_coupon">
                 						<ul>
                 							<li><span class='st_email_large' displayText='Email'></span></li>
                 							<li class="share_all"><span class='st_sharethis_large' displayText='ShareThis'></span></li>
