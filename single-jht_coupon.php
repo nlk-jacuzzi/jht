@@ -36,9 +36,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 	$banner_img = get_field('banner_bacgkround_desktop');
 	?>
 	<script type="text/javascript">var switchTo5x=true;</script>
-	<script type="text/javascript" src="http://w.sharethis.com/btn/btns.js"></script>
+	<script type="text/javascript">var switchTo5x=true;</script>
+	<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
 	<script type="text/javascript">stLight.options({publisher: "75f7878f-3534-44fe-8ded-7955f92aed01", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-
 	<div class="wrapper coupon_head">
 		<div class="wrap">
 			<div class="inner">
@@ -86,7 +86,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 					<div class="col-xs-6 col-sm-4 col-md-4 get_coupon">
                 						<a href="#" id="printcoupon" class="btn btn-primary btn-print">GET COUPON</a>
                 					</div>
-                					<div class="col-xs-6 col-sm-8 col-md-8 share_coupon">
+                					<div class="col-xs-7 col-sm-8 col-md-8 share_coupon">
                 						<ul>
                 							<li><span class='st_email_large' displayText='Email'></span></li>
                 							<li class="share_all"><span class='st_sharethis_large' displayText='ShareThis'></span></li>
@@ -94,9 +94,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 					</div>
                 				</div>
                 			</div>
-                			<div class="bottom_content">
-                				<?php the_content(); ?>
-                			</div>
+                		</div>
+                		<div class="bottom_content">
+                			<?php the_content(); ?>
                 		</div>
                 	</div>
                 </div>
