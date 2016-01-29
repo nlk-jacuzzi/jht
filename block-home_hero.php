@@ -65,10 +65,16 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     */ ?>
 
     <?php /* * * * * DEFAULT HOME PAGE J-500 HERO BLOCK * * * * */ ?>
-    <div class="hero" style="background: url(http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/heros/Prolink-Hotubs-hero.jpg) no-repeat 50% 50%;">
+    <!-- <div class="hero" style="background: url(http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/heros/Prolink-Hotubs-hero.jpg) no-repeat 50% 50%;">
         <div id="hero-slide-1" class="block">
             <a href="http://www.jacuzzi.com/hot-tubs/j-500/" style="position: absolute; color: transparent; width: 330px; height: 40px; top: 127px; left: 10px;">See it in person</a>
             <a href="http://www.jacuzzi.com/hot-tubs/owners-corner/remote-control/" style="position: absolute; color: transparent; width: 116px; height: 20px; top: 295px; left: 80px;">Prolink App</a>
+        </div>
+    </div> -->
+    <?php /* * * * * HOME PAGE SELECTOR HERO BLOCK * * * * */ ?>
+    <div class="hero" style="background: url(<?php echo get_bloginfo('url'); ?>/wp-content/themes/jht/images/heros/Selector_Hero_V5.jpg) no-repeat 50% 50%;">
+        <div id="hero-slide-1" class="block">
+            <a href="<?php echo get_bloginfo('url'); ?>/selector/" style="position: absolute; color: transparent; width: 330px; height: 40px; top: 127px; left: 10px;">See it in person</a>
         </div>
     </div>
 
