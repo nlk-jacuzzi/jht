@@ -74,7 +74,7 @@ if ( $show_promo && time() > date("U", strtotime($promo_start)) && time() < date
     <?php /* * * * * HOME PAGE SELECTOR HERO BLOCK * * * * */ ?>
     <div class="hero" style="background: url(<?php echo get_bloginfo('url'); ?>/wp-content/themes/jht/images/heros/Selector_Hero_V5.jpg) no-repeat 50% 50%;">
         <div id="hero-slide-1" class="block">
-            <a href="<?php echo get_bloginfo('url'); ?>/selector/" style="position: absolute; color: transparent; width: 330px; height: 40px; top: 127px; left: 10px;">See it in person</a>
+            <a href="<?php echo get_bloginfo('url'); ?>/selector/" style="position: absolute; color: transparent; width: 192px; height: 40px; top: 240px; left: 10px;">See it in person</a>
         </div>
     </div>
 
