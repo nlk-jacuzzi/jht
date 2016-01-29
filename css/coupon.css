@@ -497,6 +497,11 @@ a
 		font-size: 26px;
 		padding: 15px 30px;
 	}
+	
+	.wrapper.coupon_head
+	{
+		padding-bottom: 0px;
+	}
 }
 
 @media screen and (max-width: 515px) {
