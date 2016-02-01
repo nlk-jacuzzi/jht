@@ -7176,5 +7176,29 @@ a#show-msrp.close {
 
 #land a.btn:hover
 {
-	background: #ca3b06 !important;
+   background: #ca3b06 !important;
+}
+
+.home .hero .tp-caption h2
+{
+	font-size: 52px;
+	line-height: 54px;
+	font-family: "GSBQB";
+	color: #000;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.home .hero .tp-caption p
+{
+	font-size: 20px;
+	line-height: 24px;
+	font-family: "GSMT";
+	color: #000;
+	margin-bottom: 20px;
+}
+
+.home .hero .tp-caption .btn.bigGoldBtn
+{
+	text-transform: uppercase;
 }
