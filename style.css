@@ -2019,7 +2019,7 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 	border: 1px solid #CCC;
 	background:#F3F3F3 url(images/bg/silverMenu.jpg) top left repeat-x;
 	border-radius:3px;
-	/*float:left;*/
+	float:left;
 	width: 958px;
 }
 .silverMenu li{
@@ -7178,3 +7178,11 @@ a#show-msrp.close {
 {
    background: #ca3b06 !important;
  }
+
+
+/*fix offset silver menu: desktop*/
+@media (min-width: 986px) {
+  ul.silverMenu, div.threeCol {
+    margin-left: 470px;
+  }
+}
