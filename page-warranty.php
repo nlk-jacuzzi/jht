@@ -22,7 +22,7 @@ $pageopts = $custom[0];
             <div class="sign-up ">
                 <div style="position: absolute;"><p>Get Jacuzzi Genuine Parts,  Accessories, and Water Care</p></div>
                 <div style="position: absolute; right: 0; top: -25px;">
-                    <a href="/hot-tubs/dealer-locator/" class="owners-corner-link dealer"><img src="/hot-tubs/wp-content/uploads/2014/10/locate-dealer-btn.png" /></a>
+                    <a href="/hot-tubs/dealer-locator/owners/" class="owners-corner-link dealer"><img src="/hot-tubs/wp-content/uploads/2014/10/locate-dealer-btn.png" /></a>
                     <img src="/hot-tubs/wp-content/uploads/2014/10/for-owners-prod.png" />
                 </div>
             </div>
