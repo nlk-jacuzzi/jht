@@ -84,7 +84,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 			<div class="coupon_action">
                 				<div class="row">
                 					<div class="col-xs-6 col-sm-4 col-md-4 get_coupon">
-                						<a href="#" id="printcoupon" class="btn btn-primary btn-print">GET COUPON</a>
+                						<a href="<?php the_field('coupon_cutout'); ?>" id="xprintcoupon" class="btn btn-primary btn-print">GET COUPON</a>
                 					</div>
                 					<div class="col-xs-6 col-sm-8 col-md-8 share_coupon">
                 						<ul>
