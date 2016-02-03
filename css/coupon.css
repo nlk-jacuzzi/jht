@@ -419,6 +419,12 @@ a
 	background-position: -118px 0px;
 }
 
+.table.no-bordered > tr > td
+{
+	border-top: 0px solid #DDD;	
+}
+
+
 @media screen and (max-width: 767px) {
     .logosection h1 a
     {

@@ -76,6 +76,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-8 mainsection">
                 	<div class="main-content">
+                		<h2><?php the_field('introductory_head'); ?></h2>
                 		<?php the_field('introductory_text'); ?>
                 		<div class="coupon_container">
                 			<div class="coupon_cutout">
