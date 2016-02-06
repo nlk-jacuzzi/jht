@@ -20,10 +20,13 @@ get_header(); ?>
      *
      *  The file containing all home page hero stuff is now called "block-home_hero.php"
      **/
-    get_template_part('block', 'home_hero');
+    //get_template_part('block', 'home_hero');
     ?>
 
     <!--div class="goldBar5"></div-->
+	<div class="hero">
+        <?php putRevSlider("homepageslider"); ?>
+    </div>
 
     <?php get_template_part('block', 'tubs_by_size'); ?>    
 
