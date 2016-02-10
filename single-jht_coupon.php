@@ -79,12 +79,12 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 		<h2><?php the_field('introductory_head'); ?></h2>
                 		<div class="coupon_container">
                 			<div class="coupon_cutout">
-                				<img src="<?php the_field('coupon_cutout'); ?>" class="img-responsive img-coupon" />
+                				<a href="<?php the_field('coupon_pdf'); ?>"><img src="<?php the_field('coupon_cutout'); ?>" class="img-responsive img-coupon" /></a>
                 			</div>
                 			<div class="coupon_action">
                 				<div class="row">
                 					<div class="col-xs-6 col-sm-4 col-md-4 get_coupon">
-                						<a href="<?php the_field('coupon_cutout'); ?>" id="xprintcoupon" class="btn btn-primary btn-print">GET COUPON</a>
+                						<a href="<?php the_field('coupon_pdf'); ?>" id="xprintcoupon" class="btn btn-primary btn-print">GET COUPON</a>
                 					</div>
                 					<div class="col-xs-6 col-sm-8 col-md-8 share_coupon">
                 						<ul>
