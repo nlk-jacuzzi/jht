@@ -38,7 +38,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 	<script type="text/javascript">var switchTo5x=true;</script>
 	<script type="text/javascript">var switchTo5x=true;</script>
 	<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript">stLight.options({publisher: "75f7878f-3534-44fe-8ded-7955f92aed01", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+	<script type="text/javascript">stLight.options({publisher: "75f7878f-3534-44fe-8ded-7955f92aed01", publisherGA:"UA-22814648-1", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 	<div class="wrapper coupon_head">
 		<div class="wrap">
 			<div class="inner">
