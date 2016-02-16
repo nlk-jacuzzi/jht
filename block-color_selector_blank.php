@@ -80,7 +80,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<h3><strong>Cabinetry:</strong> <span class="skirt-name"></span></h3>
 				*/ ?>
 				<ul>
-					<li><i>J-355<sup>&trade;</sup> model shown for visualization purposes only. Tub size and jet placement will vary by model.<br />Not all colors available in all models. See individual product pages for available colors.</i></li>
+					<li><i>J-355<sup>&trade;</sup> model shown for visualization purposes only. Tub size, configuration, features, controls, options, physical appearance and performance will vary by model.<br />Not all colors available in all models. See individual product pages for available colors.</i></li>
 				</ul>
 			</div>
 
