@@ -1,0 +1,531 @@
+/* Coupon CSS */
+
+.wrapper
+{
+	width: 100%;
+	padding: 20px 0px;
+}
+
+a
+{
+	color: #0092cc;	
+}
+
+.wrapper.coupon_head
+{
+	background: #FFF;	
+}
+
+.logosection h1
+{
+	margin: 0px;		
+}
+
+.logosection h1 a
+{
+	display: block;
+	background: url('../images/coupons/logo_jacuzzi.png') 0 0 no-repeat transparent;
+	height: 67px;
+	width: 171px;
+	text-indent: -9999px;
+}
+
+.taglinesection h2
+{
+	font-family: "GSMT";
+	font-size: 17px;
+	line-height: 25px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	font-weight: 400;
+	margin-left: 20px;
+}
+
+.shareicons 
+{
+	padding: 15px 15px 0px;
+}
+
+.shareicons ul
+{
+	margin-left: 0px;
+	padding-left: 0px;
+	list-style: none;
+	float: right;
+	display: inline-block;	
+}
+
+.shareicons li
+{
+	list-style: none;
+	font-family: "GSBQ";
+	font-size: 14px;
+	line-height: 25px;
+	font-weight: 700;
+	margin-left: 30px;
+	float: left;
+	text-transform: uppercase;
+}
+
+.shareicons li .st_email_large .stButton .stLarge
+{
+	background: url('../images/coupons/icon_share_email.png') 0 0 no-repeat transparent !important;
+	height: 16px;
+	width: 25px;
+}
+
+.shareicons li .st_twitter_large .stButton .stLarge
+{
+	background: url('../images/coupons/icon_share_twitter.png') 0 0 no-repeat transparent !important;
+	height: 19px;
+	width: 24px;
+}
+
+.shareicons li .st_facebook_large .stButton .stLarge
+{
+	background: url('../images/coupons/icon_share_facebook.png') 0 0 no-repeat transparent !important;
+	height: 24px;
+	width: 11px;
+}
+
+.wrap
+{
+	max-width: 1060px;
+	margin: 0px auto;
+	width: auto;
+	padding: 0px 15px;
+}
+
+.banner-section
+{
+	background: url('../images/coupons/banner_desktop.png') no-repeat right top #000;
+	min-height: 272px;
+	padding-top: 50px;
+	position: relative;
+}
+
+.banner-section .arrow_down
+{
+	position: absolute;
+	bottom: -18px;
+	background: url('../images/coupons/arrow_down.png') 0 0 no-repeat transparent;
+	height: 29px;
+	width: 54px;
+	display: block;
+}
+
+.banner-section h1
+{
+	font-family: "GSMT";
+	font-size: 53px;
+	line-height: 50px;
+	font-weight: 400;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	color: #FFF;
+	text-transform: uppercase;
+}
+
+.banner-section p
+{
+	font-family: "GSMT";
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 400;
+	margin-top: 0px;
+	color: #FFF;
+}
+
+.main-wrap
+{
+	padding: 50px 0px;	
+}
+
+.main-content h2
+{
+	background: none;
+	font-family: "GSMT";
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 400;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+
+.main-content h3
+{
+	background: none;
+	font-family: "GSMT";
+	font-size: 22px;
+	line-height: 26px;
+	font-weight: 400;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	text-align: left;
+	margin-top: 10px;
+}
+
+.main-content p, .main-content ul
+{
+	font-family: "Arial";
+	font-size: 16px;
+	line-height: 22px;
+	margin-bottom: 20px;
+}
+
+.main-content ul
+{
+	padding-left: 30px;	
+}
+
+.main-content ul li
+{
+	list-style: disc;	
+	margin-bottom: 15px;
+}
+
+.main-content .coupon_container .coupon_cutout
+{
+	margin-bottom: 30px;
+}
+
+.main-content .btn.btn-primary.btn-print
+{
+	font-family: "Arial";
+	font-size: 16px;
+	color: #000 !important;
+	background: #FCB614 none repeat scroll 0% 0%;
+	border: 0px solid #FCB614;
+	padding: 15px 30px;
+	text-transform: uppercase;
+	height: auto;
+	font-weight: 700;
+	border-radius: 6px;
+}
+
+.main-content .btn.btn-primary.btn-print:hover
+{
+	background: #dfa010;
+}
+
+
+.main-content .share_coupon 
+{
+	padding: 3px 0px 0px;
+}
+
+.main-content .share_coupon ul
+{
+	margin-left: 0px;
+	padding-left: 0px;
+	list-style: none;
+	display: inline-block;	
+}
+
+.main-content .share_coupon li
+{
+	list-style: none;
+	font-family: "GSBQ";
+	font-size: 14px;
+	line-height: 40px;
+	font-weight: 700;
+	margin-left: 15px;
+	float: left;
+	text-transform: uppercase;
+	padding-top: 7px;
+}
+
+.main-content .share_coupon li .st_email_large .stButton .stLarge
+{
+	background: url('../images/coupons/icon_share_email.png') 0 0 no-repeat transparent !important;
+	height: 16px;
+	width: 25px;
+}
+
+.main-content .share_coupon li.share_all
+{
+	border-left: 1px solid #DDD;
+	padding-left: 15px;	
+}
+
+.main-content .share_coupon li .st_sharethis_large .stButton .stLarge
+{
+	background: url('../images/coupons/icon_share_arrow.png') 0 0 no-repeat transparent !important;
+	height: 17px;
+	width: 19px;
+}
+
+.sidebarsection
+{
+	background: #e6e6e7;
+}
+
+.sidebarsection .eachSidebarWidget
+{
+	padding: 0px 15px; 
+	margin-bottom: 30px;
+}
+
+.sidebarsection .eachSidebarWidget h3
+{
+	color: #000000;
+	font-family: "GSMT";
+	font-size: 19px;
+	line-height: 22px;
+	font-weight: 400;
+	margin: 20px 0px; 
+	text-transform: uppercase;
+	
+}
+
+.sidebarsection .eachSidebarWidget p
+{
+	font-family: "Arial";
+	font-size: 14px;
+	line-height: 25px;
+	margin-bottom: 0px;
+}
+
+
+.sidebarsection .btn.btn-primary.btn-direction
+{
+	font-family: "Arial";
+	font-size: 13px;
+	color: #FFF !important;
+	background: #000 none repeat scroll 0% 0%;
+	border: 0px solid #000;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	height: auto;
+	font-weight: 700;
+	border-radius: 6px;
+	display: block;
+	margin-top: 20px;
+}
+
+.wrapper.footer_section
+{
+	background: #e6e7e8;
+	padding-top: 30px;
+}
+
+.wrapper.footer_section h3
+{
+	color: #000000;
+	font-family: "GSBQ";
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: 400;
+	margin: 20px 0px 10px; 
+	text-transform: uppercase;
+}
+
+
+.wrapper.footer_section h4
+{
+	color: #000000;
+	font-family: "GSL";
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 400;
+	margin: 0px 0px 30px; 
+	text-transform: uppercase;
+}
+
+.wrapper.footer_section a
+{
+	font-family: "Arial";
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: bold;
+}
+
+.wrapper.footer_section .cta_section
+{
+	padding-bottom: 30px;
+	border-bottom: 1px solid #d1d1d1;
+}
+
+.wrapper.footer_section .cta_section > .col-xs-12
+{
+	border-left: 1px solid #d1d1d1;
+	min-height: 175px;
+}
+
+.wrapper.footer_section .cta_section > .col-xs-12:first-child
+{
+	border-left: 0px solid #d1d1d1;
+}
+
+.sidebarsection .eachSidebarWidget.googleMap
+{
+	margin-left: -15px;
+	margin-right: -15px;
+	padding: 0px;
+}
+
+.sidebarsection .eachSidebarWidget.googleMap a.btn
+{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.social_icons ul
+{
+	list-style: none;
+	margin-left: 0px;
+	display: block;
+	margin: 20px auto;
+	width: 170px;
+}
+
+.social_icons ul li
+{
+	list-style: none;
+	float: left;
+	margin-right: 10px;
+}
+
+.social_icons ul li a
+{
+	display: block;
+	text-indent: -9999px;
+	height: 32px;
+	width: 32px;
+	background: url('../images/coupons/social_icons.png') 0 0 no-repeat transparent;
+	outline: none;
+}
+
+.social_icons ul li.facebookli a
+{
+	background-position: 0px 0px;
+}
+
+.social_icons ul li.twitterli a
+{
+	background-position: -40px 0px;
+}
+
+.social_icons ul li.youtubeli a
+{
+	background-position: -78px 0px;
+}
+
+.social_icons ul li.googleli a
+{
+	background-position: -118px 0px;
+}
+
+.table.no-bordered > tr > td
+{
+	border-top: 0px solid #DDD;	
+}
+
+
+@media screen and (max-width: 767px) {
+    .logosection h1 a
+    {
+    	margin-left: auto;
+    	margin-right: auto;
+    	margin-bottom: 15px;
+    	background: transparent url("../images/coupons/logo_jacuzzi_2x.png") no-repeat scroll 0px 0px;
+		height: 94px;
+		width: 240px;
+    }
+    
+    .taglinesection h2
+    {
+    	margin-left: 0px;
+    	text-align: center;
+    	font-size: 28px;
+    	line-height: 32px;
+    }
+    
+    .shareicons {
+	    padding: 25px 0px;
+	    background: #f1f1f1;
+	}
+	
+    .shareicons li:first-child
+    {
+    	display: none;
+    }
+	    
+	    
+	.shareicons li .st_email_large .stButton .stLarge, .main-content .share_coupon li .st_email_large .stButton .stLarge
+	{
+		background: url('../images/coupons/icon_share_email_2x.png') 0 0 no-repeat transparent !important;
+		height: 24px;
+		width: 39px;
+	}
+	
+	.shareicons li .st_twitter_large .stButton .stLarge
+	{
+		background: url('../images/coupons/icon_share_twitter_2x.png') 0 0 no-repeat transparent !important;
+		height: 31px;
+		width: 38px;
+	}
+	
+	.shareicons li .st_facebook_large .stButton .stLarge
+	{
+		background: url('../images/coupons/icon_share_facebook_2x.png') 0 0 no-repeat transparent !important;
+		height: 38px;
+		width: 18px;
+	}
+	
+	.main-content .share_coupon li .st_sharethis_large .stButton .stLarge {
+	    background: transparent url("../images/coupons/icon_share_arrow_2x.png") no-repeat scroll 0px 0px !important;
+	    height: 30px;
+	    width: 33px;
+	}
+	
+	.banner-section .arrow_down
+	{
+		display: none;
+	}
+	
+	.wrapper.footer_section
+	{
+		margin-top: 0px;
+	}
+	
+	.main-wrap
+	{
+		padding-bottom: 0px;
+	}
+	
+	
+	.main-content .btn.btn-primary.btn-print , .sidebarsection .eachSidebarWidget.googleMap a.btn
+	{
+		font-size: 26px;
+		padding: 15px 30px;
+	}
+	
+	.wrapper.coupon_head
+	{
+		padding-bottom: 0px;
+	}
+	
+	.shareicons ul {
+	    margin-left: 0px;
+	    padding-left: 0px;
+	    list-style: none;
+	    float: none;
+	    display: block;
+	    width: 210px;
+	    margin: 10px auto 0px;
+	}
+}
+
+@media screen and (max-width: 515px) {
+	.coupon_action .get_coupon , .coupon_action .share_coupon
+	{
+		float: none;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}	
+

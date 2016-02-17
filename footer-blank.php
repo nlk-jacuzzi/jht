@@ -12,7 +12,7 @@
  ?>
     <?php //get_template_part('modal', 'popup'); ?>
 
-    <?php //google_tag_manager(); ?>
+    <?php google_tag_manager(); ?>
 
     <?php
 
