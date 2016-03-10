@@ -213,7 +213,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 
 			<h2><strong>Shell:</strong> <span class="shell-name"></span></h2>
 			<div class="shells">
-<				<div class="shell thumb active" timg="platinum" data-pdf="platinum" rel="Platinum" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-platinum.png" height="45" width="45"/></div>
+				<div class="shell thumb active" timg="platinum" data-pdf="platinum" rel="Platinum" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-platinum.png" height="45" width="45"/></div>
 				<div class="shell thumb" timg="silverpearl" data-pdf="silverpearl" rel="Silver Pearl" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-silverpearl.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="monaco" data-pdf="monaco" rel="Monaco" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-monaco.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="midnight" data-pdf="midnight" rel="Midnight" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-midnight.png" height="45" width="45" /></div>
