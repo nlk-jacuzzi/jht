@@ -189,9 +189,10 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/midnight.png" timg="midnight" height="410" width="576" />
 					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/opal.png" timg="opal" height="410" width="576" />
 					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/sahara.png" timg="sahara" height="410" width="576" />
-					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/sand.png" timg="sand" height="410" width="576" />
 					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/desertsand.png" timg="desertsand" height="410" width="576" />
 					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/caribbeansurf.png" timg="caribbeansurf" height="410" width="576" />
+					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/porcelain.png" timg="porcelain" height="410" width="576" />
+					<img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/sandstone.png" timg="sandstone" height="410" width="576" />
 					<?php /* ?><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/titanium.png" timg="titanium" height="410" width="576" />
 					<!--img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/slategreen.png" timg="slategreen" height="410" width="576" /--><?php */?>
 				</div>
@@ -202,7 +203,7 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<h3><strong>Cabinetry:</strong> <span class="skirt-name"></span></h3>
 				*/ ?>
 				<ul>
-					<li><i>J-355<sup>&trade;</sup> model shown for visualization purposes only. Tub size and jet placement will vary by model.<br />Not all colors available in all models. See individual product pages for available colors.</i></li>
+					<li><i>J-355<sup>&trade;</sup> model shown for visualization purposes only. Tub size, configuration, features, controls, options, physical appearance and performance will vary by model.<br />Not all colors available in all models. See individual product pages for available colors.</i></li>
 				</ul>
 			</div>
 
@@ -218,9 +219,10 @@ div[timg="silverwood"] img { background-color: #635e5f; }
 				<div class="shell thumb" timg="midnight" data-pdf="midnight" rel="Midnight" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-midnight.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="opal" data-pdf="opal" rel="Opal" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-opal.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="sahara" data-pdf="sahara" rel="Sahara" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-sahara.png" height="45" width="45" /></div>
-				<div class="shell thumb" timg="sand" data-pdf="sand" rel="Sand" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-sand.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="desertsand" data-pdf="desertsand" rel="Desert Sand" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-desertsand.png" height="45" width="45" /></div>
 				<div class="shell thumb" timg="caribbeansurf" data-pdf="caribbeansurf" rel="Caribbean Surf" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-caribbeansurf.png" height="45" width="45" /></div>
+				<div class="shell thumb" timg="porcelain" data-pdf="porcelain" rel="Porcelain" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-porcelain.png" height="45" width="45" /></div>
+				<div class="shell thumb" timg="sandstone" data-pdf="sandstone" rel="Sandstone" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-sandstone.png" height="45" width="45" /></div>
 				<?php /* ?><div class="shell thumb" timg="titanium" data-pdf="titanium" rel="Titanium" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-titanium.png" height="45" width="45" /></div>
 				<!--div class="shell thumb" timg="slategreen" data-pdf="slategreen" rel="Slate Green" ><img src="http://www.jacuzzi.com/hot-tubs/wp-content/themes/jht/images/lowres-colorselector/shells/acrylic-thumb-slategreen.png" height="45" width="45" /></div--><?php */?>
 			</div>
