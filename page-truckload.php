@@ -52,7 +52,7 @@ if ( isset($pageopts['o']) ) if ( $pageopts['o'] != '' ) $titleoverride = $pageo
             	
                     <div id="requestform" class="truckloadform">
                 		<h3>Request the<br />Truckload Sale<br />In Your Town</h3>
-                		<?php echo do_shortcode('[gravityform id="15" title="false" description="false"]'); ?>
+                		<?php echo do_shortcode('[gravityform id="18" title="false" description="false"]'); ?>
                 		<p class="note"><span class="rqd">*</span> Fields with an asterisk are required.<br />&nbsp;</p>
                         <p class="note">Your privacy is very important to us. See our <a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a>.<br />&nbsp;</p>
                 	</div>
@@ -63,6 +63,7 @@ if ( isset($pageopts['o']) ) if ( $pageopts['o'] != '' ) $titleoverride = $pageo
                     </div>
                 </div>
             </div>
+            
             <div class="main">
 					
                     <?php
