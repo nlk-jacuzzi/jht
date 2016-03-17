@@ -47,7 +47,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 						<h1><a href="#">Jacuzzi</a></h1>
 					</div>
 					<div class="col-xs-12 col-sm-4 col-md-6 taglinesection">
-						<h2><?php the_field('banner_text'); ?></h2>
+						<h2><?php the_field('tag_line'); ?></h2>
 					</div>
 					<div class="col-xs-12 col-sm-5 col-md-4 shareicons">
 						<ul>
