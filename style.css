@@ -663,7 +663,10 @@ body.ppc-white .hd a.logo {
 	height:123px;
 	display:inline-block;
 	vertical-align: top;
-	border:1px solid #DCDCDC;
+	border:1px solid #DCDCDC;     
+  
+  /*little comment right here for testing purposes*/
+  
 	border-width: 0 1px 1px 0;
 	border-top:none;
 	background:none;
