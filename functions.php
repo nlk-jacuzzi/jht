@@ -3781,7 +3781,7 @@ add_filter('gform_submit_button','form_submit_button',10,12);
 		global $post;
 		//if ( ! is_singular('jht_tub') ) return false;
 		$custom = get_post_meta($post->ID,'jht_specs');
-		if ( is_array($custom) ) {
+		if ( is_array($custom) && isset($custom[0]) ) {
 			$jht_specs = $custom[0];
 			$prod = esc_attr($jht_specs['product_id']);
 		}
