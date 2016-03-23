@@ -3781,8 +3781,10 @@ add_filter('gform_submit_button','form_submit_button',10,12);
 		global $post;
 		//if ( ! is_singular('jht_tub') ) return false;
 		$custom = get_post_meta($post->ID,'jht_specs');
-		$jht_specs = $custom[0];
-		$prod = esc_attr($jht_specs['product_id']);
+		if ( is_array($custom) ) {
+			$jht_specs = $custom[0];
+			$prod = esc_attr($jht_specs['product_id']);
+		}
 		$val = get_post_meta( $post->ID, 'lead-type', true );
 		$bvtype = get_post_meta( $post->ID, 'bvtype', true );
 		$bvlabel = get_post_meta( $post->ID, 'bvlabel', true );
