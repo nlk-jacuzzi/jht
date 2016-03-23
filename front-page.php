@@ -25,7 +25,7 @@ get_header(); ?>
 
     <!--div class="goldBar5"></div-->
 	<div class="hero">
-        <?php putRevSlider("homepageslider"); ?>
+        <?php if (function_exists('putRevSlider')) putRevSlider("homepageslider"); ?>
     </div>
 
     <?php get_template_part('block', 'tubs_by_size'); ?>    
