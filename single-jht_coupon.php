@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *
  *
  * This is the template that displays all coupons by default.
  * Please note that this is the WordPress construct of pages
@@ -14,7 +14,7 @@
 
 get_header('blank');
 ?>
-<link href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" rel="stylesheet">	
+<link href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php bloginfo('template_url'); ?>/css/coupon.css" rel="stylesheet">
 <script type="text/javascript">
     jQuery(document).ready(function(){
@@ -117,7 +117,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                 </div>
             </div>
         </div>
-	</div>    
+	</div>
     <div class="wrapper footer_section">
     	<div class="wrap">
     		<div class="inner">
@@ -125,17 +125,17 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
     				<div class="col-xs-12 col-sm-4 col-md-4">
     					<h3>Jacuzzi® Brochure</h3>
 						<h4>LIFESTYLE photos, facts & more</h4>
-						<a href="#">Get your Free Brochure</a>
+						<a href="<?php the_field('brochure_link', $post_ID); ?>">Get your Free Brochure</a>
     				</div>
     				<div class="col-xs-12 col-sm-4 col-md-4">
     					<h3>Get Pricing</h3>
 						<h4>On Your Perfect Hot Tub</h4>
-						<a href="#">Get My Pricing</a>
+						<a href="<?php the_field('pricing_link', $post_ID); ?>">Get My Pricing</a>
     				</div>
     				<div class="col-xs-12 col-sm-4 col-md-4">
     					<h3>HOT TUB SELECTOR</h3>
 						<h4>DISCOVER YOUR PERFECT MODEL</h4>
-						<a href="#">IN 3 EASY STEPS</a>
+						<a href="<?php the_field('model_link', $post_ID); ?>">IN 3 EASY STEPS</a>
     				</div>
     			</div>
     			<div  class="row social_icons">
@@ -149,7 +149,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
     				</div>
     			</div>
     		</div>
-    	</div>	
-    </div>        
+    	</div>
+    </div>
 <?php endwhile; // end of the loop. ?>
 <?php get_footer('blank'); ?>
