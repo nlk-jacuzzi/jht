@@ -47,7 +47,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 						<h1><a href="#">Jacuzzi</a></h1>
 					</div>
 					<div class="col-xs-12 col-sm-4 col-md-6 taglinesection">
-						<h2>Aqua Paradise Hot Tubs & Spas. San Diego</h2>
+						<h2><?php the_field('tag_line'); ?></h2>
 					</div>
 					<div class="col-xs-12 col-sm-5 col-md-4 shareicons">
 						<ul>
@@ -125,17 +125,17 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
     				<div class="col-xs-12 col-sm-4 col-md-4">
     					<h3>Jacuzzi® Brochure</h3>
 						<h4>LIFESTYLE photos, facts & more</h4>
-						<a href="#">Get your Free Brochure</a>
+						<a href="http://www.jacuzzi.com/hot-tubs/request-brochure/">Get your Free Brochure</a>
     				</div>
     				<div class="col-xs-12 col-sm-4 col-md-4">
     					<h3>Get Pricing</h3>
 						<h4>On Your Perfect Hot Tub</h4>
-						<a href="#">Get My Pricing</a>
+						<a href="http://www.jacuzzi.com/hot-tubs/get-a-quote/">Get My Pricing</a>
     				</div>
     				<div class="col-xs-12 col-sm-4 col-md-4">
     					<h3>HOT TUB SELECTOR</h3>
 						<h4>DISCOVER YOUR PERFECT MODEL</h4>
-						<a href="#">IN 3 EASY STEPS</a>
+						<a href="http://www.jacuzzi.com/hot-tubs/hot-tub-wizard/">IN 3 EASY STEPS</a>
     				</div>
     			</div>
     			<div  class="row social_icons">
