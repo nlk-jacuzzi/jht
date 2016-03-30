@@ -58,18 +58,22 @@ if ( function_exists('jhtpolylangfix_contentcheck') ) {
                 </div>
             </div>
             <div class="splitrow4">
-                <div href="<?php echo get_bloginfo('url'); ?>/warranty-registration/" class="manuals active">
-                    <h3>Warranty and Manuals</h3>
-                    <p><a href="<?php echo get_bloginfo('url'); ?>/warranty-registration/"><img src="<?php echo get_template_directory_uri(); ?>/images/ownerscorner/circ-arrow.png" width="20" height="20" title="Warranty Registration"/></a>Essential information for owners</p></div>
-                <div href="<?php echo get_bloginfo('url'); ?>/owners-corner/water-maintenance/" class="watermaint">
-                    <h3>Water Maintenance</h3>
-                    <p><a href="<?php echo get_bloginfo('url'); ?>/owners-corner/water-maintenance/"><img src="<?php echo get_template_directory_uri(); ?>/images/ownerscorner/circ-arrow.png" width="20" height="20" title="Water Maintenance"/></a>Keep your water sparkeling with genuine Jacuzzi parts!</p></div>
-                <div href="<?php echo get_bloginfo('url'); ?>/owners-corner/accessories/" class="htaccessories">
-                    <h3>Hot Tub Accessories</h3>
-                    <p><a href="<?php echo get_bloginfo('url'); ?>/owners-corner/accessories/"><img src="<?php echo get_template_directory_uri(); ?>/images/ownerscorner/circ-arrow.png" width="20" height="20" title="Accessories"/></a>Enrich your enjoyment with accessories from Jacuzzi</p></div>
-                <div href="<?php echo get_bloginfo('url'); ?>/owners-corner/hot-tub-maintenance/" class="htmaint">
-                    <h3>Hot Tub Maintenance</h3>
-                    <p><a href="<?php echo get_bloginfo('url'); ?>/owners-corner/hot-tub-maintenance/"><img src="<?php echo get_template_directory_uri(); ?>/images/ownerscorner/circ-arrow.png" width="20" height="20" title="Hot Tub Maintenance"/></a>Maintain your hot tub with genuine Jacuzzi parts</p></div>
-            </div>
+            	<div class="manuals active">
+            		<h3>Warranty and Manuals</h3>
+            		<p><a href="/hot-tubs/warranty-registration/"><img src="/hot-tubs/wp-content/themes/jht/images/ownerscorner/circ-arrow.png" alt="" width="20" height="20" /></a>Essential information for owners</p>
+            	</div>
+				<div class="watermaint">
+					<h3>Water Maintenance</h3>
+					<p><a href="/hot-tubs/owners-corner/water-maintenance/"><img src="/hot-tubs/wp-content/themes/jht/images/ownerscorner/circ-arrow.png" alt="" width="20" height="20" /></a>Keep your water sparkling with genuine Jacuzzi parts!</p>
+				</div>
+				<div class="htaccessories">
+					<h3>Hot Tub Parts</h3>
+					<p><a href="/hot-tubs/owners-corner/hot-tub-parts/"><img src="/hot-tubs/wp-content/themes/jht/images/ownerscorner/circ-arrow.png" alt="" width="20" height="20" /></a>Maintain your hot tub with genuine Jacuzzi® parts</p>
+				</div>
+				<div class="htmaint active">
+					<h3>Hot Tub Maintenance</h3>
+					<p><a href="/hot-tubs/owners-corner/hot-tub-maintenance/"><img src="/hot-tubs/wp-content/themes/jht/images/ownerscorner/circ-arrow.png" alt="" width="20" height="20" /></a>Efficient Maintenance for Optimal Performance</p>
+				</div>
+			</div>
 <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>
