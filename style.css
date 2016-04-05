@@ -7202,3 +7202,41 @@ a#show-msrp.close {
 {
 	text-transform: uppercase;
 }
+
+
+/* Fix for CA cutoff issue of dimension in mega menu */
+
+.hd .primaryMenu li ul li div.superMenu ul li a span
+{
+	    font-size: 10px;
+	     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	white-space: pre-wrap;       /* css-3 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+	word-break: break-all;
+	white-space: normal;
+
+        width: 90px;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul li
+{
+	    height: 134px;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul
+{
+	    min-height: 270px;
+}
+
+.hd .primaryMenu li ul li div.superMenu
+{
+	    height: 280px;
+}
+
+.hd .primaryMenu li ul li div.superMenu .image
+{
+	height: 248px;
+}
