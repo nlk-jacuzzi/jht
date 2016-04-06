@@ -24,7 +24,7 @@
 				<li>The name that started an industry</li>
 				<li>Luxury features and upgrades</li>
 			</ul>
-			<a href="http://www.jacuzzi.com/hot-tubs/about/">Why Jacuzzi</a>
+			<a href="<?php bloginfo('url'); ?>/about/">Why Jacuzzi</a>
 		</div>
 		
 		<div class="innov-sub-parts">
@@ -35,7 +35,7 @@
 				<li>Speed recovery of injuries</li>
 				<li>Promote flow of endorphines</li>
 			</ul>
-			<a href="http://www.jacuzzi.com/hot-tubs/hydrotherapy/">Why Hydrotherapy Works</a>
+			<a href="<?php bloginfo('url'); ?>/hydrotherapy/">Why Hydrotherapy Works</a>
 		</div>
 		
 		<div class="innov-sub-parts">
@@ -46,7 +46,7 @@
 				<li>Easy water care</li>
 				<li>Quality materials</li>
 			</ul>
-			<a href="http://www.jacuzzi.com/hot-tubs/warranty-options/">Warranty Options</a>
+			<a href="<?php bloginfo('url'); ?>/warranty-options/">Warranty Options</a>
 		</div>
 
 		<div class="clearfix"><p>&nbsp;</p></div>
