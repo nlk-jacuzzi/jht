@@ -73,8 +73,8 @@ class BV {
              BV expects an array with the following indexes: deployment_zone_id (string) and product_id 
              (string). ');
         }
-
-        // config array, defaults are defined here
+		
+        // config array, defaults are defined here.
         $this->config = array(
             'staging' => FALSE,
             'subject_type' => 'product',
