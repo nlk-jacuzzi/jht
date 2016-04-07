@@ -79,7 +79,7 @@ class BV {
             'staging' => FALSE,
             'subject_type' => 'product',
             'latency_timeout' => 1000,
-            'current_page_url' => $params['current_page_url'], //get the current page url passed in as a "parameter"
+            'current_page_url' => isset($params['current_page_url']) ? $params['current_page_url'] : '', //get the current page url passed in as a "parameter"
             'base_page_url' => $this->_getCurrentUrl(),
             'bot_detection' => FALSE,  // bot detection should only be enabled if average execution time regularly exceeds 350ms.
             'include_display_integration_code' => FALSE,  
