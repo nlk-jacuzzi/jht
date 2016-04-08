@@ -7203,6 +7203,6 @@ a#show-msrp.close {
 	text-transform: uppercase;
 }
 
-.gform_wrapper.stepwizard_wrapper .gform_wrapper ul.gfield_radio li {
-    padding: 0px 0px 0px 2px !important;
+.gform_wrapper.gf_browser_chrome.stepwizard_wrapper ul.gform_fields li.gfield input[type=radio] {
+    margin-left: 0.263em;
 }
