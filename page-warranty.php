@@ -70,7 +70,7 @@ if ( function_exists('jhtpolylangfix_contentcheck') ) {
 					<h3>Hot Tub Parts</h3>
 					<p><a href="/hot-tubs/owners-corner/hot-tub-parts/"><img src="/hot-tubs/wp-content/themes/jht/images/ownerscorner/circ-arrow.png" alt="" width="20" height="20" /></a>Maintain your hot tub with genuine Jacuzzi® parts</p>
 				</div>
-				<div class="htmaint active">
+				<div class="htmaint">
 					<h3>Hot Tub Maintenance</h3>
 					<p><a href="/hot-tubs/owners-corner/hot-tub-maintenance/"><img src="/hot-tubs/wp-content/themes/jht/images/ownerscorner/circ-arrow.png" alt="" width="20" height="20" /></a>Efficient Maintenance for Optimal Performance</p>
 				</div>
