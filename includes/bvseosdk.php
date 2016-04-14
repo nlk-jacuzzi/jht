@@ -73,13 +73,13 @@ class BV {
              BV expects an array with the following indexes: deployment_zone_id (string) and product_id 
              (string). ');
         }
-
-        // config array, defaults are defined here
+		
+        // config array, defaults are defined here.
         $this->config = array(
             'staging' => FALSE,
             'subject_type' => 'product',
             'latency_timeout' => 1000,
-            'current_page_url' => $params['current_page_url'], //get the current page url passed in as a "parameter"
+            'current_page_url' => isset($params['current_page_url']) ? $params['current_page_url'] : '', //get the current page url passed in as a "parameter"
             'base_page_url' => $this->_getCurrentUrl(),
             'bot_detection' => FALSE,  // bot detection should only be enabled if average execution time regularly exceeds 350ms.
             'include_display_integration_code' => FALSE,  
