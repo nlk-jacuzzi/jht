@@ -7247,3 +7247,7 @@ a#show-msrp.close {
 	height: 248px;
 }
 
+#bbg-ctas-block1 .gform_wrapper div.validation_error
+{
+	display: none !important;
+}
