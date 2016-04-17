@@ -7257,10 +7257,10 @@ a#show-msrp.close {
 	width: 74px;
 }
 
-#bbg-ctas-block1 form.brochure_form_ca .ginput_container .postal_code_cta input {
+#bbg-ctas-block1 form.brochure_form_ca .postal_code_cta .ginput_container input {
     width: 161px;
 }
 
 #bbg-ctas-block1 form.brochure_form_ca input[type="submit"] {
-	width: 110px;
+	top: 110px;
 }	
