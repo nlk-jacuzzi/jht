@@ -7251,3 +7251,16 @@ a#show-msrp.close {
 {
 	display: none !important;
 }
+
+#bbg-ctas-block1 form.brochure_form_ca .postal_code_cta .gfield_label
+{
+	width: 74px;
+}
+
+#bbg-ctas-block1 form.brochure_form_ca .ginput_container .postal_code_cta input {
+    width: 161px;
+}
+
+#bbg-ctas-block1 form.brochure_form_ca input[type="submit"] {
+	width: 110px;
+}	
