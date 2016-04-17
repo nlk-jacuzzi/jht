@@ -9,7 +9,16 @@
 
 avala_form_submit();
 
-$truckload_url = get_bloginfo('url') . '/dealer-locator/dealers/get_truckload_cities_json';
+//$truckload_url = get_bloginfo('url') . '/dealer-locator/dealers/get_truckload_cities_json';
+
+if(jht_is_ca())
+{
+	$truckload_url = 'http://www.jacuzzi.ca/hot-tubs/dealer-locator/dealers/get_truckload_ca_cities_json';	
+}
+else {
+	$truckload_url = 'http://www.jacuzzi.com/hot-tubs/dealer-locator/dealers/get_truckload_cities_json';
+}
+
 $json = file_get_contents($truckload_url);
 $truckloadObj = json_decode($json);
 
