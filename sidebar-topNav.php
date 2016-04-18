@@ -2,7 +2,8 @@
 
 //$geo = geo_data();
 //$pickyPostal = ( $geo['country'] == 'US' ) ? 'Zip / Postal Code' : 'Postal Code' ;
-$pickyPostal = 'Zip / Postal Code';
+
+$pickyPostal = jht_is_ca() ? 'Postal Code' : 'Zip / Postal Code';
 
 ?>
 			<ul class="topMenu">
