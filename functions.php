@@ -4295,13 +4295,14 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	return $confirmation;
 }
 
+
 add_filter("gform_countries", "change_countries2");
-	
+
 function change_countries2($countries)
-{
+    {
         return array( 
-        	"US" => __('United States*', 'gravityforms'),
-        	"CA" => __('Canada*', 'gravityforms'),
+        	"US" => __('United States', 'gravityforms'),
+        	"CA" => __('Canada', 'gravityforms'),
 			"AD" => __('Andorra', 'gravityforms'),
 			"AE" => __('United Arab Emirates', 'gravityforms'),
 			"AF" => __('Afghanistan', 'gravityforms'),
@@ -4313,7 +4314,7 @@ function change_countries2($countries)
 			"AQ" => __('Antarctica', 'gravityforms'),
 			"AR" => __('Argentina', 'gravityforms'),
 			"AT" => __('Austria', 'gravityforms'),
-			"AU" => __('Australia*', 'gravityforms'),
+			"AU" => __('Australia', 'gravityforms'),
 			"AW" => __('Aruba', 'gravityforms'),
 			"AX" => __('Aland Islands', 'gravityforms'),
 			"AZ" => __('Azerbaijan', 'gravityforms'),
@@ -4331,7 +4332,7 @@ function change_countries2($countries)
 			"BN" => __('Brunei Darussalam', 'gravityforms'),
 			"BO" => __('Bolivia, Plurinational State of', 'gravityforms'),
 			"BQ" => __('Bonaire, Sint Eustatius and Saba', 'gravityforms'),
-			"BR" => __('Brazil*', 'gravityforms'),
+			"BR" => __('Brazil', 'gravityforms'),
 			"BS" => __('Bahamas', 'gravityforms'),
 			"BT" => __('Bhutan', 'gravityforms'),
 			"BV" => __('Bouvet Island', 'gravityforms'),
@@ -4347,7 +4348,7 @@ function change_countries2($countries)
 			"CK" => __('Cook Islands', 'gravityforms'),
 			"CL" => __('Chile', 'gravityforms'),
 			"CM" => __('Cameroon', 'gravityforms'),
-			"CN" => __('China*', 'gravityforms'),
+			"CN" => __('China', 'gravityforms'),
 			"CO" => __('Colombia', 'gravityforms'),
 			"CR" => __('Costa Rica', 'gravityforms'),
 			"CU" => __('Cuba', 'gravityforms'),
@@ -4398,15 +4399,15 @@ function change_countries2($countries)
 			"HT" => __('Haiti', 'gravityforms'),
 			"HU" => __('Hungary', 'gravityforms'),
 			"ID" => __('Indonesia', 'gravityforms'),
-			"IE" => __('Ireland*', 'gravityforms'),
+			"IE" => __('Ireland', 'gravityforms'),
 			"IL" => __('Israel', 'gravityforms'),
 			"IM" => __('Isle of Man', 'gravityforms'),
-			"IN" => __('India*', 'gravityforms'),
+			"IN" => __('India', 'gravityforms'),
 			"IO" => __('British Indian Ocean Territory', 'gravityforms'),
 			"IQ" => __('Iraq', 'gravityforms'),
 			"IR" => __('Iran, Islamic Republic of', 'gravityforms'),
 			"IS" => __('Iceland', 'gravityforms'),
-			"IT" => __('Italy*', 'gravityforms'),
+			"IT" => __('Italy', 'gravityforms'),
 			"JE" => __('Jersey', 'gravityforms'),
 			"JM" => __('Jamaica', 'gravityforms'),
 			"JO" => __('Jordan', 'gravityforms'),
@@ -4451,7 +4452,7 @@ function change_countries2($countries)
 			"MU" => __('Mauritius', 'gravityforms'),
 			"MV" => __('Maldives', 'gravityforms'),
 			"MW" => __('Malawi', 'gravityforms'),
-			"MX" => __('Mexico*', 'gravityforms'),
+			"MX" => __('Mexico', 'gravityforms'),
 			"MY" => __('Malaysia', 'gravityforms'),
 			"MZ" => __('Mozambique', 'gravityforms'),
 			"NA" => __('Namibia', 'gravityforms'),
@@ -4540,4 +4541,4 @@ function change_countries2($countries)
 			"ZM" => __('Zambia', 'gravityforms'),
 			"ZW" => __('Zimbabwe', 'gravityforms'),
 		 );
-}
+    }
