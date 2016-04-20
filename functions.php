@@ -4295,9 +4295,9 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	return $confirmation;
 }
 
-add_filter("gform_countries", "change_countries");
+add_filter("gform_countries", "change_countries2");
 	
-function change_countries($countries)
+function change_countries2($countries)
 {
         return array( 
         	"US" => __('United States*', 'gravityforms'),
