@@ -4295,11 +4295,10 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	return $confirmation;
 }
 
-
-	add_filter("gform_countries", "change_countries");
+add_filter("gform_countries", "change_countries");
 	
-    function change_countries($countries)
-    {
+function change_countries($countries)
+{
         return array( 
         	"US" => __('United States*', 'gravityforms'),
         	"CA" => __('Canada*', 'gravityforms'),
@@ -4541,5 +4540,4 @@ function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 			"ZM" => __('Zambia', 'gravityforms'),
 			"ZW" => __('Zimbabwe', 'gravityforms'),
 		 );
-    }
-
+}
