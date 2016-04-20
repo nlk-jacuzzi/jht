@@ -7270,4 +7270,8 @@ a#show-msrp.close {
 	width: 100px !important;
 }
 
+.gform_wrapper div.charleft.warningTextareaInfo
+{
+	display: none !important;
+}
 	
