@@ -8,7 +8,7 @@
  */
 define('DONOTCACHEPAGE', true);
 
-avala_form_submit();
+//avala_form_submit();
 
 get_header(); ?>
 

@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Brochure - Buyer's Guide
+ * Template Name: Brochure - Buyer's Guide (Avala)
  *
  * @package JHT
  * @subpackage JHT
  * @since JHT 1.0
  */
 
-avala_form_submit();
+//avala_form_submit();
 
 get_header();
 

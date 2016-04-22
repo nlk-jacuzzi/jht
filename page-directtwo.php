@@ -15,7 +15,8 @@ if(isset($wp_query->query_vars['keyword'])) {
 $custom = get_post_meta($post->ID,'_progo');
 $direct = $custom[0];
 
-$errors = avala_form_submit();
+$errors = null;
+//avala_form_submit();
 
 
 

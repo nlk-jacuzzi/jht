@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Request a Quote
+ * Template Name: Request a Quote (Avala)
  *
  * @package JHT
  * @subpackage JHT
  * @since JHT 1.0
  */
 
-avala_form_submit();
+//avala_form_submit();
 
 get_header();
 

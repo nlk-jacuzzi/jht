@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Free Brochure
+ * Template Name: Free Brochure (Avala)
  *
  * @package JHT
  * @subpackage JHT
  * @since JHT 1.0
  */
 
-avala_form_submit();
+//avala_form_submit();
 
 get_header();
 
