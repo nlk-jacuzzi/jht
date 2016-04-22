@@ -7,7 +7,7 @@
  * @since JHT 1.0
  */
 
-avala_form_submit();
+//avala_form_submit();
 
 //$truckload_url = get_bloginfo('url') . '/dealer-locator/dealers/get_truckload_cities_json';
 

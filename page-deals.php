@@ -8,7 +8,7 @@
  */
 wp_enqueue_script('thickbox'); 
 
-avala_form_submit();
+//avala_form_submit();
 
 get_header('landing');
 if ( have_posts() ) while ( have_posts() ) : the_post();

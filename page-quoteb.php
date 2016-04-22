@@ -7,7 +7,7 @@
  * @since JHT 1.0
  */
 
-avala_form_submit();
+//avala_form_submit();
 
 get_header( 'newdirect' );
 

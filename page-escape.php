@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Escape with Jacuzzi
+ * Template Name: Escape with Jacuzzi (Avala)
  *
  * @package JHT
  * @subpackage JHT
@@ -8,7 +8,7 @@
  */
 
 
-avala_form_submit();
+//avala_form_submit();
 
 
 

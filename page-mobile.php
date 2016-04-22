@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Mobile Landing
+ * Template Name: Mobile Landing (Avala)
  *
  * @package JHT
  * @subpackage JHT
  * @since JHT 2.012
  */
 
-avala_form_submit();
+//avala_form_submit();
 
 get_header( 'mobile' );
 if ( have_posts() ) while ( have_posts() ) : the_post(); ?>

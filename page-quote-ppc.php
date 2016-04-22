@@ -13,7 +13,7 @@ if(isset($wp_query->query_vars['keyword'])) {
 $custom = get_post_meta($post->ID,'jht_newppc_options');
 $opts = $custom[0];
 
-avala_form_submit();
+//avala_form_submit();
 
 get_header();
 
