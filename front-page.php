@@ -47,20 +47,33 @@ get_header(); ?>
                 </div>
             </div>
             <div class="col col3 blog">
-                <?php $l = get_posts(array(
-                    'numberposts' => 1,
-                ));
-                if ( count($l) > 0 ) {
-                    echo '<h3>Latest from the Blog:</h3>';
-                    $l = $l[0];
-                    echo '<h2>'. esc_attr($l->post_title) .'</h2>';
-                    $lc = wp_kses($l->post_content, array());
-                    echo '<p>';
-                    if ( strlen($lc) > 50 ) {
-                        $lc = substr($lc, 0, strrpos(substr($lc,0,50), ' ')) .'... ';
-                    }
-                    echo $lc .'<a href="'. get_permalink($l->ID) .'">Read More</a></p>';
+                <?php 
+                if(jht_is_ca()){
+                	?>
+                		<h3>Latest News</h3>
+						<p><a href="http://www.jacuzzi.ca/hot-tubs/dealer-locator/ontario-on/"><img src="http://www.jacuzzi.ca/hot-tubs/wp-content/uploads/2016/03/JAC-ONTARIO-RES.jpg" alt="Jacuzzi Hot Tubs of Ontario" width="150" height="125" border="0"></a></p>
+						<p><a href="http://www.jacuzzi.ca/hot-tubs/dealer-locator/ontario-on/" target="_blank">Jacuzzi Hot Tubs of Ontario</a> receives the 2015 Dealer of the Year Award at this year's Jacuzzi® Dealer Conference in Panama City, Panama! Read more about the announcement <a href="http://www.jacuzzi.ca/hot-tubs/about/press-releases/annual-award-recipients-presented-at-the-2016-jacuzzi-dealer-conference/" target="_blank">here.</a></p>
+                	<?php
                 }
+				else
+				{
+					
+					
+	                $l = get_posts(array(
+	                    'numberposts' => 1,
+	                ));
+	                if ( count($l) > 0 ) {
+	                    echo '<h3>Latest from the Blog:</h3>';
+	                    $l = $l[0];
+	                    echo '<h2>'. esc_attr($l->post_title) .'</h2>';
+	                    $lc = wp_kses($l->post_content, array());
+	                    echo '<p>';
+	                    if ( strlen($lc) > 50 ) {
+	                        $lc = substr($lc, 0, strrpos(substr($lc,0,50), ' ')) .'... ';
+	                    }
+	                    echo $lc .'<a href="'. get_permalink($l->ID) .'">Read More</a></p>';
+	                }
+				}
                 ?>
 
                 <h3>The Jacuzzi<sup>&reg;</sup> blog:</h3>
