@@ -2,26 +2,7 @@
 
 ?>
             <ul class="primaryMenu" id="tnav">
-            	<li class="menu-item first <?php if(is_page('101-hot-tub')) echo ' current'; ?>"><a href="<?php echo get_bloginfo('url'); ?>/101-hot-tub/">Intro to Hot Tubs</a></li>
-                <li class="menu-item parent<?php if(is_page(3749)) echo ' current'; ?>"><a href="<?php echo get_permalink(3749) ?>">The Jacuzzi<sup>&reg;</sup> Brand</a>
-                	<ul class="drop2">
-                		<li>
-                        	<div class="search-flop why">
-                        		<ul>
-                        			<li class="search-flop-col">
-                        				<ul class="nav big">
-                        					<li><a href="<?php echo get_permalink(3749) ?>">About</a></li>
-					                		<?php wp_list_pages('include=3803,3805,3899&title_li=&depth=-1'); ?>
-					                        <li><a href="<?php echo get_permalink(3749) ?>">History of Jacuzzi</a></li>
-					                    	<?php wp_list_pages('include=3913,3908&title_li=&depth=-1'); ?>
-					                    </ul>
-					                </li>
-			                    </ul>
-			                </div>
-			            </li>
-                	</ul>
-                </li>
-                <li class="menu-item first parent<?php if ( in_array( get_post_type(), array('jht_cat', 'jht_tub'))) echo ' current'; ?>">
+            	<li class="menu-item first parent<?php if ( in_array( get_post_type(), array('jht_cat', 'jht_tub'))) echo ' current'; ?>">
 	                <?php
 						//global $polylang;
 						global $tubcats;
@@ -136,6 +117,25 @@
 						//$drop = get_transient( 'jht_hdrop' );
 						echo $o; //drop;
 					?>
+                </li>
+            	<li class="menu-item <?php if(is_page('101-hot-tub')) echo ' current'; ?>"><a href="<?php echo get_bloginfo('url'); ?>/101-hot-tub/">Intro to Hot Tubs</a></li>
+                <li class="menu-item parent<?php if(is_page(3749)) echo ' current'; ?>"><a href="<?php echo get_permalink(3749) ?>">Brand Difference</a>
+                	<ul class="drop2">
+                		<li>
+                        	<div class="search-flop why">
+                        		<ul>
+                        			<li class="search-flop-col">
+                        				<ul class="nav big">
+                        					<li><a href="<?php echo get_permalink(3749) ?>">About</a></li>
+					                		<?php wp_list_pages('include=3803,3805,3899&title_li=&depth=-1'); ?>
+					                        <li><a href="<?php echo get_permalink(3749) ?>">History of Jacuzzi</a></li>
+					                    	<?php wp_list_pages('include=3913,3908&title_li=&depth=-1'); ?>
+					                    </ul>
+					                </li>
+			                    </ul>
+			                </div>
+			            </li>
+                	</ul>
                 </li>
                 <li class="menu-item<?php if(is_page('owners-corner')) echo ' current'; ?>"><a href="<?php echo get_bloginfo('url'); ?>/owners-corner/">For Owners</a></li>
                 <li class="menu-item<?php if(is_page('request-pricing')) echo ' current'; ?>"><a href="<?php echo get_bloginfo('url'); ?>/get-a-quote/">Get Pricing</a></li>

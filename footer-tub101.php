@@ -14,11 +14,7 @@ global $post;
 
 wp_reset_query();
 ?>
-        </div><!-- /wrap -->
-        <div class="clear"></div>
-    </div><!-- /bd -->
-    
-
+        
     <?php /* Top Navigation Items */ ?>
     <div class="hd">
     	<div class="wrap">
