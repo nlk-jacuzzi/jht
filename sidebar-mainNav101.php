@@ -115,7 +115,7 @@
 						//}
 						// Use the data like you would have normally...
 						//$drop = get_transient( 'jht_hdrop' );
-						echo $o; //drop;
+						echo $o; //drop; 
 					?>
                 </li>
             	<li class="menu-item <?php if(is_page('hot-tubs-101')) echo ' current'; ?>"><a href="<?php echo get_bloginfo('url'); ?>/hot-tubs-101/">Intro to Hot Tubs</a></li>
