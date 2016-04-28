@@ -29,7 +29,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 							<?php the_field('intro_text'); ?>
 						</div>
 						<div class="img_div">
-							<img src="<?php the_field('intro_image'); ?>" />
+							<?php the_field('intro_image'); ?>
 						</div>
 						<div class="clear"></div>
 					</div>
