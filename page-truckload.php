@@ -66,10 +66,10 @@ if ( isset($pageopts['o']) ) if ( $pageopts['o'] != '' ) $titleoverride = $pageo
                         <p class="note">Your privacy is very important to us. See our <a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a>.<br />&nbsp;</p>
                 	</div>
                 <div class="share">
-                    <h3>Share This</h3>
+                    <?php /* ?><h3>Share This</h3>
                     <div class="share-bar">
                     <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
-                    </div>
+                    </div><?php */ ?>
                 </div>
             </div>
             <div class="main">
