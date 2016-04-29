@@ -33,7 +33,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 								<div class="pp_content"> \
 									<div class="pp_loaderIcon"></div> \
 									<div class="pp_fade"> \
-										<a class="pp_close" href="#">Close</a> \
+										<a class="pp_close pp_close2" href="#">Close</a> \
 										<div class="pp_hoverContainer"> \
 											<a class="pp_next" href="#">next</a> \
 											<a class="pp_previous" href="#">previous</a> \
@@ -78,7 +78,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 				<div class="breadcrumb">
 					<ul>
 						<li class="first-child"><a href="<?php bloginfo('url'); ?>/hot-tubs-101/">Hot Tubs 101</a></li>
-						<li>Inspirational Installations</li>
+						<li>Inspirational</li>
 					</ul>
 					<div class="clear"></div>	
 				</div>
@@ -102,13 +102,14 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 
 										if( $image ) {
 											$full_image = wp_get_attachment_image_src($image, $size_full);
-											echo '<li><a href="'.$full_image[0].'" rel="prettyPhoto[pp_gal]" title="'.$image_text.'">'. wp_get_attachment_image( $image, $size_thumb ).'</a></li>';
+											echo '<li><a href="'.$full_image[0].'" rel="prettyPhoto[pp_gal]" title="'.$image_text.'">'. wp_get_attachment_image( $image, $size_thumb ).'<div class="overlay2"></div></a></li>';
 										}
 								    endwhile;
 								else:
 								endif;								
 							?>
 						</ul>
+						<div class="clear"></div>
 					</div>
                 </div>
             </div>

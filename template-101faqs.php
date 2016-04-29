@@ -21,7 +21,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		jQuery(document).ready(function(){
 			jQuery( "#faqs" ).accordion({
 		      collapsible: true,
-		      heightStyle: "content" 
+		      heightStyle: "content",
+			  active: false,
 		    });
 		});
 	</script>
