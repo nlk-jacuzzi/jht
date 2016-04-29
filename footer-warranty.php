@@ -25,7 +25,11 @@
             }
             // main navigation flop menu
             if ( !isset($menuopts['main']) || $menuopts['main'] !== 'No' ) {
-    			get_sidebar('mainNav');
+    			if(jht_is_ca()){	
+    				get_sidebar('mainNav');
+				} else {
+					get_sidebar('mainNav101');
+				}
             }
             else {
                 // top keyword header in place of menu
