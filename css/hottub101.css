@@ -909,6 +909,12 @@ span.bold_flash a
 	padding-left: 20px;	
 }
 
+a[rel="wp-video-lightbox"] img {
+    float: none !important;
+    margin-right: 0px !important;
+}
+
+
 @media only screen 
 and (max-width : 1389px) {
 	
