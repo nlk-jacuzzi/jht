@@ -16,7 +16,11 @@ get_sidebar('bottomBlocks');
         	<a href="<?php bloginfo('url'); ?>" class="logo">Jacuzzi</a>
             <?php
 			get_sidebar('topNav');
-			get_sidebar('mainNav');
+			if(jht_is_ca()){	
+    				get_sidebar('mainNav');
+				} else {
+					get_sidebar('mainNav101');
+				}
 			?>
         </div>
     </div>

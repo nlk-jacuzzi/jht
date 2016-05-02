@@ -29,7 +29,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 							<?php the_field('intro_text'); ?>
 						</div>
 						<div class="img_div">
-							<img src="<?php the_field('intro_image'); ?>" />
+							<?php the_field('intro_image'); ?>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -45,31 +45,34 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 					<div class="three_blocks">
 						<div class="block_div block_first">
 							<div class="img_div">
-								<img src="<?php the_field('block_1_image'); ?>" />
+								<a href="<?php the_field('block_1_link'); ?>"><img src="<?php the_field('block_1_image'); ?>" /></a>
 							</div>
 							<div class="text_div">
-								<?php the_field('block_1_text'); ?>
+								<a href="<?php the_field('block_1_link'); ?>"><?php the_field('block_1_text'); ?></a>
 							</div>
 						</div>
 						<div class="block_div block_second">
 							<div class="img_div">
-								<img src="<?php the_field('block_2_image'); ?>" />
+								<a href="<?php the_field('block_2_link'); ?>"><img src="<?php the_field('block_2_image'); ?>" /></a>
 							</div>
 							<div class="text_div">
-								<?php the_field('block_2_text'); ?>
+								<a href="<?php the_field('block_2_link'); ?>"><?php the_field('block_2_text'); ?></a>
 							</div>
 						</div>
 						<div class="block_div block_third">
 							<div class="img_div">
-								<img src="<?php the_field('block_3_image'); ?>" />
+								<a href="<?php the_field('block_3_link'); ?>"><img src="<?php the_field('block_3_image'); ?>" /></a>
 							</div>
 							<div class="text_div">
-								<?php the_field('block_3_text'); ?>
+								<a href="<?php the_field('block_3_link'); ?>"><?php the_field('block_3_text'); ?></a>
 							</div>
 						</div>
 						<div class="clear"></div>
 					</div>
                 </div>
             </div>
+    	</div><!-- /wrap -->
+        <div class="clear"></div>
+    </div><!-- /bd -->        
 <?php endwhile; // end of the loop. ?>
 <?php get_footer('tub101'); ?>

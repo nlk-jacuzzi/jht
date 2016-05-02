@@ -13,7 +13,7 @@
 
 if(jht_is_ca())
 {
-	$truckload_url = 'http://www.jacuzzi.ca/hot-tubs/dealer-locator/dealers/get_truckload_ca_cities_json';	
+	$truckload_url = 'http://www.jacuzzi.com/hot-tubs/dealer-locator/dealers/get_truckload_ca_cities_json';	
 }
 else {
 	$truckload_url = 'http://www.jacuzzi.com/hot-tubs/dealer-locator/dealers/get_truckload_cities_json';
@@ -66,10 +66,10 @@ if ( isset($pageopts['o']) ) if ( $pageopts['o'] != '' ) $titleoverride = $pageo
                         <p class="note">Your privacy is very important to us. See our <a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a>.<br />&nbsp;</p>
                 	</div>
                 <div class="share">
-                    <h3>Share This</h3>
+                    <?php /* ?><h3>Share This</h3>
                     <div class="share-bar">
                     <?php if(function_exists('sharethis_button')) sharethis_button(); ?>
-                    </div>
+                    </div><?php */ ?>
                 </div>
             </div>
             

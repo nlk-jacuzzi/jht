@@ -106,6 +106,7 @@ function jht_setup() {
 	add_image_size( 'blog-large', 661, 495, true );
 	add_image_size( 'video-thumb', 57, 37, true );
 	add_image_size( 'navright', 237, 248, true );
+	add_image_size( 'gallery_thumb', 329, 221, true );
 
 	/*
 	 *This theme uses wp_nav_menu() in one location?
@@ -2599,7 +2600,7 @@ function jht_add_scripts() {
 		//wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', array(), '1.7.2', true);
 		wp_register_script( 'mbox', 'http://www.jacuzzi.com/hot-tubs/mbox/mbox.js', array(), null, true);
 		
-		if ( is_page(3888) ) {
+		if ( is_page(3888) || is_page('faq') ) {
 			wp_enqueue_script( 'jquery-ui-accordion', 'URL', array('jquery'), null, true );
 		}
 		if ( is_page_template('page-mobile.php') ) {

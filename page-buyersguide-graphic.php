@@ -26,7 +26,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                     <tr>
                         <td colspan="2" class="buttonarea">
                             <p class="requiredtext">* indicates required field</p>
-                            <p class="privacytext">Your privacy is very important to us. We will never rent or sell your information, see our <a href="#">Privacy Policy</a></p>
+                            <p class="privacytext">Your privacy is very important to us. We will never rent or sell your information, see our <a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a></p>
                         </td>
                     </tr>
                 </table>
