@@ -544,7 +544,8 @@ span.bold_flash
 	xmargin-bottom: 25px;
 }
 
-.bd.bottom_navigation a
+.bd.bottom_navigation a,
+a.readmore101
 {
 	color: #000000;
 	font-size: 16px;
@@ -562,7 +563,8 @@ span.bold_flash
 	float: left;
 }
 
-.bd.bottom_navigation a.next_link
+.bd.bottom_navigation a.next_link,
+a.readmore101
 {
 	padding-right: 18px;
 	background: url('../images/hottub101/arrow_next.png') right 6px no-repeat transparent;
