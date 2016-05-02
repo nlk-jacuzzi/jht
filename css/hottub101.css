@@ -240,7 +240,7 @@
 
 .hero.hero101
 {
-	height: 309px;
+	padding-bottom: 40px; /*height: 309px;*/
 	background: #F4F4F4 url(../images/hottub101/hero_benefits.jpg) 50% 0 no-repeat;
 	background-size: cover;
 	margin-top: 100px;
