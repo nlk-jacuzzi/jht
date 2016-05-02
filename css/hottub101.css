@@ -544,6 +544,9 @@ span.bold_flash
 	xmargin-bottom: 25px;
 }
 
+.bd.bottom_navigation a {
+	display: block;
+}
 .bd.bottom_navigation a,
 a.readmore101
 {
@@ -552,7 +555,6 @@ a.readmore101
 	line-height: 23px;
 	font-family: "GSBQ";
 	font-weight: 400;
-	display: block;
 	text-decoration: none;
 }
 
@@ -563,14 +565,14 @@ a.readmore101
 	float: left;
 }
 
-.bd.bottom_navigation a.next_link,
-a.readmore101
-{
+.bd.bottom_navigation a.next_link {
 	padding-right: 18px;
 	background: url('../images/hottub101/arrow_next.png') right 6px no-repeat transparent;
-}
-.bd.bottom_navigation a.next_link {
 	float: right;
+}
+a.readmore101
+{
+	background: url('../images/hottub101/arrow_next.png') right 3px no-repeat transparent;
 }
 
 
