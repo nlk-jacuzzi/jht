@@ -568,6 +568,8 @@ a.readmore101
 {
 	padding-right: 18px;
 	background: url('../images/hottub101/arrow_next.png') right 6px no-repeat transparent;
+}
+.bd.bottom_navigation a.next_link {
 	float: right;
 }
 
