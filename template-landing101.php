@@ -35,7 +35,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 					</div>
 					<div class="benefits_div">
 						<div class="img_div">
-							<img src="<?php the_field('benefits_image'); ?>" />
+							<?php the_field('benefits_image'); ?>
 						</div>
 						<div class="text_div">
 							<?php the_field('benefits_text'); ?>
