@@ -77,7 +77,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			<div class="inner">
 				<div class="breadcrumb">
 					<ul>
-						<li class="first-child"><a href="<?php bloginfo('url'); ?>/hot-tubs-101/">Hot Tubs 101</a></li>
+						<li class="first-child"><a href="<?php bloginfo('url'); ?>/hot-tubs-101/">Intro to Hot Tubs</a></li>
 						<li>Inspiration</li>
 					</ul>
 					<div class="clear"></div>	
