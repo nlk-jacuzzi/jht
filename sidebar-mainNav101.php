@@ -118,7 +118,7 @@
 						echo $o; //drop; 
 					?>
                 </li>
-            	<li class="menu-item <?php if(is_page('hot-tubs-101')) echo ' current'; ?>"><a href="<?php echo get_bloginfo('url'); ?>/hot-tubs-101/">Intro to Hot Tubs</a></li>
+            	<li class="menu-item <?php if(is_page('intro-to-hot-tubs')) echo ' current'; ?>"><a href="<?php echo get_bloginfo('url'); ?>/intro-to-hot-tubs/">Intro to Hot Tubs</a></li>
                 <li class="menu-item parent<?php if(is_page(3749)) echo ' current'; ?>"><a href="<?php echo get_permalink(3749) ?>">Brand Difference</a>
                 	<ul class="drop2">
                 		<li>
