@@ -21,7 +21,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			<div class="inner">
 				<div class="breadcrumb">
 					<ul>
-						<li class="first-child"><a href="<?php bloginfo('url'); ?>/hot-tubs-101/">Intro to Hot Tubs</a></li>
+						<li class="first-child"><a href="<?php bloginfo('url'); ?>/intro-to-hot-tubs/">Intro to Hot Tubs</a></li>
 						<li>What To Look For</li>
 					</ul>
 					<div class="clear"></div>	
